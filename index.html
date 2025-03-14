@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en_US">
-	<head>
-		<title>NeilRaiden.com</title>
-		<meta charset="utf-8">
-	</head>
+<head>
+	<title>NeilRaiden.com</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="fonts/fonts.css">
+	<link rel="stylesheet" href="layout.css">
+	<script src="fonts/fontlist.js"></script>
+	<script src="layout.js"></script>
+</head>
 <body>
-	<p>
-English is hard...
-But it can be understood through tough thorough thought, though!
-	</p>
+<!-- "HOME" link and "Hamburger menu" button -->
+<header><script>insertHTML(headerHtml);</script></header>
+<!-- Top Navigation Menu -->
+<nav><script>insertNavBar();</script></nav>
+<!-- hidden page with controls to personalize styles -->
+<section id="pageSetup"><script defer="defer">webPageSetup();</script></section>
+<!-- font comparison table -->
+<!-- section id="fontsTab"><script>fontsCompareTable();</script></section -->
+
+<main>
+	<section id="splash" onclick="splashOff()">
+		<p>English is hard...<br/>But it can be understood through tough thorough thought, though!</p>
+	</section>
+
+	<section id="mainPage" style="display: none;">
+		<div>
+		<h2>English is hard</h2>
+		<p>English language is one of the hardest languages to learn, especially to adults learning English as a second language.</p>
+		<ul>
+		<li>If you are struggling with learning English as a second language, on this website you may find some (hopefully useful) tools that may help you learn English.</li>
+		<li>If you are a parent of a child who is struggling with learning how to read and write, on this website you may find some (hopefully useful) tools that may help your child become proficient with reading/writing.</li>
+		</ul>
+
+		<h4>Why is English so hard?</h4>
+
+		<ul>
+		<li>Contemporary English is only 15-30% of English</li>
+		<li>Written English is not phonemic. There is a huge discrepancy between spoken and written English. The alphabet contains 26 letters, but the phonemic alphabet contains above 40 phonems</li>
+		<li>Spelling rules were invented while English was still evolving</li>
+		<li>English is still evolving</li>
+		<li>English is highly fragmented</li>
+		<li>English dictrionary is larger than most languages</li>
+		<li>No logic in grouping words (idioms and phrasal verbs) - example "put: put up, put down, put up with"</li>
+		</ul>
+
+		<p>Learning English isn't just a question of learning the rules - it's about learning the many exceptions to the rules.</p>
+		<p>The numerous exceptions make it difficult to apply existing knowledge and use the same principle with a new word, s..</p>
+		</div>
+
+		<h3>List of 100 Most Commonly Used Words in English:</h3>
+		<p>the . of . and . a . to . in . is . you . that . it . he . was . for . on . are . as . with . his . they . I . at . be . this . have . from . or . one . had . by . word . but . not . what . all . were . we . when . your . can . said . there . use . an . each . which . she . do . how . their . if . will . up . other . about . out . many . then . them . these . so . some . her . would . make . like . him . into . time . has . look . two . more . write . go . see . number . no . way . could . people . my . than . first . water . been . call . who . oil . its . now . find . long . down . day . did . get . come . made . may . part.</p>
+
+	</section>
+</main>
+
+<footer><script>insertHTML(footerHtml);</script></footer>
 </body>
 </html>
+

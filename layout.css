@@ -1,0 +1,222 @@
+/* global CSS variables */
+:root {
+	--fontSizeText: 14pt;
+	--fontSizeHead: 28pt;
+	--fontFamilyText: Now;
+	--fontFamilyHead: Dangrek;
+	--lineHeight: 1.1;
+	--wordSpace: 1px;
+}
+
+html, body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* ---------- website layout (header + main + footer) ---------- */
+header {
+	position: relative;
+	background: #6A5ACD; /*slateblue*/ 
+	background-color: #6A5ACD; /*slateblue*/
+	font-weight: bold;
+}
+main {
+	flex: 1;
+	display: flex;
+	position: relative;
+	padding: 5px 10px; /* T-R-B-L */
+}
+footer {
+	position: relative;
+	background-color: #6A5ACD; /*slateblue*/
+	background: #6A5ACD; /*slateblue*/
+	text-align: center;
+}
+/* ---------- home & hamburger button/icon ---------- */
+header a.home {
+	display: inline-block;
+	float: left;
+	padding: 2px 25px; /* top & bottom = 2 - right & left = 12 */
+	margin: 0;
+	text-decoration: none;
+	font-family: Dangrek;
+	font-size: 19px;
+	color: white;
+	background-color: #6A5ACD; /*slateblue*/
+}
+header a.home:hover {
+	color: black;
+	background-color: silver;
+}
+header button.icon {
+	float: right;
+	display: inline-block;
+	border: none;
+	margin: 0;
+	padding: 2px 12px; /*top & bottom = 2 - right & left = 12 */
+	color: white;
+	background-color: #6A5ACD; /*slateblue*/
+	text-decoration: none;
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+}
+header button.icon:hover {
+	color: black;
+	background-color: silver; /* #c0c0c0; */
+}
+/*-------------------- footer-------------------- */
+footer div.copy {
+	display: inline-block;
+	font-size: 12px;
+	padding: 11px 20px;
+}
+footer button.icon {
+	float: right;
+	display: inline-block;
+	border: none;
+	color: black;
+	background-color: #6A5ACD; /*slateblue*/
+	text-decoration: none;
+	font-size: 28px;
+	font-weight: bold;
+	padding: 2px 12px; /* top & bottom = 2 - right&left = 12 */
+}
+footer button:hover {
+	background-color: silver;
+	color: black;
+}
+/* ---------- navigation menu - default: hidden ---------- */
+nav {
+	background-color: #444;
+	position: relative;
+	font-weight: bold;
+}
+nav #menuLinks {
+	display: none;
+}
+/* color of the bullets in the menu UL list */
+nav #menuLinks ul li::marker {
+	color: blue;
+}
+nav ul {
+	padding: 0% 5% 0% 5%;
+}
+nav li a {
+	display: block;
+	color: white;
+	margin: 3px 20px 3px 0px; /* top right bottom left */
+	padding: 12px 12px;
+	text-decoration: none;
+	font-size: 14pt;
+}
+/* grey background color on hover */
+nav a:hover {
+	background-color: silver;
+	color: black;
+}
+/* ---------- setup page (font size, etc) ---------- */
+#pageSetup {
+	display: none;  /* default = hidden */
+	margin: auto;
+	padding: 5px;
+}
+/* grid container for styles dialog */
+.grid-container {
+  display: grid;
+  width: 400px;
+  grid-template-columns: auto auto auto auto;
+  gap: 1px;
+  background-color: dodgerblue;
+  padding: 1px 1px;
+	align-items: center;
+}
+/* grid element styles */
+.grid-container > div {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 1px 1px;
+  font-size: 12pt;
+  text-align: center;
+	line-height: 2.0;
+}
+/* buttons for changing font size, line size, etc */
+button.pgSetup {
+	display: inline-block;
+	width: 32px;
+	color: black;
+	font-size: 14pt;
+  text-align: center;
+	border: 1px solid red;
+}
+
+/* ---------- splash screen ---------- */
+#splash {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+	width: 100%;
+}
+#splash p {
+	display: inline-block;
+	position: relative;
+}
+
+/* ---------- main page setup ---------- */
+main button.icon {
+	display: inline-block;
+	float: left;
+	border: none;
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	font-size: 28px;
+	font-weight: bold;
+}
+main button:hover {
+	background-color: #eef;
+	color: blue;
+}
+/* ---------- table styles ---------- */
+table {
+	border: 1px solid blue;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 7px;
+}
+th { 	background-color: LightSteelBlue; }
+td {
+	border: 0px solid black;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: left;
+}
+/* ---------- fonts size, line spacing, word spacing ---------- */
+main, section, article {
+	width: 100%;
+}
+main, div, p {
+	font-family:  var(--fontFamilyText);
+	font-size:    var(--fontSizeText);
+	line-height:  var(--lineHeight);
+  word-spacing: var(--wordSpace);
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--fontFamilyHead);
+	font-weight: bold;
+}
+h1 { font-size: var(--fontSizeHead); }
+h2 { font-size: calc(var(--fontSizeHead) / 1.3 ); }
+h3 { font-size: calc(var(--fontSizeHead) / 1.3 / 1.3 ); }
+h4 { font-size: calc(var(--fontSizeHead) / 1.3 / 1.3 / 1.2 ); }
+h5 { font-size: calc(var(--fontSizeHead) / 1.3 / 1.3 / 1.2 / 1.2 ); }
+h6 { font-size: calc(var(--fontSizeHead) / 1.3 / 1.3 / 1.2 / 1.2 / 1.1 ); }
+
