@@ -9,13 +9,15 @@ const menuItems = [
 ];
 
 const headerHtml = [
-	'<a href="./index.html" class="home" title="Back to homepage"><b>NeilRaiden.com</b></a>\n',
-	'<button class="icon" style="float:left" onclick="toggleBlock(\'pageSetup\')">&#x2699;</button>\n',
-	'<button class="icon"  onclick="toggleBlock(\'menuLinks\')">&#x2630;</button>\n' ];
+//	'<a href="./index.html" class="home" title="Back to homepage"><b>NeilRaiden.com</b></a>\n',
+	'<button style="padding:4px 32px;font-size:20px;"  onclick="location.href=\'./index.html\'" type="button"><span title="https://NeilRaiden.com">NeilRaiden.com</span></button>\n',
+	'<button style="padding:0px 12px;font-size:24px;"  onclick="toggleBlock(\'pageSetup\')"><span title="Styles preferences">&#x2699;</span></button>\n',
+	'<button style="padding:0px 12px;font-size:24px;float:right" onclick="toggleBlock(\'menuLinks\')">&#x2630;</button>\n' ];
 
 const footerHtml = [
-	'<div class="copy">Copyright &copy; 2025 NeilRaiden.com</div>\n',
-	'<button class="icon" onclick="toTop()">&#x1F51D;</a>\n' ];
+	'<div class="copy">Copyright &copy; 2025 NeilRaiden.com (AGPLv3)</div>\n',
+	'<button onclick="toTop()"><b><span title="Return to top"><span style="font-size:10pt">TOP</span>&#x2B06;</span></b></button>\n' ];
+//	'<button onclick="toTop()">&#x1F51D;</a>\n' ];
 
 const styleSetupHtml = [
 '<div class="grid-container">',
@@ -84,13 +86,14 @@ function insertFontPickers() {
 
 function fontsCompareTable() {
 	let style = "";
-	let code = '<table><tr><th>Font Name</th><th>Digits</th><th>alphabet</th><th>ALPHABET</th></tr>\n';
+	let code = '<table><tr><th>Font Name</th><th>Digits</th><th>alphabet</th><th>ALPHABET</th><th>Icons</th></tr>\n';
 	for (let i in fontList) {
 		style = '<td style="font-family:' + fontList[i].name + ';">';
 		code += '<tr><td>' + fontList[i].name + '</td>';
 		code += style + '0123456789</td>';
 		code += style + 'abcdefghijklmnopqrstuvwxyz</td>';
-		code += style + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ</td></tr>\n';
+		code += style + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>';
+		code += style + '&#x2b06; &#x1f51d; &#x2630; &#x2699;</td></tr>\n';
 	}
 	code += '</table>\n';
 	document.write(code);

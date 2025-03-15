@@ -19,6 +19,11 @@
 	src: url('./Dangrek-Regular.ttf') format('truetype');
 }
 @font-face {
+	font-family:EncodeSans_Expanded;
+	src: url('./EncodeSans_Expanded-Regular.ttf');
+	src: url('./EncodeSans_Expanded-Regular.ttf') format('truetype');
+}
+@font-face {
 	font-family:Gidole;
 	src: url('./Gidole-Regular.ttf');
 	src: url('./Gidole-Regular.ttf') format('truetype');
@@ -44,24 +49,24 @@
 	src: url('./NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSansSymbols2;
-	src: url('./NotoSansSymbols2-Regular.ttf');
-	src: url('./NotoSansSymbols2-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:NotoSansSymbols;
-	src: url('./NotoSansSymbols-Regular.ttf');
-	src: url('./NotoSansSymbols-Regular.ttf') format('truetype');
-}
-@font-face {
 	font-family:Now;
 	src: url('./Now-Regular.otf');
 	src: url('./Now-Regular.otf') format('opentype');
 }
 @font-face {
+	font-family:Onest;
+	src: url('./Onest-Light.ttf');
+	src: url('./Onest-Light.ttf') format('truetype');
+}
+@font-face {
 	font-family:OpenSans;
 	src: url('./OpenSans-Regular-webfont.ttf');
 	src: url('./OpenSans-Regular-webfont.ttf') format('truetype');
+}
+@font-face {
+	font-family:OpenSauceOne;
+	src: url('./OpenSauceOne-Light.ttf');
+	src: url('./OpenSauceOne-Light.ttf') format('truetype');
 }
 @font-face {
 	font-family:Oxygen;
@@ -72,6 +77,21 @@
 	font-family:RedditMono;
 	src: url('./RedditMono-Regular.ttf');
 	src: url('./RedditMono-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:RedditSansCondensed;
+	src: url('./RedditSansCondensed-Bold.ttf');
+	src: url('./RedditSansCondensed-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family:RedditSans;
+	src: url('./RedditSans-Regular.ttf');
+	src: url('./RedditSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:RedHatText;
+	src: url('./RedHatText-Regular.ttf');
+	src: url('./RedHatText-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family:RobotoMono;

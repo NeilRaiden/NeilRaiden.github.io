@@ -4,6 +4,7 @@
 	<title>NeilRaiden.com</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="blankfont.css">
 	<link rel="stylesheet" href="fonts.css">
 	<script src="fontlist.js"></script>
 <style>
@@ -35,7 +36,7 @@ td {
 let tab = "";
 let style = "";
 for (let i in fontList) {
-	style = '<td style="font-family:' + fontList[i].name + ';">';
+	style = '<td style="font-family:' + fontList[i].name + ',blank;">';
 
 	tab += '<tr><td>' + fontList[i].name + '</td><td>' + fontList[i].file + '</td>\n';
 	tab += style + '0123456789</td>';

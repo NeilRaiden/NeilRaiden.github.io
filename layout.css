@@ -37,35 +37,24 @@ footer {
 	text-align: center;
 }
 /* ---------- home & hamburger button/icon ---------- */
-header a.home {
-	display: inline-block;
+header button {
 	float: left;
-	padding: 2px 25px; /* top & bottom = 2 - right & left = 12 */
-	margin: 0;
-	text-decoration: none;
-	font-family: Dangrek;
-	font-size: 19px;
-	color: white;
-	background-color: #6A5ACD; /*slateblue*/
-}
-header a.home:hover {
-	color: black;
-	background-color: silver;
-}
-header button.icon {
-	float: right;
 	display: inline-block;
 	border: none;
 	margin: 0;
+	height: 48px;
 	padding: 2px 12px; /*top & bottom = 2 - right & left = 12 */
 	color: white;
 	background-color: #6A5ACD; /*slateblue*/
+	font-family: Dangrek;
+	line-height: 2;
 	text-decoration: none;
 	text-align: center;
-	font-size: 28px;
+/*	vertical-align: middle;*/
+	font-size: 20px;
 	font-weight: bold;
 }
-header button.icon:hover {
+header button:hover {
 	color: black;
 	background-color: silver; /* #c0c0c0; */
 }
@@ -73,9 +62,9 @@ header button.icon:hover {
 footer div.copy {
 	display: inline-block;
 	font-size: 12px;
-	padding: 11px 20px;
+	padding: 12px 19px;
 }
-footer button.icon {
+footer button {
 	float: right;
 	display: inline-block;
 	border: none;
@@ -200,10 +189,7 @@ td {
 	text-align: left;
 }
 /* ---------- fonts size, line spacing, word spacing ---------- */
-main, section, article {
-	width: 100%;
-}
-main, div, p {
+a, div, ul, li, p {
 	font-family:  var(--fontFamilyText);
 	font-size:    var(--fontSizeText);
 	line-height:  var(--lineHeight);
