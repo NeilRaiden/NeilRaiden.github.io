@@ -39,6 +39,11 @@
 	src: url('./GoudyBookletter1911-Regular.ttf') format('truetype');
 }
 @font-face {
+	font-family:Jost;
+	src: url('./Jost-Regular.ttf');
+	src: url('./Jost-Regular.ttf') format('truetype');
+}
+@font-face {
 	font-family:Lato;
 	src: url('./Lato-Regular.ttf');
 	src: url('./Lato-Regular.ttf') format('truetype');
@@ -102,6 +107,16 @@
 	font-family:Slabo27px;
 	src: url('./Slabo27px-Regular.ttf');
 	src: url('./Slabo27px-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:StintUltraCondensed;
+	src: url('./StintUltraCondensed-Regular.ttf');
+	src: url('./StintUltraCondensed-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:Ubuntu;
+	src: url('./Ubuntu-Regular.ttf');
+	src: url('./Ubuntu-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family:UbuntuSansMono;

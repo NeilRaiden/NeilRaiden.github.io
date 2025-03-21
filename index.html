@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="layout.css">
+	<link rel="stylesheet" href="styles.css">
 	<script src="fonts/fontlist.js"></script>
 	<script src="layout.js"></script>
 </head>
@@ -17,33 +18,129 @@
 <!-- hidden page with controls to personalize styles -->
 <div id="pageSetup"><script>webPageSetup();</script></div>
 <main>
-	<div id="splash" onclick="splashOff()">
-		<p>English is hard...<br/>But it can be understood through tough thorough thought, though!</p>
+
+<div id="splash" onclick="splashOff()">
+	<div>
+	<p>English is hard...<br>But it can be understood through tough thorough thought, though!</p>
+	<p style="text-align:right;">— <i>Anonymous</i></p>
+	<p style="color:gray;text-align:center;"><br>(Click or tap to enter)</p>
 	</div>
+</div>
 
-	<div id="mainPage" style="display: none;">
-		<h2>English is hard</h2>
-		<p>English language is one of the hardest languages to learn, especially to adults learning English as a second language.</p>
-		<ul>
-		<li>If you are struggling with learning English as a second language, on this website you may find some (hopefully useful) tools that may help you learn English.</li>
+<div id="mainPage" style="display: none;">
+
+	<h1>English is hard</h1>
+	<p>English language is one of the hardest languages to learn, especially to adults learning English as a second language.</p>
+	<ul>
+		<li>If you can read this, then obviously you can read English. But you may be struggling with reading or pronunciation. Or, you may know someone else who does and you are trying to help that person. On this website you may find some tools that may be able to help you (or your friend, your child, your student,...) in improving spoken English.</li>
 		<li>If you are a parent of a child who is struggling with learning how to read and write, on this website you may find some (hopefully useful) tools that may help your child become proficient with reading/writing.</li>
-		</ul>
+	</ul>
 
-		<h4>Why is English so hard?</h4>
+	<h4>Why is English so hard?</h4>
+	<ul>
+		<li><a href="#tweny">English is only about 25% English.</a></li>
+		<li><a href="#alpha">English Alphabet</a></li>
+		<!-- li><a href="#evolv">English orthography was normalized while English was still evolving.</a></li -->
+		<li><a href="#phone">Written English is not phonemic.</a></li>
+		<li><a href="#still">English is still evolving</a></li>
+		<li><a href="#fragm">English is highly fragmented</a></li>
+		<li><a href="#large">English dictrionary is larger than most languages</a></li>
+		<li><a href="#logic">No logic in grouping words (compound words, idioms and phrasal verbs) - example "put: put up, put down, put up with"</a></li>
+	</ul>
 
+	<h2 id="tweny">English is only about 25% English:</h2>
+		<p>Over the last 1,000 years or so, English borrowed and collected words from many other European languages.</p>
+		<p>It is estimated that the origins of words in contemporary English are as follows:</p>
 		<ul>
-		<li>Contemporary English is only 15-30% English</li>
-		<li>Written English is not phonemic. There is a huge discrepancy between spoken and written English. The alphabet contains 26 letters, but the phonemic alphabet contains above 40 phonems</li>
-		<li>Spelling rules were invented while English was still evolving</li>
-		<li>English is still evolving</li>
-		<li>English is highly fragmented</li>
-		<li>English dictrionary is larger than most languages</li>
-		<li>No logic in grouping words (compound words, idioms and phrasal verbs) - example "put: put up, put down, put up with"</li>
+			<li>French, including Old French and early Anglo-French: <b>28.3%</b></li>
+			<li>Latin, including modern scientific and technical Latin: <b>28.24%</b></li>
+			<li>Old and Middle English, Old Norse, and Dutch: <b>25%</b></li>
+			<li>Greek: <b>5.32%</b></li>
+			<li>Unknown etymology: <b>4.03%</b></li>
+			<li>Derived from proper names: <b>3.28%</b></li>
+			<li>All other languages contributed less than <b>1%</b></li>
 		</ul>
+		<p>
+		While all languages also borrow and adopt words from other languages, they tend to modify their writing to adhere to their own spelling rules.
+		</p>
+		<p>
+		In English many of the adopted words are still written according to the spelling rules of the original language.
+		</p>
 
-		<p>Learning English isn't just a question of learning the rules - it's about learning the many exceptions to the rules.</p>
-		<p>The numerous exceptions make it difficult to apply existing knowledge and use the same principle with a new word, s..</p>
+	<h2 id="alpha">English Alphabet</h2>
+	<p>
+	<a href="https://en.wikipedia.org/wiki/Modern_English">Modern English</a> is written with a Latin-script alphabet consisting of 26 letters, with each having both uppercase and lowercase forms.
+	</p>
+	<!-- ul>
+		<li>Vowels: A · B · C · D · E · F · G · H · I · J · K · L · M · N · O · P · Q · R · S · T · U · V · W · X · Y · Z</li>
+		<li>Lowercase: a · b · c · d · e · f · g · h · i · j · k · l · m · n · o · p · q · r · s · t · u · v · w · x · y · z</li>
+	</ul -->
+	<table class="alphabet">
+		<tr><th>Uppercase</th><th>Lowercase</th><th>Name<br>(spelling)</th><th>Name<br>(phonetic)</th></tr>
+		<tr><td>A</td><td>a</td><td>a</td><td>/ˈeɪ/</td></tr>
+		<tr><td>B</td><td>b</td><td>bee</td><td>/ˈbiː/</td></tr>
+		<tr><td>C</td><td>c</td><td>cee</td><td>/ˈsiː/</td></tr>
+		<tr><td>D</td><td>d</td><td>dee</td><td>/ˈdiː/</td></tr>
+		<tr><td>E</td><td>e</td><td>e</td><td>/ˈiː/</td></tr>
+		<tr><td>F</td><td>f</td><td>eff</td><td>/ˈɛf/</td></tr>
+		<tr><td>G</td><td>g</td><td>gee</td><td>/ˈdʒiː/</td></tr>
+		<tr><td>H</td><td>h</td><td>aitch</td><td>/ˈeɪtʃ/</td></tr>
+		<tr><td>I</td><td>i</td><td>i</td><td>/ˈaɪ/</td></tr>
+		<tr><td>J</td><td>j</td><td>jay</td><td>/ˈdʒeɪ/</td></tr>
+		<tr><td>K</td><td>k</td><td>kay</td><td>/ˈkeɪ/</td></tr>
+		<tr><td>L</td><td>l</td><td>ell</td><td>/ˈɛl/</td></tr>
+		<tr><td>M</td><td>m</td><td>em</td><td>/ˈɛm/</td></tr>
+		<tr><td>N</td><td>n</td><td>en</td><td>/ˈɛn/</td></tr>
+		<tr><td>O</td><td>o</td><td>o</td><td>/ˈoʊ/</td></tr>
+		<tr><td>P</td><td>p</td><td>pee</td><td>/ˈpiː/</td></tr>
+		<tr><td>Q</td><td>q</td><td>cue</td><td>/ˈkjuː/</td></tr>
+		<tr><td>R</td><td>r</td><td>ar</td><td>/ˈɑːr/</td></tr>
+		<tr><td>S</td><td>s</td><td>ess</td><td>/ˈɛs/</td></tr>
+		<tr><td>T</td><td>t</td><td>tee</td><td>/ˈtiː/</td></tr>
+		<tr><td>U</td><td>u</td><td>u</td><td>/ˈjuː/</td></tr>
+		<tr><td>V</td><td>v</td><td>vee</td><td>/ˈviː/</td></tr>
+		<tr><td>W</td><td>w</td><td>double-u</td><td>/ˈdʌbəl.juː/</td></tr>
+		<tr><td>X</td><td>x</td><td>ex</td><td>/ˈɛks/</td></tr>
+		<tr><td>Y</td><td>y</td><td>wy</td><td>/ˈwaɪ/</td></tr>
+		<tr><td>Z</td><td>z</td><td>zee (US)</td><td>/ˈziː/</td></tr>
+		<tr><td>Z</td><td>z</td><td>zed (UK)</td><td>/ˈzɛd/</td></tr>
+	</table>
 
+	<p>
+	Two letters may be confusing, lowercase A and G.
+
+	</p>
+
+	<!--
+	<blockquote class="bq2">
+		An <a href="https://en.wikipedia.org/wiki/Orthography">orthography</a> is a set of conventions for writing a language, including norms of spelling, punctuation, word boundaries, capitalization, hyphenation, and emphasis.
+	</blockquote>
+
+	<h2 id="phone">Written English is not phonemic</h2>
+	<p>There is a huge discrepancy between spoken and written English. The alphabet contains 26 letters, but the phonemic alphabet contains above 40 phonems:</p>
+	<ul>
+		<li>General American: 40 phonemes (24 consonants, 16 vowels)</li>
+		<li>Received Pronunciation (British): 44 phonemes (24 consonants, 20 vowels). </p>
+	<p>.gɡ·ɛʤ..</p>
+
+
+	<h2 id="still">English is still evolving</h2>
+	<p>For example: the American <i>father-bother</i> merger. Reportedly started around 1900-1920 and spread across American, but in recend decadedsit is reportedly reversing.</p>
+
+<h2 id="fragm">English is highly fragmented</h2>
+	<p>...</p>
+
+<h2 id="large">English dictrionary is larger than most languages</h2>
+	<p>...</p>
+
+<h2 id="logic">No logic in grouping words (compound words, idioms and phrasal verbs) - example "put: put up, put down, put up with"</h2>
+	<p>...</p>
+
+-->
+	<p>Learning English isn't just a question of learning the rules - it's about learning the many exceptions to the rules.</p>
+	<p>The numerous exceptions make it difficult to apply existing knowledge and use the same principle with a new word, s..</p>
+
+    <p>Return to the <a href="#mainPage">top</a>.</p>
 
 	</div>
 </main>

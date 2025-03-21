@@ -6,6 +6,7 @@ EncodeSans_Expanded-Regular.ttf
 Gidole-Regular.ttf
 Gidolinya-Regular.otf
 GoudyBookletter1911-Regular.ttf
+Jost-Regular.ttf
 Lato-Regular.ttf
 NotoSans-Regular.ttf
 Now-Regular.otf
@@ -19,6 +20,8 @@ RedditSans-Regular.ttf
 RedHatText-Regular.ttf
 RobotoMono-Regular.ttf
 Slabo27px-Regular.ttf
+StintUltraCondensed-Regular.ttf
+Ubuntu-Regular.ttf
 UbuntuSansMono-Regular.ttf
 Virgil.woff2
 YanoneKaffeesatz-Regular.ttf

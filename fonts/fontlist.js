@@ -7,6 +7,7 @@ var fontList = [
 	{ name:"Gidole", file:'Gidole-Regular.ttf'},
 	{ name:"Gidolinya", file:'Gidolinya-Regular.otf'},
 	{ name:"GoudyBookletter1911", file:'GoudyBookletter1911-Regular.ttf'},
+	{ name:"Jost", file:'Jost-Regular.ttf'},
 	{ name:"Lato", file:'Lato-Regular.ttf'},
 	{ name:"NotoSans", file:'NotoSans-Regular.ttf'},
 	{ name:"Now", file:'Now-Regular.otf'},
@@ -20,6 +21,8 @@ var fontList = [
 	{ name:"RedHatText", file:'RedHatText-Regular.ttf'},
 	{ name:"RobotoMono", file:'RobotoMono-Regular.ttf'},
 	{ name:"Slabo27px", file:'Slabo27px-Regular.ttf'},
+	{ name:"StintUltraCondensed", file:'StintUltraCondensed-Regular.ttf'},
+	{ name:"Ubuntu", file:'Ubuntu-Regular.ttf'},
 	{ name:"UbuntuSansMono", file:'UbuntuSansMono-Regular.ttf'},
 	{ name:"Virgil", file:'Virgil.woff2'},
 	{ name:"YanoneKaffeesatz", file:'YanoneKaffeesatz-Regular.ttf'}];

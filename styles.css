@@ -1,0 +1,31 @@
+table.alphabet {
+	font-family: NotoSans;
+}
+table.alphabet th, td {
+	text-align: center;
+/*	font-size:10pt;*/
+	padding: 3px 8px 3px 8px;
+	font-size: var(--fontSizeText);
+}
+table.alphabet tr:hover {
+  background-color: lightgrey;
+}
+
+blockquote.bq1 {
+	font-family: NotoSans;
+  border-left: 3px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+} 
+blockquote.bq2 {
+/*	font-family: NotoSans;*/
+	color: gray;
+	border: 1px solid blue;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 10px 10px 10px;
+	border-radius: 7px;
+}
