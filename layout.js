@@ -3,8 +3,9 @@ const menuItems = [
 /*	{ item:'Learning English',      link:'learn.html'},
 	{ item:'Phonetic Dictionaries', link:'dicts.html'},
 	{ item:'Phonetic Spellchecks',  link:'spell.html'},
-	{ item:'Keyboard Layouts',      link:'layouts.html'},
-	{ item:'Site-map',              link:'sitemap.html'},*/
+	{ item:'Keyboard Layouts',      link:'layouts.html'},*/
+	{ item:'Home',                  link:'index.html'},
+	{ item:'Site-map',              link:'sitemap.html'},
 	{ item:'About',                 link:'about.html'}
 ];
 
