@@ -1,14 +1,22 @@
+Antonio-Bold.ttf
 Arvo-Regular.ttf
 Barlow-Regular.ttf
 ComicNeue-Regular.ttf
 Dangrek-Regular.ttf
+Dosis-VariableFont_wght.ttf
+EBH Facsimile.otf
 EncodeSans_Expanded-Regular.ttf
 Gidole-Regular.ttf
 Gidolinya-Regular.otf
 GoudyBookletter1911-Regular.ttf
 Jost-Regular.ttf
 Lato-Regular.ttf
+MouseMemoirs-Regular.ttf
+NotoSansMono_ExtraCondensed-Regular.ttf
+NotoSansMono-Regular.ttf
 NotoSans-Regular.ttf
+NotoSansRunic-Regular.ttf
+NotoSansShavian-Regular.ttf
 Now-Regular.otf
 Onest-Light.ttf
 OpenSans-Regular-webfont.ttf

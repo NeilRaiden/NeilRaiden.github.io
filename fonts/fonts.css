@@ -1,4 +1,9 @@
 @font-face {
+	font-family:Antonio;
+	src: url('./Antonio-Bold.ttf');
+	src: url('./Antonio-Bold.ttf') format('truetype');
+}
+@font-face {
 	font-family:Arvo;
 	src: url('./Arvo-Regular.ttf');
 	src: url('./Arvo-Regular.ttf') format('truetype');
@@ -17,6 +22,16 @@
 	font-family:Dangrek;
 	src: url('./Dangrek-Regular.ttf');
 	src: url('./Dangrek-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:Dosis;
+	src: url('./Dosis-VariableFont_wght.ttf');
+	src: url('./Dosis-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+	font-family:EBH Facsimile;
+	src: url('./EBH Facsimile.otf');
+	src: url('./EBH Facsimile.otf') format('opentype');
 }
 @font-face {
 	font-family:EncodeSans_Expanded;
@@ -49,9 +64,34 @@
 	src: url('./Lato-Regular.ttf') format('truetype');
 }
 @font-face {
+	font-family:MouseMemoirs;
+	src: url('./MouseMemoirs-Regular.ttf');
+	src: url('./MouseMemoirs-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:NotoSansMono_ExtraCondensed;
+	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf');
+	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:NotoSansMono;
+	src: url('./NotoSansMono-Regular.ttf');
+	src: url('./NotoSansMono-Regular.ttf') format('truetype');
+}
+@font-face {
 	font-family:NotoSans;
 	src: url('./NotoSans-Regular.ttf');
 	src: url('./NotoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:NotoSansRunic;
+	src: url('./NotoSansRunic-Regular.ttf');
+	src: url('./NotoSansRunic-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:NotoSansShavian;
+	src: url('./NotoSansShavian-Regular.ttf');
+	src: url('./NotoSansShavian-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family:Now;
