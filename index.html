@@ -240,42 +240,53 @@ const phonUSB = [
 	 'æ',   'ʃ',  'ər',  'aɪ',  '·',  'ð',  'dʒ',  '«',   '»',  ':', '\"',
 	 'ʒ',  'ɛr', 'ɪər',  'ju',  '⸰',  'ŋ',   'u',  '‹',   '›',  '?'     ];
 const phonUSC = [ 
-	 '´',   '¹',   '²',   '³',  '⁴',  '⁵',  '⁶',   '⁷',   '⁸',  '⁹',  '⁰', '→',  '≠',
-	 '…',   'ʍ',   'ɜ',   'ɹ',   '',   '',  '↑',   'ˈ',    '',   '',  '⟨', '⟩',  '•',
-	 '“',   '”',   '↓',   '°',   '',  '‐',  'ʤ',   'ˌ',   'ɫ',  'ː',  '×',
-	 '‘',   '’',   'ʧ',   '⁃',  '·',  '–',  '—',   '<',   '>',  '÷'     ];
+	 '´',  '¹',  '²',  '³',  '⁴',  '⁵',  '⁶',  '⁷',  '⁸',  '⁹',  '⁰', '→', '≠',
+	 '…',  'ʍ',  'e',  'ʳ',  'ɾ',   '',  '↑',   '',   '',   '',  '⟨', '⟩', '•',
+	 '“',  '”',  '↓',  '°',  'ʔ',  '‐',  'ʤ',  '≤',  '≥',  'ː',  '×',
+	 '‘',  '’',  'ʧ',  '⁃',  '○',  '–',  '—',  '<',  '>',  '÷'     ];
+// old:
+//	 '´',   '¹',   '²',   '³',  '⁴',  '⁵',  '⁶',   '⁷',   '⁸',  '⁹',  '⁰', '→',  '≠',
+//	 '…',   'ʍ',   'ɜ',   'ɹ',   '',   '',  '↑',   'ˈ',    '',   '',  '⟨', '⟩',  '•',
+//	 '“',   '”',   '↓',   '°',   '',  '‐',  'ʤ',   'ˌ',   'ɫ',  'ː',  '×',
+//	 '‘',   '’',   'ʧ',   '⁃',  '·',  '–',  '—',   '<',   '>',  '÷'     ];
 const phonUSD = [ 
-	 '≈',   '₁',   '₂',   '₃',  '₄',  '₅',  '₆',   '₇',   '₈',   '₉',  '₀', '←',  '±',
-	 '⌜',   '⌝',   '⌞',   '⌟',   '',   '',   '',    '',    '',   'π',  '⟮', '⟯',  '◦',
-	  '',    '',    '',    '',   '',  '‑',   '',    '',    '',   '§',  '☒',
-	  '',    '',    '',    '',  '○',   '',  'µ',   '☺',   '☐',   '☑'    ];
+	 '≈',  '₁',  '₂',  '₃',  '₄',  '₅',  '₆',  '₇',  '₈',  '₉',  '₀', '←', '±',
+	 '⋯',   '',  'ɜ',  'ɹ',   '',   '',   '',   '',   '',   '',  '⟮', '⟯', '◦',
+	 'ɐ',  '☺',  'ɚ',   '',  'ˀ',  'ʰ',  'ˈ',  'ˌ',  'ɫ',  '§',  '☒',
+	  '',  'ɝ',   '',   '',  '◌',   '',   '',   '',  '☐',  '☑'    ];
+// old:
+//	 '≈',   '₁',   '₂',   '₃',  '₄',  '₅',  '₆',   '₇',   '₈',   '₉',  '₀', '←',  '±',
+//	 '⌜',   '⌝',   '⌞',   '⌟',   '',   '',   '',    '',    '',   'π',  '⟮', '⟯',  '◦',
+//	  '',    '',    '',    '',   '',  '‑',   '',    '',    '',   '§',  '☒',
+//	  '',    '',    '',    '',  '○',   '',  'µ',   '☺',   '☐',   '☑'    ];
 
 // UK Phonemic
 const phonUKA = [ 
-	 '`',   '1',   '2',   '3',  '4',  '5',   '6',  '7',   '8',  '9',   '0', '-',  '=',
-	'ɔɪ',   'w',   'ɛ',   'r',  't', 'ɑː',   'ʌ',  'ɪ',   'ɒ',  'p',   '[', ']', '\\',
-	 'ə',   's',   'd',   'f',  'ɡ',  'h',   'j',  'k',   'l',  ';',   "'",
-	 'z', 'ɜːr',  'tʃ',   'v',  'b',  'n',   'm',  ',',   '.',  '/'      ];
+	 '`',  '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9',  '0', '-', '=',
+	'ɔɪ',  'w',  'ɛ',  'r',  't', 'ɑː',  'ʌ',  'ɪ',  'ɒ',  'p',  '[', ']','\\',
+	 'ə',  's',  'd',  'f',  'ɡ',  'h',  'j',  'k',  'l',  ';',  "'",
+	 'z','ɜːʳ', 'tʃ',  'v',  'b',  'n',  'm',  ',',  '.',  '/'      ];
 const phonUKB = [ 
-	 '~',   '!',   '@',   '#',  '$',  '%',   '^',  '&',   '*',   '(',  ')', '_',  '+',
-	'aʊ',  'ɪə',  'eɪ', 'ɑːr',  'θ', 'ɔː',   'ʊ', 'iː',  'əʊ', 'ɔːr',  '⟨', '⟩',  '|',
-	 'æ',   'ʃ',  'ər',  'aɪ',  '·',  'ð',  'dʒ',  '«',   '»',   'ː', '\"',
-	 'ʒ', 'ɛər', 'ɪər', 'juː',  '⸰',  'ŋ',  'uː',  '‹',   '›',   '?'     ];
-const phonUKC = [ 
-	 '´',   '¹',   '²',   '³',  '⁴',  '⁵',  '⁶',   '⁷',   '⁸',   '⁹',  '⁰', '→',  '≠',
-	 '…',   'ʍ',   'ɜ',   'ɹ',   '',   '',  '↑',   'ˈ',    '',    '',  '{', '}',  '•',
-	 '“',   '”',   '↓',   '°',   '',  '‐',  'ʤ',   'ˌ',   'ɫ',   ':',  '×',
-	 '‘',   '’',   'ʧ',   '⁃',  '·',  '–',  '—',   '<',   '>',   '÷'     ];
-const phonUKD = [ 
-	 '≈',   '₁',   '₂',   '₃',  '₄',  '₅',  '₆',   '₇',   '₈',    '₉',  '₀', '←',  '±',
-	 '⌜',   '⌝',   '⌞',   '⌟',   '',   '',   '',    '',    '',    'π',  '⟮', '⟯',  '◦',
-	  '',    '',    '',    '',   '',  '‑',   '',    '',    '',    '§',  '☒',
-	  '',    '',    '',    '',  '○',   '',  'µ',   '☺',   '☐',    '☑'    ];
-
-// TODO : revise "UK Phonemic", copy and create "UK non-rhotic"
+	 '~',  '!',  '@',  '£',  '$',  '%',  '^',  '&',  '*',  '(',  ')', '_', '+',
+	'aʊ', 'ɪə', 'eɪ','ɑːʳ',  'θ', 'ɔː',  'ʊ', 'iː', 'əʊ','ɔːʳ',  '{', '}', '|',
+	 'æ',  'ʃ', 'əʳ', 'aɪ',  '·',  'ð', 'dʒ',  '«',  '»',  ':', '\"',
+	 'ʒ','eəʳ','ɪəʳ','juː',  '⸰',  'ŋ', 'uː',  '‹',  '›',  '?'     ];
+//const phonUKC = phonUSC
+//const phonUKD = phonUSD
 
 // UK non-rhotic
-
+const rhotUKA = [ 
+	 '`',  '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9',  '0', '-', '=',
+	'ɔɪ',  'w',  'ɛ',  'r',  't', 'ɑː',  'ʌ',  'ɪ',  'ɒ',  'p',  '[', ']','\\',
+	 'ə',  's',  'd',  'f',  'ɡ',  'h',  'j',  'k',  'l',  ';',  "'",
+	 'z','ɜːr', 'tʃ',  'v',  'b',  'n',  'm',  ',',  '.',  '/'      ];
+const rhotUKB = [ 
+	 '~',  '!',  '@',  '£',  '$',  '%',  '^',  '&',  '*',  '(',  ')', '_', '+',
+	'aʊ', 'ɪə', 'eɪ','ɑːr',  'θ', 'ɔː',  'ʊ', 'iː', 'əʊ','ɔːr',  '{', '}', '|',
+	 'æ',  'ʃ', 'ər', 'aɪ',  '·',  'ð', 'dʒ',  '«',  '»',  ':', '\"',
+	 'ʒ','eər','ɪər','juː',  '⸰',  'ŋ', 'uː',  '‹',  '›',  '?'     ];
+//const rhoticUKC = phonUKC
+//const rhoticUKD = phonUKD 
 
 // ESL layout
 const eslA = [
@@ -392,7 +403,8 @@ function layoutSwitch(laiout) {
   	document.getElementById(currentLayout + 'Desc').style.display = 'block';
 	switch(laiout) {
 		case "phonemus" : keysA=phonUSA; keysB=phonUSB; keysC=phonUSC; keysD=phonUSD; kbName="US Phonemic"; cheat=1; break;
-		case "phonemuk" : keysA=phonUKA; keysB=phonUKB; keysC=phonUKC; keysD=phonUKD; kbName="UK Phonemic"; cheat=1; break;
+		case "phonemuk" : keysA=phonUKA; keysB=phonUKB; keysC=phonUSC; keysD=phonUSD; kbName="UK Phonemic"; cheat=1; break;
+		case "rhoticuk" : keysA=rhotUKA; keysB=rhotUKB; keysC=phonUSC; keysD=phonUSD; kbName="UK Rhotic";   cheat=1; break;
 		case "esl"      : keysA=eslA;    keysB=eslB;    keysC=eslC;    keysD=eslD;    kbName="ESL";         cheat=0; break; 
 	}
 
@@ -1038,6 +1050,7 @@ var keysD = phonUSD;
 <div class="divtab">
 	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('phonemus')" >US Phonemic</button></div></div>
 	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('phonemuk')" >UK Phonemic</button></div></div>
+	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('rhoticuk')" >UK Rhotic</button></div></div>
 	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('esl')"      >ESL</button></div></div>
 	<!-- div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('custom')"    >Your Custom Layout</button></div></div -->
 </div>
@@ -1049,18 +1062,30 @@ var keysD = phonUSD;
 <div class="divcell"> <!-- style="width:600px;"> -->
 	<div id="phonemusDesc" class="desc" style="display:block;">
 		<h3>US Phonemic</h3>
-		<p>With this layout you can type in English with IPA symbols.<br />
-		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br /></p>
+		<p>With this layout you can type in American English (GA) using IPA symbols.<br />
+		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br />
+			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+		</p>
 	</div>
 	<div id="phonemukDesc" class="desc" style="display:none;">
-		<h3>US Phonemic</h3>
-		<p>With this layout you can type in English with IPA symbols.<br />
-		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br /></p>
+		<h3>UK Phonemic</h3>
+		<p>With this layout you can type in non-rhotic British English (RP) using IPA symbols.<br />
+		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br />
+			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+		</p>
+	</div>
+
+	<div id="rhoticukDesc" class="desc" style="display:none;">
+		<h3>UK Rhotic</h3>
+		<p>With this layout you can type in <b>rhotic</b> British English using IPA symbols.<br />
+		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br />
+			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+		</p>
 	</div>
 	<div id="eslDesc" class="desc" style="display:none;">
 		<h3>ESL</h3>
-		<p>With this layout you can type in English with IPA symbols.<br />
-		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Standard QWERTY layout.<br />
+		<p>This layout is meant for people who only occasionally need to type IPA symbols.<br>
+		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Standard QWERTY layout.<br>
 		   The AltGr and AltGr+Shift layers (Layer 3 &amp; 4) contain all English phonemes that may be
 		   needed by an ESL tutor.
 		</p>
@@ -1222,6 +1247,29 @@ var keysD = phonUSD;
 	</div>
 </div>
 
+<!-- IPA notation cmparison table -->
+<div id="IPAcomparison"  class="divtab"  style="display:block;margin-left:auto;margin-right:auto;"> 
+	<div class="divrow">
+		<div class="divcell" style="padding:20px;">
+				<h4>Differences between US and UK notations:</h4>
+				<p> </p>
+				<table style="font-weight:normal">
+						<tr><th>UK (RP)</th><th>UK (rhotic)</th><th>US (GA)</th><tr>
+						<tr><td>ɑː </td><td>ɑː </td><td>ɑ </td></tr>
+						<tr><td>ɔː </td><td>ɔː </td><td>ɔ </td></tr>
+						<tr><td>uː </td><td>uː </td><td>u </td></tr>
+						<tr><td>iː </td><td>iː </td><td>i </td></tr>
+						<tr><td>ɑːʳ</td><td>ɑːr</td><td>ɑr</td></tr>
+						<tr><td>ɔːʳ</td><td>ɔːr</td><td>ɔr</td></tr>
+						<tr><td>ɜːʳ</td><td>ɜːr</td><td>ɜr</td></tr>
+						<tr><td>əʊ </td><td>əʊ </td><td>ɔʊ</td></tr>
+						<tr><td>ʊəʳ</td><td>ʊər</td><td>ʊr</td></tr>
+						<tr><td>eəʳ</td><td>eər</td><td>er</td></tr>
+				</table>
+			<p><button class="bton" onclick="document.getElementById('IPAcomparison').style.display='none';">Close</button></p>
+		</div>
+	</div>
+</div>
 
 <!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
 <script> 
