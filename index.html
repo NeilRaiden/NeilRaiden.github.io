@@ -46,8 +46,8 @@
 }
 
 /* ----------- styles ----------- */
-body { 
-	font-family: var(--defaultfont), Noto; 
+body {
+	font-family: var(--defaultfont), Noto;
 /*	font-family: var(--defaultfont), Segoe; * / for Windows */
 /*	background-color: transparent; */
 	background-color: rgba(232, 232, 255, 0.9);
@@ -71,7 +71,7 @@ ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
 
 textarea {
-	font-family: var(--defaultfont), Segoe; 
+	font-family: var(--defaultfont), Segoe;
 	font-size: 14pt;
 	margin-left: auto;
 	margin-right: auto;
@@ -114,7 +114,13 @@ td {
 /*	border-style: none none solid none; */
 }
 
-.DELETErounded-corners tr td:hover {	background-color: RoyalBlue; }
+button {
+/*	font-family: var(--defaultfont), Noto;
+	font-size: var(--keyfontsize); */
+	font-weight: bold;
+	padding-right: 5px;
+	padding-left: 5px;
+}
 
 .bton {
 /*	background-color: Silver;
@@ -207,39 +213,39 @@ const qwertyB = [
 	'Z','X','C','V','B','N','M','<','>','?' ];
 
 // English Writer (&#x0301 - combining acute mark on layerC:keyE example:⟨é⟩)
-const writerA = [ 
+const writerA = [
 	'`','1','2','3','4','5','6','7','8','9','0','-','=',
 	'q','w','e','r','t','y','u','i','o','p','[',']','\\',
 	'a','s','d','f','g','h','j','k','l',';','\'',
 	'z','x','c','v','b','n','m',',','.','/' ];
-const writerB = [ 
+const writerB = [
 	'~','!','@','#','$','%','^','&','*','(',')','_','+',
 	'Q','W','E','R','T','Y','U','I','O','P','{','}','|',
 	'A','S','D','F','G','H','J','K','L',':','\"',
 	'Z','X','C','V','B','N','M','<','>','?' ];
-const writerC = [ 
+const writerC = [
 	'´','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁰','→','≠',
 	'…','⋯','́','®','™','√','↑','','','℗','⟨','⟩','•',
 	'“','”','↓','°','','‐','','«','»','§','×',
 	'‘','’','©','⁃','·','–','—','‹','›','÷' ];
-const writerD = [ 
+const writerD = [
 	'≈','₁','₂','₃','₄','₅','₆','₇','₈','₉','₀','←','±',
 	'⌜','⌝','⌞','⌟', '', '', '','ˈ', '','π','⟮','⟯','◦',
 	 '', '', '', '', '','‑', '','ˌ', '','ː','☒',
 	 '', '','¢', '','○', '','µ','☺','☐','☑' ];
 
 // US Phonemic
-const phonUSA = [ 
+const phonUSA = [
 	 "`",   "1",   "2",   "3",  '4',  '5',   '6',  '7',   '8',  '9',   '0', '-',  '=',
 	'ɔɪ',   'w',   'ɛ',   'r',  't',  'ɑ',   'ʌ',  'ɪ',   'ɒ',  'p',   '[', ']', '\\',
 	 'ə',   's',   'd',   'f',  'ɡ',  'h',   'j',  'k',   'l',  ';',   "'",
 	 'z',  'ɜr',  'tʃ',   'v',  'b',  'n',   'm',  ',',   '.',  '/'      ];
-const phonUSB = [ 
+const phonUSB = [
 	 '~',   '!',   '@',   '#',  '$',  '%',   '^',  '&',   '*',  '(',  ')', '_',  '+',
 	'aʊ',  'ɪə',  'eɪ',  'ɑr',  'θ',  'ɔ',   'ʊ',  'i',  'ɔʊ', 'ɔr',  '{', '}',  '|',
 	 'æ',   'ʃ',  'ər',  'aɪ',  '·',  'ð',  'dʒ',  '«',   '»',  ':', '\"',
 	 'ʒ',  'ɛr', 'ɪər',  'ju',  '⸰',  'ŋ',   'u',  '‹',   '›',  '?'     ];
-const phonUSC = [ 
+const phonUSC = [
 	 '´',  '¹',  '²',  '³',  '⁴',  '⁵',  '⁶',  '⁷',  '⁸',  '⁹',  '⁰', '→', '≠',
 	 '…',  'ʍ',  'e',  'ʳ',  'ɾ',   '',  '↑',   '',   '',   '',  '⟨', '⟩', '•',
 	 '“',  '”',  '↓',  '°',  'ʔ',  '‐',  'ʤ',  '≤',  '≥',  'ː',  '×',
@@ -249,7 +255,7 @@ const phonUSC = [
 //	 '…',   'ʍ',   'ɜ',   'ɹ',   '',   '',  '↑',   'ˈ',    '',   '',  '⟨', '⟩',  '•',
 //	 '“',   '”',   '↓',   '°',   '',  '‐',  'ʤ',   'ˌ',   'ɫ',  'ː',  '×',
 //	 '‘',   '’',   'ʧ',   '⁃',  '·',  '–',  '—',   '<',   '>',  '÷'     ];
-const phonUSD = [ 
+const phonUSD = [
 	 '≈',  '₁',  '₂',  '₃',  '₄',  '₅',  '₆',  '₇',  '₈',  '₉',  '₀', '←', '±',
 	 '⋯',   '',  'ɜ',  'ɹ',   '',   '',   '',   '',   '',   '',  '⟮', '⟯', '◦',
 	 'ɐ',  '☺',  'ɚ',   '',  'ˀ',  'ʰ',  'ˈ',  'ˌ',  'ɫ',  '§',  '☒',
@@ -261,12 +267,12 @@ const phonUSD = [
 //	  '',    '',    '',    '',  '○',   '',  'µ',   '☺',   '☐',   '☑'    ];
 
 // UK Phonemic
-const phonUKA = [ 
+const phonUKA = [
 	 '`',  '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9',  '0', '-', '=',
 	'ɔɪ',  'w',  'ɛ',  'r',  't', 'ɑː',  'ʌ',  'ɪ',  'ɒ',  'p',  '[', ']','\\',
 	 'ə',  's',  'd',  'f',  'ɡ',  'h',  'j',  'k',  'l',  ';',  "'",
 	 'z','ɜːʳ', 'tʃ',  'v',  'b',  'n',  'm',  ',',  '.',  '/'      ];
-const phonUKB = [ 
+const phonUKB = [
 	 '~',  '!',  '@',  '£',  '$',  '%',  '^',  '&',  '*',  '(',  ')', '_', '+',
 	'aʊ', 'ɪə', 'eɪ','ɑːʳ',  'θ', 'ɔː',  'ʊ', 'iː', 'əʊ','ɔːʳ',  '{', '}', '|',
 	 'æ',  'ʃ', 'əʳ', 'aɪ',  '·',  'ð', 'dʒ',  '«',  '»',  ':', '\"',
@@ -275,18 +281,18 @@ const phonUKB = [
 //const phonUKD = phonUSD
 
 // UK non-rhotic
-const rhotUKA = [ 
+const rhotUKA = [
 	 '`',  '1',  '2',  '3',  '4',  '5',  '6',  '7',  '8',  '9',  '0', '-', '=',
 	'ɔɪ',  'w',  'ɛ',  'r',  't', 'ɑː',  'ʌ',  'ɪ',  'ɒ',  'p',  '[', ']','\\',
 	 'ə',  's',  'd',  'f',  'ɡ',  'h',  'j',  'k',  'l',  ';',  "'",
 	 'z','ɜːr', 'tʃ',  'v',  'b',  'n',  'm',  ',',  '.',  '/'      ];
-const rhotUKB = [ 
+const rhotUKB = [
 	 '~',  '!',  '@',  '£',  '$',  '%',  '^',  '&',  '*',  '(',  ')', '_', '+',
 	'aʊ', 'ɪə', 'eɪ','ɑːr',  'θ', 'ɔː',  'ʊ', 'iː', 'əʊ','ɔːr',  '{', '}', '|',
 	 'æ',  'ʃ', 'ər', 'aɪ',  '·',  'ð', 'dʒ',  '«',  '»',  ':', '\"',
 	 'ʒ','eər','ɪər','juː',  '⸰',  'ŋ', 'uː',  '‹',  '›',  '?'     ];
 //const rhoticUKC = phonUKC
-//const rhoticUKD = phonUKD 
+//const rhoticUKD = phonUKD
 
 // ESL layout
 const eslA = [
@@ -299,14 +305,14 @@ const eslB = [
 	'Q','W','E','R','T','Y','U','I','O','P','{','}','|',
 	'A','S','D','F','G','H','J','K','L',':','\"',
 	'Z','X','C','V','B','N','M','<','>','?' ];
-const eslC = [ 
+const eslC = [
 	 '´','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁰','→','≠',
 	 'ɜ','ʍ','ɛ','ɹ','θ','ə','ʊ','ɪ','ɔ','ɒ','⟨','⟩','•',
 	 'ɑ','ʃ','ð','ɐ','ɡ','‐','ʤ','ʰ','ɫ','ː','ᵊ',
 	 'ʒ','æ','ʧ','ʌ','·','ŋ','̃','ˈ','ˌ','ʔ'  ];
 // Alt+m  - ◌̃ (U+0303) combining tilde /ˈtɪldə/ (for nasalisation)
 // Alt+h  - ‐ (U+2010) hyphen
-const eslD = [ 
+const eslD = [
 	'≈','₁','₂','₃','₄','₅','₆','₇','₈','₉','₀','←','±',
 	'ɝ','̀','́','ʳ','ɾ','ɚ','↑','','','','⟮','⟯','◦',
 	'“','”','↓','̄','̱','‑','','«','»','§','×',
@@ -332,7 +338,7 @@ If it's the second option, then here is how you do it:
  3. If you want to make it default, then change the "const keys[ABCD] = ..." definitions at the bottom of this <script> section
  4. Modify and un‐comment the <tr>...</tr> in the <div id="kboardTable"...> tag
  5. Save and refresh page with F5
- 6. Oh, and remember to update the "Copyright (c) 202_ Your Name (AGPL v3)" line 
+ 6. Oh, and remember to update the "Copyright (c) 202_ Your Name (AGPL v3)" line
 Good Luck! :)
 */
 /* custom tables * /
@@ -343,19 +349,19 @@ const customA = [
 	  'c','u','s','t','o','m','','','','','',
 	   '','','','','l','a','y','o','u','t' ];
 // shifted:
-const customB = [ 
+const customB = [
 	'','','','','','','','','','','','','',
 	 '','','','','','','','','','','','','',
 	  '','','','','','','','','','','',
 	   '','','','','','','','','','' ];
 // AltGR (aka right-alt):
-const customC = [ 
+const customC = [
 	'','','','','','','','','','','','','',
 	 '','','','','','','','','','','','','',
 	  '','','','','','','','','','','',
 	   '','','','','','','','','','' ];
 // AltGr + Shift:
-const customD = [ 
+const customD = [
 	'','','','','','','','','','','','','',
 	 '','','','','','','','','','','','','',
 	  '','','','','','','','','','','',
@@ -395,32 +401,48 @@ function keyC(key) { insertChar(keysC[key]); }
 function keyD(key) { insertChar(keysD[key]); }
 
 function layoutSwitch(laiout) {
-	let kbName = "US Phonemic";
-		//x=1 show cheat table for given layout
-	let cheat=0;
-  	document.getElementById(currentLayout + 'Desc').style.display = 'none';
-  	currentLayout=laiout;
-  	document.getElementById(currentLayout + 'Desc').style.display = 'block';
-	switch(laiout) {
-		case "phonemus" : keysA=phonUSA; keysB=phonUSB; keysC=phonUSC; keysD=phonUSD; kbName="US Phonemic"; cheat=1; break;
-		case "phonemuk" : keysA=phonUKA; keysB=phonUKB; keysC=phonUSC; keysD=phonUSD; kbName="UK Phonemic"; cheat=1; break;
-		case "rhoticuk" : keysA=rhotUKA; keysB=rhotUKB; keysC=phonUSC; keysD=phonUSD; kbName="UK Rhotic";   cheat=1; break;
-		case "esl"      : keysA=eslA;    keysB=eslB;    keysC=eslC;    keysD=eslD;    kbName="ESL";         cheat=0; break; 
-	}
+	let kbName = "US Phonemic";  // default layout
+	let cheat=0;   //cheat=1 show cheat table for given layout
 
+	// change color of all layout switching buttons to default
+	// then the current layout to RoyalBlue
+	document.getElementById("phonemus").style.backgroundColor = "";
+	document.getElementById("phonemuk").style.backgroundColor = "";
+	document.getElementById("rhoticuk").style.backgroundColor = "";
+	document.getElementById("esl").style.backgroundColor      = "";
+	document.getElementById(laiout).style.backgroundColor     = "dodgerblue";
+
+ 	document.getElementById(currentLayout + 'Desc').style.display = 'none';
+ 	currentLayout=laiout;
+ 	document.getElementById(currentLayout + 'Desc').style.display = 'block';
+
+	switch(laiout) {
+		case "phonemus" :
+				keysA=phonUSA; keysB=phonUSB; keysC=phonUSC; keysD=phonUSD; kbName="US Phonemic"; cheat=1;
+				break;
+		case "phonemuk" :
+				keysA=phonUKA; keysB=phonUKB; keysC=phonUSC; keysD=phonUSD; kbName="UK Phonemic"; cheat=1;
+				break;
+		case "rhoticuk" :
+				keysA=rhotUKA; keysB=rhotUKB; keysC=phonUSC; keysD=phonUSD; kbName="UK Rhotic";   cheat=1;
+				break;
+		case "esl"      :
+				keysA=eslA;    keysB=eslB;    keysC=eslC;    keysD=eslD;    kbName="ESL";         cheat=0;
+				break;
+	}
 	layerSwitch("kbA");
-	document.getElementById("kboardButton").innerText = kbName;
+	//document.getElementById("kboardButton").innerText = kbName;
 	//reload all buttons with symbols from new layout
 	layoutLoad();
-		// cheatButton on = show cheat table
-	var cheatButton = document.getElementById('cheatButton');
-	if ( cheat == 1 ) {
-		cheatButton.style.display='inline-block';
-	}
-	else {
-		cheatButton.style.display='none';
-		document.getElementById('cheatTable').style.display='none';
-	}
+	// cheatButton on = show cheatsheet table
+	//var cheatButton = document.getElementById('cheatButton');
+	//if ( cheat == 1 ) {
+	//	cheatButton.style.display='inline-block';
+	//}
+	//else {
+	//	cheatButton.style.display='none';
+	//	document.getElementById('cheatTable').style.display='none';
+	//}
 }
 
 // ------ textarea functions
@@ -465,7 +487,7 @@ function backSpace() {
 	else {
 		if ( cursorSta > 0 ) {
 		// if (Unicode char) then { delete 2 bytes } else { delete 1 byte }
-			if ( letter == "\uD801" ) { 
+			if ( letter == "\uD801" ) {
 				// Unicode char detected: delete 2 bytes
 				textArea.value = text.slice(0,cursorSta-2) + text.slice(cursorSta);
 				// set cursor position -2
@@ -505,7 +527,7 @@ function deleteChar() {
 	textArea.setSelectionRange(cursorSta, cursorSta);
 }
 
-// ------ 
+// ------
 function layerSwitch(kb) {
 	const kbA = document.getElementById("kbA"); // lowercase
 	const kbB = document.getElementById("kbB"); // uppercase (Shift)
@@ -528,7 +550,7 @@ function showWindow(wind) {
 	const buttonId = document.getElementById(wind + 'Button');
 	if ( windId.style.display == "none" ) {
 		windId.style.display = 'table';
-		buttonId.style.backgroundColor = 'royalblue'; // works - but leaves border somewhat thick-black
+		buttonId.style.backgroundColor = 'RoyalBlue'; // works - but leaves border somewhat thick-black
 		//buttonId.style.background = 'royalblue';		// works - but leaves thick border even after reset
 		//buttonId.bgcolor = 'royalblue';					// doesn't do a thing
 		//document.getElementById("button").className = 'button_color';   // change class name
@@ -660,443 +682,443 @@ var keysD = phonUSD;
 	<div>
 		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
 	</div>
+	<!-- buttons (Clear, To Clipboard -->
+	<!-- div style="margin: 5px;padding: 0px;" -->
+	<div style="margin: 0px;padding: 0px;">
+		<button onclick="clearTextArea()" >Clear</button>
+		<button onclick="copyToClip()"    >To Clipboard</button>
+	</div>
 
-<!-- cheat sheet table for US phonemic -->
-	<div id="cheatTable" class="divtab" style="display:none;border: 1px solid #ddd;margin-bottom:5px;"> 
+	<!-- ------ Layout switcher ------ -->
+	<div style="margin: 5px;padding: 0px;">
+		<b>Layout:</b>&nbsp;
+		<button id="phonemus" onclick="layoutSwitch('phonemus')" >US Phonemic</button>
+		<button id="phonemuk" onclick="layoutSwitch('phonemuk')" >UK Phonemic</button>
+		<button id="rhoticuk" onclick="layoutSwitch('rhoticuk')" >UK Rhotic</button>
+		<button id="esl" onclick="layoutSwitch('esl')"      >ESL</button>
+		<!-- <button style="width:100%" onclick="layoutSwitch('custom')">Your Custom Layout</button> -->
+	</div>
+
+		<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
+	<div id="kbA" style="display: block;">
+		<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
+		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kA0"  onclick="keyA(0)">`</td>
+				<td colspan="2" class="bton" id="kA1"  onclick="keyA(1)">1</td>
+				<td colspan="2" class="bton" id="kA2"  onclick="keyA(2)">2</td>
+				<td colspan="2" class="bton" id="kA3"  onclick="keyA(3)">3</td>
+				<td colspan="2" class="bton" id="kA4"  onclick="keyA(4)">4</td>
+				<td colspan="2" class="bton" id="kA5"  onclick="keyA(5)">5</td>
+				<td colspan="2" class="bton" id="kA6"  onclick="keyA(6)">6</td>
+				<td colspan="2" class="bton" id="kA7"  onclick="keyA(7)">7</td>
+				<td colspan="2" class="bton" id="kA8"  onclick="keyA(8)">8</td>
+				<td colspan="2" class="bton" id="kA9"  onclick="keyA(9)">9</td>
+				<td colspan="2" class="bton" id="kA10" onclick="keyA(10)">0</td>
+				<td colspan="2" class="bton" id="kA11" onclick="keyA(11)">-</td>
+				<td colspan="2" class="bton" id="kA12" onclick="keyA(12)">=</td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kA13" onclick="keyA(13)"></td>
+				<td colspan="2" class="bton" id="kA14" onclick="keyA(14)"></td>
+				<td colspan="2" class="bton" id="kA15" onclick="keyA(15)"></td>
+				<td colspan="2" class="bton" id="kA16" onclick="keyA(16)"></td>
+				<td colspan="2" class="bton" id="kA17" onclick="keyA(17)"></td>
+				<td colspan="2" class="bton" id="kA18" onclick="keyA(18)"></td>
+				<td colspan="2" class="bton" id="kA19" onclick="keyA(19)"></td>
+				<td colspan="2" class="bton" id="kA20" onclick="keyA(20)"></td>
+				<td colspan="2" class="bton" id="kA21" onclick="keyA(21)"></td>
+				<td colspan="2" class="bton" id="kA22" onclick="keyA(22)"></td>
+				<td colspan="2" class="bton" id="kA23" onclick="keyA(23)"></td>
+				<td colspan="2" class="bton" id="kA24" onclick="keyA(24)"></td>
+				<td colspan="2" class="bton" id="kA25" onclick="keyA(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kA26" onclick="keyA(26)"></td>
+				<td colspan="2" class="bton" id="kA27" onclick="keyA(27)"></td>
+				<td colspan="2" class="bton" id="kA28" onclick="keyA(28)"></td>
+				<td colspan="2" class="bton" id="kA29" onclick="keyA(29)"></td>
+				<td colspan="2" class="bton" id="kA30" onclick="keyA(30)"></td>
+				<td colspan="2" class="bton" id="kA31" onclick="keyA(31)"></td>
+				<td colspan="2" class="bton" id="kA32" onclick="keyA(32)"></td>
+				<td colspan="2" class="bton" id="kA33" onclick="keyA(33)"></td>
+				<td colspan="2" class="bton" id="kA34" onclick="keyA(34)"></td>
+				<td colspan="2" class="bton" id="kA35" onclick="keyA(35)"></td>
+				<td colspan="2" class="bton" id="kA36" onclick="keyA(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
+				<td colspan="2" class="bton" id="kA37" onclick="keyA(37)"></td>
+				<td colspan="2" class="bton" id="kA38" onclick="keyA(38)"></td>
+				<td colspan="2" class="bton" id="kA39" onclick="keyA(39)"></td>
+				<td colspan="2" class="bton" id="kA40" onclick="keyA(40)"></td>
+				<td colspan="2" class="bton" id="kA41" onclick="keyA(41)"></td>
+				<td colspan="2" class="bton" id="kA42" onclick="keyA(42)"></td>
+				<td colspan="2" class="bton" id="kA43" onclick="keyA(43)"></td>
+				<td colspan="2" class="bton" id="kA44" onclick="keyA(44)"></td>
+				<td colspan="2" class="bton" id="kA45" onclick="keyA(45)"></td>
+				<td colspan="2" class="bton" id="kA46" onclick="keyA(46)"></td>
+				<td colspan="4" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
+				<td colspan="3"  class="bton" onclick="layerSwitch('kbC')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
+	<div id="kbB" style="display: none;">
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kB0"  onclick="keyB(0)"></td>
+				<td colspan="2" class="bton" id="kB1"  onclick="keyB(1)"></td>
+				<td colspan="2" class="bton" id="kB2"  onclick="keyB(2)"></td>
+				<td colspan="2" class="bton" id="kB3"  onclick="keyB(3)"></td>
+				<td colspan="2" class="bton" id="kB4"  onclick="keyB(4)"></td>
+				<td colspan="2" class="bton" id="kB5"  onclick="keyB(5)"></td>
+				<td colspan="2" class="bton" id="kB6"  onclick="keyB(6)"></td>
+				<td colspan="2" class="bton" id="kB7"  onclick="keyB(7)"></td>
+				<td colspan="2" class="bton" id="kB8"  onclick="keyB(8)"></td>
+				<td colspan="2" class="bton" id="kB9"  onclick="keyB(9)"></td>
+				<td colspan="2" class="bton" id="kB10" onclick="keyB(10)"></td>
+				<td colspan="2" class="bton" id="kB11" onclick="keyB(11)"></td>
+				<td colspan="2" class="bton" id="kB12" onclick="keyB(12)"></td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kB13" onclick="keyB(13)"></td>
+				<td colspan="2" class="bton" id="kB14" onclick="keyB(14)"></td>
+				<td colspan="2" class="bton" id="kB15" onclick="keyB(15)"></td>
+				<td colspan="2" class="bton" id="kB16" onclick="keyB(16)"></td>
+				<td colspan="2" class="bton" id="kB17" onclick="keyB(17)"></td>
+				<td colspan="2" class="bton" id="kB18" onclick="keyB(18)"></td>
+				<td colspan="2" class="bton" id="kB19" onclick="keyB(19)"></td>
+				<td colspan="2" class="bton" id="kB20" onclick="keyB(20)"></td>
+				<td colspan="2" class="bton" id="kB21" onclick="keyB(21)"></td>
+				<td colspan="2" class="bton" id="kB22" onclick="keyB(22)"></td>
+				<td colspan="2" class="bton" id="kB23" onclick="keyB(23)"></td>
+				<td colspan="2" class="bton" id="kB24" onclick="keyB(24)"></td>
+				<td colspan="2" class="bton" id="kB25" onclick="keyB(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kB26" onclick="keyB(26)"></td>
+				<td colspan="2" class="bton" id="kB27" onclick="keyB(27)"></td>
+				<td colspan="2" class="bton" id="kB28" onclick="keyB(28)"></td>
+				<td colspan="2" class="bton" id="kB29" onclick="keyB(29)"></td>
+				<td colspan="2" class="bton" id="kB30" onclick="keyB(30)"></td>
+				<td colspan="2" class="bton" id="kB31" onclick="keyB(31)"></td>
+				<td colspan="2" class="bton" id="kB32" onclick="keyB(32)"></td>
+				<td colspan="2" class="bton" id="kB33" onclick="keyB(33)"></td>
+				<td colspan="2" class="bton" id="kB34" onclick="keyB(34)"></td>
+				<td colspan="2" class="bton" id="kB35" onclick="keyB(35)"></td>
+				<td colspan="2" class="bton" id="kB36" onclick="keyB(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
+				<td colspan="2" class="bton" id="kB37" onclick="keyB(37)"></td>
+				<td colspan="2" class="bton" id="kB38" onclick="keyB(38)"></td>
+				<td colspan="2" class="bton" id="kB39" onclick="keyB(39)"></td>
+				<td colspan="2" class="bton" id="kB40" onclick="keyB(40)"></td>
+				<td colspan="2" class="bton" id="kB41" onclick="keyB(41)"></td>
+				<td colspan="2" class="bton" id="kB42" onclick="keyB(42)"></td>
+				<td colspan="2" class="bton" id="kB43" onclick="keyB(43)"></td>
+				<td colspan="2" class="bton" id="kB44" onclick="keyB(44)"></td>
+				<td colspan="2" class="bton" id="kB45" onclick="keyB(45)"></td>
+				<td colspan="2" class="bton" id="kB46" onclick="keyB(46)"></td>
+				<td colspan="4" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
+				<td colspan="3"  class="bton" onclick="layerSwitch('kbD')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
+	<div id="kbC" style="display: none;">
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kC0"  onclick="keyC(0)"></td>
+				<td colspan="2" class="bton" id="kC1"  onclick="keyC(1)"></td>
+				<td colspan="2" class="bton" id="kC2"  onclick="keyC(2)"></td>
+				<td colspan="2" class="bton" id="kC3"  onclick="keyC(3)"></td>
+				<td colspan="2" class="bton" id="kC4"  onclick="keyC(4)"></td>
+				<td colspan="2" class="bton" id="kC5"  onclick="keyC(5)"></td>
+				<td colspan="2" class="bton" id="kC6"  onclick="keyC(6)"></td>
+				<td colspan="2" class="bton" id="kC7"  onclick="keyC(7)"></td>
+				<td colspan="2" class="bton" id="kC8"  onclick="keyC(8)"></td>
+				<td colspan="2" class="bton" id="kC9"  onclick="keyC(9)"></td>
+				<td colspan="2" class="bton" id="kC10" onclick="keyC(10)"></td>
+				<td colspan="2" class="bton" id="kC11" onclick="keyC(11)"></td>
+				<td colspan="2" class="bton" id="kC12" onclick="keyC(12)"></td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kC13" onclick="keyC(13)"></td>
+				<td colspan="2" class="bton" id="kC14" onclick="keyC(14)"></td>
+				<td colspan="2" class="bton" id="kC15" onclick="keyC(15)"></td>
+				<td colspan="2" class="bton" id="kC16" onclick="keyC(16)"></td>
+				<td colspan="2" class="bton" id="kC17" onclick="keyC(17)"></td>
+				<td colspan="2" class="bton" id="kC18" onclick="keyC(18)"></td>
+				<td colspan="2" class="bton" id="kC19" onclick="keyC(19)"></td>
+				<td colspan="2" class="bton" id="kC20" onclick="keyC(20)"></td>
+				<td colspan="2" class="bton" id="kC21" onclick="keyC(21)"></td>
+				<td colspan="2" class="bton" id="kC22" onclick="keyC(22)"></td>
+				<td colspan="2" class="bton" id="kC23" onclick="keyC(23)"></td>
+				<td colspan="2" class="bton" id="kC24" onclick="keyC(24)"></td>
+				<td colspan="2" class="bton" id="kC25" onclick="keyC(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kC26" onclick="keyC(26)"></td>
+				<td colspan="2" class="bton" id="kC27" onclick="keyC(27)"></td>
+				<td colspan="2" class="bton" id="kC28" onclick="keyC(28)"></td>
+				<td colspan="2" class="bton" id="kC29" onclick="keyC(29)"></td>
+				<td colspan="2" class="bton" id="kC30" onclick="keyC(30)"></td>
+				<td colspan="2" class="bton" id="kC31" onclick="keyC(31)"></td>
+				<td colspan="2" class="bton" id="kC32" onclick="keyC(32)"></td>
+				<td colspan="2" class="bton" id="kC33" onclick="keyC(33)"></td>
+				<td colspan="2" class="bton" id="kC34" onclick="keyC(34)"></td>
+				<td colspan="2" class="bton" id="kC35" onclick="keyC(35)"></td>
+				<td colspan="2" class="bton" id="kC36" onclick="keyC(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="bton" onclick="layerSwitch('kbD')">SHIFT</td>
+				<td colspan="2" class="bton" id="kC37" onclick="keyC(37)"></td>
+				<td colspan="2" class="bton" id="kC38" onclick="keyC(38)"></td>
+				<td colspan="2" class="bton" id="kC39" onclick="keyC(39)"></td>
+				<td colspan="2" class="bton" id="kC40" onclick="keyC(40)"></td>
+				<td colspan="2" class="bton" id="kC41" onclick="keyC(41)"></td>
+				<td colspan="2" class="bton" id="kC42" onclick="keyC(42)"></td>
+				<td colspan="2" class="bton" id="kC43" onclick="keyC(43)"></td>
+				<td colspan="2" class="bton" id="kC44" onclick="keyC(44)"></td>
+				<td colspan="2" class="bton" id="kC45" onclick="keyC(45)"></td>
+				<td colspan="2" class="bton" id="kC46" onclick="keyC(46)"></td>
+				<td colspan="4" class="bton" onclick="layerSwitch('kbD')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar('&emsp;')">EM SPACE</td> <!-- &#8192 -->
+				<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
+	<div id="kbD" style="display: none;">
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kD0"  onclick="keyD(0)"></td>
+				<td colspan="2" class="bton" id="kD1"  onclick="keyD(1)"></td>
+				<td colspan="2" class="bton" id="kD2"  onclick="keyD(2)"></td>
+				<td colspan="2" class="bton" id="kD3"  onclick="keyD(3)"></td>
+				<td colspan="2" class="bton" id="kD4"  onclick="keyD(4)"></td>
+				<td colspan="2" class="bton" id="kD5"  onclick="keyD(5)"></td>
+				<td colspan="2" class="bton" id="kD6"  onclick="keyD(6)"></td>
+				<td colspan="2" class="bton" id="kD7"  onclick="keyD(7)"></td>
+				<td colspan="2" class="bton" id="kD8"  onclick="keyD(8)"></td>
+				<td colspan="2" class="bton" id="kD9"  onclick="keyD(9)"></td>
+				<td colspan="2" class="bton" id="kD10" onclick="keyD(10)"></td>
+				<td colspan="2" class="bton" id="kD11" onclick="keyD(11)"></td>
+				<td colspan="2" class="bton" id="kD12" onclick="keyD(12)"></td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kD13" onclick="keyD(13)"></td>
+				<td colspan="2" class="bton" id="kD14" onclick="keyD(14)"></td>
+				<td colspan="2" class="bton" id="kD15" onclick="keyD(15)"></td>
+				<td colspan="2" class="bton" id="kD16" onclick="keyD(16)"></td>
+				<td colspan="2" class="bton" id="kD17" onclick="keyD(17)"></td>
+				<td colspan="2" class="bton" id="kD18" onclick="keyD(18)"></td>
+				<td colspan="2" class="bton" id="kD19" onclick="keyD(19)"></td>
+				<td colspan="2" class="bton" id="kD20" onclick="keyD(20)"></td>
+				<td colspan="2" class="bton" id="kD21" onclick="keyD(21)"></td>
+				<td colspan="2" class="bton" id="kD22" onclick="keyD(22)"></td>
+				<td colspan="2" class="bton" id="kD23" onclick="keyD(23)"></td>
+				<td colspan="2" class="bton" id="kD24" onclick="keyD(24)"></td>
+				<td colspan="2" class="bton" id="kD25" onclick="keyD(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kD26" onclick="keyD(26)"></td>
+				<td colspan="2" class="bton" id="kD27" onclick="keyD(27)"></td>
+				<td colspan="2" class="bton" id="kD28" onclick="keyD(28)"></td>
+				<td colspan="2" class="bton" id="kD29" onclick="keyD(29)"></td>
+				<td colspan="2" class="bton" id="kD30" onclick="keyD(30)"></td>
+				<td colspan="2" class="bton" id="kD31" onclick="keyD(31)"></td>
+				<td colspan="2" class="bton" id="kD32" onclick="keyD(32)"></td>
+				<td colspan="2" class="bton" id="kD33" onclick="keyD(33)"></td>
+				<td colspan="2" class="bton" id="kD34" onclick="keyD(34)"></td>
+				<td colspan="2" class="bton" id="kD35" onclick="keyD(35)"></td>
+				<td colspan="2" class="bton" id="kD36" onclick="keyD(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbC')">SHIFT</td>
+				<td colspan="2" id="kD37" class="bton" onclick="keyD(37)"></td>
+				<td colspan="2" id="kD38" class="bton" onclick="keyD(38)"></td>
+				<td colspan="2" id="kD39" class="bton" onclick="keyD(39)"></td>
+				<td colspan="2" id="kD40" class="bton" onclick="keyD(40)"></td>
+				<td colspan="2" id="kD41" class="bton" onclick="keyD(41)"></td>
+				<td colspan="2" id="kD42" class="bton" onclick="keyD(42)"></td>
+				<td colspan="2" id="kD43" class="bton" onclick="keyD(43)"></td>
+				<td colspan="2" id="kD44" class="bton" onclick="keyD(44)"></td>
+				<td colspan="2" id="kD45" class="bton" onclick="keyD(45)"></td>
+				<td colspan="2" id="kD46" class="bton" onclick="keyD(46)"></td>
+				<td colspan="4" class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbC')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td> <!-- ⟮⊞⟯ &#x229E; -->
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar('&#x200B;')">zero-width space</td> <!-- &#8203; -->
+				<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbB')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- buttons: Options, Fonts -->
+	<div style="margin: 5px;padding: 0px;">
+		<!-- button id="kboardButton"  onclick="showWindow('kboard')" >US Phonemic</button -->
+		<button id="optionsButton" onclick="showWindow('options')">Options</button>
+		<button id="fontsButton"   onclick="showWindow('fonts')"  >Fonts</button>
+		<!-- button id="cheatButton"   onclick="showWindow('cheat')" style="display:inline-block">☺</button -->
+	</div>
+
+<!-- cheatsheet table for US phonemic -->
+	<div id="cheatTable" class="divtab" style="display:none;border: 1px solid #ddd;margin-bottom:5px;">
 		<div class="divrow">
-		<div class="divcellch">a<br>ə</div>
-		<div class="divcellch">b<br>b</div>
-		<div class="divcellch">c<br>tʃ</div>
-		<div class="divcellch">d<br>d</div>
-		<div class="divcellch">e<br>ɛ</div>
-		<div class="divcellch">f<br>f</div>
-		<div class="divcellch">g<br>ɡ</div>
-		<div class="divcellch">h<br>h</div>
-		<div class="divcellch">i<br>ɪ</div>
-		<div class="divcellch">j<br>j</div>
-		<div class="divcellch">k<br>k</div>
-		<div class="divcellch">l<br>l</div>
-		<div class="divcellch">m<br>m</div>
-		<div class="divcellch">n<br>n</div>
-		<div class="divcellch">o<br>ɒ</div>
-		<div class="divcellch">p<br>p</div>
-		<div class="divcellch">q<br>ɔɪ</div>
-		<div class="divcellch">r<br>r</div>
-		<div class="divcellch">s<br>s</div>
-		<div class="divcellch">t<br>t</div>
-		<div class="divcellch">u<br>ʌ</div>
-		<div class="divcellch">v<br>v</div>
-		<div class="divcellch">w<br>w</div>
-		<div class="divcellch">x<br>ɜr</div>
-		<div class="divcellch">y<br>ɑ</div>
-		<div class="divcellch">z<br>z</div>
-		<div class="divcellch">A<br>æ</div>
-		<div class="divcellch">B<br>⸰</div>
-		<div class="divcellch">C<br>ɪər</div>
-		<div class="divcellch">D<br>ər</div>
-		<div class="divcellch">E<br>eɪ</div>
-		<div class="divcellch">F<br>aɪ</div>
-		<div class="divcellch">G<br>·</div>
-		<div class="divcellch">H<br>ð</div>
-		<div class="divcellch">I<br>i</div>
-		<div class="divcellch">J<br>dʒ</div>
-		<div class="divcellch">K<br>«</div>
-		<div class="divcellch">L<br>»</div>
-		<div class="divcellch">M<br>u</div>
-		<div class="divcellch">N<br>ŋ</div>
-		<div class="divcellch">O<br>ɔʊ</div>
-		<div class="divcellch">P<br>ɔr</div>
-		<div class="divcellch">Q<br>aʊ</div>
-		<div class="divcellch">R<br>ɑr</div>
-		<div class="divcellch">S<br>ʃ</div>
-		<div class="divcellch">T<br>θ</div>
-		<div class="divcellch">U<br>ʊ</div>
-		<div class="divcellch">V<br>ju</div>
-		<div class="divcellch">W<br>ɪə</div>
-		<div class="divcellch">X<br>ɛr</div>
-		<div class="divcellch">Y<br>ɔ</div>
-		<div class="divcellch">Z<br>ʒ</div>
+			<div class="divcellch">a<br>ə</div>
+			<div class="divcellch">b<br>b</div>
+			<div class="divcellch">c<br>tʃ</div>
+			<div class="divcellch">d<br>d</div>
+			<div class="divcellch">e<br>ɛ</div>
+			<div class="divcellch">f<br>f</div>
+			<div class="divcellch">g<br>ɡ</div>
+			<div class="divcellch">h<br>h</div>
+			<div class="divcellch">i<br>ɪ</div>
+			<div class="divcellch">j<br>j</div>
+			<div class="divcellch">k<br>k</div>
+			<div class="divcellch">l<br>l</div>
+			<div class="divcellch">m<br>m</div>
+			<div class="divcellch">n<br>n</div>
+			<div class="divcellch">o<br>ɒ</div>
+			<div class="divcellch">p<br>p</div>
+			<div class="divcellch">q<br>ɔɪ</div>
+			<div class="divcellch">r<br>r</div>
+			<div class="divcellch">s<br>s</div>
+			<div class="divcellch">t<br>t</div>
+			<div class="divcellch">u<br>ʌ</div>
+			<div class="divcellch">v<br>v</div>
+			<div class="divcellch">w<br>w</div>
+			<div class="divcellch">x<br>ɜr</div>
+			<div class="divcellch">y<br>ɑ</div>
+			<div class="divcellch">z<br>z</div>
+		</div>
+		<div class="divrow">
+			<div class="divcellch">A<br>æ</div>
+			<div class="divcellch">B<br>⸰</div>
+			<div class="divcellch">C<br>ɪər</div>
+			<div class="divcellch">D<br>ər</div>
+			<div class="divcellch">E<br>eɪ</div>
+			<div class="divcellch">F<br>aɪ</div>
+			<div class="divcellch">G<br>·</div>
+			<div class="divcellch">H<br>ð</div>
+			<div class="divcellch">I<br>i</div>
+			<div class="divcellch">J<br>dʒ</div>
+			<div class="divcellch">K<br>«</div>
+			<div class="divcellch">L<br>»</div>
+			<div class="divcellch">M<br>u</div>
+			<div class="divcellch">N<br>ŋ</div>
+			<div class="divcellch">O<br>ɔʊ</div>
+			<div class="divcellch">P<br>ɔr</div>
+			<div class="divcellch">Q<br>aʊ</div>
+			<div class="divcellch">R<br>ɑr</div>
+			<div class="divcellch">S<br>ʃ</div>
+			<div class="divcellch">T<br>θ</div>
+			<div class="divcellch">U<br>ʊ</div>
+			<div class="divcellch">V<br>ju</div>
+			<div class="divcellch">W<br>ɪə</div>
+			<div class="divcellch">X<br>ɛr</div>
+			<div class="divcellch">Y<br>ɔ</div>
+			<div class="divcellch">Z<br>ʒ</div>
 		</div>
 	</div>
 
-<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
-<div id="kbA" style="display: block;"> 
-<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
-		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
-<table class="rounded-corners" >
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-	<tr>
-		<td colspan="2" class="bton" id="kA0"  onclick="keyA(0)">`</td>
-		<td colspan="2" class="bton" id="kA1"  onclick="keyA(1)">1</td>
-		<td colspan="2" class="bton" id="kA2"  onclick="keyA(2)">2</td>
-		<td colspan="2" class="bton" id="kA3"  onclick="keyA(3)">3</td>
-		<td colspan="2" class="bton" id="kA4"  onclick="keyA(4)">4</td>
-		<td colspan="2" class="bton" id="kA5"  onclick="keyA(5)">5</td>
-		<td colspan="2" class="bton" id="kA6"  onclick="keyA(6)">6</td>
-		<td colspan="2" class="bton" id="kA7"  onclick="keyA(7)">7</td>
-		<td colspan="2" class="bton" id="kA8"  onclick="keyA(8)">8</td>
-		<td colspan="2" class="bton" id="kA9"  onclick="keyA(9)">9</td>
-		<td colspan="2" class="bton" id="kA10" onclick="keyA(10)">0</td>
-		<td colspan="2" class="bton" id="kA11" onclick="keyA(11)">-</td>
-		<td colspan="2" class="bton" id="kA12" onclick="keyA(12)">=</td>
-		<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
-	</tr>
-	<tr>
-		<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
-		<td colspan="2" class="bton" id="kA13" onclick="keyA(13)"></td>
-		<td colspan="2" class="bton" id="kA14" onclick="keyA(14)"></td>
-		<td colspan="2" class="bton" id="kA15" onclick="keyA(15)"></td>
-		<td colspan="2" class="bton" id="kA16" onclick="keyA(16)"></td>
-		<td colspan="2" class="bton" id="kA17" onclick="keyA(17)"></td>
-		<td colspan="2" class="bton" id="kA18" onclick="keyA(18)"></td>
-		<td colspan="2" class="bton" id="kA19" onclick="keyA(19)"></td>
-		<td colspan="2" class="bton" id="kA20" onclick="keyA(20)"></td>
-		<td colspan="2" class="bton" id="kA21" onclick="keyA(21)"></td>
-		<td colspan="2" class="bton" id="kA22" onclick="keyA(22)"></td>
-		<td colspan="2" class="bton" id="kA23" onclick="keyA(23)"></td>
-		<td colspan="2" class="bton" id="kA24" onclick="keyA(24)"></td>
-		<td colspan="2" class="bton" id="kA25" onclick="keyA(25)"></td>
-	</tr>
-	<tr>
-		<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
-		<td colspan="2" class="bton" id="kA26" onclick="keyA(26)"></td>
-		<td colspan="2" class="bton" id="kA27" onclick="keyA(27)"></td>
-		<td colspan="2" class="bton" id="kA28" onclick="keyA(28)"></td>
-		<td colspan="2" class="bton" id="kA29" onclick="keyA(29)"></td>
-		<td colspan="2" class="bton" id="kA30" onclick="keyA(30)"></td>
-		<td colspan="2" class="bton" id="kA31" onclick="keyA(31)"></td>
-		<td colspan="2" class="bton" id="kA32" onclick="keyA(32)"></td>
-		<td colspan="2" class="bton" id="kA33" onclick="keyA(33)"></td>
-		<td colspan="2" class="bton" id="kA34" onclick="keyA(34)"></td>
-		<td colspan="2" class="bton" id="kA35" onclick="keyA(35)"></td>
-		<td colspan="2" class="bton" id="kA36" onclick="keyA(36)"></td>
-		<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
-	</tr>
-	<tr>
-		<td colspan="5" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
-		<td colspan="2" class="bton" id="kA37" onclick="keyA(37)"></td>
-		<td colspan="2" class="bton" id="kA38" onclick="keyA(38)"></td>
-		<td colspan="2" class="bton" id="kA39" onclick="keyA(39)"></td>
-		<td colspan="2" class="bton" id="kA40" onclick="keyA(40)"></td>
-		<td colspan="2" class="bton" id="kA41" onclick="keyA(41)"></td>
-		<td colspan="2" class="bton" id="kA42" onclick="keyA(42)"></td>
-		<td colspan="2" class="bton" id="kA43" onclick="keyA(43)"></td>
-		<td colspan="2" class="bton" id="kA44" onclick="keyA(44)"></td>
-		<td colspan="2" class="bton" id="kA45" onclick="keyA(45)"></td>
-		<td colspan="2" class="bton" id="kA46" onclick="keyA(46)"></td>
-		<td colspan="4" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
-	</tr>
-	<tr>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
-		<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
-		<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
-		<td colspan="3"  class="bton" onclick="layerSwitch('kbC')">ALT</td>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
-	</tr>
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-</table>
-</div>
-
-<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
-<div id="kbB" style="display: none;">  
-<table class="rounded-corners" >
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-	<tr>
-		<td colspan="2" class="bton" id="kB0"  onclick="keyB(0)"></td>
-		<td colspan="2" class="bton" id="kB1"  onclick="keyB(1)"></td>
-		<td colspan="2" class="bton" id="kB2"  onclick="keyB(2)"></td>
-		<td colspan="2" class="bton" id="kB3"  onclick="keyB(3)"></td>
-		<td colspan="2" class="bton" id="kB4"  onclick="keyB(4)"></td>
-		<td colspan="2" class="bton" id="kB5"  onclick="keyB(5)"></td>
-		<td colspan="2" class="bton" id="kB6"  onclick="keyB(6)"></td>
-		<td colspan="2" class="bton" id="kB7"  onclick="keyB(7)"></td>
-		<td colspan="2" class="bton" id="kB8"  onclick="keyB(8)"></td>
-		<td colspan="2" class="bton" id="kB9"  onclick="keyB(9)"></td>
-		<td colspan="2" class="bton" id="kB10" onclick="keyB(10)"></td>
-		<td colspan="2" class="bton" id="kB11" onclick="keyB(11)"></td>
-		<td colspan="2" class="bton" id="kB12" onclick="keyB(12)"></td>
-		<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
-	</tr>
-	<tr>
-		<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
-		<td colspan="2" class="bton" id="kB13" onclick="keyB(13)"></td>
-		<td colspan="2" class="bton" id="kB14" onclick="keyB(14)"></td>
-		<td colspan="2" class="bton" id="kB15" onclick="keyB(15)"></td>
-		<td colspan="2" class="bton" id="kB16" onclick="keyB(16)"></td>
-		<td colspan="2" class="bton" id="kB17" onclick="keyB(17)"></td>
-		<td colspan="2" class="bton" id="kB18" onclick="keyB(18)"></td>
-		<td colspan="2" class="bton" id="kB19" onclick="keyB(19)"></td>
-		<td colspan="2" class="bton" id="kB20" onclick="keyB(20)"></td>
-		<td colspan="2" class="bton" id="kB21" onclick="keyB(21)"></td>
-		<td colspan="2" class="bton" id="kB22" onclick="keyB(22)"></td>
-		<td colspan="2" class="bton" id="kB23" onclick="keyB(23)"></td>
-		<td colspan="2" class="bton" id="kB24" onclick="keyB(24)"></td>
-		<td colspan="2" class="bton" id="kB25" onclick="keyB(25)"></td>
-	</tr>
-	<tr>
-		<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
-		<td colspan="2" class="bton" id="kB26" onclick="keyB(26)"></td>
-		<td colspan="2" class="bton" id="kB27" onclick="keyB(27)"></td>
-		<td colspan="2" class="bton" id="kB28" onclick="keyB(28)"></td>
-		<td colspan="2" class="bton" id="kB29" onclick="keyB(29)"></td>
-		<td colspan="2" class="bton" id="kB30" onclick="keyB(30)"></td>
-		<td colspan="2" class="bton" id="kB31" onclick="keyB(31)"></td>
-		<td colspan="2" class="bton" id="kB32" onclick="keyB(32)"></td>
-		<td colspan="2" class="bton" id="kB33" onclick="keyB(33)"></td>
-		<td colspan="2" class="bton" id="kB34" onclick="keyB(34)"></td>
-		<td colspan="2" class="bton" id="kB35" onclick="keyB(35)"></td>
-		<td colspan="2" class="bton" id="kB36" onclick="keyB(36)"></td>
-		<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
-	</tr>
-	<tr>
-		<td colspan="5" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
-		<td colspan="2" class="bton" id="kB37" onclick="keyB(37)"></td>
-		<td colspan="2" class="bton" id="kB38" onclick="keyB(38)"></td>
-		<td colspan="2" class="bton" id="kB39" onclick="keyB(39)"></td>
-		<td colspan="2" class="bton" id="kB40" onclick="keyB(40)"></td>
-		<td colspan="2" class="bton" id="kB41" onclick="keyB(41)"></td>
-		<td colspan="2" class="bton" id="kB42" onclick="keyB(42)"></td>
-		<td colspan="2" class="bton" id="kB43" onclick="keyB(43)"></td>
-		<td colspan="2" class="bton" id="kB44" onclick="keyB(44)"></td>
-		<td colspan="2" class="bton" id="kB45" onclick="keyB(45)"></td>
-		<td colspan="2" class="bton" id="kB46" onclick="keyB(46)"></td>
-		<td colspan="4" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
-	</tr>
-	<tr>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
-		<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
-		<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
-		<td colspan="3"  class="bton" onclick="layerSwitch('kbD')">ALT</td>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
-	</tr>
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-</table>
-</div>
-
-<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
-<div id="kbC" style="display: none;">  
-<table class="rounded-corners" >
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-	<tr>
-		<td colspan="2" class="bton" id="kC0"  onclick="keyC(0)"></td>
-		<td colspan="2" class="bton" id="kC1"  onclick="keyC(1)"></td>
-		<td colspan="2" class="bton" id="kC2"  onclick="keyC(2)"></td>
-		<td colspan="2" class="bton" id="kC3"  onclick="keyC(3)"></td>
-		<td colspan="2" class="bton" id="kC4"  onclick="keyC(4)"></td>
-		<td colspan="2" class="bton" id="kC5"  onclick="keyC(5)"></td>
-		<td colspan="2" class="bton" id="kC6"  onclick="keyC(6)"></td>
-		<td colspan="2" class="bton" id="kC7"  onclick="keyC(7)"></td>
-		<td colspan="2" class="bton" id="kC8"  onclick="keyC(8)"></td>
-		<td colspan="2" class="bton" id="kC9"  onclick="keyC(9)"></td>
-		<td colspan="2" class="bton" id="kC10" onclick="keyC(10)"></td>
-		<td colspan="2" class="bton" id="kC11" onclick="keyC(11)"></td>
-		<td colspan="2" class="bton" id="kC12" onclick="keyC(12)"></td>
-		<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
-	</tr>
-	<tr>
-		<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
-		<td colspan="2" class="bton" id="kC13" onclick="keyC(13)"></td>
-		<td colspan="2" class="bton" id="kC14" onclick="keyC(14)"></td>
-		<td colspan="2" class="bton" id="kC15" onclick="keyC(15)"></td>
-		<td colspan="2" class="bton" id="kC16" onclick="keyC(16)"></td>
-		<td colspan="2" class="bton" id="kC17" onclick="keyC(17)"></td>
-		<td colspan="2" class="bton" id="kC18" onclick="keyC(18)"></td>
-		<td colspan="2" class="bton" id="kC19" onclick="keyC(19)"></td>
-		<td colspan="2" class="bton" id="kC20" onclick="keyC(20)"></td>
-		<td colspan="2" class="bton" id="kC21" onclick="keyC(21)"></td>
-		<td colspan="2" class="bton" id="kC22" onclick="keyC(22)"></td>
-		<td colspan="2" class="bton" id="kC23" onclick="keyC(23)"></td>
-		<td colspan="2" class="bton" id="kC24" onclick="keyC(24)"></td>
-		<td colspan="2" class="bton" id="kC25" onclick="keyC(25)"></td>
-	</tr>
-	<tr>
-		<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
-		<td colspan="2" class="bton" id="kC26" onclick="keyC(26)"></td>
-		<td colspan="2" class="bton" id="kC27" onclick="keyC(27)"></td>
-		<td colspan="2" class="bton" id="kC28" onclick="keyC(28)"></td>
-		<td colspan="2" class="bton" id="kC29" onclick="keyC(29)"></td>
-		<td colspan="2" class="bton" id="kC30" onclick="keyC(30)"></td>
-		<td colspan="2" class="bton" id="kC31" onclick="keyC(31)"></td>
-		<td colspan="2" class="bton" id="kC32" onclick="keyC(32)"></td>
-		<td colspan="2" class="bton" id="kC33" onclick="keyC(33)"></td>
-		<td colspan="2" class="bton" id="kC34" onclick="keyC(34)"></td>
-		<td colspan="2" class="bton" id="kC35" onclick="keyC(35)"></td>
-		<td colspan="2" class="bton" id="kC36" onclick="keyC(36)"></td>
-		<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
-	</tr>
-	<tr>
-		<td colspan="5" class="bton" onclick="layerSwitch('kbD')">SHIFT</td>
-		<td colspan="2" class="bton" id="kC37" onclick="keyC(37)"></td>
-		<td colspan="2" class="bton" id="kC38" onclick="keyC(38)"></td>
-		<td colspan="2" class="bton" id="kC39" onclick="keyC(39)"></td>
-		<td colspan="2" class="bton" id="kC40" onclick="keyC(40)"></td>
-		<td colspan="2" class="bton" id="kC41" onclick="keyC(41)"></td>
-		<td colspan="2" class="bton" id="kC42" onclick="keyC(42)"></td>
-		<td colspan="2" class="bton" id="kC43" onclick="keyC(43)"></td>
-		<td colspan="2" class="bton" id="kC44" onclick="keyC(44)"></td>
-		<td colspan="2" class="bton" id="kC45" onclick="keyC(45)"></td>
-		<td colspan="2" class="bton" id="kC46" onclick="keyC(46)"></td>
-		<td colspan="4" class="bton" onclick="layerSwitch('kbD')">SHIFT</td>
-	</tr>
-	<tr>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
-		<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
-		<td colspan="11" class="bton" onclick="insertChar('&emsp;')">EM SPACE</td> <!-- &#8192 -->
-		<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">ALT</td>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
-	</tr>
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-</table>
-</div>
-
-<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
-<div id="kbD" style="display: none;">  
-<table class="rounded-corners" >
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-	<tr>
-		<td colspan="2" class="bton" id="kD0"  onclick="keyD(0)"></td>
-		<td colspan="2" class="bton" id="kD1"  onclick="keyD(1)"></td>
-		<td colspan="2" class="bton" id="kD2"  onclick="keyD(2)"></td>
-		<td colspan="2" class="bton" id="kD3"  onclick="keyD(3)"></td>
-		<td colspan="2" class="bton" id="kD4"  onclick="keyD(4)"></td>
-		<td colspan="2" class="bton" id="kD5"  onclick="keyD(5)"></td>
-		<td colspan="2" class="bton" id="kD6"  onclick="keyD(6)"></td>
-		<td colspan="2" class="bton" id="kD7"  onclick="keyD(7)"></td>
-		<td colspan="2" class="bton" id="kD8"  onclick="keyD(8)"></td>
-		<td colspan="2" class="bton" id="kD9"  onclick="keyD(9)"></td>
-		<td colspan="2" class="bton" id="kD10" onclick="keyD(10)"></td>
-		<td colspan="2" class="bton" id="kD11" onclick="keyD(11)"></td>
-		<td colspan="2" class="bton" id="kD12" onclick="keyD(12)"></td>
-		<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
-	</tr>
-	<tr>
-		<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
-		<td colspan="2" class="bton" id="kD13" onclick="keyD(13)"></td>
-		<td colspan="2" class="bton" id="kD14" onclick="keyD(14)"></td>
-		<td colspan="2" class="bton" id="kD15" onclick="keyD(15)"></td>
-		<td colspan="2" class="bton" id="kD16" onclick="keyD(16)"></td>
-		<td colspan="2" class="bton" id="kD17" onclick="keyD(17)"></td>
-		<td colspan="2" class="bton" id="kD18" onclick="keyD(18)"></td>
-		<td colspan="2" class="bton" id="kD19" onclick="keyD(19)"></td>
-		<td colspan="2" class="bton" id="kD20" onclick="keyD(20)"></td>
-		<td colspan="2" class="bton" id="kD21" onclick="keyD(21)"></td>
-		<td colspan="2" class="bton" id="kD22" onclick="keyD(22)"></td>
-		<td colspan="2" class="bton" id="kD23" onclick="keyD(23)"></td>
-		<td colspan="2" class="bton" id="kD24" onclick="keyD(24)"></td>
-		<td colspan="2" class="bton" id="kD25" onclick="keyD(25)"></td>
-	</tr>
-	<tr>
-		<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
-		<td colspan="2" class="bton" id="kD26" onclick="keyD(26)"></td>
-		<td colspan="2" class="bton" id="kD27" onclick="keyD(27)"></td>
-		<td colspan="2" class="bton" id="kD28" onclick="keyD(28)"></td>
-		<td colspan="2" class="bton" id="kD29" onclick="keyD(29)"></td>
-		<td colspan="2" class="bton" id="kD30" onclick="keyD(30)"></td>
-		<td colspan="2" class="bton" id="kD31" onclick="keyD(31)"></td>
-		<td colspan="2" class="bton" id="kD32" onclick="keyD(32)"></td>
-		<td colspan="2" class="bton" id="kD33" onclick="keyD(33)"></td>
-		<td colspan="2" class="bton" id="kD34" onclick="keyD(34)"></td>
-		<td colspan="2" class="bton" id="kD35" onclick="keyD(35)"></td>
-		<td colspan="2" class="bton" id="kD36" onclick="keyD(36)"></td>
-		<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
-	</tr>
-	<tr>
-		<td colspan="5" class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbC')">SHIFT</td>
-		<td colspan="2" id="kD37" class="bton" onclick="keyD(37)"></td>
-		<td colspan="2" id="kD38" class="bton" onclick="keyD(38)"></td>
-		<td colspan="2" id="kD39" class="bton" onclick="keyD(39)"></td>
-		<td colspan="2" id="kD40" class="bton" onclick="keyD(40)"></td>
-		<td colspan="2" id="kD41" class="bton" onclick="keyD(41)"></td>
-		<td colspan="2" id="kD42" class="bton" onclick="keyD(42)"></td>
-		<td colspan="2" id="kD43" class="bton" onclick="keyD(43)"></td>
-		<td colspan="2" id="kD44" class="bton" onclick="keyD(44)"></td>
-		<td colspan="2" id="kD45" class="bton" onclick="keyD(45)"></td>
-		<td colspan="2" id="kD46" class="bton" onclick="keyD(46)"></td>
-		<td colspan="4" class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbC')">SHIFT</td>
-	</tr>
-	<tr>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td> <!-- ⟮⊞⟯ &#x229E; -->
-		<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
-		<td colspan="11" class="bton" onclick="insertChar('&#x200B;')">zero-width space</td> <!-- &#8203; -->
-		<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbB')">ALT</td>
-		<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
-		<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
-	</tr>
-	<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
-</table>
-</div>
-
-<!-- buttons (Clear, ON/OFF, Options -->
-	<div style="margin: 5px;padding: 0px;"> 
-		<button onclick="clearTextArea()"                         >Clear</button>
-		<button id="kboardButton"  onclick="showWindow('kboard')" >US Phonemic</button>
-		<button id="optionsButton" onclick="showWindow('options')">Options</button>
-		<button id="fontsButton"   onclick="showWindow('fonts')"  >Fonts</button>
-		<button id="cheatButton"   onclick="showWindow('cheat')" style="display:inline-block">☺</button>
-	</div>
-
-<!-- ----------- Keyboards ----------- -->
-<div id="kboardTable" class="divtab" style="display:none;">
-  <div class="divrow">
-    <div class="divcell">
-
-<div class="divtab">
-	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('phonemus')" >US Phonemic</button></div></div>
-	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('phonemuk')" >UK Phonemic</button></div></div>
-	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('rhoticuk')" >UK Rhotic</button></div></div>
-	<div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('esl')"      >ESL</button></div></div>
-	<!-- div class="divrow"><div class="divcell"><button style="width:100%" onclick="layoutSwitch('custom')"    >Your Custom Layout</button></div></div -->
-</div>
-
-
-</div> <!-- left cell end -->
-
-<!-- --------- help for each layout --------- -->
-<div class="divcell"> <!-- style="width:600px;"> -->
-	<div id="phonemusDesc" class="desc" style="display:block;">
-		<h3>US Phonemic</h3>
-		<p>With this layout you can type in American English (GA) using IPA symbols.<br />
-		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br />
-			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
-		</p>
-	</div>
-	<div id="phonemukDesc" class="desc" style="display:none;">
-		<h3>UK Phonemic</h3>
-		<p>With this layout you can type in non-rhotic British English (RP) using IPA symbols.<br />
-		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br />
-			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
-		</p>
-	</div>
-
-	<div id="rhoticukDesc" class="desc" style="display:none;">
-		<h3>UK Rhotic</h3>
-		<p>With this layout you can type in <b>rhotic</b> British English using IPA symbols.<br />
-		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Shavian QWERTY layout.<br />
-			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
-		</p>
-	</div>
-	<div id="eslDesc" class="desc" style="display:none;">
-		<h3>ESL</h3>
-		<p>This layout is meant for people who only occasionally need to type IPA symbols.<br>
-		   The Unshifted and Shifted layers (Layer 1 &amp; 2) are based on Standard QWERTY layout.<br>
-		   The AltGr and AltGr+Shift layers (Layer 3 &amp; 4) contain all English phonemes that may be
-		   needed by an ESL tutor.
-		</p>
-	</div>
-</div> <!-- right cell end -->
-
-</div>
-</div>
+	<!-- ----------- Layout descritpions ----------- -->
+	<div id="kboardTable" class="divtab" style="display:block;border: 1px solid red; text-align:center;">
+		<div class="divrow">
+			<div class="divcell"> <!-- style="width:600px;"> -->
+				<div id="phonemusDesc" class="desc" style="display:block;">
+					<h4>US Phonemic</h4>
+					<p>Layout for typing in <b>American English (GA)</b> with IPA symbols.<br>
+					   The Unshifted and Shifted layers (Layers 1 &amp; 2) are based on <b>Shavian QWERTY</b> layout.<br>
+						 Layers 3 &amp; 4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+					</p>
+				</div>
+				<div id="phonemukDesc" class="desc" style="display:none;">
+					<h4>UK Phonemic</h4>
+					<p>Layout typing in <b>non-rhotic British English (RP)</b> wtih IPA symbols.<br>
+					   The Unshifted and Shifted layers (Layers 1 &amp; 2) are based on <b>Shavian QWERTY</b> layout.<br>
+						 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+					</p>
+				</div>
+				<div id="rhoticukDesc" class="desc" style="display:none;">
+					<h4>UK Rhotic</h4>
+					<p>Layout typing in <b>Rhotic British English</b> with IPA symbols.<br>
+					   The Unshifted and Shifted layers (Layers 1 &amp; 2) are based on <b>Shavian QWERTY</b> layout.<br>
+						 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+					</p>
+				</div>
+				<div id="eslDesc" class="desc" style="display:none;">
+					<h4>ESL</h4>
+					<p>Layout is meant for people who only occasionally need to type IPA symbols. For example, ESL tutors.<br>
+					   The AltGr and AltGr+Shift layers (Layers 3 &amp; 4) contain all English phonemes that may be
+					   needed by an ESL tutor. Also, most of the punctuation marks required by Writing Style Guides.
+					</p>
+				</div>
+			</div> <!-- divcell end -->
+		</div> <!-- divrow end -->
+	</div> <!-- divtab end -->
 
 <!-- ----------- Options ----------- -->
-<div id="optionsTable" class="divtab" style="display:none;padding:40px;"> 
+<div id="optionsTable" class="divtab" style="display:none;padding:40px;">
 	<table>
 	<tr> <!-- changeTxtAreaFontSize() -->
 		<td><button onclick="changeTxtAreaFontSize(-1)">-</button></td>
@@ -1143,7 +1165,7 @@ var keysD = phonUSD;
 
 
 <!-- ----------- Fonts ----------- -->
-<div id="fontsTable" class="divtab" style="display:none;"> 
+<div id="fontsTable" class="divtab" style="display:none;">
 	<h3>Fonts used by this keyboard</h3>
 	<p>This HTML file is looking for the following font files in a “fonts” folder in the current directory (except for SegoeUI-Historic¹):</p>
 	<table style="font-weight:normal">
@@ -1181,17 +1203,17 @@ var keysD = phonUSD;
 
 
 <!-- CTRL key -->
-<div id="CTRL"  class="divtab"  style="display:none;"> 
+<div id="CTRL"  class="divtab"  style="display:none;">
 	<div class="divrow">
 		<div class="divcell" style="padding:20px;">
-			<h3>CTRL (Control) key</h3>
+			<h4>CTRL (Control) key</h4>
 			<p><button class="bton" onclick="document.getElementById('CTRL').style.display='none';">Close</button></p>
 		</div>
 	</div>
 </div>
 
 <!-- WIN key -->
-<div id="WIN"  class="divtab"  style="display:none;"> 
+<div id="WIN"  class="divtab"  style="display:none;">
 	<div class="divrow">
 		<div class="divcell" style="padding:20px;">
 			<p>The Windows key, or Super key, or Command key on MacOS ⟮&#x2318;⟯.</p>
@@ -1201,7 +1223,7 @@ var keysD = phonUSD;
 </div>
 
 <!-- --------- Left ALT help --------- -->
-<div id="ALT"  class="divtab"  style="display:none;"> 
+<div id="ALT"  class="divtab"  style="display:none;">
 	<div class="divrow">
 		<div class="divcell" style="padding:20px;">
 			<h3>Left ALT key</h3>
@@ -1248,7 +1270,7 @@ var keysD = phonUSD;
 </div>
 
 <!-- IPA notation cmparison table -->
-<div id="IPAcomparison"  class="divtab"  style="display:block;margin-left:auto;margin-right:auto;"> 
+<div id="IPAcomparison"  class="divtab"  style="display:block;margin-left:auto;margin-right:auto;">
 	<div class="divrow">
 		<div class="divcell" style="padding:20px;">
 				<h4>Differences between US and UK notations:</h4>
@@ -1272,9 +1294,10 @@ var keysD = phonUSD;
 </div>
 
 <!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
-<script> 
-	layoutLoad();   //load default keyboard layout
-//	fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
+<script>
+	layoutSwitch("phonemus");  // default keyboard layout
+	//layoutLoad();   //load default keyboard layout
+	//	fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
 </script>
 
 </main>
