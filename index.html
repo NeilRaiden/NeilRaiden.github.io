@@ -21,11 +21,12 @@
 <style type="text/css">
 /* global CSS variables */
 :root {
-	--spacerwidth: 1px;
-	--keysheight:  28px;
-	--keyfontsize: 14pt;
-	--bodyopacity:  0.8;
-	--defaultfont: Higgins;
+		--spacerwidth: 1px;
+		--keysheight:  28px;
+		--keyfontsize: 14pt;
+		--bodyopacity:  0.8;
+		--defaultfont: Higgins;
+		--kboardfont: Higgins;
 }
 /* Adobe Blank 2 from */
 @font-face {
@@ -87,149 +88,164 @@
 
 /* ----------- styles ----------- */
 body {
-	font-family: var(--defaultfont), Noto;
-/*	font-family: var(--defaultfont), Segoe; * / for Windows */
-/*	background-color: transparent; */
-	background-color: rgba(232, 232, 255, 0.9);
-	background:none transparent;
-/*	opacity: 0.7; */
-	opacity: var(--bodyopacity);
-	text-align: center;
-	font-size: 10pt;
+		font-family: var(--defaultfont), Noto;
+		/*font-family: var(--defaultfont), Segoe; * / for Windows */
+		/*background-color: transparent; */
+		background-color: rgba(232, 232, 255, 0.9);
+		background:none transparent;
+		/*opacity: 0.7; */
+		opacity: var(--bodyopacity);
+		text-align: center;
+		font-size: 10pt;
 }
-h1	{	text-align: center; }
-h3	{	text-align: center; }
-p   {
-	font-weight: normal;
-	text-align: left;
+h1 { text-align: center; }
+h3 { text-align: center; }
+
+p {
+		font-weight: normal;
+		text-align: left; 
 }
 
 ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
 
 textarea {
-	font-family: var(--defaultfont), Segoe;
-	font-size: 14pt;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top:10px;
-	margin-bottom:5px;
+		font-family: var(--defaultfont), Segoe;
+		font-size: 14pt;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:10px;
+		margin-bottom:5px;
 }
 .rounded-corners {
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: separate;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: WhiteSmoke; /* #F5F5F5 */
-/*	Gainsboro; /* #DCDCDC; */
+		margin-left: auto;
+		margin-right: auto;
+		border-collapse: separate;
+		border: 1px solid black;
+		border-radius: 5px;
+		background-color: WhiteSmoke; /* #F5F5F5 */ /*Gainsboro; /* #DCDCDC; */
 }
 .rounded-corners td {
-	border-collapse: separate;
-	border-radius: 7px;
-	border: 1px solid black;
-	width: 12px;
-	height: 12px;
-	text-align: center;
-	background-color: Silver;
+		border-collapse: separate;
+		border-radius: 7px;
+		border: 1px solid black;
+		width: 12px;
+		height: 12px;
+		text-align: center;
+		background-color: Silver;
 }
 table {
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 7px;
-	border: 1px solid black;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 7px;
+		border: 1px solid black;
 }
-th { 	background-color: LightSteelBlue; }
+th { background-color: LightSteelBlue; }
 td {
-	border: 0px solid black;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	text-align: left;
-	font-size: 10pt;
-/*	border-style: none none solid none; */
+		border: 0px solid black;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		text-align: left;
+		font-size: 10pt;
+		/* border-style: none none solid none; */
 }
 
 button {
-/*	font-family: var(--defaultfont), Noto;
-	font-size: var(--keyfontsize); */
-	font-weight: bold;
-	padding-right: 5px;
-	padding-left: 5px;
+		/*font-family: var(--defaultfont), Noto;
+		font-size: var(--keyfontsize); */
+		font-weight: bold;
+		padding-right: 5px;
+		padding-left: 5px;
 }
 
 .bton {
-/*	background-color: Silver;
-/*	Silver; #C0C0C0
-/*	SlateGrey; #708090
-/*	LightSlateGrey; #778899
-/*	LightSteelBlue; #B0C4DE
-/*	LightGray; #D3D3D3 */
-/*	Gray; #808080 */
-/*	DimGray #696969 */
-/*	DarkGrey; #A9A9A9 */
-/*	display: table; */
-	border: none;
-	border-radius: 7px;
-	color: black;
-	text-align: center;
-	font-family: var(--defaultfont), Noto;
-	font-size: var(--keyfontsize);
-	font-weight: bold;
-	padding: 5px;
-	width: 100%;
-	height: var(--keysheight);
-	cursor: pointer;
+		/*background-color: Silver;
+		/*Silver; #C0C0C0
+		/*SlateGrey; #708090
+		/*LightSlateGrey; #778899
+		/*LightSteelBlue; #B0C4DE
+		/*LightGray; #D3D3D3 */
+		/*Gray; #808080 */
+		/*DimGray #696969 */
+		/*DarkGrey; #A9A9A9 */
+		/*display: table; */
+		border: none;
+		border-radius: 7px;
+		color: black;
+		text-align: center;
+		font-family: var(--kboardfont), Noto;
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		height: var(--keysheight);
+		cursor: pointer;
 }
-.bton:hover {	background-color: RoyalBlue; }
+.bton:hover { background-color: RoyalBlue; }
 .btonpressed {
-	background-color: LightBlue;
-	border: none;
-	border-radius: 7px;
-	color: black;
-	text-align: center;
-	font-family: var(--defaultfont), Noto;
-	font-size: var(--keyfontsize);
-	font-weight: bold;
-	padding: 5px;
-	width: 100%;
-/*	height: 100%; */
-	height: var(--keysheight);
-	cursor: pointer;
+		background-color: LightBlue;
+		border: none;
+		border-radius: 7px;
+		color: black;
+		text-align: center;
+		font-family: var(--defaultfont), Noto;
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		/*height: 100%;*/
+		height: var(--keysheight);
+		cursor: pointer;
 }
 .trSpacer td {
-	width: var(--spacerwidth);
-	height: 0px;
-	border: 0px;
+		width: var(--spacerwidth);
+		height: 0px;
+		border: 0px;
 }
 .divtab {
-	display: table;
-	width: auto;
-	margin: auto; /* shrink and center */
-	margin-top: 10px;
-	border-collapse: collapse;
+		display: table;
+		width: auto;
+		margin: auto; /* shrink and center */
+		margin-top: 10px;
+		border-collapse: collapse;
 }
 .divrow {
-	display: table-row;
+		display: table-row;
 }
 .divcell {
-	display: table-cell;
-	border: 0px solid #ddd;
+		display: table-cell;
+		border: 0px solid #ddd;
 }
 .divcellch {
-	display: table-cell;
-	padding: 3px;
-	border: 0px solid #ddd;
-	font-size:14pt;
-	font-style:bold;
+		display: table-cell;
+		padding: 3px;
+		border: 0px solid #ddd;
+		font-size:14pt;
+		font-style:bold;
 }
 .desc {
-	width: 100%;
-	border:0px solid blue;
-	padding-left:10px;
-	font-size:11pt;
-	text-align:center;
+		display: flex;
+		/*align-items: center;*/
+		justify-content: center;
+		text-align:center;
+		/*width: 100%;*/
+		border:0px solid blue;
+		/*padding-left:10px;*/
+		/*font-size:11pt;*/
+}
+.desc p {
+		border: 0px solid magenta;
+		width:400px; /* "margin:auto;" for centering fixed-width objects*/
+		margin: auto;
+		margin-bottom: 10px;
+}
+.transTable td {
+		text-align: center;
+		font-weight: bold;
+		padding: 3px 3px 3px 3px; /* top right bottom left */
+		font-size:1.2em;
 }
 </style>
 
@@ -600,15 +616,18 @@ function showWindow(wind) {
 		buttonId.style.backgroundColor  = '';
 	}
 }
+
 function specialKey(spcKey) {
-	var spcKeyId = document.getElementById(spcKey);
-	if ( spcKeyId.style.display == 'table' ) {
-		spcKeyId.style.display = 'none';
-	}
-	else {
-		spcKeyId.style.display = 'table';
-	}
+	// NOT SUPPORTED
+	//var spcKeyId = document.getElementById(spcKey);
+	//if ( spcKeyId.style.display == 'table' ) {
+	//	spcKeyId.style.display = 'none';
+	//}
+	//else {
+	//	spcKeyId.style.display = 'table';
+	//}
 }
+
 function changeTxtAreaFontSize(valu) {
 	var txtWin = document.getElementById("txtWin");
 	textAreaFontSize += valu;
@@ -645,7 +664,7 @@ function changeFont(selObj) {
 	var selectedText = selObj.options[selectedIndex].text;
 	var selectedValue = selObj.options[selectedIndex].value;
 	console.log("Selected font:" + selectedText + " index: " +selectedIndex + " value: " + selectedValue);
-	r.style.setProperty('--defaultfont', selectedValue );
+	r.style.setProperty('--kboardfont', selectedValue );
 }
 function fontDetector() {
 	const fontFaceSet = document.fonts;
@@ -682,12 +701,13 @@ function fontDetector() {
 }
 
 // global variables - important: some of these variables have their corresponding counterpart in the ":root" CSS global variables
+var bodyOpacity       = 0.8;	// CSS variable: --bodyopacity
+var defaultFont       = 'Higgins';   // CSS variable: --defaultfont
 var textAreaFontSize  =  14; 	// textarea font-size (default 14pt)
+var kboardFont        = 'Higgins'; 
 var kboardFontSize    =  14; 	// class .bton font-size (default 14pt)
 var kboardSpacerWidth =  1;	  // keys width (default 12px)  - CSS variable ""
 var kboardKeysHeight  =  28;	// keys height (default 25px) - CSS variable "--keysheight"
-var bodyOpacity       = 0.8;	// CSS variable: --bodyopacity
-var defaultFont  = 'Higgins';   // CSS variable: --defaultfont
 var r = document.querySelector(':root'); 	// Get the root element
 
 /*   default keyboard layout - on startup will be loaded at the end of page */
@@ -798,12 +818,12 @@ var keysD = phonUSD;
 				<td colspan="4" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
 			</tr>
 			<tr>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-				<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
 				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
 				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
 				<td colspan="3"  class="bton" onclick="layerSwitch('kbC')">ALT</td>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -876,12 +896,12 @@ var keysD = phonUSD;
 				<td colspan="4" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
 			</tr>
 			<tr>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-				<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
 				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
 				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
 				<td colspan="3"  class="bton" onclick="layerSwitch('kbD')">ALT</td>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -1163,15 +1183,6 @@ var keysD = phonUSD;
 
 
 	<!-- ----------- Layout descritpions ----------- -->
-<style>
-.transTable td {
-		text-align: center;
-		font-weight: bold;
-		padding: 3px 3px 3px 3px; /* top right bottom left */
-		font-size:1.2em;
-}
-</style>
-
 	<div id="phonemusDesc" class="desc" style="display:block;">
 		<h4>US Phonemic</h4>
 		<p>Layout for typing in <b>American English (GA)</b> with IPA symbols.<br>
@@ -1549,98 +1560,29 @@ var keysD = phonUSD;
 		</p>
 	</div>
 
-
-<!-- CTRL key -->
-<div id="CTRL"  class="divtab"  style="display:none;">
-	<div class="divrow">
-		<div class="divcell" style="padding:20px;">
-			<h4>CTRL (Control) key</h4>
-			<p><button class="bton" onclick="document.getElementById('CTRL').style.display='none';">Close</button></p>
-		</div>
-	</div>
-</div>
-
-<!-- WIN key -->
-<div id="WIN"  class="divtab"  style="display:none;">
-	<div class="divrow">
-		<div class="divcell" style="padding:20px;">
-			<p>The Windows key, or Super key, or Command key on MacOS ⟮&#x2318;⟯.</p>
-			<p><button class="bton" onclick="document.getElementById('WIN').style.display='none';">Close</button></p>
-		</div>
-	</div>
-</div>
-
-<!-- --------- Left ALT help --------- -->
-<div id="ALT"  class="divtab"  style="display:none;">
-	<div class="divrow">
-		<div class="divcell" style="padding:20px;">
-			<h3>Left ALT key</h3>
-			<p>There is a number of useful Left-ALT shortcuts. Several examples below:</p>
-
-			<p>The Left-ALT key would be much better utilized if it was mirroring the function of the AltGR ⟮Right-ALT⟯ key.</p>
-			<p>This way you would be able to access all the special symbols, punctuation marks, etc, without interruption for a brief session of awkward finger gymnastics.<br />Especially when typing symbols located on the right side of the keyboard.</p>
-			<p>The solution is to remap the ⟮Left-ALT⟯ key to another key.</p>
-			<p>For example, most people do not use the ⟮CapsLock⟯ key.</p>
-			<p>BTW, wouldn't it be easier to press ⟮CapsLock⟯+⟮TAB⟯ instead of ⟮L-ALT⟯+⟮TAB⟯ to switch between open windows?</p>
-			<p>There are multiple ways to do this.<br />You have several options:</p>
-			<ul>
-				<li>Write an <a href="https://www.autohotkey.com">AutoHotKey</a> script and have it running in the background all the time</li>
-				<li>Use Keyboard Manager from Windows <a href="https://github.com/microsoft/PowerToys/releases/">Power Toys</a></li>
-				<li>Some more expensive keyboards come with software that is capable of remapping keys</li>
-				<li>Use <a href="https://github.com/randyrants/sharpkeys/releases/">SharpKeys</a> - single‐file executable.</li>
-				<li>Apply a simple Windows registry tweak.</li>
-			</ul>
-			<p>The choice is yours. Here is the registry tweak for Windows 10:</p>
-			<ol>
-				<li>Start Regedit as Administorator</li>
-				<li>Go to: "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout"</li>
-				<li>Create new value "Binary value" ⟮REG_BINARY⟯ - name it "<b>Scancode Map</b>"</li>
-				<li>Enter the following value: "00 00 00 00 00 00 00 00 03 00 00 00 38 00 3A 00 38 E0 38 00 00 00 00 00"</li>
-				<li>Reboot your Windows</li>
-			</ol>
-			<div id="regkey">
-				<p><b>Explanation:</b></p>
-				<pre style="text-align:center;">hex:&nbsp;<red>00 00 00 00 00 00 00 00</red>&nbsp;<blu>03 00</blu>&nbsp;<sil>00 00</sil>&nbsp;<lg>38 00</lg>&nbsp;<ly>3A 00</ly>&nbsp;<lg>38 E0</lg>&nbsp;<ly>38 00</ly>&nbsp;<sil>00 00</sil>&nbsp;<sil>00 00</sil></pre>
-				<ul>
-					<li><red>00 00 00 00 00 00 00 00</red> - header version (4 bytes) and header flags (4 bytes) - always zeros</li>
-					<li><blu>03 00</blu> = number of remaps plus 1</li>
-					<li><sil>00 00</sil> = NULL</li>
-					<li>Note: bytes in key scancodes are reversed</li>
-					<li><lg>38 00</lg>&nbsp;<ly>3A 00</ly> - <b>Left-Alt</b> ⟮00_38⟯ will replace <b>CapsLock</b> ⟮00_3A⟯</li>
-					<li><lg>38 E0</lg>&nbsp;<ly>38 00</ly> - <b>Right-Alt</b> ⟮E0_38⟯ will replace <b>Left-Alt</b> ⟮00_38⟯</li>
-					<li>Effectively <b>CapsLock</b> is disabled - but if you still need it, you can map it to, for example, an <b>F6</b> key ⟮00_40⟯</li>
-				</ul>
-			</div>
-			<p></p>
-			<p><button class="bton" onclick="document.getElementById('ALT').style.display='none';">Close</button></p>
-		</div>
-	</div>
-</div>
-
 	<!-- IPA notation cmparison table -->
-	<div style="text-align:center;">
+	<div style="text-align:center; margin-bottom:10px;">
 		<h4>Differences between US and UK notations:</h4>
 		<p> </p>
 		<table style="font-weight:normal">
-				<tr><th>UK (RP)</th><th>UK (rhotic)</th><th>US (GA)</th><tr>
-				<tr><td>ɑː </td><td>ɑː </td><td>ɑ </td></tr>
-				<tr><td>ɔː </td><td>ɔː </td><td>ɔ </td></tr>
-				<tr><td>uː </td><td>uː </td><td>u </td></tr>
-				<tr><td>iː </td><td>iː </td><td>i </td></tr>
-				<tr><td>ɑːʳ</td><td>ɑːr</td><td>ɑr</td></tr>
-				<tr><td>ɔːʳ</td><td>ɔːr</td><td>ɔr</td></tr>
-				<tr><td>ɜːʳ</td><td>ɜːr</td><td>ɜr</td></tr>
-				<tr><td>əʊ </td><td>əʊ </td><td>ɔʊ</td></tr>
-				<tr><td>ʊəʳ</td><td>ʊər</td><td>ʊr</td></tr>
-				<tr><td>eəʳ</td><td>eər</td><td>er</td></tr>
+			<tr><th>UK (RP)</th><th>UK (rhotic)</th><th>US (GA)</th><tr>
+			<tr><td>ɑː </td><td>ɑː </td><td>ɑ </td></tr>
+			<tr><td>ɔː </td><td>ɔː </td><td>ɔ </td></tr>
+			<tr><td>uː </td><td>uː </td><td>u </td></tr>
+			<tr><td>iː </td><td>iː </td><td>i </td></tr>
+			<tr><td>ɑːʳ</td><td>ɑːr</td><td>ɑr</td></tr>
+			<tr><td>ɔːʳ</td><td>ɔːr</td><td>ɔr</td></tr>
+			<tr><td>ɜːʳ</td><td>ɜːr</td><td>ɜr</td></tr>
+			<tr><td>əʊ </td><td>əʊ </td><td>ɔʊ</td></tr>
+			<tr><td>ʊəʳ</td><td>ʊər</td><td>ʊr</td></tr>
+			<tr><td>eəʳ</td><td>eər</td><td>er</td></tr>
 		</table>
 	</div>
 
 <!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
 <script>
 	layoutSwitch("phonemus");  // default keyboard layout
-	//layoutLoad();   //load default keyboard layout
-	//fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
+	fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
 </script>
 
 </main>
