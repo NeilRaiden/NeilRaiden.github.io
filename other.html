@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>NeilRaiden.com - Other Layouts</title>
+	<title>NeilRaiden.com</title>
 	<meta charset="UTF-8"> <!-- HTML5 -->
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- HTML4 -->
 	<!-- match width with phone device widths -->
@@ -21,11 +21,12 @@
 <style type="text/css">
 /* global CSS variables */
 :root {
-	--spacerwidth: 1px;
-	--keysheight:  28px;
-	--keyfontsize: 14pt;
-	--bodyopacity:  0.8;
-	--defaultfont: Higgins;
+		--spacerwidth: 1px;
+		--keysheight:  28px;
+		--keyfontsize: 14pt;
+		--bodyopacity:  0.8;
+		--defaultfont: Higgins;
+		--kboardfont: Higgins;
 }
 /* Adobe Blank 2 from */
 @font-face {
@@ -33,155 +34,218 @@
     src: url("data:font/opentype;base64,T1RUTwAKAIAAAwAgQ0ZGIN6nWacAAAfMAAABMURTSUcAAAABAAAJCAAAAAhPUy8yAF+xmwAAARAAAABgY21hcAE0tLwAAAasAAABAGhlYWQIOsNZAAAArAAAADZoaGVhB1oD7wAAAOQAAAAkaG10eAPoAHwAAAkAAAAACG1heHAAAlAAAAABCAAAAAZuYW1lc0mXUAAAAXAAAAU6cG9zdP+4ADIAAAesAAAAIAABAAAAAgBB1Q6SE18PPPUAAwPoAAAAANKdP6AAAAAA0p0/oAB8/4gDbANwAAAAAwACAAAAAAAAAAEAAANw/4gAAAPoAHwAfANsAAEAAAAAAAAAAAAAAAAAAAACAABQAAACAAAAAwPoAZAABQAAAooCWAAAAEsCigJYAAABXgAyANwAAAAAAAAAAAAAAAD3/67/+9///w/gAD8AAAAAQURCTwBAAAD//wNw/4gAAANwAHhgLwH/AAAAAAAAAAAAAAAgAAAAAAALAIoAAwABBAkAAACUAAAAAwABBAkAAQAaAJQAAwABBAkAAgAOAK4AAwABBAkAAwA4ALwAAwABBAkABAAaAJQAAwABBAkABQB0APQAAwABBAkABgAWAWgAAwABBAkACAA0AX4AAwABBAkACwA0AbIAAwABBAkADQKWAeYAAwABBAkADgA0BHwAQwBvAHAAeQByAGkAZwBoAHQAIACpACAAMgAwADEAMwAsACAAMgAwADEANQAgAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgACgAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAGEAZABvAGIAZQAuAGMAbwBtAC8AKQAuAEEAZABvAGIAZQAgAEIAbABhAG4AawAgADIAUgBlAGcAdQBsAGEAcgAyAC4AMAAwADEAOwBBAEQAQgBPADsAQQBkAG8AYgBlAEIAbABhAG4AawAyADsAQQBEAE8AQgBFAFYAZQByAHMAaQBvAG4AIAAyAC4AMAAwADEAOwBQAFMAIAAyAC4AMAAwADEAOwBoAG8AdABjAG8AbgB2ACAAMQAuADAALgA4ADgAOwBtAGEAawBlAG8AdABmAC4AbABpAGIAMgAuADUALgA2ADUAMAAxADIAQQBkAG8AYgBlAEIAbABhAG4AawAyAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZABoAHQAdABwADoALwAvAHcAdwB3AC4AYQBkAG8AYgBlAC4AYwBvAG0ALwB0AHkAcABlAC8AVABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIABpAHMAIABsAGkAYwBlAG4AcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAFMASQBMACAATwBwAGUAbgAgAEYAbwBuAHQAIABMAGkAYwBlAG4AcwBlACwAIABWAGUAcgBzAGkAbwBuACAAMQAuADEALgAgAFQAaABpAHMAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACAAaQBzACAAZABpAHMAdAByAGkAYgB1AHQAZQBkACAAbwBuACAAYQBuACAAIgBBAFMAIABJAFMAIgAgAEIAQQBTAEkAUwAsACAAVwBJAFQASABPAFUAVAAgAFcAQQBSAFIAQQBOAFQASQBFAFMAIABPAFIAIABDAE8ATgBEAEkAVABJAE8ATgBTACAATwBGACAAQQBOAFkAIABLAEkATgBEACwAIABlAGkAdABoAGUAcgAgAGUAeABwAHIAZQBzAHMAIABvAHIAIABpAG0AcABsAGkAZQBkAC4AIABTAGUAZQAgAHQAaABlACAAUwBJAEwAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUAIABmAG8AcgAgAHQAaABlACAAcwBwAGUAYwBpAGYAaQBjACAAbABhAG4AZwB1AGEAZwBlACwAIABwAGUAcgBtAGkAcwBzAGkAbwBuAHMAIABhAG4AZAAgAGwAaQBtAGkAdABhAHQAaQBvAG4AcwAgAGcAbwB2AGUAcgBuAGkAbgBnACAAeQBvAHUAcgAgAHUAcwBlACAAbwBmACAAdABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUALgBoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAAEAAwAKAAAADAANAAAAAAD0AAAAAAAAABMAAAAAAADX/wAAAAEAAOAAAAD9zwAAAAEAAP3wAAD//QAAAAEAAQAAAAH//QAAAAEAAgAAAAL//QAAAAEAAwAAAAP//QAAAAEABAAAAAT//QAAAAEABQAAAAX//QAAAAEABgAAAAb//QAAAAEABwAAAAf//QAAAAEACAAAAAj//QAAAAEACQAAAAn//QAAAAEACgAAAAr//QAAAAEACwAAAAv//QAAAAEADAAAAAz//QAAAAEADQAAAA3//QAAAAEADgAAAA7//QAAAAEADwAAAA///QAAAAEAEAAAABD//QAAAAEAAwAAAAAAAP+1ADIAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAIAAQEBDEFkb2JlQmxhbmsyAAEBAS34G/gciwwe+B0B+B4Ci/sM+gD6BAUeKgAfDB+NDCL3Uw/3WRH3Vgwl96wMJAAFAQEGDlZjcEFkb2JlSWRlbnRpdHlDb3B5cmlnaHQgMjAxMywgMjAxNSBBZG9iZSBTeXN0ZW1zIEluY29ycG9yYXRlZCAoaHR0cDovL3d3dy5hZG9iZS5jb20vKS5BZG9iZSBCbGFuayAyQWRvYmVCbGFuazItMgAAAAABAAAAAAIBAUxO+nz7DLf6JLcB9xC3+Sy3A/cQ+gQV/nz5hPp8B/1Y/icV+dIH98X8MwWmsBX7xfg3Bfj2BqZiFf3SB/vF+DMFcGYV98X8NwX89gYOiw4AAQEBCfgfDCaX97kS+46LHAVGiwa9Cr0LAAAAA+gAfAAAAAAAAAABAAAAAA==");
 }
 
+/* --------- font faces --------- */
 @font-face {
 	font-family:Higgins;
 	src: url('./fonts/HenryHigginsSans-Regular.otf');
 	src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
 }
+@font-face {
+    font-family:IntAliaR;
+    src: url('./fonts/InterAlia-Regular.woff2');
+    src: url('./fonts/InterAlia-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family:IntAliaI;
+    src: url('./fonts/InterAlia-Italic.woff2');
+    src: url('./fonts/InterAlia-Italic.woff2') format('woff2');
+}
+@font-face {
+    font-family:IntAliaB;
+    src: url('./fonts/InterAlia-Bold.woff2');
+    src: url('./fonts/InterAlia-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family:IntAliaBI;
+    src: url('./fonts/InterAlia-BoldItalic.woff2');
+    src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
+}
+@font-face {
+	font-family:NotoS;
+	src: url('./fonts/NotoSans-Regular.ttf');
+	src: url('./fonts/NotoSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:NotoF;
+	src: url('./fonts/NotoSerif-Regular.ttf');
+	src: url('./fonts/NotoSerif-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:Trabajo;
+	src: url('./fonts/Trabajo.otf');
+	src: url('./fonts/Trabajo.otf') format('opentype');
+}
 
-.pHiggins   { font-family: Higgins, AdobeBlank2;   font-size: 16pt; }
-
+/* --------- FontTable styles --------- */
+.pHiggins   { font-family: Higgins,   AdobeBlank2; font-size: 14pt; }
+.pIntAliaR  { font-family: IntAliaR,  AdobeBlank2; font-size: 14pt; }
+.pIntAliaI  { font-family: IntAliaI,  AdobeBlank2; font-size: 14pt; }
+.pIntAliaB  { font-family: IntAliaB,  AdobeBlank2; font-size: 14pt; }
+.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2; font-size: 14pt; }
+.pNotoS     { font-family: NotoS,     AdobeBlank2; font-size: 14pt; }
+.pNotoF     { font-family: NotoF,     AdobeBlank2; font-size: 14pt; }
+.pTrabajo   { font-family: Trabajo,   AdobeBlank2; font-size: 14pt; }
 
 /* ----------- styles ----------- */
-body { 
-	font-family: var(--defaultfont), Noto; 
-/*	font-family: var(--defaultfont), Segoe; * / for Windows */
-/*	background-color: transparent; */
-	background-color: rgba(232, 232, 255, 0.9);
-	background:none transparent;
-/*	opacity: 0.7; */
-	opacity: var(--bodyopacity);
-	text-align: center;
-	font-size: 10pt;
+body {
+		font-family: var(--defaultfont), Noto;
+		/*font-family: var(--defaultfont), Segoe; * / for Windows */
+		/*background-color: transparent; */
+		background-color: rgba(232, 232, 255, 0.9);
+		background:none transparent;
+		/*opacity: 0.7; */
+		opacity: var(--bodyopacity);
+		text-align: center;
+		font-size: 10pt;
 }
-h1	{	text-align: center; }
-h3	{	text-align: center; }
-p   {
-	font-weight: normal;
-	text-align: left;
+h1 { text-align: center; }
+h3 { text-align: center; }
+
+p {
+		font-weight: normal;
+		text-align: left; 
 }
 
 ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
 
 textarea {
-	font-family: var(--defaultfont), Segoe; 
-	font-size: 14pt;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top:10px;
-	margin-bottom:5px;
+		font-family: var(--defaultfont), Segoe;
+		font-size: 14pt;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:10px;
+		margin-bottom:5px;
 }
 .rounded-corners {
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: separate;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: WhiteSmoke; /* #F5F5F5 */
-/*	Gainsboro; /* #DCDCDC; */
+		margin-left: auto;
+		margin-right: auto;
+		border-collapse: separate;
+		border: 1px solid black;
+		border-radius: 5px;
+		background-color: WhiteSmoke; /* #F5F5F5 */ /*Gainsboro; /* #DCDCDC; */
 }
 .rounded-corners td {
-	border-collapse: separate;
-	border-radius: 7px;
-	border: 1px solid black;
-	width: 12px;
-	height: 12px;
-	text-align: center;
-	background-color: Silver;
+		border-collapse: separate;
+		border-radius: 7px;
+		border: 1px solid black;
+		width: 12px;
+		height: 12px;
+		text-align: center;
+		background-color: Silver;
 }
 table {
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 7px;
-	border-collaps: collapse;
-	border: 1px solid black;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 7px;
+		border: 1px solid black;
 }
-th { 	background-color: LightSteelBlue; }
+th { background-color: LightSteelBlue; }
 td {
-	border: 0px solid black;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 0px;
-	padding-bottom: 0px;
-	text-align: left;
-	font-size: 10pt;
-/*	border-style: none none solid none; */
+		border: 0px solid black;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		text-align: left;
+		font-size: 10pt;
+		/* border-style: none none solid none; */
 }
 
-/* ------ Keyboard table layout ------ */
-.bton {
-/*	background-color: Silver;
-/*	Silver; #C0C0C0
-/*	SlateGrey; #708090
-/*	LightSlateGrey; #778899
-/*	LightSteelBlue; #B0C4DE
-/*	LightGray; #D3D3D3 */
-/*	Gray; #808080 */
-/*	DimGray #696969 */
-/*	DarkGrey; #A9A9A9 */
-/*	display: table; */
-	border: none;
-	border-radius: 7px;
-	color: black;
-	text-align: center;
-	font-family: var(--defaultfont), Noto;
-	font-size: var(--keyfontsize);
-	font-weight: bold;
-	padding: 5px;
-	width: 100%;
-	height: var(--keysheight);
-	cursor: pointer;
+button {
+		/*font-family: var(--defaultfont), Noto;
+		font-size: var(--keyfontsize); */
+		font-weight: bold;
+		padding-right: 5px;
+		padding-left: 5px;
 }
-.bton:hover {	background-color: RoyalBlue; }
+
+.bton {
+		/*background-color: Silver;
+		/*Silver; #C0C0C0
+		/*SlateGrey; #708090
+		/*LightSlateGrey; #778899
+		/*LightSteelBlue; #B0C4DE
+		/*LightGray; #D3D3D3 */
+		/*Gray; #808080 */
+		/*DimGray #696969 */
+		/*DarkGrey; #A9A9A9 */
+		/*display: table; */
+		border: none;
+		border-radius: 7px;
+		color: black;
+		text-align: center;
+		font-family: var(--kboardfont), Noto;
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		height: var(--keysheight);
+		cursor: pointer;
+}
+.bton:hover { background-color: RoyalBlue; }
 .btonpressed {
-	background-color: LightBlue;
-	border: none;
-	border-radius: 7px;
-	color: black;
-	text-align: center;
-	font-family: var(--defaultfont), Noto;
-	font-size: var(--keyfontsize);
-	font-weight: bold;
-	padding: 5px;
-	width: 100%;
-/*	height: 100%; */
-	height: var(--keysheight);
-	cursor: pointer;
+		background-color: LightBlue;
+		border: none;
+		border-radius: 7px;
+		color: black;
+		text-align: center;
+		font-family: var(--defaultfont), Noto;
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		/*height: 100%;*/
+		height: var(--keysheight);
+		cursor: pointer;
 }
 .trSpacer td {
-	width: var(--spacerwidth);
-	height: 0px;
-	border: 0px;
+		width: var(--spacerwidth);
+		height: 0px;
+		border: 0px;
 }
-
-/* ------ div table layout ------ */
 .divtab {
-	display: table;
-	width: auto;
-	margin: auto; /* shrink and center */
-	margin-top: 10px;
-	border-collapse: collapse;
+		display: table;
+		width: auto;
+		margin: auto; /* shrink and center */
+		margin-top: 10px;
+		border-collapse: collapse;
 }
 .divrow {
-	display: table-row;
+		display: table-row;
 }
 .divcell {
-	display: table-cell;
-	border: 0px solid #ddd;
+		display: table-cell;
+		border: 0px solid #ddd;
 }
 .divcellch {
-	display: table-cell;
-	padding: 3px;
-	border: 0px solid #ddd;
-	font-size:14pt;
-	font-style:bold;
+		display: table-cell;
+		padding: 3px;
+		border: 0px solid #ddd;
+		font-size:14pt;
+		font-style:bold;
 }
 .desc {
-	width: 400px;
-	border:0px solid blue;
-	padding-left:10px;
-	font-size:11pt;
+		display: flex;
+		/*align-items: center;*/
+		justify-content: center;
+		text-align:center;
+		/*width: 100%;*/
+		border:0px solid blue;
+		/*padding-left:10px;*/
+		/*font-size:11pt;*/
+}
+.desc p {
+		border: 0px solid magenta;
+		width:400px; /* "margin:auto;" for centering fixed-width objects*/
+		margin: auto;
+		margin-bottom: 10px;
+}
+.transTable td {
+		text-align: center;
+		font-weight: bold;
+		padding: 3px 3px 3px 3px; /* top right bottom left */
+		font-size:1.2em;
 }
 </style>
 
@@ -203,26 +267,41 @@ const qwertyB = [
 	'Z','X','C','V','B','N','M','<','>','?' ];
 
 // English Writer (&#x0301 - combining acute mark on layerC:keyE example:⟨é⟩)
-const writerA = [ 
-	'`','1','2','3','4','5','6','7','8','9','0','-','=',
-	'q','w','e','r','t','y','u','i','o','p','[',']','\\',
-	'a','s','d','f','g','h','j','k','l',';','\'',
-	'z','x','c','v','b','n','m',',','.','/' ];
-const writerB = [ 
-	'~','!','@','#','$','%','^','&','*','(',')','_','+',
-	'Q','W','E','R','T','Y','U','I','O','P','{','}','|',
-	'A','S','D','F','G','H','J','K','L',':','\"',
-	'Z','X','C','V','B','N','M','<','>','?' ];
-const writerC = [ 
+const writerA = qwertyA;
+const writerB = qwertyB;
+const writerC = [
 	'´','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁰','→','≠',
 	'…','⋯','́','®','™','√','↑','','','℗','⟨','⟩','•',
 	'“','”','↓','°','','‐','','«','»','§','×',
 	'‘','’','©','⁃','·','–','—','‹','›','÷' ];
-const writerD = [ 
+const writerD = [
 	'≈','₁','₂','₃','₄','₅','₆','₇','₈','₉','₀','←','±',
 	'⌜','⌝','⌞','⌟', '', '', '','ˈ', '','π','⟮','⟯','◦',
 	 '', '', '', '', '','‑', '','ˌ', '','ː','☒',
 	 '', '','¢', '','○', '','µ','☺','☐','☑' ];
+
+// ASERT layout
+const aserthA = [
+	'`','1','2','3','4','5','6','7','8','9','0','-','=',
+	'q','w','d','f','g','y','u','k','p',';','[',']','\\',
+	'a','s','e','r','t','h','n','i','o','l', "'",
+	'z','x','c','v','b','j','m',',','.','/' ];
+const aserthB = [
+	'~','!','@','#','$','%','^','&','*','(',')','_','+',
+	'Q','W','D','F','G','Y','U','K','P',':','{','}','|',
+	'A','S','E','R','T','H','N','I','O','L','\"',
+	'Z','X','C','V','B','J','M','<','>','?' ];
+const aserthC = [ 
+	'´','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁰','→','≠',
+	'…','⋯','↓','°','','√','↑','§','℗','×','⟨','⟩','•',
+	'“','”','́','®','™','‐','–','','','«','»',
+	'‘','’','©','⁃','·','','—','÷','‹','›' ];
+const aserthD = [ 
+	'≈','₁','₂','₃','₄','₅','₆','₇','₈','₉','₀','←','±',
+	'⌜','⌝','⌞','⌟','','','','ˈ','π','ː','⟮','⟯','◦',
+	'','','','','','‑','','ˌ','','','☒',
+	'','','¢','','○','','µ','☺','☐','☑' ];
+
 
 /* Your Own Custom Keyboard Layout */
 /* If you are reading this, that means either you are:
@@ -233,9 +312,8 @@ If it's the second option, then here is how you do it:
  1. Modify and un‐comment the layout tables below (customA, customB, customC, customD)
  2. The "custom_" tables are already added to the layoutSwitch() function — no need to do anything
  3. If you want to make it default, then change the "const keys[ABCD] = ..." definitions at the bottom of this <script> section
- 4. Modify and un‐comment the <tr>...</tr> in the <div id="kboardTable"...> tag
- 5. Save and refresh page with F5
- 6. Oh, and remember to update the "Copyright (c) 202_ Your Name (AGPL v3)" line 
+ 4. Save and refresh page with F5
+ 5. Oh, and remember to update the "Copyright (c) 202_ Your Name (AGPL v3)" line
 Good Luck! :)
 */
 /* custom tables * /
@@ -246,19 +324,19 @@ const customA = [
 	  'c','u','s','t','o','m','','','','','',
 	   '','','','','l','a','y','o','u','t' ];
 // shifted:
-const customB = [ 
+const customB = [
 	'','','','','','','','','','','','','',
 	 '','','','','','','','','','','','','',
 	  '','','','','','','','','','','',
 	   '','','','','','','','','','' ];
 // AltGR (aka right-alt):
-const customC = [ 
+const customC = [
 	'','','','','','','','','','','','','',
 	 '','','','','','','','','','','','','',
 	  '','','','','','','','','','','',
 	   '','','','','','','','','','' ];
 // AltGr + Shift:
-const customD = [ 
+const customD = [
 	'','','','','','','','','','','','','',
 	 '','','','','','','','','','','','','',
 	  '','','','','','','','','','','',
@@ -298,29 +376,43 @@ function keyC(key) { insertChar(keysC[key]); }
 function keyD(key) { insertChar(keysD[key]); }
 
 function layoutSwitch(laiout) {
-	let kbName = "US Phonemic";
-		//x=1 show cheat table for given layout
-	let cheat=0;
-  	document.getElementById(currentLayout + 'Desc').style.display = 'none';
-  	currentLayout=laiout;
-  	document.getElementById(currentLayout + 'Desc').style.display = 'block';
-	switch(laiout) {
-		case "writer" : keysA=writerA; keysB=writerB; keysC=writerC; keysD=writerD; kbName="Writer"; cheat=1; break;
-	}
+	let kbName = "US Writer";  // default layout
+	let cheat=0;   //cheat=1 show cheat table for given layout
 
+	// change color of all layout switching buttons to default
+	// then the current layout to RoyalBlue
+	document.getElementById("writer").style.backgroundColor = "";
+	document.getElementById("aserth").style.backgroundColor = "";
+	document.getElementById(laiout).style.backgroundColor     = "dodgerblue";
+
+ 	document.getElementById(currentLayout + 'Desc').style.display = 'none';
+ 	currentLayout=laiout;
+ 	document.getElementById(currentLayout + 'Desc').style.display = 'block';
+
+	switch(laiout) {
+		case "writer" :
+				keysA=writerA; keysB=writerB; keysC=writerC; keysD=writerD; kbName="US Writer";
+				break;
+		case "aserth" :
+				keysA=aserthA; keysB=aserthB; keysC=aserthC; keysD=aserthD; kbName="ASERT";
+				break;
+		//case "custom"      :
+		//		keysA=customA;    keysB=customB;    keysC=customC;    keysD=customD;    kbName="Custom"; cheat=0;
+		//		break;
+	}
 	layerSwitch("kbA");
-	document.getElementById("kboardButton").innerText = kbName;
+	//document.getElementById("kboardButton").innerText = kbName;
 	//reload all buttons with symbols from new layout
 	layoutLoad();
-		// cheatButton on = show cheat table
-	var cheatButton = document.getElementById('cheatButton');
-	if ( cheat == 1 ) {
-		cheatButton.style.display='inline-block';
-	}
-	else {
-		cheatButton.style.display='none';
-		document.getElementById('cheatTable').style.display='none';
-	}
+	// cheatButton on = show cheatsheet table
+	//var cheatButton = document.getElementById('cheatButton');
+	//if ( cheat == 1 ) {
+	//	cheatButton.style.display='inline-block';
+	//}
+	//else {
+	//	cheatButton.style.display='none';
+	//	document.getElementById('cheatTable').style.display='none';
+	//}
 }
 
 // ------ textarea functions
@@ -365,7 +457,7 @@ function backSpace() {
 	else {
 		if ( cursorSta > 0 ) {
 		// if (Unicode char) then { delete 2 bytes } else { delete 1 byte }
-			if ( letter == "\uD801" ) { 
+			if ( letter == "\uD801" ) {
 				// Unicode char detected: delete 2 bytes
 				textArea.value = text.slice(0,cursorSta-2) + text.slice(cursorSta);
 				// set cursor position -2
@@ -405,7 +497,7 @@ function deleteChar() {
 	textArea.setSelectionRange(cursorSta, cursorSta);
 }
 
-// ------ layout layer switching
+// ------
 function layerSwitch(kb) {
 	const kbA = document.getElementById("kbA"); // lowercase
 	const kbB = document.getElementById("kbB"); // uppercase (Shift)
@@ -428,7 +520,7 @@ function showWindow(wind) {
 	const buttonId = document.getElementById(wind + 'Button');
 	if ( windId.style.display == "none" ) {
 		windId.style.display = 'table';
-		buttonId.style.backgroundColor = 'royalblue'; // works - but leaves border somewhat thick-black
+		buttonId.style.backgroundColor = 'RoyalBlue'; // works - but leaves border somewhat thick-black
 		//buttonId.style.background = 'royalblue';		// works - but leaves thick border even after reset
 		//buttonId.bgcolor = 'royalblue';					// doesn't do a thing
 		//document.getElementById("button").className = 'button_color';   // change class name
@@ -438,17 +530,18 @@ function showWindow(wind) {
 		buttonId.style.backgroundColor  = '';
 	}
 }
+
 function specialKey(spcKey) {
-	var spcKeyId = document.getElementById(spcKey);
-	if ( spcKeyId.style.display == 'table' ) {
-		spcKeyId.style.display = 'none';
-	}
-	else {
-		spcKeyId.style.display = 'table';
-	}
+	// NOT SUPPORTED
+	//var spcKeyId = document.getElementById(spcKey);
+	//if ( spcKeyId.style.display == 'table' ) {
+	//	spcKeyId.style.display = 'none';
+	//}
+	//else {
+	//	spcKeyId.style.display = 'table';
+	//}
 }
 
-// ------ Options
 function changeTxtAreaFontSize(valu) {
 	var txtWin = document.getElementById("txtWin");
 	textAreaFontSize += valu;
@@ -485,18 +578,50 @@ function changeFont(selObj) {
 	var selectedText = selObj.options[selectedIndex].text;
 	var selectedValue = selObj.options[selectedIndex].value;
 	console.log("Selected font:" + selectedText + " index: " +selectedIndex + " value: " + selectedValue);
-	r.style.setProperty('--defaultfont', selectedValue );
+	r.style.setProperty('--kboardfont', selectedValue );
 }
 function fontDetector() {
+	const fontFaceSet = document.fonts;
+	const fontList = [ 'HenryHigginsSans-Regular.otf',
+		'InterAlia-Regular.woff2',
+		'InterAlia-Italic.woff2',
+		'InterAlia-Bold.woff2',
+		'InterAlia-BoldItalic.woff2',
+		'NotoSans-Regular.ttf',
+		'NotoSerif-Regular.ttf',
+		'Trabajo.otf' ];
+	const fontShortList = [ 'Higgins', 'IntAliaR','IntAliaI','IntAliaB','IntAliaBI','NotoS','NotoF','Trabajo' ];
+
+	// fontIs are used as ElementIs of <td> in font table:
+	const fontIds = ['higg','alia','alii','alib','albi','nots','notf','trab'];
+	var fontSelector = document.getElementById('fontSelect').getElementsByTagName("option");
+
+	for ( let i=0; i<fontIds.length; i++ ) {
+		let tdId = document.getElementById(fontIds[i]);
+		var fontFace = new FontFace(fontShortList[i], 'url(./fonts/'+fontList[i]+')');
+		fontFace.load().then(fond => {
+			// font is loaded, make it available:
+				document.fonts.add(fond);
+				tdId.innerText = '☑';
+				tdId.style.color = 'RoyalBlue';
+				fontSelector[i].disabled = false;
+		}).catch((error) => {
+			// fallback font is used or font loading failed
+				tdId.innerText = '☒';
+				tdId.style.color = 'Red';
+				fontSelector[i].disabled = true;
+		});
+	}
 }
 
 // global variables - important: some of these variables have their corresponding counterpart in the ":root" CSS global variables
-var textAreaFontSize  =  14; 	// textarea font-size (default 14pt)
-var kboardFontSize    =  14; 	// class .bton font-size (default 14pt)
-var kboardSpacerWidth =  1;	// keys width (default 12px)  - CSS variable ""
-var kboardKeysHeight  =  28;	// keys height (default 25px) - CSS variable "--keysheight"
 var bodyOpacity       = 0.8;	// CSS variable: --bodyopacity
-var defaultFont  = 'Higgins';   // CSS variable: --defaultfont
+var defaultFont       = 'Higgins';   // CSS variable: --defaultfont
+var textAreaFontSize  =  14; 	// textarea font-size (default 14pt)
+var kboardFont        = 'Higgins'; 
+var kboardFontSize    =  14; 	// class .bton font-size (default 14pt)
+var kboardSpacerWidth =  1;	  // keys width (default 12px)  - CSS variable ""
+var kboardKeysHeight  =  28;	// keys height (default 25px) - CSS variable "--keysheight"
 var r = document.querySelector(':root'); 	// Get the root element
 
 /*   default keyboard layout - on startup will be loaded at the end of page */
@@ -522,10 +647,24 @@ var keysD = writerD;
 	<div>
 		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
 	</div>
+	<!-- buttons (Clear, To Clipboard -->
+	<div style="margin: 0px;padding: 0px;">
+		<button onclick="clearTextArea()" >Clear</button>
+		<button onclick="copyToClip()"    >To Clipboard</button>
+	</div>
 
-	<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
-	<div id="kbA" style="display: block;"> 
+	<!-- ------ Layout switcher ------ -->
+	<div style="margin: 5px;padding: 0px;">
+		<b>Layout:</b>&nbsp;
+		<button id="writer" onclick="layoutSwitch('writer')" >US Writer</button>
+		<button id="aserth" onclick="layoutSwitch('aserth')" >ASERT</button>
+		<!-- <button style="width:100%" onclick="layoutSwitch('custom')">Your Custom Layout</button> -->
+	</div>
+
+		<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
+	<div id="kbA" style="display: block;">
 		<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
+		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
 			<tr>
@@ -561,7 +700,7 @@ var keysD = writerD;
 				<td colspan="2" class="bton" id="kA25" onclick="keyA(25)"></td>
 			</tr>
 			<tr>
-				<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
 				<td colspan="2" class="bton" id="kA26" onclick="keyA(26)"></td>
 				<td colspan="2" class="bton" id="kA27" onclick="keyA(27)"></td>
 				<td colspan="2" class="bton" id="kA28" onclick="keyA(28)"></td>
@@ -590,12 +729,12 @@ var keysD = writerD;
 				<td colspan="4" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
 			</tr>
 			<tr>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-				<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
 				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
 				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
 				<td colspan="3"  class="bton" onclick="layerSwitch('kbC')">ALT</td>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -603,7 +742,7 @@ var keysD = writerD;
 	</div>
 
 	<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
-	<div id="kbB" style="display: none;">  
+	<div id="kbB" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
 			<tr>
@@ -639,7 +778,7 @@ var keysD = writerD;
 				<td colspan="2" class="bton" id="kB25" onclick="keyB(25)"></td>
 			</tr>
 			<tr>
-				<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
 				<td colspan="2" class="bton" id="kB26" onclick="keyB(26)"></td>
 				<td colspan="2" class="bton" id="kB27" onclick="keyB(27)"></td>
 				<td colspan="2" class="bton" id="kB28" onclick="keyB(28)"></td>
@@ -668,12 +807,12 @@ var keysD = writerD;
 				<td colspan="4" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
 			</tr>
 			<tr>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
-				<td colspan="3"  class="bton" onclick="specialKey('WIN_')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
 				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
 				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
 				<td colspan="3"  class="bton" onclick="layerSwitch('kbD')">ALT</td>
-				<td colspan="3"  class="bton" onclick="specialKey('CTRL_')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -681,7 +820,7 @@ var keysD = writerD;
 	</div>
 
 	<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
-	<div id="kbC" style="display: none;">  
+	<div id="kbC" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
 			<tr>
@@ -717,7 +856,7 @@ var keysD = writerD;
 				<td colspan="2" class="bton" id="kC25" onclick="keyC(25)"></td>
 			</tr>
 			<tr>
-				<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
 				<td colspan="2" class="bton" id="kC26" onclick="keyC(26)"></td>
 				<td colspan="2" class="bton" id="kC27" onclick="keyC(27)"></td>
 				<td colspan="2" class="bton" id="kC28" onclick="keyC(28)"></td>
@@ -759,7 +898,7 @@ var keysD = writerD;
 	</div>
 
 	<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
-	<div id="kbD" style="display: none;">  
+	<div id="kbD" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
 			<tr>
@@ -795,7 +934,7 @@ var keysD = writerD;
 				<td colspan="2" class="bton" id="kD25" onclick="keyD(25)"></td>
 			</tr>
 			<tr>
-				<td colspan="4" class="bton" onclick="copyToClip()">Copy</td>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
 				<td colspan="2" class="bton" id="kD26" onclick="keyD(26)"></td>
 				<td colspan="2" class="bton" id="kD27" onclick="keyD(27)"></td>
 				<td colspan="2" class="bton" id="kD28" onclick="keyD(28)"></td>
@@ -836,16 +975,17 @@ var keysD = writerD;
 		</table>
 	</div>
 
-<!-- buttons (Clear, ON/OFF, Options -->
-	<div style="margin: 5px;padding: 0px;"> 
-		<button onclick="clearTextArea()"                         >Clear</button>
+	<!-- buttons: Options, Fonts -->
+	<div style="margin: 5px;padding: 0px;">
+		<!-- button id="kboardButton"  onclick="showWindow('kboard')" >US Phonemic</button -->
 		<button id="optionsButton" onclick="showWindow('options')">Options</button>
-		<button id="cheatButton"   onclick="showWindow('cheat')" style="display:inline-block">☺</button>
+		<button id="fontsButton"   onclick="showWindow('fonts')"  >Fonts</button>
+		<!-- button id="cheatButton"   onclick="showWindow('cheat')" style="display:inline-block">☺</button -->
 	</div>
 
-<!-- ----------- Options ----------- -->
-<div id="optionsTable" class="divtab" style="display:none;padding:40px;"> 
-	<table>
+	<!-- ----------- Options ----------- -->
+	<div id="optionsTable" class="divtab" style="display:none;padding:40px;">
+		<table>
 		<tr> <!-- changeTxtAreaFontSize() -->
 			<td><button onclick="changeTxtAreaFontSize(-1)">-</button></td>
 			<td>Text area font size :</td>
@@ -880,85 +1020,179 @@ var keysD = writerD;
 		<tr> <!-- changeFont() -->
 			<td colspan="4" style="text-align:center;width:100%;">
 				<select id="fontSelect" name="Select font" onchange="changeFont(this)">
-					<option value="Higgins"  >HenryHigginsSans-Regular.otf</option>
-					<option value="Noto"     >NotoSansShavian-Regular.ttf</option>
-					<option value="Trabajo"  >Trabajo.otf</option>
+					<option value="Higgins"   >HenryHigginsSans-Regular.otf</option>
+					<option value="IntAliaR"  >InterAlia-Regular.ttf</option>
+					<option value="IntAliaI"  >InterAlia-Italic.ttf</option>
+					<option value="IntAliaB"  >InterAlia-Bold.ttf</option>
+					<option value="IntAliaBI" >InterAlia-BoldItalic.ttf</option>
+					<option value="NotoS"     >NotoSans-Regular.ttf</option>
+					<option value="NotoF"     >NotoSerif-Regular.ttf</option>
+					<option value="Trabajo"   >Trabajo.otf</option>
 				</select>
 			</td>
 		</tr>
-	</table>
-</div>
-
-<!-- CTRL key -->
-<div id="CTRL"  class="divtab"  style="display:none;"> 
-	<div class="divrow">
-		<div class="divcell" style="padding:20px;">
-			<h3>CTRL (Control) key</h3>
-			<p><button class="bton" onclick="document.getElementById('CTRL').style.display='none';">Close</button></p>
-		</div>
+		</table>
 	</div>
-</div>
 
-<!-- WIN key -->
-<div id="WIN"  class="divtab"  style="display:none;"> 
-	<div class="divrow">
-		<div class="divcell" style="padding:20px;">
-			<p>The Windows key, or Super key, or Command key on MacOS ⟮&#x2318;⟯.</p>
-			<p><button class="bton" onclick="document.getElementById('WIN').style.display='none';">Close</button></p>
-		</div>
+	<!-- ----------- Fonts ----------- -->
+	<div id="fontsTable" class="divtab" style="display:none;">
+		<h4>Fonts used by this keyboard</h4>
+		<table style="font-weight:normal;font-size:14pt;margin-bottom:5px;">
+			<tr><td id="higg">?</td><td>HenryHigginsSans-Regular.otf</td>
+				<td class="pHiggins">the five boxing wizards jump quickly<br>THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="alia">?</td><td>InterAlia-Regular.woff2</td>
+				<td class="pIntAliaR">the five boxing wizards jump quickly</td></tr>
+			<tr><td id="alii">?</td><td>InterAlia-Italic.woff2</td>
+				<td class="pIntAliaI">the five boxing wizards jump quickly</td></tr>
+			<tr><td id="alib">?</td><td>InterAlia-Bold.woff2</td>
+				<td class="pIntAliaB">the five boxing wizards jump quickly</td></tr>
+			<tr><td id="albi">?</td><td>InterAlia-BoldItalic.woff2</td>
+				<td class="pIntAliaBI">the five boxing wizards jump quickly</td></tr>
+			<tr><td id="nots">?</td><td>NotoSans-Regular.ttf</td>
+				<td class="pNotoS">the five boxing wizards jump quickly</td></tr>
+			<tr><td id="notf">?</td><td>NotoSerif-Regular.ttf</td>
+				<td class="pNotoF">the five boxing wizards jump quickly</td></tr>
+			<tr><td id="trab">?</td><td>Trabajo.otf</td>
+				<td class="pTrabajo">the five boxing wizards jump quickly</td></tr>
+		</table>
+		<button onclick="fontDetector()">Reload fonts</button>
+
+		<!-- pangrams for font testing:
+		The five boxing wizards jump quickly.
+		Pack my box with five dozen liquor jugs.
+		Go, lazy fat vixen; be shrewd, jump quick.
+		When zombies arrive, quickly fax Judge Pat.
+		Amazingly few discotheques provide jukeboxes.
+		Puzzled women bequeath jerks very exotic gifts.
+		The quick onyx goblin jumps over the lazy dwarf.
+		Brawny gods just flocked up to quiz and vex him.
+		Watch “Jeopardy!”, Alex Trebek’s fun TV quiz game.
+		Six big devils from Japan quickly forgot how to waltz.
+		Five or six big jet planes zoomed quickly by the tower.
+		Jack amazed a few girls by dropping the antique onyx vase.
+		A quick movement of the enemy will jeopardize six gunboats.
+		quick move of the enemy will jeopardize six gunboats.
+		Jaded zombies acted quaintly but kept driving their oxen forward.
+		-->
+		<!--
+		<p>This HTML file is looking for the following font files in a “fonts” folder in the current directory:</p>
+		<p style="text-align:center;"><i>This functionality to reload fonts may NOT work in all browsers.</i></p>
+		<p>Please download and place desired font files into a folder “<b>fonts</b>” in the same directory as this HTML file.</p>
+		<p>Then use the “<b>Reload Fonts</b>” button to verify that the HTML document can use them.</p>
+		<p>For font files that are present, you should see a blue check‐mark ⟮<span style="color:RoyalBlue">☑</span>⟯ — and you should see different styles in the table above.</p>
+		<p>For font files that are missing, you should see a red checkbox with an “×” inside ⟮<span style="color:Red">☒</span>⟯.</p>
+		<p>If the font is missing, you will see an empty line — the font fallback is disabled in the table above on purpose.</p>
+		<p>That way you will not mistake the font listed here, with the one provided by your OS as a fallback.</p>
+		<p>Please note: the font fallback is disabled only in the table above — the font used in the keyboard will be either of the:</p>
+		<ul>
+			<li>A random font rendered by your browser from whatever font fallback mechanism will find in your OS.</li>
+			<li>Default one: <b>Henry Higgins Sans Regular</b> - if present in the local “fonts” folder.</li>
+			<li>A font chosen by you from the “<b>Options</b>” panel — only if present in “fonts” folder.</li>
+		</ul>
+		-->
 	</div>
-</div>
 
-<!-- --------- Left ALT help --------- -->
-<div id="ALT"  class="divtab"  style="display:none;"> 
-	<div class="divrow">
-		<div class="divcell" style="padding:20px;">
-			<h3>Left ALT key</h3>
-			<p>There is a number of useful Left-ALT shortcuts. Several examples below:</p>
 
-			<p>The Left-ALT key would be much better utilized if it was mirroring the function of the AltGR ⟮Right-ALT⟯ key.</p>
-			<p>This way you would be able to access all the special symbols, punctuation marks, etc, without interruption for a brief session of awkward finger gymnastics.<br />Especially when typing symbols located on the right side of the keyboard.</p>
-			<p>The solution is to remap the ⟮Left-ALT⟯ key to another key.</p>
-			<p>For example, most people do not use the ⟮CapsLock⟯ key.</p>
-			<p>BTW, wouldn't it be easier to press ⟮CapsLock⟯+⟮TAB⟯ instead of ⟮L-ALT⟯+⟮TAB⟯ to switch between open windows?</p>
-			<p>There are multiple ways to do this.<br />You have several options:</p>
-			<ul>
-				<li>Write an <a href="https://www.autohotkey.com">AutoHotKey</a> script and have it running in the background all the time</li>
-				<li>Use Keyboard Manager from Windows <a href="https://github.com/microsoft/PowerToys/releases/">Power Toys</a></li>
-				<li>Some more expensive keyboards come with software that is capable of remapping keys</li>
-				<li>Use <a href="https://github.com/randyrants/sharpkeys/releases/">SharpKeys</a> - single‐file executable.</li>
-				<li>Apply a simple Windows registry tweak.</li>
-			</ul>
-			<p>The choice is yours. Here is the registry tweak for Windows 10:</p>
-			<ol>
-				<li>Start Regedit as Administorator</li>
-				<li>Go to: "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout"</li>
-				<li>Create new value "Binary value" ⟮REG_BINARY⟯ - name it "<b>Scancode Map</b>"</li>
-				<li>Enter the following value: "00 00 00 00 00 00 00 00 03 00 00 00 38 00 3A 00 38 E0 38 00 00 00 00 00"</li>
-				<li>Reboot your Windows</li>
-			</ol>
-			<div id="regkey">
-				<p><b>Explanation:</b></p>
-				<pre style="text-align:center;">hex:&nbsp;<red>00 00 00 00 00 00 00 00</red>&nbsp;<blu>03 00</blu>&nbsp;<sil>00 00</sil>&nbsp;<lg>38 00</lg>&nbsp;<ly>3A 00</ly>&nbsp;<lg>38 E0</lg>&nbsp;<ly>38 00</ly>&nbsp;<sil>00 00</sil>&nbsp;<sil>00 00</sil></pre>
+	<!-- ----------- Layout descritpions ----------- -->
+	<div id="writerDesc" class="desc" style="display:block;">
+		<h4>US Writer</h4>
+		<p><i>Layout for typing frequently used punctuation marks and 
+			typographic symbols required by writing style guides that are 
+			not avilable on the standard QWERTY layout.</i></p>
+		<h5>Problem:</h5>
+		<p>All the novels, essays, newspaper articles, etc — anything 
+			that is published or printed — must follow specific rules 
+			outlined in the writing guides such as the famous 
+			“Chicago Manual of Style”.</p>
+		<p>For example, those writing guides require writers, authors, 
+			publishers to use:<br>
+		 • 66-99 and 6-9 quotation marks,<br>
+		 • N-dash, M-dash, several types of hyphens — not the hyphen-minus
+			that is present on the QWERTY layout,<br>
+		 • ellipsis, footnotes, end-notes, etc.<br>
+		</p>
+		<p>None of those symbols is readily available on the 
+			standard <b>English QWERTY</b> keyboard layout. 
+			Neither on Dvorak and Colemak. Instead, writers must either:<br>
+		 • memorize a list of <b>Alt codes,</b><br>
+		 • laboriously copy the symbols from the <b>CharacterMap</b> 
+			or a similar app,<br>
+		 • or use an expensive software dedicated for writers that 
+			auto-magically replaces typed symbols with the correct ones.<br>
+		</p>
+		<p>Unfortunately the "smart quotes" are not implemented in every 
+			text editor — <b>that is THE PROBLEM</b>.</p>
+		<h5>Solution:</h5>
+		<p>The <b>Writer</b> keyboard layouts allow you to type those 
+			most commonly used symbols with <b>AltGr</b> (right Alt key)
+			and <b>AltGr+Shift</b> in a way easier to memorize 
+			than the <i>Alt codes</i>.
+		<p>And you may also easily enter some other useful symbols:<br>
+		“«©℗®™√÷×≠±≈⟨¹²⁹⁰₁₂₉₀⟩⟮·○•◦⟯°πµ☐☑☒☺»”.</p>
+	</div>
+
+	<div id="aserthDesc" class="desc" style="display:none;">
+		<h4>ASERTH</h4>
+		<p><i>A layout for more efficient typing</i></p>
+		<p>This layout is based on 
+			<a href="https://github.com/nick-gravgaard/qwerty-flip">QWERTY-Flip-Twist</a> by Nick Gravgaard.<br>
+			The <b>AltGr</b> and <b>AltGr+Shift</b> layers are similar 
+			to the <b>Writer</b> layout.<br>
+ 		</p>
+		<h5>Problem:</h5>
+		<p>The most popular keyboard layout in the world, <b>QWERTY</b> was designed in 1870s, for the first typewriting machines. The keys in those typewriter machines were moving type-bars which were placed very close to each other and their trajectories crossed with others. This caused jamming when a user pressed two keys one after another too quickly. Reportedly to prevent jamming the keys were arranged in a way to slow down the user.</p>
+
+		<p>In summary: <b>QWERTY is highly inefficient by design</b>.</p>
+
+		<p>In the 1930-ties <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">Dr August Dvorak</a> re-arranged the keys to create a more ergonomic layout with focus on writing speed and mimimizing strain. It was most likely designed for electric typewriting machines that started being popular in 1920s. His layout is known as <b>Dvorak<b> layout. But probably because the mechanical typewriters were still widely used the adoption of Dvorak failed.</p>  
+
+		<p>In summary: <b>Dvorak is efficient, but hard to learn</b>, especiall by people already proficient with QWERTY, it retains only 2 keys from QWERTY layout.</p>
+
+		<p>In 2006 <a href="https://colemak.com/">Shai Coleman</a> released his <b>Colemak</b> layout as a compromise between QWERTY and typing speed (17 keys moved and 10 retained). Colemak is the result of a very thorough analysis of English text, finger distances for most common letter pairs, etc. For more info visit <a href="https://colemak.com/">Colemak.com</a> (the official Shai Coleman website), <a href="https://colemak.org/">Colemak.org</a> and <a href="https://mk.bcgsc.ca/carpalx/?colemak">CarpalX</a>.</p>
+
+		<p>In summary: Colemak is one of the best designed layouts, easier to learn than Dvorak. But if you're already typing at speed of more than 50wpm it may take you months to achieve that kind of speed with the new layout. However, reportedly the reduction in fatigue is noticeable almost immediately.</p>
+
+		<p>In recent decade multiple new layouts were designed that are slightly more efficient than Colemak. But they are not much faster than Colemak, and their focus is on various types of optimization and not reduction of learning curve. Examples:<br>
+			• <a href="https://github.com/jackrosenthal/threelayout">Three Layout - 3l</a><br>
+			• <a href="https://en.wikipedia.org/wiki/Keyboard_layout#Workman">Workman</a><br>
+		</p>
+
+		<p>Probably the difficulty of having to completely re-learn the layout is what keeps most people from even trying it. And That is <b>the problem</b>.</p>
+
+		<h5>Solution:</h5>
+		<p>Several good solutions already exist that are a middle-ground between QWERTY and Colemak. Three most notable examples:</p>
+
+		<p>
+		<ol> 
+			<li><a href="http://www.minimak.org/">Minimak</a> layout. With Minimak you can gradually swap 12 keys:
 				<ul>
-					<li><red>00 00 00 00 00 00 00 00</red> - header version (4 bytes) and header flags (4 bytes) - always zeros</li>
-					<li><blu>03 00</blu> = number of remaps plus 1</li>
-					<li><sil>00 00</sil> = NULL</li>
-					<li>Note: bytes in key scancodes are reversed</li>
-					<li><lg>38 00</lg>&nbsp;<ly>3A 00</ly> - <b>Left-Alt</b> ⟮00_38⟯ will replace <b>CapsLock</b> ⟮00_3A⟯</li>
-					<li><lg>38 E0</lg>&nbsp;<ly>38 00</ly> - <b>Right-Alt</b> ⟮E0_38⟯ will replace <b>Left-Alt</b> ⟮00_38⟯</li>
-					<li>Effectively <b>CapsLock</b> is disabled - but if you still need it, you can map it to, for example, an <b>F6</b> key ⟮00_40⟯</li>
-				</ul>
-			</div>
-			<p></p>
-			<p><button class="bton" onclick="document.getElementById('ALT').style.display='none';">Close</button></p>
-		</div>
-	</div>
-</div>
+				<li><b>Minimak-4</b>: swap 4 keys for 60% improvement ⟮rotation: D → E → K → T → D⟯.</li>
+				<li><b>Minimak-8</b>: after few weeks, swap another 4 keys ⟮swap N with J, and L with O⟯</li>
+				<li><b>Minimak-12</b>: after another few weeks, swap another 4 keys to achieve 83% of the benefits of Dvorak ⟮swap R with F, and P with ;⟯</li>
+				</ul></li>
+			<li><a href="https://github.com/AlternateKeyboard/ASERT">ASERT</a> layout (15 keys relocated):
+				<ul>
+						<li>swap ERT with DFG</li>
+						<li>swap IOP with KL;</li>
+						<li>rotate: J → Y → N → J</li>
+				</ul></li>
+			<li><a href="https://nick-gravgaard.com/qwerty-flip/">QWERTY-Flip-Twist</a> (the <b>ASERTH</b> layout presented here). Total of 14 keys relocated according to scheme:
+						<ul>
+								<li>flip ERT with DFG</li>
+								<li>flip N with J, K with I</li>
+								<li>twist: L → ; → P → O → L</li>
+						</ul>
+			</li>
+			</ol>
+			</p>
+			<p>ASERT, Minimak and QWERTY-flip layouts focus on <b>reducing the learning curve</b> while being almost as efficient as Colemak.</p>
 
-<!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
-<script> 
-	layoutLoad();   //load default keyboard layout
+	</div>
+
+<!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
+<script>
+	layoutSwitch("writer");  // default keyboard layout
+	fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
 </script>
 
 </main>
