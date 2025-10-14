@@ -237,9 +237,20 @@ button {
 }
 .desc p {
 		border: 0px solid magenta;
-		width:400px; /* "margin:auto;" for centering fixed-width objects*/
+/*		width:400px; /* "margin:auto;" for centering fixed-width objects*/
 		margin: auto;
 		margin-bottom: 10px;
+		padding-left:5px;
+}
+.desc blockquote {
+		margin-left:15px;
+		border-left:3px solid silver;
+		padding-left:5px;
+		text-align:left;
+}
+.desc b {
+		color:black;
+		font-weight:bold;
 }
 .transTable td {
 		text-align: center;
@@ -1097,7 +1108,7 @@ var keysD = writerD;
 	<div id="writerDesc" class="desc" style="display:block;">
 		<h4>US Writer</h4>
 		<p><i>Layout for typing frequently used punctuation marks and 
-			typographic symbols required by writing style guides that are 
+			typographic symbols (required by writing style guides) which are 
 			not avilable on the standard QWERTY layout.</i></p>
 		<h5>Problem:</h5>
 		<p>All the novels, essays, newspaper articles, etc — anything 
@@ -1105,64 +1116,64 @@ var keysD = writerD;
 			outlined in the writing guides such as the famous 
 			“Chicago Manual of Style”.</p>
 		<p>For example, those writing guides require writers, authors, 
-			publishers to use:<br>
-		 • 66-99 and 6-9 quotation marks,<br>
-		 • N-dash, M-dash, several types of hyphens — not the hyphen-minus
-			that is present on the QWERTY layout,<br>
-		 • ellipsis, footnotes, end-notes, etc.<br>
-		</p>
+			publishers to use:</p>
+		<ul>
+			<li>66-99 and 6-9 quotation marks,</li>
+			<li>N-dash, M-dash, several types of hyphens — not the hyphen-minus
+			that is present on the QWERTY layout,</li>
+			<li>ellipsis, footnotes, end-notes, etc.</li>
+		</ul>
 		<p>None of those symbols is readily available on the 
 			standard <b>English QWERTY</b> keyboard layout. 
-			Neither on Dvorak and Colemak. Instead, writers must either:<br>
-		 • memorize a list of <b>Alt codes,</b><br>
-		 • laboriously copy the symbols from the <b>CharacterMap</b> 
-			or a similar app,<br>
-		 • or use an expensive software dedicated for writers that 
-			auto-magically replaces typed symbols with the correct ones.<br>
-		</p>
+			Neither on Dvorak and Colemak. Instead, writers must either:</p>
+		<ul>
+				<li>memorize a list of <b>Alt codes,</b></li>
+				<li>laboriously copy the symbols from the <b>CharacterMap</b> 
+			or a similar app,</li>
+				<li>or use an expensive software dedicated for writers that 
+			auto-magically replaces typed symbols with the correct ones.</li>
+		</ul>
 		<p>Unfortunately the "smart quotes" are not implemented in every 
 			text editor — <b>that is THE PROBLEM</b>.</p>
 		<h5>Solution:</h5>
-		<p>The <b>Writer</b> keyboard layouts allow you to type those 
+		<p>The <b>Writer</b> keyboard layout allows you to type those 
 			most commonly used symbols with <b>AltGr</b> (right Alt key)
 			and <b>AltGr+Shift</b> in a way easier to memorize 
 			than the <i>Alt codes</i>.
-		<p>And you may also easily enter some other useful symbols:<br>
-		“«©℗®™√÷×≠±≈⟨¹²⁹⁰₁₂₉₀⟩⟮·○•◦⟯°πµ☐☑☒☺»”.</p>
+		<p>And you may also easily enter some other useful symbols: “<b>«©℗®™√÷×≠±≈⟨¹²⁹⁰₁₂₉₀⟩⟮·○•◦⟯°πµ☐☑☒☺»</b>”.</p>
 	</div>
 
 	<div id="aserthDesc" class="desc" style="display:none;">
 		<h4>ASERTH</h4>
-		<p><i>A layout for more efficient typing</i></p>
+		<p><i>A layout for more efficient typing</i>.</p>
 		<p>This layout is based on 
 			<a href="https://github.com/nick-gravgaard/qwerty-flip">QWERTY-Flip-Twist</a> by Nick Gravgaard.<br>
-			The <b>AltGr</b> and <b>AltGr+Shift</b> layers are similar 
-			to the <b>Writer</b> layout.<br>
+			The <b>AltGr</b> and <b>AltGr+Shift</b> layers are similar to the <b>Writer</b> layout.<br>
  		</p>
 		<h5>Problem:</h5>
-		<p>The most popular keyboard layout in the world, <b>QWERTY</b> was designed in 1870s, for the first typewriting machines. The keys in those typewriter machines were moving type-bars which were placed very close to each other and their trajectories crossed with others. This caused jamming when a user pressed two keys one after another too quickly. Reportedly to prevent jamming the keys were arranged in a way to slow down the user.</p>
+		<p>The most popular keyboard layout in the world, <b>QWERTY</b> was designed in 1870s, for the first typewriter machines. The keys in those typewriter machines were moving type-bars which were placed very close to each other and their trajectories crossed with others. This caused jamming when a user pressed two keys one after another too quickly. Reportedly to prevent jamming the keys were arranged in a way to slow down the user.</p>
 
-		<p>In summary: <b>QWERTY is highly inefficient by design</b>.</p>
+		<blockquote>In summary: <b>QWERTY is highly inefficient by design</b>.</blockquote>
 
 		<p>In the 1930-ties <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">Dr August Dvorak</a> re-arranged the keys to create a more ergonomic layout with focus on writing speed and mimimizing strain. It was most likely designed for electric typewriting machines that started being popular in 1920s. His layout is known as <b>Dvorak<b> layout. But probably because the mechanical typewriters were still widely used the adoption of Dvorak failed.</p>  
 
-		<p>In summary: <b>Dvorak is efficient, but hard to learn</b>, especiall by people already proficient with QWERTY, it retains only 2 keys from QWERTY layout.</p>
+		<blockquote>In summary: <b>Dvorak is efficient, but hard to learn</b>, especiall by people already proficient with QWERTY, it retains only 2 keys from QWERTY layout.</blockquote>
 
 		<p>In 2006 <a href="https://colemak.com/">Shai Coleman</a> released his <b>Colemak</b> layout as a compromise between QWERTY and typing speed (17 keys moved and 10 retained). Colemak is the result of a very thorough analysis of English text, finger distances for most common letter pairs, etc. For more info visit <a href="https://colemak.com/">Colemak.com</a> (the official Shai Coleman website), <a href="https://colemak.org/">Colemak.org</a> and <a href="https://mk.bcgsc.ca/carpalx/?colemak">CarpalX</a>.</p>
 
-		<p>In summary: Colemak is one of the best designed layouts, easier to learn than Dvorak. But if you're already typing at speed of more than 50wpm it may take you months to achieve that kind of speed with the new layout. However, reportedly the reduction in fatigue is noticeable almost immediately.</p>
+		<blockquote>In summary: Colemak is one of the best designed layouts, easier to learn than Dvorak. But if you're already typing at speed of more than 50wpm it may take you months to achieve that kind of speed with the new layout. However, reportedly the reduction in fatigue is noticeable almost immediately.</blockquote>
 
-		<p>In recent decade multiple new layouts were designed that are slightly more efficient than Colemak. But they are not much faster than Colemak, and their focus is on various types of optimization and not reduction of learning curve. Examples:<br>
-			• <a href="https://github.com/jackrosenthal/threelayout">Three Layout - 3l</a><br>
-			• <a href="https://en.wikipedia.org/wiki/Keyboard_layout#Workman">Workman</a><br>
-		</p>
+		<p>In recent decade multiple new layouts were designed that are slightly more efficient than Colemak. But they are not much faster than Colemak, and their focus is on various types of optimization and not reduction of learning curve. Examples:</p>
+		<ul>
+			<li><a href="https://github.com/jackrosenthal/threelayout">Three Layout - 3l</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Keyboard_layout#Workman">Workman</a></li>
+		</ul>
 
 		<p>Probably the difficulty of having to completely re-learn the layout is what keeps most people from even trying it. And That is <b>the problem</b>.</p>
 
 		<h5>Solution:</h5>
 		<p>Several good solutions already exist that are a middle-ground between QWERTY and Colemak. Three most notable examples:</p>
 
-		<p>
 		<ol> 
 			<li><a href="http://www.minimak.org/">Minimak</a> layout. With Minimak you can gradually swap 12 keys:
 				<ul>
@@ -1178,14 +1189,14 @@ var keysD = writerD;
 				</ul></li>
 			<li><a href="https://nick-gravgaard.com/qwerty-flip/">QWERTY-Flip-Twist</a> (the <b>ASERTH</b> layout presented here). Total of 14 keys relocated according to scheme:
 						<ul>
-								<li>flip ERT with DFG</li>
-								<li>flip N with J, K with I</li>
-								<li>twist: L → ; → P → O → L</li>
+								<li>flip <b>ERT</b> with <b>DFG</b></li>
+								<li>flip <b>N</b> with <b>J</b>, <b>K</b> with <b>I</b></li>
+								<li>twist: <b>L → ; → P → O → L</b></li>
 						</ul>
 			</li>
-			</ol>
+		</ol>
 			</p>
-			<p>ASERT, Minimak and QWERTY-flip layouts focus on <b>reducing the learning curve</b> while being almost as efficient as Colemak.</p>
+			<p>ASERT, Minimak and QWERTY-flip-twist layouts focus on <b>reducing the learning curve</b> while being <i>almost</i> as efficient as Colemak.</p>
 
 	</div>
 
