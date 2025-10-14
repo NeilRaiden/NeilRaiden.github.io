@@ -54,6 +54,31 @@
 	src: url('./GoudyBookletter1911-Regular.ttf') format('truetype');
 }
 @font-face {
+	font-family:HenryHigginsSans;
+	src: url('./HenryHigginsSans-Regular.otf');
+	src: url('./HenryHigginsSans-Regular.otf') format('opentype');
+}
+@font-face {
+	font-family:InterAlia;
+	src: url('./InterAlia-Bold.woff2');
+	src: url('./InterAlia-Bold.woff2') format('woff2');
+}
+@font-face {
+	font-family:InterAlia;
+	src: url('./InterAlia-BoldItalic.woff2');
+	src: url('./InterAlia-BoldItalic.woff2') format('woff2');
+}
+@font-face {
+	font-family:InterAlia;
+	src: url('./InterAlia-Italic.woff2');
+	src: url('./InterAlia-Italic.woff2') format('woff2');
+}
+@font-face {
+	font-family:InterAlia;
+	src: url('./InterAlia-Regular.woff2');
+	src: url('./InterAlia-Regular.woff2') format('woff2');
+}
+@font-face {
 	font-family:Jost;
 	src: url('./Jost-Regular.ttf');
 	src: url('./Jost-Regular.ttf') format('truetype');
@@ -69,6 +94,11 @@
 	src: url('./MouseMemoirs-Regular.ttf') format('truetype');
 }
 @font-face {
+	font-family:NotoSans;
+	src: url('./NotoSans-Regular.ttf');
+	src: url('./NotoSans-Regular.ttf') format('truetype');
+}
+@font-face {
 	font-family:NotoSansMono_ExtraCondensed;
 	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf');
 	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf') format('truetype');
@@ -79,11 +109,6 @@
 	src: url('./NotoSansMono-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSans;
-	src: url('./NotoSans-Regular.ttf');
-	src: url('./NotoSans-Regular.ttf') format('truetype');
-}
-@font-face {
 	font-family:NotoSansRunic;
 	src: url('./NotoSansRunic-Regular.ttf');
 	src: url('./NotoSansRunic-Regular.ttf') format('truetype');
@@ -92,6 +117,11 @@
 	font-family:NotoSansShavian;
 	src: url('./NotoSansShavian-Regular.ttf');
 	src: url('./NotoSansShavian-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:NotoSerif;
+	src: url('./NotoSerif-Regular.ttf');
+	src: url('./NotoSerif-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family:Now;
@@ -124,14 +154,14 @@
 	src: url('./RedditMono-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedditSansCondensed;
-	src: url('./RedditSansCondensed-Bold.ttf');
-	src: url('./RedditSansCondensed-Bold.ttf') format('truetype');
-}
-@font-face {
 	font-family:RedditSans;
 	src: url('./RedditSans-Regular.ttf');
 	src: url('./RedditSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:RedditSansCondensed;
+	src: url('./RedditSansCondensed-Bold.ttf');
+	src: url('./RedditSansCondensed-Bold.ttf') format('truetype');
 }
 @font-face {
 	font-family:RedHatText;
@@ -152,6 +182,11 @@
 	font-family:StintUltraCondensed;
 	src: url('./StintUltraCondensed-Regular.ttf');
 	src: url('./StintUltraCondensed-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family:Trabajo;
+	src: url('./Trabajo.otf');
+	src: url('./Trabajo.otf') format('opentype');
 }
 @font-face {
 	font-family:Ubuntu;

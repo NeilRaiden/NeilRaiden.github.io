@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # Check Bash version
 if (( ${BASH_VERSINFO[0]} < 4)); then
