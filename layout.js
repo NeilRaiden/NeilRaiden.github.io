@@ -1,10 +1,10 @@
 /* Add menu items to this array: */
 const menuItems = [
 	{ item:'Home',                   link:'index.html'},
+	{ item:'Other Keyboard Layouts', link:'other.html'},
 	{ item:'Learning English',       link:'learn.html'},
 	{ item:'Phonetic Dictionaries',  link:'dicts.html'},
 	{ item:'Phonetic Spellchecks',   link:'spell.html'},
-	{ item:'Other Keyboard Layouts', link:'other.html'},
 	{ item:'Site-map',               link:'sitemap.html'},
 	{ item:'About',                  link:'about.html'}
 ];
@@ -16,8 +16,9 @@ const headerHtml = [
 	'<button style="padding:0px 12px;font-size:24px;float:right" onclick="toggleBlock(\'menuLinks\')">&#x2630;</button>\n' ];
 
 const footerHtml = [
-	'<div class="copy">Copyright &copy; 2025 NeilRaiden.com (AGPLv3)</div>\n',
-	'<button onclick="toTop()"><b><span title="Return to top"><span style="font-size:10pt">TOP</span>&#x2B06;</span></b></button>\n' ];
+	'<p class="copy">Copyright &copy; 2025 NeilRaiden.com (AGPLv3)</p>',
+	'<div class="button" onclick="toTop()"><span title="Return to top">TOP &#x2B06;</span></div>\n' ];
+//	'<button onclick="toTop()"><b><span title="Return to top"><span style="font-size:10px;">TOP</span>&#x2B06;</span></b></button>\n' ];
 //	'<button onclick="toTop()">&#x1F51D;</a>\n' ];
 
 const styleSetupHtml = [
