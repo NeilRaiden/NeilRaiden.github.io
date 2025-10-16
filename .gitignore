@@ -1,3 +1,4 @@
+# graphics
 *.png
 *.jpg
 *.jpeg
@@ -5,10 +6,14 @@
 *.bmp
 *.svg
 *.ico
+
+# fonts
 *.woff
 *.woff2
 *.ttf
 *.eot
 *.otf
+
+# download packages	
 *.dmg
 *.zip
