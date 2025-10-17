@@ -305,7 +305,7 @@ const writerD = [
 //- ⌥⇧x : ⌘ (U+2318) Command key symbol
 //- ⌥⇧v : ⌃ (U+2303) Control key symbol
 
-// ASERT layout
+// ASERTH layout
 const aserthA = [
 	'`','1','2','3','4','5','6','7','8','9','0','-','=',
 	'q','w','d','f','g','y','u','k','p',';','[',']','\\',
@@ -419,7 +419,7 @@ function layoutSwitch(laiout) {
 				keysA=writerA; keysB=writerB; keysC=writerC; keysD=writerD; kbName="US Writer";
 				break;
 		case "aserth" :
-				keysA=aserthA; keysB=aserthB; keysC=aserthC; keysD=aserthD; kbName="ASERT";
+				keysA=aserthA; keysB=aserthB; keysC=aserthC; keysD=aserthD; kbName="ASERTH";
 				break;
 		//case "custom"      :
 		//		keysA=customA;    keysB=customB;    keysC=customC;    keysD=customD;    kbName="Custom"; cheat=0;
@@ -682,7 +682,7 @@ var keysD = writerD;
 	<div style="margin: 5px;padding: 0px;">
 		<b>Layout:</b>&nbsp;
 		<button id="writer" onclick="layoutSwitch('writer')" >US Writer</button>
-		<button id="aserth" onclick="layoutSwitch('aserth')" >ASERT</button>
+		<button id="aserth" onclick="layoutSwitch('aserth')" >ASERTH</button>
 		<!-- <button style="width:100%" onclick="layoutSwitch('custom')">Your Custom Layout</button> -->
 	</div>
 
