@@ -1,13 +1,17 @@
 /* Add menu items to this array: */
 const menuItems = [
-	{ item:'Home',                   link:'index.html'},
-	{ item:'Other Keyboard Layouts', link:'other.html'},
-	{ item:'Learning English',       link:'learn.html'},
-	{ item:'Phonetic Dictionaries',  link:'dicts.html'},
-	{ item:'Phonetic Spellchecks',   link:'spell.html'},
-	{ item:'Site-map',               link:'sitemap.html'},
-	{ item:'About',                  link:'about.html'}
+	{ item:'Home - Phonemic Keyboards', link:'index.html'},
+	{ item:'Other Keyboard Layouts',    link:'other.html'},
+	{ item:'Downloads',                 link:'downloads.html'},
+	{ item:'Site-map',                  link:'sitemap.html'},
+	{ item:'About',                     link:'about.html'}
 ];
+
+// coming soon (hopefully):
+//	{ item:'Learning English',          link:'learn.html'},
+//	{ item:'Phonetic Dictionaries',     link:'dicts.html'},
+//	{ item:'Phonetic Spellchecks',      link:'spell.html'},
+
 
 const headerHtml = [
 //	'<a href="./index.html" class="home" title="Back to homepage"><b>NeilRaiden.com</b></a>\n',

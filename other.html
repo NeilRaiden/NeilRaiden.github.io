@@ -282,17 +282,18 @@ const writerA = qwertyA;
 const writerB = qwertyB;
 const writerC = [
 	'´','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁰','→','≠',
-	'…','⋯','́','®','™','√','↑','̈','ø','℗','⟨','⟩','•',
+	'…','̀','́','®','™','√','↑','̈','ø','℗','⟨','⟩','•',
 	'“','”','↓','°','æ','‐','œ','«','»','§','×',
 	'‘','’','©','⁃','·','–','—','‹','›','÷' ];
+// - ⌥w  : ◌̀ (U+0300) combining grave accent    (&#x0300;)
 // - ⌥e  : ◌́ (U+0301) combining acute accent
 // - ⌥u  : ◌̈ (U+0308) combining diaeresis/umlaut (eg: naïve)
 // - ⌥n  : ◌̃ (U+0303) combining tilde /ˈtɪldə/˜
 const writerD = [
 	'≈','₁','₂','₃','₄','₅','₆','₇','₈','₉','₀','←','±',
 	'⌜','⌝','⌞','⌟', '‰', '', '','',  'Ø','π', '⟮','⟯','◦',
-	 '', '', '', '', 'Æ','‑','Œ','', '₤', '', '☒',
-	 '⌥', '⌘','¢','⌃','○', '̃','µ','☺','☐','☑' ];
+	 '', '☺', '', '', 'Æ','‑','Œ','', '₤', '', '',
+	 '⌥', '⌘','¢','⌃','○', '̃','µ','☒','☐','☑' ];
 //## hyphens and dashes:
 //- ⌥h  : ‐ (U+2010) hyphen
 //- ⌥⇧h : ‑ (U+2011) non-breaking hyphen
@@ -318,14 +319,14 @@ const aserthB = [
 	'Z','X','C','V','B','J','M','<','>','?' ];
 const aserthC = [ 
 	'´','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁰','→','≠',
-	'…','⋯','↓','°','æ','√','↑','§','℗','×','⟨','⟩','•',
-	'“','”', '́','®','™','‐','–','̈','ø','«','»',
+	'…','̀', '́','°','æ','√','↑','§','℗','×','⟨','⟩','•',
+	'“','”','↓','®','™','‐','–','̈','ø','«','»',
 	'‘','’','©','⁃','·','œ','—','÷','‹','›' ];
 const aserthD = [ 
 	'≈','₁','₂','₃','₄','₅','₆','₇','₈','₉','₀','←','±',
-	'⌜','⌝','⌞','⌟','Æ','','','ˈ','π','','⟮','⟯','◦',
-	'','','','','','‑','̃','','Ø','₤','☒',
-	'⌥','⌘','¢','⌃','○','Œ','µ','☺','☐','☑' ];
+	'⌜','⌝','⌞','⌟','Æ','','','','π','','⟮','⟯','◦',
+	'','☺','','','‰','‑','̃','','Ø','₤','',
+	'⌥','⌘','¢','⌃','○','Œ','µ','☒','☐','☑' ];
 
 
 /* Your Own Custom Keyboard Layout */
@@ -913,7 +914,7 @@ var keysD = writerD;
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
 				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
-				<td colspan="11" class="bton" onclick="insertChar('&emsp;')">EM SPACE</td> <!-- &#8192 -->
+				<td colspan="11" class="bton" onclick="insertChar('&#x2003;')">EM SPACE (U+2003)</td> <!-- hex &#x2003; dec &#8192; &emsp; -->
 				<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">ALT</td>
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
@@ -1136,15 +1137,16 @@ var keysD = writerD;
 			<li>N-dash, M-dash, several types of hyphens — not the hyphen-minus
 			that is present on the QWERTY layout,</li>
 			<li>ellipsis, footnotes, end-notes, etc.</li>
+			<li>em-space (U+2003), zero-width space (U+200B)</li>
 		</ul>
 		<p>None of those symbols is readily available on the 
 			standard <b>English QWERTY</b> keyboard layout. 
 			Neither on Dvorak and Colemak. Instead, writers must either:</p>
 		<ul>
-				<li>memorize a list of <b>Alt codes,</b></li>
-				<li>laboriously copy the symbols from the <b>CharacterMap</b> 
+			<li>memorize a list of <b>Alt codes,</b></li>
+			<li>laboriously copy the symbols from the <b>CharacterMap</b> 
 			or a similar app,</li>
-				<li>or use an expensive software dedicated for writers that 
+			<li>or use an expensive software dedicated for writers that 
 			auto-magically replaces typed symbols with the correct ones.</li>
 		</ul>
 		<p>Unfortunately the "smart quotes" are not implemented in every 
@@ -1213,6 +1215,25 @@ var keysD = writerD;
 			<p>ASERT, Minimak and QWERTY-flip-twist layouts focus on <b>reducing the learning curve</b> while being <i>almost</i> as efficient as Colemak.</p>
 
 	</div>
+
+	<h4>Downloads</h4>
+	<table class="downl">
+		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
+		<tr>
+			<td>Writer</td>
+			<td><a href="./downloads/macOS/Writer.dmg">US-Writer.dmg</a></td>
+			<td><i>coming soon</i></td>
+			<td><i>coming soon</i></td>
+		</tr>
+		<tr>
+			<td>ASERTH</td>
+			<td><a href="./downloads/macOS/ASERTH.dmg">ASERTH.dmg</a></td>
+			<td><i>coming soon</i></td>
+			<td><i>coming soon</i></td>
+		</tr>
+	</table>
+	<p><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-v3.0</a><p>
+
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>
