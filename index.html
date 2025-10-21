@@ -301,7 +301,7 @@ const phonUSB = [
 	 'ʒ',  'er', 'ɪər',  'ju',  '⸰',  'ŋ',   'u',  '‹',   '›',  '?'     ];
 const phonUSC = [
 	 '´',  '¹',  '²',  '³',  '⁴',  '⁵',  '⁶',  '⁷',  '⁸',  '⁹',  '⁰', '→', '≠',
-	 '…',  'ʍ',  'e',  'ʳ',  'ɾ',   '',  '↑',   '',   '',   '',  '⟨', '⟩', '•',
+	 '…',  'ʍ',  'e',  'ʳ',  'ɾ',   '',  '↑',   '',   'ˈ',   'ˌ',  '⟨', '⟩', '•',
 	 '“',  '”',  '↓',  '°',  'ʔ',  '‐',  'ʤ',  '≤',  '≥',  'ː',  '×',
 	 '‘',  '’',  'ʧ',  '⁃',  '○',  '–',  '—',  '<',  '>',  '÷'     ];
 // old:
@@ -311,9 +311,9 @@ const phonUSC = [
 //	 '‘',   '’',   'ʧ',   '⁃',  '·',  '–',  '—',   '<',   '>',  '÷'     ];
 const phonUSD = [
 	 '≈',  '₁',  '₂',  '₃',  '₄',  '₅',  '₆',  '₇',  '₈',  '₉',  '₀', '←', '±',
-	 '⋯',   '',  'ɜ',  'ɹ',   '',   '',   '',   '',   '',   '',  '⟮', '⟯', '◦',
-	 'ɐ',  '☺',  'ɚ',   '',  'ˀ',  'ʰ',  'ˈ',  'ˌ',  'ɫ',  '§',  '☒',
-	  '',  'ɝ',   '',   '',  '◌',   '',   '',   '',  '☐',  '☑'    ];
+	 '⋯',   '',  'ɜ',  'ɹ',   'ʰ',   '',   '',   '',   '',   '',  '⟮', '⟯', '◦',
+	 'ɐ',  '☺',  'ɚ',   '',  'ˀ',  '‑',  '',  '',  'ɫ',  '§',  '',
+	  '',  'ɝ',   '',   '',  '◌',   '',   '',   '☒',  '☐',  '☑'    ];
 // old:
 //	 '≈',   '₁',   '₂',   '₃',  '₄',  '₅',  '₆',   '₇',   '₈',   '₉',  '₀', '←',  '±',
 //	 '⌜',   '⌝',   '⌞',   '⌟',   '',   '',   '',    '',    '',   'π',  '⟮', '⟯',  '◦',
@@ -977,7 +977,7 @@ var keysD = phonUSD;
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
 				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
-				<td colspan="11" class="bton" onclick="insertChar('&emsp;')">EM SPACE</td> <!-- &#8192 -->
+				<td colspan="11" class="bton" onclick="insertChar('&#x2003;')">EM SPACE (U+2003)</td> <!-- hex &#x2003; dec &#8192; &emsp; -->
 				<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">ALT</td>
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
@@ -1055,7 +1055,7 @@ var keysD = phonUSD;
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td> <!-- ⟮⊞⟯ &#x229E; -->
 				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
-				<td colspan="11" class="bton" onclick="insertChar('&#x200B;')">zero-width space</td> <!-- &#8203; -->
+				<td colspan="11" class="bton" onclick="insertChar('&#x200B;')">zero-width space</td> <!-- dec: &#8203; -->
 				<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbB')">ALT</td>
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
@@ -1579,36 +1579,34 @@ var keysD = phonUSD;
 		</table>
 	</div>
 
-
 	<h4>Download</h4>
 	<table class="downl">
 		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
+		<tr>
+			<td>US Phonemic</td>
+			<td><a href="./downloads/macOS/US-phonemic.dmg">US-phonemic.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+		<tr>
+			<td>UK Phonemic</td>
+			<td><a href="./downloads/macOS/UK-phonemic.dmg">UK-phonemic.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+		<tr>
+			<td>UK Rhotic</td>
+			<td><a href="./downloads/macOS/UK-rhotic.dmg">UK-rhotic.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
 		<tr>
 			<td>ESL</td>
 			<td><a href="./downloads/macOS/ESL.dmg">ESL.dmg</a></td>
 			<td>(coming soon)</td>
 			<td>(coming soon)</td>
 		</tr>
-		<tr>
-			<td>US Phonemic</td>
-			<td><a href="./downloads/macOS/US-phonemic.keylayout">US-phonemic.keylayout</a></td>
-			<td>(coming soon)</td>
-			<td>(coming soon)</td>
-		</tr>
-		<tr>
-			<td>UK Phonemic</td>
-			<td><a href="./downloads/macOS/UK-phonemic.keylayout">UK-phonemic.keylayout</a></td>
-			<td>(coming soon)</td>
-			<td>(coming soon)</td>
-		</tr>
-		<tr>
-			<td>UK Rhotic</td>
-			<td><a href="./downloads/macOS/UK-rhotic.keylayout">UK-rhotic.keylayout</a></td>
-			<td>(coming soon)</td>
-			<td>(coming soon)</td>
-		</tr>
 	</table>
-
 
 <!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
 <script>
