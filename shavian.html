@@ -170,6 +170,9 @@ p {
 		font-weight: normal;
 		text-align: left; 
 }
+ipa {
+		font-family: var(--defaultfont), Noto, Segoe;
+}
 
 ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
@@ -780,7 +783,7 @@ var keysD = emptY;
 		<button onclick="copyToClip()"    >To Clipboard</button>
 	</div>
 
-	<!-- ------ Layout switcher ------ -->
+	<!-- Layout switcher -->
 	<div style="margin: 5px;padding: 0px;">
 		<b>Layout:</b>&nbsp;
 		<button id="shawQwerty" onclick="layoutSwitch('shawQwerty')" >Shaw QWERTY</button>
@@ -788,7 +791,7 @@ var keysD = emptY;
 		<!-- <button style="width:100%" onclick="layoutSwitch('custom')">Your Custom Layout</button> -->
 	</div>
 
-		<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
+		<!-- KEYBOARD A (unshifted) -->
 	<div id="kbA" style="display: block;">
 		<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
 		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
@@ -877,7 +880,7 @@ var keysD = emptY;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
+	<!-- KEYBOARD B (Shifted)  -->
 	<div id="kbB" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer">
@@ -963,7 +966,7 @@ var keysD = emptY;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
+	<!-- KEYBOARD C (right ALT) -->
 	<div id="kbC" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer">
@@ -1049,7 +1052,7 @@ var keysD = emptY;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
+	<!-- KEYBOARD D (right ALT + SHIFT) -->
 	<div id="kbD" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer">
@@ -1142,7 +1145,7 @@ var keysD = emptY;
 		<button id="fontsButton"   onclick="showWindow('fonts')"  >Shavian Fonts</button>
 	</div>
 
-	<!-- ----------- Options ----------- -->
+	<!-- Options -->
 	<div id="optionsTable" class="divtab" style="display:none;padding:40px;">
 		<table>
 		<tr> <!-- changeTxtAreaFontSize() -->
@@ -1195,7 +1198,7 @@ var keysD = emptY;
 		</table>
 	</div>
 
-	<!-- ----------- Fonts ----------- -->
+	<!-- Fonts -->
 	<div id="fontsTable" class="divtab" style="display:none;">
 		<h4>Fonts used by this keyboard</h4>
 		<p>This HTML file is looking for the following font files in a “fonts” folder in the current directory (except for SegoeUI-Historic¹):</p>
@@ -1272,7 +1275,7 @@ var keysD = emptY;
 		</tr>
 	</table>
 
-	<!-- ----------- Layout descriptions ----------- -->
+	<!-- Layout descriptions -->
 	<div id="shawQwertyDesc" class="desc" style="display:block;">
 
 		<h4>Shaw QWERTY</h4>
@@ -1298,7 +1301,10 @@ var keysD = emptY;
 			Shaw considered the use of the Latin alphabet for writing English as a great waste of time, energy and paper,
 			so in his will he left a provision to fund the design of a new English alphabet that would be fully phonemic.
 		</p>
-		<ol>Shaw set three main criteria for the new alphabet:
+		<p>
+			Shaw set three main criteria for the new alphabet:
+		</p>
+		<ol>
 			<li>at least 40 letters;</li>
 			<li>as "phonetic" as possible (that is, letters should have a 1:1 correspondence to phonemes); and</li>
 			<li>distinct from the Latin alphabet to avoid the impression that the new spellings were simply "misspellings".</li>
@@ -1562,8 +1568,9 @@ var keysD = emptY;
 				Please note: This keyboard layout <b>is not based</b> on the 
 				<a href="https://keyman.com/keyboards/english_shavian_igc">Keyman Shaw Imperial</a>.
 		</p>
-		<p>
-		<ul>The <b>Imperial Model 6</b> typewriter:
+
+		<p>The <b>Imperial Model 6</b> typewriter:</p>
+		<ul>
 			<li>had no keys ⟮`⟯ and ⟮1⟯,</li>
 			<li>had no digits 0 and 1. Just like on many very old typewriters I and O had to be used instead,</li>
 			<li>had only <b>capital</b> Latin letters when "CapsLock" lever was pressed,</li>
@@ -1582,7 +1589,8 @@ var keysD = emptY;
 				than of a regular typewriter.
 		</p>
 
-		<ul>Differences between this keyboard layout and the original Imperial Model 6:
+		<p>Differences between this keyboard layout and the original Imperial Model 6:</p>
+		<ul>
 			<li>four layers instead of only two,</li>
 			<li>lowercase Latin letters in the <b>shifted</b> layer instead of uppercase,</li>
 			<li>uppercase Latin letters in the <b>AltGr</b> layer,</li>
@@ -1606,7 +1614,7 @@ var keysD = emptY;
 
 	<p>Last updated: 2025-10-27</p> 
 
-<!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
+<!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>
 	layoutSwitch("shawQwerty");  // default keyboard layout
 	fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
