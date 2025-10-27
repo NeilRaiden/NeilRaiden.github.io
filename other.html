@@ -3,13 +3,13 @@
 <head>
 	<title>NeilRaiden.com</title>
 	<meta charset="UTF-8"> <!-- HTML5 -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- HTML4 -->
+	<!-- meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <! -- HTML4 -->
 	<!-- match width with phone device widths -->
 	<!-- meta name="viewport" content="width=device-width,user-scalable=no" -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="description" content="Neil Raiden - demo of keyboard layouts." />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Neil Raiden - demo of keyboard layouts.">
 	<!--link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/trabajo" type="text/css" -->
 
 	<link rel="stylesheet" href="fonts/fonts.css">
@@ -223,7 +223,7 @@ button {
 		padding: 3px;
 		border: 0px solid #ddd;
 		font-size:14pt;
-		font-style:bold;
+		font-weight:bold;
 }
 .desc {
 		display: flex;
@@ -679,7 +679,7 @@ var keysD = writerD;
 		<button onclick="copyToClip()"    >To Clipboard</button>
 	</div>
 
-	<!-- ------ Layout switcher ------ -->
+	<!-- Layout switcher -->
 	<div style="margin: 5px;padding: 0px;">
 		<b>Layout:</b>&nbsp;
 		<button id="writer" onclick="layoutSwitch('writer')" >US Writer</button>
@@ -687,7 +687,7 @@ var keysD = writerD;
 		<!-- <button style="width:100%" onclick="layoutSwitch('custom')">Your Custom Layout</button> -->
 	</div>
 
-		<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
+		<!-- KEYBOARD A (unshifted) -->
 	<div id="kbA" style="display: block;">
 		<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
 		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
@@ -767,7 +767,7 @@ var keysD = writerD;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
+	<!-- KEYBOARD B (Shifted) -->
 	<div id="kbB" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -845,7 +845,7 @@ var keysD = writerD;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
+	<!-- KEYBOARD C (right ALT) -->
 	<div id="kbC" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -923,7 +923,7 @@ var keysD = writerD;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
+	<!-- KEYBOARD D (right ALT + SHIFT) -->
 	<div id="kbD" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -1009,7 +1009,7 @@ var keysD = writerD;
 		<!-- button id="cheatButton"   onclick="showWindow('cheat')" style="display:inline-block">☺</button -->
 	</div>
 
-	<!-- ----------- Options ----------- -->
+	<!-- Options -->
 	<div id="optionsTable" class="divtab" style="display:none;padding:40px;">
 		<table>
 		<tr> <!-- changeTxtAreaFontSize() -->
@@ -1054,7 +1054,7 @@ var keysD = writerD;
 		</table>
 	</div>
 
-	<!-- ----------- Fonts ----------- -->
+	<!-- Fonts -->
 	<div id="fontsTable" class="divtab" style="display:none;">
 		<h4>Fonts used by this keyboard</h4>
 		<table style="font-weight:normal;font-size:14pt;margin-bottom:5px;">
@@ -1112,13 +1112,31 @@ var keysD = writerD;
 		-->
 	</div>
 
+	<h4>Downloads</h4>
+	<table class="downl">
+		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
+		<tr>
+			<td>Writer</td>
+			<td><a href="./downloads/macOS/Writer.dmg">US-Writer.dmg</a></td>
+			<td><i>coming soon</i></td>
+			<td><i>coming soon</i></td>
+		</tr>
+		<tr>
+			<td>ASERTH</td>
+			<td><a href="./downloads/macOS/ASERTH.dmg">ASERTH.dmg</a></td>
+			<td><i>coming soon</i></td>
+			<td><i>coming soon</i></td>
+		</tr>
+	</table>
+	<!-- p><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-v3.0</a><p -->
 
-	<!-- ----------- Layout descritpions ----------- -->
+
+	<!-- Layout descriptions -->
 	<div id="writerDesc" class="desc" style="display:block;">
 		<h4>US Writer</h4>
 		<p><i>Layout for typing frequently used punctuation marks and 
 			typographic symbols (required by writing style guides) which are 
-			not avilable on the standard QWERTY layout.</i></p>
+			not available on the standard QWERTY layout.</i></p>
 		<h5>Problem:</h5>
 		<p>All the novels, essays, newspaper articles, etc — anything 
 			that is published or printed — must follow specific rules 
@@ -1165,9 +1183,9 @@ var keysD = writerD;
 
 		<blockquote>In summary: <b>QWERTY is highly inefficient by design</b>.</blockquote>
 
-		<p>In the 1930-ties <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">Dr August Dvorak</a> re-arranged the keys to create a more ergonomic layout with focus on writing speed and mimimizing strain. It was most likely designed for electric typewriting machines that started being popular in 1920s. His layout is known as <b>Dvorak<b> layout. But probably because the mechanical typewriters were still widely used the adoption of Dvorak failed.</p>  
+		<p>In the 1930-ties <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">Dr August Dvorak</a> re-arranged the keys to create a more ergonomic layout with focus on writing speed and minimizing strain. It was most likely designed for electric typewriting machines that started being popular in 1920s. His layout is known as <b>Dvorak<b> layout. But probably because the mechanical typewriters were still widely used the adoption of Dvorak failed.</p>  
 
-		<blockquote>In summary: <b>Dvorak is efficient, but hard to learn</b>, especiall by people already proficient with QWERTY, it retains only 2 keys from QWERTY layout.</blockquote>
+		<blockquote>In summary: <b>Dvorak is efficient, but hard to learn</b>, especially by people already proficient with QWERTY, it retains only 2 keys from QWERTY layout.</blockquote>
 
 		<p>In 2006 <a href="https://colemak.com/">Shai Coleman</a> released his <b>Colemak</b> layout as a compromise between QWERTY and typing speed (17 keys moved and 10 retained). Colemak is the result of a very thorough analysis of English text, finger distances for most common letter pairs, etc. For more info visit <a href="https://colemak.com/">Colemak.com</a> (the official Shai Coleman website), <a href="https://colemak.org/">Colemak.org</a> and <a href="https://mk.bcgsc.ca/carpalx/?colemak">CarpalX</a>.</p>
 
@@ -1179,7 +1197,7 @@ var keysD = writerD;
 			<li><a href="https://en.wikipedia.org/wiki/Keyboard_layout#Workman">Workman</a></li>
 		</ul>
 
-		<p>Probably the difficulty of having to completely re-learn the layout is what keeps most people from even trying it. And That is <b>the problem</b>.</p>
+		<p>Probably the difficulty of having to completely re-learn the layout is what keeps most people from even trying it. And that is <b>the problem</b>.</p>
 
 		<h5>Solution:</h5>
 		<p>Several good solutions already exist that are a middle-ground between QWERTY and Colemak. Three most notable examples:</p>
@@ -1187,47 +1205,28 @@ var keysD = writerD;
 		<ol> 
 			<li><a href="http://www.minimak.org/">Minimak</a> layout. With Minimak you can gradually swap 12 keys:
 				<ul>
-				<li><b>Minimak-4</b>: swap 4 keys for 60% improvement ⟮rotation: D → E → K → T → D⟯.</li>
-				<li><b>Minimak-8</b>: after few weeks, swap another 4 keys ⟮swap N with J, and L with O⟯</li>
-				<li><b>Minimak-12</b>: after another few weeks, swap another 4 keys to achieve 83% of the benefits of Dvorak ⟮swap R with F, and P with ;⟯</li>
+					<li><b>Minimak-4</b>: swap 4 keys for 60% improvement ⟮rotation: D → E → K → T → D⟯.</li>
+					<li><b>Minimak-8</b>: after few weeks, swap another 4 keys ⟮swap N with J, and L with O⟯</li>
+					<li><b>Minimak-12</b>: after another few weeks, swap another 4 keys to achieve 83% of the benefits of Dvorak ⟮swap R with F, and P with ;⟯</li>
 				</ul></li>
 			<li><a href="https://github.com/AlternateKeyboard/ASERT">ASERT</a> layout (15 keys relocated):
 				<ul>
-						<li>swap ERT with DFG</li>
-						<li>swap IOP with KL;</li>
-						<li>rotate: J → Y → N → J</li>
+					<li>swap ERT with DFG</li>
+					<li>swap IOP with KL;</li>
+					<li>rotate: J → Y → N → J</li>
 				</ul></li>
 			<li><a href="https://nick-gravgaard.com/qwerty-flip/">QWERTY-Flip-Twist</a> (the <b>ASERTH</b> layout presented here). Total of 14 keys relocated according to scheme:
-						<ul>
-								<li>flip <b>ERT</b> with <b>DFG</b></li>
-								<li>flip <b>N</b> with <b>J</b>, <b>K</b> with <b>I</b></li>
-								<li>twist: <b>L → ; → P → O → L</b></li>
-						</ul>
+				<ul>
+					<li>flip <b>ERT</b> with <b>DFG</b></li>
+					<li>flip <b>N</b> with <b>J</b>, <b>K</b> with <b>I</b></li>
+					<li>twist: <b>L → ; → P → O → L</b></li>
+				</ul>
 			</li>
 		</ol>
-			</p>
-			<p>ASERT, Minimak and QWERTY-flip-twist layouts focus on <b>reducing the learning curve</b> while being <i>almost</i> as efficient as Colemak.</p>
-
+		<p>ASERT, Minimak and QWERTY-flip-twist layouts focus on <b>reducing the learning curve</b> while being <i>almost</i> as efficient as Colemak.</p>
 	</div>
 
-	<h4>Downloads</h4>
-	<table class="downl">
-		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
-		<tr>
-			<td>Writer</td>
-			<td><a href="./downloads/macOS/Writer.dmg">US-Writer.dmg</a></td>
-			<td><i>coming soon</i></td>
-			<td><i>coming soon</i></td>
-		</tr>
-		<tr>
-			<td>ASERTH</td>
-			<td><a href="./downloads/macOS/ASERTH.dmg">ASERTH.dmg</a></td>
-			<td><i>coming soon</i></td>
-			<td><i>coming soon</i></td>
-		</tr>
-	</table>
-	<p><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-v3.0</a><p>
-
+	<p>Last updated: 2025-10-27</p>
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>
