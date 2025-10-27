@@ -3,14 +3,13 @@
 <head>
 	<title>NeilRaiden.com</title>
 	<meta charset="UTF-8"> <!-- HTML5 -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- HTML4 -->
+	<!-- meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> < !-- HTML4 -->
 	<!-- match width with phone device widths -->
 	<!-- meta name="viewport" content="width=device-width,user-scalable=no" -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="description" content="Neil Raiden - demo of keyboard layouts." />
-	<!--link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/trabajo" type="text/css" -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Neil Raiden - demo of keyboard layouts.">
 
 	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="layout.css">
@@ -18,7 +17,7 @@
 	<script src="fonts/fontlist.js"></script>
 	<script src="layout.js"></script>
 
-<style type="text/css">
+<style>
 /* global CSS variables */
 :root {
 		--spacerwidth: 1px;
@@ -36,14 +35,14 @@
 
 /* --------- font faces --------- */
 @font-face {
-	font-family:Higgins;
-	src: url('./fonts/HenryHigginsSans-Regular.otf');
-	src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
+		font-family:Higgins;
+		src: url('./fonts/HenryHigginsSans-Regular.otf');
+		src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
 }
 @font-face {
-    font-family:IntAliaR;
-    src: url('./fonts/InterAlia-Regular.woff2');
-    src: url('./fonts/InterAlia-Regular.woff2') format('woff2');
+		font-family:IntAliaR;
+		src: url('./fonts/InterAlia-Regular.woff2');
+		src: url('./fonts/InterAlia-Regular.woff2') format('woff2');
 }
 @font-face {
     font-family:IntAliaI;
@@ -56,24 +55,24 @@
     src: url('./fonts/InterAlia-Bold.woff2') format('woff2');
 }
 @font-face {
-    font-family:IntAliaBI;
-    src: url('./fonts/InterAlia-BoldItalic.woff2');
-    src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
+		font-family:IntAliaBI;
+		src: url('./fonts/InterAlia-BoldItalic.woff2');
+		src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
 }
 @font-face {
-	font-family:NotoS;
-	src: url('./fonts/NotoSans-Regular.ttf');
-	src: url('./fonts/NotoSans-Regular.ttf') format('truetype');
+		font-family:NotoS;
+		src: url('./fonts/NotoSans-Regular.ttf');
+		src: url('./fonts/NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoF;
-	src: url('./fonts/NotoSerif-Regular.ttf');
-	src: url('./fonts/NotoSerif-Regular.ttf') format('truetype');
+		font-family:NotoF;
+		src: url('./fonts/NotoSerif-Regular.ttf');
+		src: url('./fonts/NotoSerif-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Trabajo;
-	src: url('./fonts/Trabajo.otf');
-	src: url('./fonts/Trabajo.otf') format('opentype');
+		font-family:Trabajo;
+		src: url('./fonts/Trabajo.otf');
+		src: url('./fonts/Trabajo.otf') format('opentype');
 }
 
 /* --------- FontTable styles --------- */
@@ -223,7 +222,7 @@ button {
 		padding: 3px;
 		border: 0px solid #ddd;
 		font-size:14pt;
-		font-style:bold;
+		font-weight:bold;
 }
 .desc {
 		display: flex;
@@ -740,7 +739,7 @@ var keysD = phonUSD;
 <div id="pageSetup"><script>webPageSetup();</script></div>
 <main>
 
-<!-- textArea -->
+	<!-- textArea -->
 	<div>
 		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
 	</div>
@@ -751,7 +750,7 @@ var keysD = phonUSD;
 		<button onclick="copyToClip()"    >To Clipboard</button>
 	</div>
 
-	<!-- ------ Layout switcher ------ -->
+	<!-- Layout switcher -->
 	<div style="margin: 5px;padding: 0px;">
 		<b>Layout:</b>&nbsp;
 		<button id="phonemus" onclick="layoutSwitch('phonemus')" >US Phonemic</button>
@@ -761,12 +760,12 @@ var keysD = phonUSD;
 		<!-- <button style="width:100%" onclick="layoutSwitch('custom')">Your Custom Layout</button> -->
 	</div>
 
-		<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
+	<!-- KEYBOARD A (unshifted) -->
 	<div id="kbA" style="display: block;">
 		<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
 		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
 		<table class="rounded-corners" >
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer"><td></td><script>for ( let i=0; i<28; i++ ) { document.write("<td></td>"); }</script></tr>
 			<tr>
 				<td colspan="2" class="bton" id="kA0"  onclick="keyA(0)">`</td>
 				<td colspan="2" class="bton" id="kA1"  onclick="keyA(1)">1</td>
@@ -841,7 +840,7 @@ var keysD = phonUSD;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
+	<!-- KEYBOARD B (Shifted) -->
 	<div id="kbB" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -919,7 +918,7 @@ var keysD = phonUSD;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
+	<!-- KEYBOARD C (right ALT) -->
 	<div id="kbC" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -997,7 +996,7 @@ var keysD = phonUSD;
 		</table>
 	</div>
 
-	<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
+	<!-- KEYBOARD D (right ALT + SHIFT) -->
 	<div id="kbD" style="display: none;">
 		<table class="rounded-corners" >
 			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
@@ -1083,52 +1082,52 @@ var keysD = phonUSD;
 		<!-- button id="cheatButton"   onclick="showWindow('cheat')" style="display:inline-block">☺</button -->
 	</div>
 
-	<!-- ----------- Options ----------- -->
+	<!-- Options -->
 	<div id="optionsTable" class="divtab" style="display:none;padding:40px;">
 		<table>
-		<tr> <!-- changeTxtAreaFontSize() -->
-			<td><button onclick="changeTxtAreaFontSize(-1)">-</button></td>
-			<td>Text area font size :</td>
-			<td id="txtAfontSize">14</td>
-			<td><button onclick="changeTxtAreaFontSize(1)">+</button></td>
-		</tr>
-		<tr> <!-- changeKboardFontSize() -->
-			<td><button onclick="changeKboardFontSize(-1)">-</button></td>
-			<td>Keyboard font size :</td>
-			<td id="kbFontSize">14</td>
-			<td><button onclick="changeKboardFontSize(1)">+</button></td>
-		</tr>
-		<tr> <!-- changeKeyboardWidth() -->
-			<td><button onclick="changeKeyboardWidth(-1)">-</button></td>
-			<td>Keyboard width :</td>
-			<td id="kbKeySize">1</td>
-			<td><button onclick="changeKeyboardWidth(1)">+</button></td>
-		</tr>
-		<tr> <!-- changeKeysHeight() -->
-			<td><button onclick="changeKeysHeight(-1)">-</button></td>
-			<td>Keyboard height :</td>
-			<td id="kbKeyHigh">28</td>
-			<td><button onclick="changeKeysHeight(1)">+</button></td>
-		</tr>
-		<tr><td colspan="4" style="text-align:center;">Select font:</td></tr>
-		<tr> <!-- changeFont() -->
-			<td colspan="4" style="text-align:center;width:100%;">
-				<select id="fontSelect" name="Select font" onchange="changeFont(this)">
-					<option value="Higgins"   >HenryHigginsSans-Regular.otf</option>
-					<option value="IntAliaR"  >InterAlia-Regular.ttf</option>
-					<option value="IntAliaI"  >InterAlia-Italic.ttf</option>
-					<option value="IntAliaB"  >InterAlia-Bold.ttf</option>
-					<option value="IntAliaBI" >InterAlia-BoldItalic.ttf</option>
-					<option value="NotoS"     >NotoSans-Regular.ttf</option>
-					<option value="NotoF"     >NotoSerif-Regular.ttf</option>
-					<option value="Trabajo"   >Trabajo.otf</option>
-				</select>
-			</td>
-		</tr>
+			<tr> <!-- changeTxtAreaFontSize() -->
+				<td><button onclick="changeTxtAreaFontSize(-1)">-</button></td>
+				<td>Text area font size :</td>
+				<td id="txtAfontSize">14</td>
+				<td><button onclick="changeTxtAreaFontSize(1)">+</button></td>
+			</tr>
+			<tr> <!-- changeKboardFontSize() -->
+				<td><button onclick="changeKboardFontSize(-1)">-</button></td>
+				<td>Keyboard font size :</td>
+				<td id="kbFontSize">14</td>
+				<td><button onclick="changeKboardFontSize(1)">+</button></td>
+			</tr>
+			<tr> <!-- changeKeyboardWidth() -->
+				<td><button onclick="changeKeyboardWidth(-1)">-</button></td>
+				<td>Keyboard width :</td>
+				<td id="kbKeySize">1</td>
+				<td><button onclick="changeKeyboardWidth(1)">+</button></td>
+			</tr>
+			<tr> <!-- changeKeysHeight() -->
+				<td><button onclick="changeKeysHeight(-1)">-</button></td>
+				<td>Keyboard height :</td>
+				<td id="kbKeyHigh">28</td>
+				<td><button onclick="changeKeysHeight(1)">+</button></td>
+			</tr>
+			<tr><td colspan="4" style="text-align:center;">Select font:</td></tr>
+			<tr> <!-- changeFont() -->
+				<td colspan="4" style="text-align:center;width:100%;">
+					<select id="fontSelect" name="Select font" onchange="changeFont(this)">
+						<option value="Higgins"   >HenryHigginsSans-Regular.otf</option>
+						<option value="IntAliaR"  >InterAlia-Regular.ttf</option>
+						<option value="IntAliaI"  >InterAlia-Italic.ttf</option>
+						<option value="IntAliaB"  >InterAlia-Bold.ttf</option>
+						<option value="IntAliaBI" >InterAlia-BoldItalic.ttf</option>
+						<option value="NotoS"     >NotoSans-Regular.ttf</option>
+						<option value="NotoF"     >NotoSerif-Regular.ttf</option>
+						<option value="Trabajo"   >Trabajo.otf</option>
+					</select>
+				</td>
+			</tr>
 		</table>
 	</div>
 
-	<!-- ----------- Fonts ----------- -->
+	<!-- Fonts -->
 	<div id="fontsTable" class="divtab" style="display:none;">
 		<h4>Fonts used by this keyboard</h4>
 		<table style="font-weight:normal;font-size:14pt;margin-bottom:5px;">
@@ -1186,8 +1185,36 @@ var keysD = phonUSD;
 		-->
 	</div>
 
+	<h4>Download</h4>
+	<table class="downl">
+		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
+		<tr>
+			<td>US Phonemic</td>
+			<td><a href="./downloads/macOS/US-phonemic.dmg">US-phonemic.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+		<tr>
+			<td>UK Phonemic</td>
+			<td><a href="./downloads/macOS/UK-phonemic.dmg">UK-phonemic.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+		<tr>
+			<td>UK Rhotic</td>
+			<td><a href="./downloads/macOS/UK-rhotic.dmg">UK-rhotic.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+		<tr>
+			<td>ESL</td>
+			<td><a href="./downloads/macOS/ESL.dmg">ESL.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+	</table>
 
-	<!-- ----------- Layout descritpions ----------- -->
+	<!-- Layout descriptions -->
 	<div id="phonemusDesc" class="desc" style="display:block;">
 		<h4>US Phonemic</h4>
 		<p>Layout for typing in <b>American English (GA)</b> with IPA symbols.<br>
@@ -1313,7 +1340,7 @@ var keysD = phonUSD;
 
 	<div id="phonemukDesc" class="desc" style="display:none;">
 		<h4>UK Phonemic</h4>
-		<p>Layout typing in <b>non-rhotic British English (RP)</b> wtih IPA symbols.<br>
+		<p>Layout typing in <b>non-rhotic British English (RP)</b> with IPA symbols.<br>
 		   The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with <b>Shavian QWERTY</b> layout.<br>
 			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
 		</p>
@@ -1559,18 +1586,18 @@ var keysD = phonUSD;
 
 	<div id="eslDesc" class="desc" style="display:none;">
 		<h4>ESL</h4>
-		<p>This layout is meant for people who only occasionally need to type IPA symbols, and only those specific to English lanugage (like ESL tutors).<br>
+		<p>This layout is meant for people who only occasionally need to type IPA symbols, and only those specific to English language (like ESL tutors).<br>
 		   The <b>AltGr</b> and <b>AltGr+Shift</b> layers (layers 3 &amp; 4) contain all IPA symbols for English phonemes that may be
 		   needed by an ESL tutor. Also, most of the punctuation marks required by Style Guides, stress marks, dashes, etc.
 		</p>
 	</div>
 
-	<!-- IPA notation cmparison table -->
+	<!-- IPA notation comparison table -->
 	<div style="text-align:center; margin-bottom:10px;">
 		<h4>Differences between US and UK notations:</h4>
 		<p> </p>
 		<table style="font-weight:normal">
-			<tr><th>UK (RP)</th><th>UK (rhotic)</th><th>US (GA)</th><tr>
+			<tr><th>UK (RP)</th><th>UK (rhotic)</th><th>US (GA)</th></tr>
 			<tr><td>ɑː </td><td>ɑː </td><td>ɑ </td></tr>
 			<tr><td>ɔː </td><td>ɔː </td><td>ɔ </td></tr>
 			<tr><td>uː </td><td>uː </td><td>u </td></tr>
@@ -1584,36 +1611,9 @@ var keysD = phonUSD;
 		</table>
 	</div>
 
-	<h4>Download</h4>
-	<table class="downl">
-		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
-		<tr>
-			<td>US Phonemic</td>
-			<td><a href="./downloads/macOS/US-phonemic.dmg">US-phonemic.dmg</a></td>
-			<td>(coming soon)</td>
-			<td>(coming soon)</td>
-		</tr>
-		<tr>
-			<td>UK Phonemic</td>
-			<td><a href="./downloads/macOS/UK-phonemic.dmg">UK-phonemic.dmg</a></td>
-			<td>(coming soon)</td>
-			<td>(coming soon)</td>
-		</tr>
-		<tr>
-			<td>UK Rhotic</td>
-			<td><a href="./downloads/macOS/UK-rhotic.dmg">UK-rhotic.dmg</a></td>
-			<td>(coming soon)</td>
-			<td>(coming soon)</td>
-		</tr>
-		<tr>
-			<td>ESL</td>
-			<td><a href="./downloads/macOS/ESL.dmg">ESL.dmg</a></td>
-			<td>(coming soon)</td>
-			<td>(coming soon)</td>
-		</tr>
-	</table>
+	<p>Last updated: 2025-10-27</p>
 
-<!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
+<!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>
 	layoutSwitch("phonemus");  // default keyboard layout
 	fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
