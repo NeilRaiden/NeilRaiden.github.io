@@ -17,7 +17,7 @@
 	<script src="./fonts/fontlist.js"></script>
 	<script src="./layout.js"></script>
 
-<style type="text/css">
+<style>
 /* global CSS variables */
 :root {
 		--spacerwidth: 1px;
@@ -793,7 +793,12 @@ var keysD = emptY;
 		<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
 		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
 		<table class="rounded-corners" >
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<!-- tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr -->
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 			<tr>
 				<td colspan="2" class="bton" id="kA0"  onclick="keyA(0)">`</td>
 				<td colspan="2" class="bton" id="kA1"  onclick="keyA(1)">1</td>
@@ -864,14 +869,22 @@ var keysD = emptY;
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 		</table>
 	</div>
 
 	<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
 	<div id="kbB" style="display: none;">
 		<table class="rounded-corners" >
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 			<tr>
 				<td colspan="2" class="bton" id="kB0"  onclick="keyB(0)"></td>
 				<td colspan="2" class="bton" id="kB1"  onclick="keyB(1)"></td>
@@ -942,14 +955,22 @@ var keysD = emptY;
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 		</table>
 	</div>
 
 	<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
 	<div id="kbC" style="display: none;">
 		<table class="rounded-corners" >
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 			<tr>
 				<td colspan="2" class="bton" id="kC0"  onclick="keyC(0)"></td>
 				<td colspan="2" class="bton" id="kC1"  onclick="keyC(1)"></td>
@@ -1020,14 +1041,22 @@ var keysD = emptY;
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 		</table>
 	</div>
 
 	<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
 	<div id="kbD" style="display: none;">
 		<table class="rounded-corners" >
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 			<tr>
 				<td colspan="2" class="bton" id="kD0"  onclick="keyD(0)"></td>
 				<td colspan="2" class="bton" id="kD1"  onclick="keyD(1)"></td>
@@ -1098,7 +1127,11 @@ var keysD = emptY;
 				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
 				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
 			</tr>
-			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr class="trSpacer">
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
 		</table>
 	</div>
 
@@ -1510,8 +1543,11 @@ var keysD = emptY;
 			<li><a href="https://hughbirkenhead.com/shavian/ascii-unicode/">Hugh Birkenhead's site</a>— the converter from old-style pre-Unicode ASCII Shavian to Unicode Shavian.</li>
 			<li><a href="https://reddit.com/r/shavian">reddit.com</a> — Shavian discussion group on Reddit.</li>
 			<li><a href="https://shavian.neocities.org/american">Haley Halcyon</a> website — “A Guide to American Shavian Spelling” by Haruki “Haley” Wakamatsu</li>
+			<li><a href="https://shavian.neocities.org/type">Haley Halcyon</a> website — online keyboard for learning Shavian.</li>
 			<li><a href="https://www.youtube.com/@shavianalphabet4307">ShavianAlphabet4307</a> YouTube channel.</li>
 			<li><a href="https://postimg.cc/gallery/vZPtJXw">The Cat in the Hat (Shavian)</a> — the famous children's book by Dr. Seuss transliterated into Shavian.</li>
+			<li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+Shavian">Google Fonts</a> — Noto Sans Shavian.</li>
+			<li><a href="https://www.unicode.org/standard/translations/shavian.html">Unicode.org</a> page in Shavian.</li>
 		</ul>
 
 	</div>
