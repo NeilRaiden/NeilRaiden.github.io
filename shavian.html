@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>NeilRaiden.com - Shavian</title>
+	<meta charset="UTF-8"> <!-- HTML5 -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- HTML4 -->
+	<!-- match width with phone device widths -->
+	<!-- meta name="viewport" content="width=device-width,user-scalable=no" -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="Neil Raiden - Shavian keyboard layouts." />
+
+	<link rel="stylesheet" href="./fonts/fonts.css">
+	<link rel="stylesheet" href="./layout.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script src="./fonts/fontlist.js"></script>
+	<script src="./layout.js"></script>
+
+<style type="text/css">
+/* global CSS variables */
+:root {
+		--spacerwidth: 1px;
+		--keysheight:  28px;
+		--keyfontsize: 14pt;
+		--bodyopacity:  0.8;
+		--defaultfont: Higgins;
+		--kboardfont: Higgins;
+}
+/* Adobe Blank 2 from */
+@font-face {
+    font-family: AdobeBlank2;
+    src: url("data:font/opentype;base64,T1RUTwAKAIAAAwAgQ0ZGIN6nWacAAAfMAAABMURTSUcAAAABAAAJCAAAAAhPUy8yAF+xmwAAARAAAABgY21hcAE0tLwAAAasAAABAGhlYWQIOsNZAAAArAAAADZoaGVhB1oD7wAAAOQAAAAkaG10eAPoAHwAAAkAAAAACG1heHAAAlAAAAABCAAAAAZuYW1lc0mXUAAAAXAAAAU6cG9zdP+4ADIAAAesAAAAIAABAAAAAgBB1Q6SE18PPPUAAwPoAAAAANKdP6AAAAAA0p0/oAB8/4gDbANwAAAAAwACAAAAAAAAAAEAAANw/4gAAAPoAHwAfANsAAEAAAAAAAAAAAAAAAAAAAACAABQAAACAAAAAwPoAZAABQAAAooCWAAAAEsCigJYAAABXgAyANwAAAAAAAAAAAAAAAD3/67/+9///w/gAD8AAAAAQURCTwBAAAD//wNw/4gAAANwAHhgLwH/AAAAAAAAAAAAAAAgAAAAAAALAIoAAwABBAkAAACUAAAAAwABBAkAAQAaAJQAAwABBAkAAgAOAK4AAwABBAkAAwA4ALwAAwABBAkABAAaAJQAAwABBAkABQB0APQAAwABBAkABgAWAWgAAwABBAkACAA0AX4AAwABBAkACwA0AbIAAwABBAkADQKWAeYAAwABBAkADgA0BHwAQwBvAHAAeQByAGkAZwBoAHQAIACpACAAMgAwADEAMwAsACAAMgAwADEANQAgAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgACgAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAGEAZABvAGIAZQAuAGMAbwBtAC8AKQAuAEEAZABvAGIAZQAgAEIAbABhAG4AawAgADIAUgBlAGcAdQBsAGEAcgAyAC4AMAAwADEAOwBBAEQAQgBPADsAQQBkAG8AYgBlAEIAbABhAG4AawAyADsAQQBEAE8AQgBFAFYAZQByAHMAaQBvAG4AIAAyAC4AMAAwADEAOwBQAFMAIAAyAC4AMAAwADEAOwBoAG8AdABjAG8AbgB2ACAAMQAuADAALgA4ADgAOwBtAGEAawBlAG8AdABmAC4AbABpAGIAMgAuADUALgA2ADUAMAAxADIAQQBkAG8AYgBlAEIAbABhAG4AawAyAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZABoAHQAdABwADoALwAvAHcAdwB3AC4AYQBkAG8AYgBlAC4AYwBvAG0ALwB0AHkAcABlAC8AVABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIABpAHMAIABsAGkAYwBlAG4AcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAFMASQBMACAATwBwAGUAbgAgAEYAbwBuAHQAIABMAGkAYwBlAG4AcwBlACwAIABWAGUAcgBzAGkAbwBuACAAMQAuADEALgAgAFQAaABpAHMAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACAAaQBzACAAZABpAHMAdAByAGkAYgB1AHQAZQBkACAAbwBuACAAYQBuACAAIgBBAFMAIABJAFMAIgAgAEIAQQBTAEkAUwAsACAAVwBJAFQASABPAFUAVAAgAFcAQQBSAFIAQQBOAFQASQBFAFMAIABPAFIAIABDAE8ATgBEAEkAVABJAE8ATgBTACAATwBGACAAQQBOAFkAIABLAEkATgBEACwAIABlAGkAdABoAGUAcgAgAGUAeABwAHIAZQBzAHMAIABvAHIAIABpAG0AcABsAGkAZQBkAC4AIABTAGUAZQAgAHQAaABlACAAUwBJAEwAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUAIABmAG8AcgAgAHQAaABlACAAcwBwAGUAYwBpAGYAaQBjACAAbABhAG4AZwB1AGEAZwBlACwAIABwAGUAcgBtAGkAcwBzAGkAbwBuAHMAIABhAG4AZAAgAGwAaQBtAGkAdABhAHQAaQBvAG4AcwAgAGcAbwB2AGUAcgBuAGkAbgBnACAAeQBvAHUAcgAgAHUAcwBlACAAbwBmACAAdABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUALgBoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAAEAAwAKAAAADAANAAAAAAD0AAAAAAAAABMAAAAAAADX/wAAAAEAAOAAAAD9zwAAAAEAAP3wAAD//QAAAAEAAQAAAAH//QAAAAEAAgAAAAL//QAAAAEAAwAAAAP//QAAAAEABAAAAAT//QAAAAEABQAAAAX//QAAAAEABgAAAAb//QAAAAEABwAAAAf//QAAAAEACAAAAAj//QAAAAEACQAAAAn//QAAAAEACgAAAAr//QAAAAEACwAAAAv//QAAAAEADAAAAAz//QAAAAEADQAAAA3//QAAAAEADgAAAA7//QAAAAEADwAAAA///QAAAAEAEAAAABD//QAAAAEAAwAAAAAAAP+1ADIAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAIAAQEBDEFkb2JlQmxhbmsyAAEBAS34G/gciwwe+B0B+B4Ci/sM+gD6BAUeKgAfDB+NDCL3Uw/3WRH3Vgwl96wMJAAFAQEGDlZjcEFkb2JlSWRlbnRpdHlDb3B5cmlnaHQgMjAxMywgMjAxNSBBZG9iZSBTeXN0ZW1zIEluY29ycG9yYXRlZCAoaHR0cDovL3d3dy5hZG9iZS5jb20vKS5BZG9iZSBCbGFuayAyQWRvYmVCbGFuazItMgAAAAABAAAAAAIBAUxO+nz7DLf6JLcB9xC3+Sy3A/cQ+gQV/nz5hPp8B/1Y/icV+dIH98X8MwWmsBX7xfg3Bfj2BqZiFf3SB/vF+DMFcGYV98X8NwX89gYOiw4AAQEBCfgfDCaX97kS+46LHAVGiwa9Cr0LAAAAA+gAfAAAAAAAAAABAAAAAA==");
+}
+
+
+/* --------- Shavian font faces --------- */
+@font-face {
+		font-family:Andagii;
+		src: url('./fonts-shavian/ANDAGII.ttf');
+		src: url('./fonts-shavian/ANDAGII.ttf') format('truetype');
+}
+@font-face {
+		font-family:Cafe;
+		src: url('./fonts-shavian/CafeMajestic-Regular.otf');
+		src: url('./fonts-shavian/CafeMajestic-Regular.otf') format('opentype');
+}
+@font-face {
+		font-family:CafeI;
+		src: url('./fonts-shavian/CafeMajestic-Inline.otf');
+		src: url('./fonts-shavian/CafeMajestic-Inline.otf') format('opentype');
+}
+@font-face {
+		font-family:DoolittI;
+		src: url('./fonts-shavian/DoolittleGaramond-Italic.otf');
+		src: url('./fonts-shavian/DoolittleGaramond-Italic.otf') format('opentype');
+}	
+@font-face {
+		font-family:DoolittR;
+		src: url('./fonts-shavian/DoolittleGaramond-Regular.otf');
+		src: url('./fonts-shavian/DoolittleGaramond-Regular.otf') format('opentype');
+}
+@font-face {
+		font-family:Fairfax;
+		src: url('./fonts-shavian/FairfaxHD.ttf');
+		src: url('./fonts-shavian/FairfaxHD.ttf') format('truetype');
+}
+@font-face {
+		font-family:MPH;
+		src: url('./fonts-shavian/MPH-2B-Damase_v2.ttf');
+		src: url('./fonts-shavian/MPH-2B-Damase_v2.ttf') format('truetype');
+}
+@font-face {
+		font-family:NotoShavian;
+		src: url('./fonts-shavian/NotoSansShavian-Regular.ttf');
+		src: url('./fonts-shavian/NotoSansShavian-Regular.ttf') format('truetype');
+}
+@font-face {
+		font-family:Ormin;
+		src: url('./fonts-shavian/Ormin-Regular.otf');
+		src: url('./fonts-shavian/Ormin-Regular.otf') format('opentype');
+}
+@font-face {
+		font-family:Trabajo;
+		src: url('./fonts-shavian/Trabajo.otf');
+		src: url('./fonts-shavian/Trabajo.otf') format('opentype');
+}
+
+/* --- shavian fonts already in the main "./fonts" directory:
+
+//@font-face {
+//		font-family:Higgins;
+//	src: url('./fonts/HenryHigginsSans-Regular.otf');
+//		src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
+//}
+
+//@font-face {
+//		font-family:IntAliaR;
+//		src: url('./fonts/InterAlia-Regular.woff2');
+//		src: url('./fonts/InterAlia-Regular.woff2') format('woff2');
+//}
+//@font-face {
+//		font-family:IntAliaI;
+//		src: url('./fonts/InterAlia-Italic.woff2');
+//		src: url('./fonts/InterAlia-Italic.woff2') format('woff2');
+//}
+//@font-face {
+//		font-family:IntAliaB;
+//		src: url('./fonts/InterAlia-Bold.woff2');
+//		src: url('./fonts/InterAlia-Bold.woff2') format('woff2');
+//}
+//@font-face {
+//		font-family:IntAliaBI;
+//		src: url('./fonts/InterAlia-BoldItalic.woff2');
+//		src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
+//}
+//
+//@font-face {
+//		font-family:Trabajo;
+//		src: url('./fonts/Trabajo.otf');
+//		src: url('./fonts/Trabajo.otf') format('opentype');
+//}
+//@font-face {
+//		font-family: 'TrabajoRegular';
+//		font-weight: normal;
+//		font-style: normal;
+//}
+/* SegoeUI-Historic is only on Microsoft Windows machines */
+//@font-face {
+//	font-family:Segoe;
+//	src: url('./fonts/SegoeUI-Historic.ttf');
+//	src: url('c:/Windows/Fonts/seguihis.ttf');
+//	src: url(c:/Windows/Fonts/seguihis.ttf) format('truetype');
+//}
+
+/* ---- Shavian fonts table ------ */
+.pAndagii   { font-family: Andagii, AdobeBlank2;     font-size: 14pt; }
+.pCafeI     { font-family: CafeI, AdobeBlank2;       font-size: 14pt; }
+.pCafeR     { font-family: CafeR, AdobeBlank2;       font-size: 14pt; }
+.pDoolittI  { font-family: DoolittI, AdobeBlank2;    font-size: 14pt; }
+.pDoolittR  { font-family: DoolittR, AdobeBlank2;    font-size: 14pt; }
+.pFairfax   { font-family: Fairfax, AdobeBlank2;     font-size: 14pt; }
+.pHiggins   { font-family: Higgins, AdobeBlank2;     font-size: 14pt; }
+.pIntAliaR  { font-family: IntAliaR, AdobeBlank2;    font-size: 14pt; }
+.pIntAliaI  { font-family: IntAliaI, AdobeBlank2;    font-size: 14pt; }
+.pIntAliaB  { font-family: IntAliaB, AdobeBlank2;    font-size: 14pt; }
+.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2;   font-size: 14pt; }
+.pMPH       { font-family: MPH, AdobeBlank2;         font-size: 14pt; }
+.pOrmin     { font-family: Ormin, AdobeBlank2;       font-size: 14pt; }
+.pNotoSh    { font-family: NotoShavian, NotoS, AdobeBlank2; font-size: 14pt; }
+.pTrabajo   { font-family: Trabajo, AdobeBlank2;   font-size: 14pt; }
+//.pSegoe     { font-family: Segoe, AdobeBlank2;     font-size: 14pt; }
+
+/* ----------- styles ----------- */
+body {
+		font-family: var(--defaultfont), Noto;
+		/*font-family: var(--defaultfont), Segoe; * / for Windows */
+		/*background-color: transparent; */
+		background-color: rgba(232, 232, 255, 0.9);
+		background:none transparent;
+		/*opacity: 0.7; */
+		opacity: var(--bodyopacity);
+		text-align: center;
+		font-size: 10pt;
+}
+h1 { text-align: center; }
+h3 { text-align: center; }
+
+p {
+		font-weight: normal;
+		text-align: left; 
+}
+
+ul { text-align: left; font-weight:normal; }
+ol { text-align: left; font-weight:normal; }
+
+textarea {
+		font-family: var(--defaultfont), Segoe;
+		font-size: 14pt;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top:10px;
+		margin-bottom:5px;
+}
+.rounded-corners {
+		margin-left: auto;
+		margin-right: auto;
+		border-collapse: separate;
+		border: 1px solid black;
+		border-radius: 5px;
+		background-color: WhiteSmoke; /* #F5F5F5 */ /*Gainsboro; /* #DCDCDC; */
+}
+.rounded-corners td {
+		border-collapse: separate;
+		border-radius: 7px;
+		border: 1px solid black;
+		width: 12px;
+		height: 12px;
+		text-align: center;
+		background-color: Silver;
+}
+table {
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 7px;
+		border: 1px solid black;
+}
+th { background-color: LightSteelBlue; }
+td {
+		border: 0px solid black;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		text-align: left;
+		font-size: 10pt;
+		/* border-style: none none solid none; */
+}
+
+button {
+		/*font-family: var(--defaultfont), Noto;
+		font-size: var(--keyfontsize); */
+		font-weight: bold;
+		padding-right: 5px;
+		padding-left: 5px;
+}
+
+.bton {
+		/*background-color: Silver;
+		/*Silver; #C0C0C0
+		/*SlateGrey; #708090
+		/*LightSlateGrey; #778899
+		/*LightSteelBlue; #B0C4DE
+		/*LightGray; #D3D3D3 */
+		/*Gray; #808080 */
+		/*DimGray #696969 */
+		/*DarkGrey; #A9A9A9 */
+		/*display: table; */
+		border: none;
+		border-radius: 7px;
+		color: black;
+		text-align: center;
+		font-family: var(--kboardfont), Noto;
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		height: var(--keysheight);
+		cursor: pointer;
+}
+.bton:hover { background-color: RoyalBlue; }
+.btonpressed {
+		background-color: LightBlue;
+		border: none;
+		border-radius: 7px;
+		color: black;
+		text-align: center;
+		font-family: var(--defaultfont), Noto;
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		/*height: 100%;*/
+		height: var(--keysheight);
+		cursor: pointer;
+}
+.trSpacer td {
+		width: var(--spacerwidth);
+		height: 0px;
+		border: 0px;
+}
+.divtab {
+		display: table;
+		width: auto;
+		margin: auto; /* shrink and center */
+		margin-top: 10px;
+		border-collapse: collapse;
+}
+.divrow {
+		display: table-row;
+}
+.divcell {
+		display: table-cell;
+		border: 0px solid #ddd;
+}
+.divcellch {
+		display: table-cell;
+		padding: 3px;
+		border: 0px solid #ddd;
+		font-size:14pt;
+		font-style:bold;
+}
+.desc {
+		display: flex;
+		/*align-items: center;*/
+		justify-content: center;
+		text-align:center;
+		/*width: 100%;*/
+		border:0px solid blue;
+		/*padding-left:10px;*/
+		/*font-size:11pt;*/
+}
+.desc p {
+		border: 0px solid magenta;
+/*		width:400px; /* "margin:auto;" for centering fixed-width objects*/
+		margin: auto;
+		margin-bottom: 10px;
+		padding-left:5px;
+}
+.desc blockquote {
+		margin-left:15px;
+		border-left:3px solid silver;
+		padding-left:5px;
+		text-align:left;
+}
+.desc b {
+		color:black;
+		font-weight:bold;
+}
+.transTable td {
+		text-align: center;
+		font-weight: bold;
+		padding: 3px 3px 3px 3px; /* top right bottom left */
+		font-size:1.2em;
+}
+.transTable .Shavian td {
+		color: red;
+}
+.transTable .shawIpa td {
+		color: silver;
+		font-style:italic;
+}
+</style>
+
+<script>
+const emptY = [
+	'','','','','','','','','','','','','','','','','','','','','','','','','','',
+	'','','','','','','','','','','','','','','','','','','','','' ];
+
+// English QWERTY (standard)
+const qwertyA = [
+	'`','1','2','3','4','5','6','7','8','9','0','-','=',
+	'q','w','e','r','t','y','u','i','o','p','[',']','\\',
+	'a','s','d','f','g','h','j','k','l',';', "'",
+	'z','x','c','v','b','n','m',',','.','/' ];
+const qwertyB = [
+	'~','!','@','#','$','%','^','&','*','(',')','_','+',
+	'Q','W','E','R','T','Y','U','I','O','P','{','}','|',
+	'A','S','D','F','G','H','J','K','L',':','\"',
+	'Z','X','C','V','B','N','M','<','>','?' ];
+
+// --- Shaw QWERTY :
+const shawqwA = [
+	'`','1','2','3','4','5','6','7','8','9','0','-','=',
+	'𐑶','𐑢','𐑧','𐑮','𐑑','𐑭','𐑳','𐑦','𐑪','𐑐','[',']','\\',
+	'𐑩','𐑕','𐑛','𐑓','𐑜','𐑣','𐑘','𐑒','𐑤',';', "'",
+	'𐑟','𐑻','𐑗','𐑝','𐑚','𐑯','𐑥',',','.','/' ];
+const shawqwB = [ 
+	'~','!','@','#','$','%','^','&','*','(',')','_','+',
+	'𐑬','𐑾','𐑱','𐑸','𐑔','𐑷','𐑫','𐑰','𐑴','𐑹','{','}','|',
+	'𐑨','𐑖','𐑼','𐑲','·','𐑞','𐑡','«','»',':','\"',
+	'𐑠','𐑺','𐑽','𐑿','⸰','𐑙','𐑵','‹','›','?'  ];
+const shawqwC = [
+	'´','¹','²','³','⁴','⁵','⁶','⁷','⁸','⁹','⁰','→','≠',
+	'…','̀','́','®','™','√','↑','̈','ø','℗','⟨','⟩','•',
+	'“','”','↓','°','æ','‐','œ','≤','≥','§','×',
+	'‘','’','©','⁃','○','–','—','<','>','÷' ];
+// - ⌥w  : ◌̀ (U+0300) combining grave accent    (&#x0300;)
+// - ⌥e  : ◌́ (U+0301) combining acute accent
+// - ⌥u  : ◌̈ (U+0308) combining diaeresis/umlaut (eg: naïve)
+// - ⌥⇧n : ◌̃ (U+0303) combining tilde /ˈtɪldə/˜
+//## hyphens and dashes:
+//- ⌥h  : ‐ (U+2010) hyphen
+//- ⌥⇧h : ‑ (U+2011) non-breaking hyphen
+//- ⌥v  : ⁃ (U+2043) bullet hyphen
+//- ⌥n  : – (U+2013) N-dash
+//- ⌥m  : — (U+2014) M-dash
+const shawqwD = [
+	'≈','₁','₂','₃','₄','₅','₆','₇','₈','₉','₀','←','±',
+	'⌜','⌝','⌞','⌟', '‰', '', '','',  'Ø','π', '⟮','⟯','◦',
+	 '', '☺', '', '', 'Æ','‑','Œ','', '₤', '', '',
+	 '⌥', '⌘','¢','⌃','◌', '̃','µ','☒','☐','☑' ];
+//## Apple symbols:
+//- ⌥⇧a :  (U+f8ff) Apple logo
+//- ⌥⇧z : ⌥ (U+2325) Option key symbol
+//- ⌥⇧x : ⌘ (U+2318) Command key symbol
+//- ⌥⇧v : ⌃ (U+2303) Control key symbol
+
+// --- Shaw Imperial (Neil Raiden version)
+const shawImA = [ 
+	'⸰','·','𐑬','𐑻','𐑫','𐑺','𐑜','𐑖','𐑗','𐑙','𐑘','𐑡','𐑔',
+	'𐑭','𐑷','𐑵','𐑱','𐑳','𐑓','𐑞','𐑤','𐑥','𐑒','𐑢','𐑣','𐑠',  
+	'𐑪','𐑨','𐑦','𐑩','𐑧','𐑐','𐑯','𐑑','𐑮','𐑕','𐑛',
+	'𐑾','𐑲','𐑴','𐑰','𐑚','𐑝','𐑟',',','.','/' ];
+const shawImB = [ 
+    '◦','•','𐑶','𐑸','𐑿','𐑹','𐑼','𐑽','*','-','(',')','=',
+	'q','w','e','r','t','y','u','i','o','p',"!",'&','~', 
+    'a','s','d','f','g','h','j','k','l','\'','"',
+	'z','x','c','v','b','n','m',';',':','?' ];
+const shawImC = [ 
+    '0','1','2','3','4','5','6','7','8','9','[',']','_',
+    'Q','W','E','R','T','Y','U','I','O','P','{','}','|',
+    'A','S','D','F','G','H','J','K','L','«','»',
+    'Z','X','C','V','B','N','M','“','”','…' ];
+const shawImD = [
+    '`','´','@','#','$','%','^','&','×','÷','<','>', '+',
+	 '', '', '', '', '', '', '', '', '', '', '', '','\\',
+	 '', '', '', '', '','‐', '', '', '£','‹','›',
+	 '', '', '¢','⁃','○','–','—','‘','’','' ];
+
+/* Your Own Custom Keyboard Layout */
+/* If you are reading this, that means either you are:
+ · trying to modify (or make corrections to) an existing layout, or
+ · trying to create a new one
+If it's the first option, then simply modify any of the tables defined above.
+If it's the second option, then here is how you do it:
+ 1. Modify and un‐comment the layout tables below (customA, customB, customC, customD)
+ 2. The "custom_" tables are already added to the layoutSwitch() function — no need to do anything
+ 3. If you want to make it default, then change the "const keys[ABCD] = ..." definitions at the bottom of this <script> section
+ 4. Save and refresh page with F5
+ 5. Oh, and remember to update the "Copyright (c) 202_ Your Name (AGPL v3)" line
+Good Luck! :)
+*/
+/* custom tables * /
+// unshifted:
+const customA = [
+	'','','','','','','','','','','','','',
+	 'T','h','i','s','','i','s','','Y','o','u','r','',
+	  'c','u','s','t','o','m','','','','','',
+	   '','','','','l','a','y','o','u','t' ];
+// shifted:
+const customB = [
+	'','','','','','','','','','','','','',
+	 '','','','','','','','','','','','','',
+	  '','','','','','','','','','','',
+	   '','','','','','','','','','' ];
+// AltGR (aka right-alt):
+const customC = [
+	'','','','','','','','','','','','','',
+	 '','','','','','','','','','','','','',
+	  '','','','','','','','','','','',
+	   '','','','','','','','','','' ];
+// AltGr + Shift:
+const customD = [
+	'','','','','','','','','','','','','',
+	 '','','','','','','','','','','','','',
+	  '','','','','','','','','','','',
+	   '','','','','','','','','','' ];
+/* */
+/* ----------- functions ----------- */
+function layoutLoad() {
+	let keyId = "";
+	var button;
+	document.getElementById("kA0").textContent = String(keysA[0]);
+	for ( let i=0; i<47; i++ ) {
+		keyId = "kA" + String(i);
+		button = document.getElementById(keyId);
+		button.textContent = String(keysA[i]);
+		button.innerText   = String(keysA[i]);
+//		button.innerHTML   = String(keysA[i]);
+		keyId = "kB" + String(i);
+		button = document.getElementById(keyId);
+		button.textContent = String(keysB[i]);
+		button.innerText   = String(keysB[i]);
+//		button.innerHTML   = String(keysB[i]);
+		keyId = "kC" + String(i);
+		button = document.getElementById(keyId);
+		button.textContent = String(keysC[i]);
+		button.innerText   = String(keysC[i]);
+//		button.innerHTML   = String(keysC[i]);
+		keyId = "kD" + String(i);
+		button = document.getElementById(keyId);
+		button.textContent = String(keysD[i]);
+		button.innerText   = String(keysD[i]);
+//		button.innerHTML   = String(keysD[i]);
+	}
+}
+function keyA(key) { insertChar(keysA[key]); }
+function keyB(key) { insertChar(keysB[key]); }
+function keyC(key) { insertChar(keysC[key]); }
+function keyD(key) { insertChar(keysD[key]); }
+
+function layoutSwitch(laiout) {
+	let kbName = "Shaw QWERTY";  // default layout
+
+	// change color of all layout switching buttons to default
+	// then the current layout to RoyalBlue
+	document.getElementById("shawQwerty").style.backgroundColor = "";
+	document.getElementById("shawEmpire").style.backgroundColor = "";
+	document.getElementById(laiout).style.backgroundColor     = "dodgerblue";
+
+ 	document.getElementById(currentLayout + 'Desc').style.display = 'none';
+ 	currentLayout=laiout;
+ 	document.getElementById(currentLayout + 'Desc').style.display = 'block';
+
+	switch(laiout) {
+		case "shawQwerty":
+				keysA=shawqwA; keysB=shawqwB; 
+				keysC=shawqwC; keysD=shawqwD;
+				kbName="Shavian QWERTY";
+				break;
+		case "shawEmpire":
+				keysA=shawImA; keysB=shawImB;
+				keysC=shawImC; keysD=shawImD;
+				kbName="Shavian Imperial";
+				break;
+		//case "custom":
+		//		keysA=customA; keysB=customB;
+		//		keysC=customC; keysD=customD;
+		//		kbName="Custom";
+		//		break;
+	}
+
+	layerSwitch("kbA");
+	//reload all buttons with symbols from new layout
+	layoutLoad();
+}
+
+// ------ textarea functions ------
+function insertChar(ch) {
+		const textArea = document.getElementById('txtWin');
+		textArea.focus();
+		const cursorPos = textArea.selectionStart;
+		let text = textArea.value;
+		let newTextA = text.slice(0,cursorPos);
+		let newTextB = text.slice(cursorPos);
+		textArea.value = newTextA + ch + newTextB;
+		textArea.setSelectionRange(cursorPos+ch.length, cursorPos+ch.length);
+}
+function copyToClip() {
+		var copyText = document.getElementById("txtWin");
+		copyText.focus();
+		copyText.select();
+		copyText.setSelectionRange(0, 99999); // For mobile devices
+		navigator.clipboard.writeText(copyText.value);
+	//alert("Copied to clipboard: \n" + copyText.value);
+}
+function clearTextArea() {
+		const textArea = document.getElementById('txtWin');
+		textArea.focus();
+		//	textArea.innerHTML = "";
+		textArea.value = "";
+		textArea.setSelectionRange(0, 0);
+}
+function backSpace() {
+		let textArea = document.getElementById('txtWin');
+		let cursorSta = textArea.selectionStart;
+		let cursorEnd = textArea.selectionEnd;
+		textArea.focus();
+		let text = textArea.value;
+		let letter = text.charAt(cursorSta - 2);
+
+		if ( cursorSta < cursorEnd ) {
+				// delete selection = same as DEL
+				textArea.value = text.slice(0,cursorSta) + text.slice(cursorEnd);
+				textArea.setSelectionRange(cursorSta, cursorSta);
+		}
+		else {
+			if ( cursorSta > 0 ) {
+			// if (Unicode char) then { delete 2 bytes } else { delete 1 byte }
+				if ( letter == "\uD801" ) {
+					// Unicode char detected: delete 2 bytes
+					textArea.value = text.slice(0,cursorSta-2) + text.slice(cursorSta);
+					// set cursor position -2
+					textArea.setSelectionRange(cursorSta-2, cursorSta-2);
+				}
+				else {
+					// ASCII char detected: delete a single byte
+					textArea.value = text.slice(0,cursorSta-1) + text.slice(cursorSta);
+					// set cursor position -1
+					textArea.setSelectionRange(cursorSta-1, cursorSta-1);
+				}
+			}
+			else {
+				// cursor at 0 = do nothing
+				textArea.setSelectionRange(cursorSta, cursorSta);
+			}
+		}
+}
+function deleteChar() {
+		const textArea = document.getElementById('txtWin');
+		let cursorSta = textArea.selectionStart;
+		let cursorEnd = textArea.selectionEnd;
+		textArea.focus();
+		let text = textArea.value;
+		let letter = text.charAt(cursorSta);
+		if ( cursorSta < text.length ) {
+			// if cursor start equals cursor end, delete one character (1 or 2 bytes), else delete range
+			if ( cursorSta == cursorEnd ) {
+				if ( letter == "\uD801" ) { cursorEnd +=2 } else { cursorEnd += 1; }
+			}
+			textArea.value = text.slice(0,cursorSta) + text.slice(cursorEnd);
+		}
+		else {
+			// if cursor at the end of text - do nothing - reposition the cursor
+			textArea.setSelectionRange(cursorSta, cursorSta);
+		}
+		textArea.setSelectionRange(cursorSta, cursorSta);
+}
+
+// ------
+function layerSwitch(kb) {
+		const kbA = document.getElementById("kbA"); // lowercase
+		const kbB = document.getElementById("kbB"); // uppercase (Shift)
+		const kbC = document.getElementById('kbC'); // AltGr
+		const kbD = document.getElementById('kbD'); // AltGr+Shift
+		kbA.style.display = 'none';
+		kbB.style.display = 'none';
+		kbC.style.display = 'none';
+		kbD.style.display = 'none';
+		currentLayer = kb;
+		switch (kb) {
+			case "kbA": kbA.style.display = 'block'; break;
+			case "kbB": kbB.style.display = 'block'; break;
+			case "kbC": kbC.style.display = 'block'; break;
+			case "kbD": kbD.style.display = 'block'; break;
+		}
+}
+function showWindow(wind) {
+		const windId = document.getElementById(wind + 'Table');
+		const buttonId = document.getElementById(wind + 'Button');
+		if ( windId.style.display == "none" ) {
+			windId.style.display = 'table';
+			buttonId.style.backgroundColor = 'RoyalBlue'; // works - but leaves border somewhat thick-black
+			//buttonId.style.background = 'royalblue';		// works - but leaves thick border even after reset
+			//buttonId.bgcolor = 'royalblue';					// doesn't do a thing
+			//document.getElementById("button").className = 'button_color';   // change class name
+		}
+		else {
+			windId.style.display = 'none';
+			buttonId.style.backgroundColor  = '';
+		}
+}
+
+function specialKey(spcKey) {
+	// NOT SUPPORTED
+	//var spcKeyId = document.getElementById(spcKey);
+	//if ( spcKeyId.style.display == 'table' ) {
+	//	spcKeyId.style.display = 'none';
+	//}
+	//else {
+	//	spcKeyId.style.display = 'table';
+	//}
+}
+
+function changeTxtAreaFontSize(valu) {
+		var txtWin = document.getElementById("txtWin");
+		textAreaFontSize += valu;
+		txtWin.style.fontSize = textAreaFontSize + "pt";
+		document.getElementById('txtAfontSize').innerHTML = textAreaFontSize +"&nbsp;";
+}
+function changeKboardFontSize(valu) {
+//	var rs = getComputedStyle(r);		// Get the values of the global root CSS variables
+//	alert("The --keyfontsize is: " + rs.getPropertyValue('--keyfontsize'));
+	kboardFontSize += valu;
+	r.style.setProperty('--keyfontsize', kboardFontSize + 'pt');
+	document.getElementById('kbFontSize').innerHTML = kboardFontSize + "&nbsp;";
+}
+function changeKeyboardWidth(valu) {
+	kboardSpacerWidth += valu;
+	r.style.setProperty('--spacerwidth', kboardSpacerWidth + 'px');
+	document.getElementById('kbKeySize').innerHTML = kboardSpacerWidth + "&nbsp;";
+}
+function changeKeysHeight(valu) {
+	kboardKeysHeight += valu;
+	r.style.setProperty('--keysheight', kboardKeysHeight + 'px');
+	document.getElementById('kbKeyHigh').innerHTML = kboardKeysHeight + "&nbsp;";
+}
+function changeOpacity(v) {
+	let bO = bodyOpacity;
+	if( ( bO > 0.2 && bO < 0.9 )  ||  ( bO <= 0.2 && v > 0 ) || ( bO >= 0.9 && v < 0 ) ) {
+		bodyOpacity += v;
+		r.style.setProperty('--bodyopacity', bodyOpacity);
+		document.getElementById('bodOpacit').innerHTML = bodyOpacity.toFixed(1) + '&nbsp;' ;
+	}
+}
+function changeFont(selObj) {
+	var selectedIndex = selObj.selectedIndex;
+	var selectedText = selObj.options[selectedIndex].text;
+	var selectedValue = selObj.options[selectedIndex].value;
+	console.log("Selected font:" + selectedText + " index: " +selectedIndex + " value: " + selectedValue);
+	r.style.setProperty('--kboardfont', selectedValue );
+}
+
+function fontDetector() {
+			const fontFaceSet = document.fonts;
+
+			const fontList = [	'ANDAGII.TTF', 
+				'CafeMajestic-Inline.otf', 
+				'CafeMajestic-Regular.otf',
+				'DoolittleGaramond-Italic.otf',
+				'DoolittleGaramond-Regular.otf',
+				'FairfaxHD.ttf',
+				'HenryHigginsSans-Regular.otf',
+				'InterAlia-Regular.woff2',
+				'InterAlia-Italic.woff2',
+				'InterAlia-Bold.woff2',
+				'InterAlia-BoldItalic.woff2',
+				'MPH-2B-Damase_v2.ttf',
+				'NotoSansShavian-Regular.ttf',
+				'Ormin-Regular.otf',
+				'Trabajo.otf' ];
+
+			const fontShortList = [ 'Andagii',
+				'CafeI',
+				'CafeR',
+				'DoolittI',
+				'DoolittR',
+				'Fairfax',
+				'Higgins',
+				'IntAliaR',
+				'IntAliaI',
+				'IntAliaB',
+				'IntAliaBI',
+				'MPH',
+				'NotoSh',
+				'Ormin',
+				'Trabajo' ];
+
+			// fontIs are used as ElementIs of <td> in font table:
+			const fontIds = ['anda','cafi','cafe','dool','door','fair','higg','alia','alii','alib','albi','mphd','noto','ormi','trab'];
+
+		var fontSelector = document.getElementById('fontSelect').getElementsByTagName("option");
+	
+		for ( let i=0; i<fontIds.length; i++ ) {
+			let tdId = document.getElementById(fontIds[i]);
+			var fontFace = new FontFace(fontShortList[i], 'url(./fonts-shavian/'+fontList[i]+')');
+			fontFace.load().then(fond => {
+				// font is loaded, make it available:
+					document.fonts.add(fond);
+					tdId.innerText = '☑';
+					tdId.style.color = 'RoyalBlue';
+					fontSelector[i].disabled = false;
+			}).catch((error) => {
+				// fallback font is used or font loading failed
+					tdId.innerText = '☒';
+					tdId.style.color = 'Red';
+					fontSelector[i].disabled = true;
+			});
+		}
+}
+
+// global variables - important: some of these variables have their corresponding counterpart in the ":root" CSS global variables
+var bodyOpacity       = 0.8;	// CSS variable: --bodyopacity
+var defaultFont       = 'Higgins';   // CSS variable: --defaultfont
+var textAreaFontSize  =  14; 	// textarea font-size (default 14pt)
+var kboardFont        = 'Higgins'; 
+var kboardFontSize    =  14; 	// class .bton font-size (default 14pt)
+var kboardSpacerWidth =  1;	  // keys width (default 12px)  - CSS variable ""
+var kboardKeysHeight  =  28;	// keys height (default 25px) - CSS variable "--keysheight"
+var r = document.querySelector(':root'); 	// Get the root element
+
+/*   default keyboard layout - on startup will be loaded at the end of page */
+var currentLayer = 'kbA';
+var currentLayout = 'shawQwerty';
+var keysA = shawqwA;
+var keysB = shawqwB;
+var keysC = emptY;
+var keysD = emptY;
+</script>
+</head>
+
+<body>
+<!-- "HOME" link and "Hamburger menu" button -->
+<header><script>insertHTML(headerHtml);</script></header>
+<!-- Top Navigation Menu -->
+<nav><script>insertNavBar();</script></nav>
+<!-- hidden page with controls to personalize styles -->
+<div id="pageSetup"><script>webPageSetup();</script></div>
+<main>
+
+<!-- textArea -->
+	<div>
+		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
+	</div>
+	<!-- buttons (Clear, To Clipboard -->
+	<!-- div style="margin: 5px;padding: 0px;" -->
+	<div style="margin: 0px;padding: 0px;">
+		<button onclick="clearTextArea()" >Clear</button>
+		<button onclick="copyToClip()"    >To Clipboard</button>
+	</div>
+
+	<!-- ------ Layout switcher ------ -->
+	<div style="margin: 5px;padding: 0px;">
+		<b>Layout:</b>&nbsp;
+		<button id="shawQwerty" onclick="layoutSwitch('shawQwerty')" >Shaw QWERTY</button>
+		<button id="shawEmpire" onclick="layoutSwitch('shawEmpire')" >Shaw Imperial</button>
+		<!-- <button style="width:100%" onclick="layoutSwitch('custom')">Your Custom Layout</button> -->
+	</div>
+
+		<!-- ----------- KEYBOARD A (unshifted)        ----------- -->
+	<div id="kbA" style="display: block;">
+		<!-- strangely the table doesn't keep alignment - so dirty trick here: write 29 empty columns :) -->
+		<!--td colspan="2"><button id="kA0"  class="bton" onclick="keyA(0)"></button></td -->
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kA0"  onclick="keyA(0)">`</td>
+				<td colspan="2" class="bton" id="kA1"  onclick="keyA(1)">1</td>
+				<td colspan="2" class="bton" id="kA2"  onclick="keyA(2)">2</td>
+				<td colspan="2" class="bton" id="kA3"  onclick="keyA(3)">3</td>
+				<td colspan="2" class="bton" id="kA4"  onclick="keyA(4)">4</td>
+				<td colspan="2" class="bton" id="kA5"  onclick="keyA(5)">5</td>
+				<td colspan="2" class="bton" id="kA6"  onclick="keyA(6)">6</td>
+				<td colspan="2" class="bton" id="kA7"  onclick="keyA(7)">7</td>
+				<td colspan="2" class="bton" id="kA8"  onclick="keyA(8)">8</td>
+				<td colspan="2" class="bton" id="kA9"  onclick="keyA(9)">9</td>
+				<td colspan="2" class="bton" id="kA10" onclick="keyA(10)">0</td>
+				<td colspan="2" class="bton" id="kA11" onclick="keyA(11)">-</td>
+				<td colspan="2" class="bton" id="kA12" onclick="keyA(12)">=</td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kA13" onclick="keyA(13)"></td>
+				<td colspan="2" class="bton" id="kA14" onclick="keyA(14)"></td>
+				<td colspan="2" class="bton" id="kA15" onclick="keyA(15)"></td>
+				<td colspan="2" class="bton" id="kA16" onclick="keyA(16)"></td>
+				<td colspan="2" class="bton" id="kA17" onclick="keyA(17)"></td>
+				<td colspan="2" class="bton" id="kA18" onclick="keyA(18)"></td>
+				<td colspan="2" class="bton" id="kA19" onclick="keyA(19)"></td>
+				<td colspan="2" class="bton" id="kA20" onclick="keyA(20)"></td>
+				<td colspan="2" class="bton" id="kA21" onclick="keyA(21)"></td>
+				<td colspan="2" class="bton" id="kA22" onclick="keyA(22)"></td>
+				<td colspan="2" class="bton" id="kA23" onclick="keyA(23)"></td>
+				<td colspan="2" class="bton" id="kA24" onclick="keyA(24)"></td>
+				<td colspan="2" class="bton" id="kA25" onclick="keyA(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kA26" onclick="keyA(26)"></td>
+				<td colspan="2" class="bton" id="kA27" onclick="keyA(27)"></td>
+				<td colspan="2" class="bton" id="kA28" onclick="keyA(28)"></td>
+				<td colspan="2" class="bton" id="kA29" onclick="keyA(29)"></td>
+				<td colspan="2" class="bton" id="kA30" onclick="keyA(30)"></td>
+				<td colspan="2" class="bton" id="kA31" onclick="keyA(31)"></td>
+				<td colspan="2" class="bton" id="kA32" onclick="keyA(32)"></td>
+				<td colspan="2" class="bton" id="kA33" onclick="keyA(33)"></td>
+				<td colspan="2" class="bton" id="kA34" onclick="keyA(34)"></td>
+				<td colspan="2" class="bton" id="kA35" onclick="keyA(35)"></td>
+				<td colspan="2" class="bton" id="kA36" onclick="keyA(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
+				<td colspan="2" class="bton" id="kA37" onclick="keyA(37)"></td>
+				<td colspan="2" class="bton" id="kA38" onclick="keyA(38)"></td>
+				<td colspan="2" class="bton" id="kA39" onclick="keyA(39)"></td>
+				<td colspan="2" class="bton" id="kA40" onclick="keyA(40)"></td>
+				<td colspan="2" class="bton" id="kA41" onclick="keyA(41)"></td>
+				<td colspan="2" class="bton" id="kA42" onclick="keyA(42)"></td>
+				<td colspan="2" class="bton" id="kA43" onclick="keyA(43)"></td>
+				<td colspan="2" class="bton" id="kA44" onclick="keyA(44)"></td>
+				<td colspan="2" class="bton" id="kA45" onclick="keyA(45)"></td>
+				<td colspan="2" class="bton" id="kA46" onclick="keyA(46)"></td>
+				<td colspan="4" class="bton" onclick="layerSwitch('kbB')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
+				<td colspan="3"  class="bton" onclick="layerSwitch('kbC')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- ----------- KEYBOARD B (Shifted)           ----------- -->
+	<div id="kbB" style="display: none;">
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kB0"  onclick="keyB(0)"></td>
+				<td colspan="2" class="bton" id="kB1"  onclick="keyB(1)"></td>
+				<td colspan="2" class="bton" id="kB2"  onclick="keyB(2)"></td>
+				<td colspan="2" class="bton" id="kB3"  onclick="keyB(3)"></td>
+				<td colspan="2" class="bton" id="kB4"  onclick="keyB(4)"></td>
+				<td colspan="2" class="bton" id="kB5"  onclick="keyB(5)"></td>
+				<td colspan="2" class="bton" id="kB6"  onclick="keyB(6)"></td>
+				<td colspan="2" class="bton" id="kB7"  onclick="keyB(7)"></td>
+				<td colspan="2" class="bton" id="kB8"  onclick="keyB(8)"></td>
+				<td colspan="2" class="bton" id="kB9"  onclick="keyB(9)"></td>
+				<td colspan="2" class="bton" id="kB10" onclick="keyB(10)"></td>
+				<td colspan="2" class="bton" id="kB11" onclick="keyB(11)"></td>
+				<td colspan="2" class="bton" id="kB12" onclick="keyB(12)"></td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kB13" onclick="keyB(13)"></td>
+				<td colspan="2" class="bton" id="kB14" onclick="keyB(14)"></td>
+				<td colspan="2" class="bton" id="kB15" onclick="keyB(15)"></td>
+				<td colspan="2" class="bton" id="kB16" onclick="keyB(16)"></td>
+				<td colspan="2" class="bton" id="kB17" onclick="keyB(17)"></td>
+				<td colspan="2" class="bton" id="kB18" onclick="keyB(18)"></td>
+				<td colspan="2" class="bton" id="kB19" onclick="keyB(19)"></td>
+				<td colspan="2" class="bton" id="kB20" onclick="keyB(20)"></td>
+				<td colspan="2" class="bton" id="kB21" onclick="keyB(21)"></td>
+				<td colspan="2" class="bton" id="kB22" onclick="keyB(22)"></td>
+				<td colspan="2" class="bton" id="kB23" onclick="keyB(23)"></td>
+				<td colspan="2" class="bton" id="kB24" onclick="keyB(24)"></td>
+				<td colspan="2" class="bton" id="kB25" onclick="keyB(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kB26" onclick="keyB(26)"></td>
+				<td colspan="2" class="bton" id="kB27" onclick="keyB(27)"></td>
+				<td colspan="2" class="bton" id="kB28" onclick="keyB(28)"></td>
+				<td colspan="2" class="bton" id="kB29" onclick="keyB(29)"></td>
+				<td colspan="2" class="bton" id="kB30" onclick="keyB(30)"></td>
+				<td colspan="2" class="bton" id="kB31" onclick="keyB(31)"></td>
+				<td colspan="2" class="bton" id="kB32" onclick="keyB(32)"></td>
+				<td colspan="2" class="bton" id="kB33" onclick="keyB(33)"></td>
+				<td colspan="2" class="bton" id="kB34" onclick="keyB(34)"></td>
+				<td colspan="2" class="bton" id="kB35" onclick="keyB(35)"></td>
+				<td colspan="2" class="bton" id="kB36" onclick="keyB(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
+				<td colspan="2" class="bton" id="kB37" onclick="keyB(37)"></td>
+				<td colspan="2" class="bton" id="kB38" onclick="keyB(38)"></td>
+				<td colspan="2" class="bton" id="kB39" onclick="keyB(39)"></td>
+				<td colspan="2" class="bton" id="kB40" onclick="keyB(40)"></td>
+				<td colspan="2" class="bton" id="kB41" onclick="keyB(41)"></td>
+				<td colspan="2" class="bton" id="kB42" onclick="keyB(42)"></td>
+				<td colspan="2" class="bton" id="kB43" onclick="keyB(43)"></td>
+				<td colspan="2" class="bton" id="kB44" onclick="keyB(44)"></td>
+				<td colspan="2" class="bton" id="kB45" onclick="keyB(45)"></td>
+				<td colspan="2" class="bton" id="kB46" onclick="keyB(46)"></td>
+				<td colspan="4" class="bton" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar(' ')">SPACE</td>
+				<td colspan="3"  class="bton" onclick="layerSwitch('kbD')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- ----------- KEYBOARD C (right ALT)         ----------- -->
+	<div id="kbC" style="display: none;">
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kC0"  onclick="keyC(0)"></td>
+				<td colspan="2" class="bton" id="kC1"  onclick="keyC(1)"></td>
+				<td colspan="2" class="bton" id="kC2"  onclick="keyC(2)"></td>
+				<td colspan="2" class="bton" id="kC3"  onclick="keyC(3)"></td>
+				<td colspan="2" class="bton" id="kC4"  onclick="keyC(4)"></td>
+				<td colspan="2" class="bton" id="kC5"  onclick="keyC(5)"></td>
+				<td colspan="2" class="bton" id="kC6"  onclick="keyC(6)"></td>
+				<td colspan="2" class="bton" id="kC7"  onclick="keyC(7)"></td>
+				<td colspan="2" class="bton" id="kC8"  onclick="keyC(8)"></td>
+				<td colspan="2" class="bton" id="kC9"  onclick="keyC(9)"></td>
+				<td colspan="2" class="bton" id="kC10" onclick="keyC(10)"></td>
+				<td colspan="2" class="bton" id="kC11" onclick="keyC(11)"></td>
+				<td colspan="2" class="bton" id="kC12" onclick="keyC(12)"></td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kC13" onclick="keyC(13)"></td>
+				<td colspan="2" class="bton" id="kC14" onclick="keyC(14)"></td>
+				<td colspan="2" class="bton" id="kC15" onclick="keyC(15)"></td>
+				<td colspan="2" class="bton" id="kC16" onclick="keyC(16)"></td>
+				<td colspan="2" class="bton" id="kC17" onclick="keyC(17)"></td>
+				<td colspan="2" class="bton" id="kC18" onclick="keyC(18)"></td>
+				<td colspan="2" class="bton" id="kC19" onclick="keyC(19)"></td>
+				<td colspan="2" class="bton" id="kC20" onclick="keyC(20)"></td>
+				<td colspan="2" class="bton" id="kC21" onclick="keyC(21)"></td>
+				<td colspan="2" class="bton" id="kC22" onclick="keyC(22)"></td>
+				<td colspan="2" class="bton" id="kC23" onclick="keyC(23)"></td>
+				<td colspan="2" class="bton" id="kC24" onclick="keyC(24)"></td>
+				<td colspan="2" class="bton" id="kC25" onclick="keyC(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kC26" onclick="keyC(26)"></td>
+				<td colspan="2" class="bton" id="kC27" onclick="keyC(27)"></td>
+				<td colspan="2" class="bton" id="kC28" onclick="keyC(28)"></td>
+				<td colspan="2" class="bton" id="kC29" onclick="keyC(29)"></td>
+				<td colspan="2" class="bton" id="kC30" onclick="keyC(30)"></td>
+				<td colspan="2" class="bton" id="kC31" onclick="keyC(31)"></td>
+				<td colspan="2" class="bton" id="kC32" onclick="keyC(32)"></td>
+				<td colspan="2" class="bton" id="kC33" onclick="keyC(33)"></td>
+				<td colspan="2" class="bton" id="kC34" onclick="keyC(34)"></td>
+				<td colspan="2" class="bton" id="kC35" onclick="keyC(35)"></td>
+				<td colspan="2" class="bton" id="kC36" onclick="keyC(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="bton" onclick="layerSwitch('kbD')">SHIFT</td>
+				<td colspan="2" class="bton" id="kC37" onclick="keyC(37)"></td>
+				<td colspan="2" class="bton" id="kC38" onclick="keyC(38)"></td>
+				<td colspan="2" class="bton" id="kC39" onclick="keyC(39)"></td>
+				<td colspan="2" class="bton" id="kC40" onclick="keyC(40)"></td>
+				<td colspan="2" class="bton" id="kC41" onclick="keyC(41)"></td>
+				<td colspan="2" class="bton" id="kC42" onclick="keyC(42)"></td>
+				<td colspan="2" class="bton" id="kC43" onclick="keyC(43)"></td>
+				<td colspan="2" class="bton" id="kC44" onclick="keyC(44)"></td>
+				<td colspan="2" class="bton" id="kC45" onclick="keyC(45)"></td>
+				<td colspan="2" class="bton" id="kC46" onclick="keyC(46)"></td>
+				<td colspan="4" class="bton" onclick="layerSwitch('kbD')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td>
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar('&#x2003;')">EM SPACE (U+2003)</td> <!-- hex &#x2003; dec &#8192; &emsp; -->
+				<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbA')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- ----------- KEYBOARD D (right ALT + SHIFT) ----------- -->
+	<div id="kbD" style="display: none;">
+		<table class="rounded-corners" >
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+			<tr>
+				<td colspan="2" class="bton" id="kD0"  onclick="keyD(0)"></td>
+				<td colspan="2" class="bton" id="kD1"  onclick="keyD(1)"></td>
+				<td colspan="2" class="bton" id="kD2"  onclick="keyD(2)"></td>
+				<td colspan="2" class="bton" id="kD3"  onclick="keyD(3)"></td>
+				<td colspan="2" class="bton" id="kD4"  onclick="keyD(4)"></td>
+				<td colspan="2" class="bton" id="kD5"  onclick="keyD(5)"></td>
+				<td colspan="2" class="bton" id="kD6"  onclick="keyD(6)"></td>
+				<td colspan="2" class="bton" id="kD7"  onclick="keyD(7)"></td>
+				<td colspan="2" class="bton" id="kD8"  onclick="keyD(8)"></td>
+				<td colspan="2" class="bton" id="kD9"  onclick="keyD(9)"></td>
+				<td colspan="2" class="bton" id="kD10" onclick="keyD(10)"></td>
+				<td colspan="2" class="bton" id="kD11" onclick="keyD(11)"></td>
+				<td colspan="2" class="bton" id="kD12" onclick="keyD(12)"></td>
+				<td colspan="3" class="bton" onclick="backSpace()">BKSP</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="bton" onclick="insertChar('\t')">TAB</td>
+				<td colspan="2" class="bton" id="kD13" onclick="keyD(13)"></td>
+				<td colspan="2" class="bton" id="kD14" onclick="keyD(14)"></td>
+				<td colspan="2" class="bton" id="kD15" onclick="keyD(15)"></td>
+				<td colspan="2" class="bton" id="kD16" onclick="keyD(16)"></td>
+				<td colspan="2" class="bton" id="kD17" onclick="keyD(17)"></td>
+				<td colspan="2" class="bton" id="kD18" onclick="keyD(18)"></td>
+				<td colspan="2" class="bton" id="kD19" onclick="keyD(19)"></td>
+				<td colspan="2" class="bton" id="kD20" onclick="keyD(20)"></td>
+				<td colspan="2" class="bton" id="kD21" onclick="keyD(21)"></td>
+				<td colspan="2" class="bton" id="kD22" onclick="keyD(22)"></td>
+				<td colspan="2" class="bton" id="kD23" onclick="keyD(23)"></td>
+				<td colspan="2" class="bton" id="kD24" onclick="keyD(24)"></td>
+				<td colspan="2" class="bton" id="kD25" onclick="keyD(25)"></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="bton" onclick="copyToClip()">CapsL</td>
+				<td colspan="2" class="bton" id="kD26" onclick="keyD(26)"></td>
+				<td colspan="2" class="bton" id="kD27" onclick="keyD(27)"></td>
+				<td colspan="2" class="bton" id="kD28" onclick="keyD(28)"></td>
+				<td colspan="2" class="bton" id="kD29" onclick="keyD(29)"></td>
+				<td colspan="2" class="bton" id="kD30" onclick="keyD(30)"></td>
+				<td colspan="2" class="bton" id="kD31" onclick="keyD(31)"></td>
+				<td colspan="2" class="bton" id="kD32" onclick="keyD(32)"></td>
+				<td colspan="2" class="bton" id="kD33" onclick="keyD(33)"></td>
+				<td colspan="2" class="bton" id="kD34" onclick="keyD(34)"></td>
+				<td colspan="2" class="bton" id="kD35" onclick="keyD(35)"></td>
+				<td colspan="2" class="bton" id="kD36" onclick="keyD(36)"></td>
+				<td colspan="3" class="bton" onclick="insertChar('\n')">ENT</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbC')">SHIFT</td>
+				<td colspan="2" id="kD37" class="bton" onclick="keyD(37)"></td>
+				<td colspan="2" id="kD38" class="bton" onclick="keyD(38)"></td>
+				<td colspan="2" id="kD39" class="bton" onclick="keyD(39)"></td>
+				<td colspan="2" id="kD40" class="bton" onclick="keyD(40)"></td>
+				<td colspan="2" id="kD41" class="bton" onclick="keyD(41)"></td>
+				<td colspan="2" id="kD42" class="bton" onclick="keyD(42)"></td>
+				<td colspan="2" id="kD43" class="bton" onclick="keyD(43)"></td>
+				<td colspan="2" id="kD44" class="bton" onclick="keyD(44)"></td>
+				<td colspan="2" id="kD45" class="bton" onclick="keyD(45)"></td>
+				<td colspan="2" id="kD46" class="bton" onclick="keyD(46)"></td>
+				<td colspan="4" class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbC')">SHIFT</td>
+			</tr>
+			<tr>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="specialKey('WIN')">&#x229E;</td> <!-- ⟮⊞⟯ &#x229E; -->
+				<td colspan="3"  class="bton" onclick="specialKey('ALT')">ALT</td>
+				<td colspan="11" class="bton" onclick="insertChar('&#x200B;')">zero-width space</td> <!-- dec: &#8203; -->
+				<td colspan="3"  class="btonpressed" style="background-color:RoyalBlue;" onclick="layerSwitch('kbB')">ALT</td>
+				<td colspan="3"  class="bton" onclick="specialKey('CTRL')">CTRL</td>
+				<td colspan="3"  class="bton" onclick="deleteChar()">DEL</td>
+			</tr>
+			<tr class="trSpacer"><script>for ( let i=0; i<29; i++ ) { document.write("<td></td>"); }</script></tr>
+		</table>
+	</div>
+
+	<!-- buttons: Options, Fonts -->
+	<div style="margin: 5px;padding: 0px;">
+		<!-- button id="kboardButton"  onclick="showWindow('kboard')" >US Phonemic</button -->
+		<button id="optionsButton" onclick="showWindow('options')">Keyboard Options</button>
+		<button id="fontsButton"   onclick="showWindow('fonts')"  >Shavian Fonts</button>
+	</div>
+
+	<!-- ----------- Options ----------- -->
+	<div id="optionsTable" class="divtab" style="display:none;padding:40px;">
+		<table>
+		<tr> <!-- changeTxtAreaFontSize() -->
+			<td><button onclick="changeTxtAreaFontSize(-1)">-</button></td>
+			<td>Text area font size :</td>
+			<td id="txtAfontSize">14</td>
+			<td><button onclick="changeTxtAreaFontSize(1)">+</button></td>
+		</tr>
+		<tr> <!-- changeKboardFontSize() -->
+			<td><button onclick="changeKboardFontSize(-1)">-</button></td>
+			<td>Keyboard font size :</td>
+			<td id="kbFontSize">14</td>
+			<td><button onclick="changeKboardFontSize(1)">+</button></td>
+		</tr>
+		<tr> <!-- changeKeyboardWidth() -->
+			<td><button onclick="changeKeyboardWidth(-1)">-</button></td>
+			<td>Keyboard width :</td>
+			<td id="kbKeySize">1</td>
+			<td><button onclick="changeKeyboardWidth(1)">+</button></td>
+		</tr>
+		<tr> <!-- changeKeysHeight() -->
+			<td><button onclick="changeKeysHeight(-1)">-</button></td>
+			<td>Keyboard height :</td>
+			<td id="kbKeyHigh">28</td>
+			<td><button onclick="changeKeysHeight(1)">+</button></td>
+		</tr>
+		<tr><td colspan="4" style="text-align:center;">Select font:</td></tr>
+		<tr> <!-- changeFont() -->
+			<td colspan="4" style="text-align:center;width:100%;">
+				<select id="fontSelect" name="Select font" onchange="changeFont(this)">
+						<option value="Andagii"  >Andagii.ttf</option>
+						<option value="CafeI"    >CafeMajestic-Inline.otf</option>
+						<option value="CafeR"    >CafeMajestic-Regular.otf</option>
+						<option value="DoolittI" >DoolittleGaramond-Italic.otf</option>
+						<option value="DoolittR" >DoolittleGaramond-Regular.otf</option>
+						<option value="Fairfax"  >FairFaxHD.ttf</option>
+						<option value="Higgins"  >HenryHigginsSans-Regular.otf</option>
+						<option value="IntAliaR" >InterAlia-Regular.woff2</option>
+						<option value="IntAliaI" >InterAlia-Italic.woff2</option>
+						<option value="IntAliaB" >InterAlia-Bold.woff2</option>
+						<option value="IntAliaBI">InterAlia-BoldItalic.woff2</option>
+						<option value="MPH"      >MPH-2B-Damase_v2.ttf</option>
+						<option value="NotoSh"   >NotoSansShavian-Regular.ttf</option>
+						<option value="Ormin"    >Ormin-Regular.otf</option>
+						<option value="Trabajo"  >Trabajo.otf</option>
+						<!-- option value="Segoe"    >SegoeUI-Historic.ttf</option -->
+				</select>
+			</td>
+		</tr>
+		</table>
+	</div>
+
+	<!-- ----------- Fonts ----------- -->
+	<div id="fontsTable" class="divtab" style="display:none;">
+		<h4>Fonts used by this keyboard</h4>
+		<p>This HTML file is looking for the following font files in a “fonts” folder in the current directory (except for SegoeUI-Historic¹):</p>
+		<table style="font-weight:normal">
+			<tr><td id="anda">?</td><td>Andagii.ttf</td><td class="pAndagii">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="cafi">?</td><td>CafeMajestic-Inline.otf</td><td class="pCafeI">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="cafe">?</td><td>CafeMajestic-Regular.otf</td><td class="pCafeR">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="dool">?</td><td>DoolittleGaramond-Italic.otf</td><td class="pDoolittI">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="door">?</td><td>DoolittleGaramond-Regular.otf</td><td class="pDoolittR">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="fair">?</td><td>FairFaxHD.ttf</td><td class="pFairfax">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="higg">?</td><td>HenryHigginsSans-Regular.otf</td><td class="pHiggins">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="alia">?</td><td>InterAlia-Regular.woff2</td><td class="pIntAliaR">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="alii">?</td><td>InterAlia-Italic.woff2</td><td class="pIntAliaI">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="alib">?</td><td>InterAlia-Bold.woff2</td><td class="pIntAliaB">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="albi">?</td><td>InterAlia-BoldItalic.woff2</td><td class="pIntAliaBI">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="mphd">?</td><td>MPH-2B-Damase_v2.ttf</td><td class="pMPH">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="noto">?</td><td>NotoSansShavian-Regular.ttf</td><td class="pNotoSh">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="ormi">?</td><td>Ormin-Regular.otf</td><td class="pOrmin">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="trab">?</td><td>Trabajo.otf</td><td class="pTrabajo">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+			<tr><td id="sego">?</td><td>SegoeUI-Historic.ttf <b>¹</b></td><td class="pSegoe">𐑥𐑯𐑩𐑧𐑨𐑪𐑳𐑦𐑰𐑫𐑵𐑭𐑷𐑬𐑶𐑴𐑱𐑲𐑔𐑞𐑓𐑝𐑐𐑚𐑘𐑢𐑑𐑛𐑒𐑜𐑤𐑮𐑕𐑟𐑖𐑠𐑗𐑡𐑼𐑺𐑻𐑸𐑹𐑽𐑾𐑿</td></tr>
+		</table>
+
+		<button onclick="fontDetector()">Reload fonts</button>
+
+		<!-- pangrams for font testing:
+		The five boxing wizards jump quickly.
+		Pack my box with five dozen liquor jugs.
+		Go, lazy fat vixen; be shrewd, jump quick.
+		When zombies arrive, quickly fax Judge Pat.
+		Amazingly few discotheques provide jukeboxes.
+		Puzzled women bequeath jerks very exotic gifts.
+		The quick onyx goblin jumps over the lazy dwarf.
+		Brawny gods just flocked up to quiz and vex him.
+		Watch “Jeopardy!”, Alex Trebek’s fun TV quiz game.
+		Six big devils from Japan quickly forgot how to waltz.
+		Five or six big jet planes zoomed quickly by the tower.
+		Jack amazed a few girls by dropping the antique onyx vase.
+		A quick movement of the enemy will jeopardize six gunboats.
+		quick move of the enemy will jeopardize six gunboats.
+		Jaded zombies acted quaintly but kept driving their oxen forward.
+		-->
+		<!--
+		<p>This HTML file is looking for the following font files in a “fonts” folder in the current directory:</p>
+		<p style="text-align:center;"><i>This functionality to reload fonts may NOT work in all browsers.</i></p>
+		<p>Please download and place desired font files into a folder “<b>fonts</b>” in the same directory as this HTML file.</p>
+		<p>Then use the “<b>Reload Fonts</b>” button to verify that the HTML document can use them.</p>
+		<p>For font files that are present, you should see a blue check‐mark ⟮<span style="color:RoyalBlue">☑</span>⟯ — and you should see different styles in the table above.</p>
+		<p>For font files that are missing, you should see a red checkbox with an “×” inside ⟮<span style="color:Red">☒</span>⟯.</p>
+		<p>If the font is missing, you will see an empty line — the font fallback is disabled in the table above on purpose.</p>
+		<p>That way you will not mistake the font listed here, with the one provided by your OS as a fallback.</p>
+		<p>Please note: the font fallback is disabled only in the table above — the font used in the keyboard will be either of the:</p>
+		<ul>
+			<li>A random font rendered by your browser from whatever font fallback mechanism will find in your OS.</li>
+			<li>Default one: <b>Henry Higgins Sans Regular</b> - if present in the local “fonts” folder.</li>
+			<li>A font chosen by you from the “<b>Options</b>” panel — only if present in “fonts” folder.</li>
+		</ul>
+		-->
+	</div>
+
+	<h4>Download</h4>
+	<table class="downl">
+		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
+		<tr>
+			<td>Shaw QWERTY</td>
+			<td><a href="./downloads/macOS/ShawQWERTY.dmg">ShawQWERTY.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+		<tr>
+			<td>Shaw Imperial</td>
+			<td><a href="./downloads/macOS/ShawImperial.dmg">ShawImperial.dmg</a></td>
+			<td>(coming soon)</td>
+			<td>(coming soon)</td>
+		</tr>
+	</table>
+
+	<!-- ----------- Layout descriptions ----------- -->
+	<div id="shawQwertyDesc" class="desc" style="display:block;">
+
+		<h4>Shaw QWERTY</h4>
+		<p>Layout for typing in <b>Shavian Alphabet</b> <ipa>/ˈʃeɪviən/</ipa>.<br>
+			The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with the <b>Phonemic</b> layouts, 
+			so if you've already learned to type with any Phonemic layout from this website and you decide to learn the Shavian Alphabet, 
+			you'll already know the positions of the phonemes on the keyboard.<br>
+			Layers 3 &amp; 4 contain additional punctuation marks, hyphens, etc., that may also be very useful.
+		</p>
+		<!-- p> ·𐑒𐑩𐑯𐑑𐑳𐑒𐑦 ·𐑓𐑮𐑲𐑛 ·𐑗𐑦𐑒𐑦𐑯, ·𐑨𐑯 𐑝 ·𐑜𐑮𐑰𐑯 ·𐑜𐑱𐑚𐑩𐑤𐑟, ·𐑢𐑦𐑯𐑦 𐑞 ·𐑐𐑵, ·𐑻𐑕𐑩𐑤𐑩 𐑓𐑪𐑯 𐑛𐑧𐑮 ·𐑤𐑲𐑦𐑯. </p -->
+		<p>
+			The <a href="https://en.wikipedia.org/wiki/Shavian_alphabet">Shavian Alphabet</a>
+			is one of the best (if not “the best”) alternative writing systems for English language.
+			It is fully phonemic (phoneme to grapheme ratio is 1:1).
+			Moreover, the Shavian Alphabet has 6 ligatures for R-colored vowels, totaling 48 letters to represent all sounds used in English language.
+		</p>
+		<p>
+			The Shavian Alphabet is named after 
+			<a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw">George Bernard Shaw</a> (1856-1950),
+			an Irish playwright, critic, an political activist.
+			Shaw was a critic of English orthography, he himself used <a href="https://en.wikipedia.org/wiki/Pitman_shorthand">Pitman shorthand</a>,
+			a phonetic shorthand system, in writing his plays.
+			Shaw considered the use of the Latin alphabet for writing English as a great waste of time, energy and paper,
+			so in his will he left a provision to fund the design of a new English alphabet that would be fully phonemic.
+		</p>
+		<ol>Shaw set three main criteria for the new alphabet:
+			<li>at least 40 letters;</li>
+			<li>as "phonetic" as possible (that is, letters should have a 1:1 correspondence to phonemes); and</li>
+			<li>distinct from the Latin alphabet to avoid the impression that the new spellings were simply "misspellings".</li>
+		</ol>
+		<p>
+			In 1958, eight years after Shaw's death in 1950, the competition took place to design such an alphabet and 
+			<a href="https://en.wikipedia.org/wiki/Ronald_Kingsley_Read">Kingsley Read</a>'s system was chosen as the winner out of the 467 entries.
+			In 1962 the book <a href="https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition"><i>Androcles and the Lion</i></a> was published,
+			a side-by-side English and Shavian transcription.
+			Between 1963 and 1965, 8 issues of the quarterly journal, <i>Shaw-script</i>, were published by Read.
+			However, the Shavian Alphabet failed to gain popularity, and in 1966 Kingsley Read published
+			<a href="https://en.wikipedia.org/wiki/Quikscript">Quikscript</a>, aka “Read Alphabet”.
+			Which also failed to gain popularity.
+		</p>
+		<p>
+			In 1997, Ross DeMeyere published on his website (now defunct but still can be found in 
+			<a href="https://web.archive.org/web/19970726074639/http://www.demeyere.com/Shavian/info.html">archive.org</a>) font file
+			<a href="https://web.archive.org/web/19970726074154/http://www.demeyere.com/Shavian/shawr___.zip">ShawRough</a>, and a
+			<a href="https://web.archive.org/web/19970726075300/http://www.demeyere.com/Shavian/keys.html">keymap</a> showing
+			the translation of Latin to Shaw alphabet. 
+			Later, in 1999, he published two probably the most popular Shavian fonts at the time: 
+			<a href="https://web.archive.org/web/20060502050959/http://www.demeyere.com/shavian/androcles_ghoti.zip"><i>Androcles</i> and <i>Ghoti</i></a>.
+		</p>
+		<p>
+			Those first font files used a clever trick: replacing Lating letters of English alphabet with Shavian symbols.
+			Typing in Shavian was actually done with a regular QWERTY layout.
+			That was the basis for the <b>Shaw QWERTY</b> keyboard layout.
+		</p>
+		<!-- p>
+			Then in 2000 (<a href="https://web.archive.org/web/20130129175352/http://demeyere.com/shavian/">archive.org</a>) two 
+			<a href="https://web.archive.org/web/20130129175352/http://demeyere.com/shavian/androcles_ghoti.zip">font files</a>: androcles.ttf and ghoti.ttf.<br>
+			These font files had Shaw Alphabet symbols in places of Latin alphabet symbols.
+
+			http://www.30below.com/%7Eethanl/fonts.html - 
+		</p -->
+
+			<table class="transTable">
+				<caption>Keymap for the Shavian QWERTY</caption>
+				<tr>
+					<td>a</td>
+					<td>b</td>
+					<td>c</td>
+					<td>d</td>
+					<td>e</td>
+					<td>f</td>
+					<td>g</td>
+					<td>h</td>
+					<td>i</td>
+					<td>j</td>
+					<td>k</td>
+					<td>l</td>
+					<td>m</td>
+					<td>n</td>
+					<td>o</td>
+					<td>p</td>
+					<td>q</td>
+					<td>r</td>
+					<td>s</td>
+					<td>t</td>
+					<td>u</td>
+					<td>v</td>
+					<td>w</td>
+					<td>x</td>
+					<td>y</td>
+					<td>z</td>
+				</tr>
+				<tr class="Shavian">
+					<td>𐑩</td>
+					<td>𐑚</td>
+					<td>𐑗</td>
+					<td>𐑛</td>
+					<td>𐑧</td>
+					<td>𐑓</td>
+					<td>𐑜</td>
+					<td>𐑣</td>
+					<td>𐑦</td>
+					<td>𐑘</td>
+					<td>𐑒</td>
+					<td>𐑤</td>
+					<td>𐑥</td>
+					<td>𐑯</td>
+					<td>𐑪</td>
+					<td>𐑐</td>
+					<td>𐑶</td>
+					<td>𐑮</td>
+					<td>𐑕</td>
+					<td>𐑑</td>
+					<td>𐑳</td>
+					<td>𐑝</td>
+					<td>𐑢</td>
+					<td>𐑻</td>
+					<td>𐑭</td>
+					<td>𐑟</td>
+				</tr>
+				<tr class="shawIpa">
+					<td>ə</td>
+					<td>b</td>
+					<td>tʃ</td>
+					<td>d</td>
+					<td>ɛ</td>
+					<td>f</td>
+					<td>ɡ</td>
+					<td>h</td>
+					<td>ɪ</td>
+					<td>j</td>
+					<td>k</td>
+					<td>l</td>
+					<td>m</td>
+					<td>n</td>
+					<td>ɒ</td>
+					<td>p</td>
+					<td>ɔɪ</td>
+					<td>r</td>
+					<td>s</td>
+					<td>t</td>
+					<td>ʌ</td>
+					<td>v</td>
+					<td>w</td>
+					<td>ɜr</td>
+					<td>ɑ</td>
+					<td>z</td>
+				</tr>
+				<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
+				<tr>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+					<td>G</td>
+					<td>H</td>
+					<td>I</td>
+					<td>J</td>
+					<td>K</td>
+					<td>L</td>
+					<td>M</td>
+					<td>N</td>
+					<td>O</td>
+					<td>P</td>
+					<td>Q</td>
+					<td>R</td>
+					<td>S</td>
+					<td>T</td>
+					<td>U</td>
+					<td>V</td>
+					<td>W</td>
+					<td>X</td>
+					<td>Y</td>
+					<td>Z</td>
+				</tr>
+				<tr class="Shavian">
+					<td>𐑨</td>
+					<td>⸰</td>
+					<td>𐑽</td>
+					<td>𐑼</td>
+					<td>𐑱</td>
+					<td>𐑲</td>
+					<td>·</td>
+					<td>𐑞</td>
+					<td>𐑰</td>
+					<td>𐑡</td>
+					<td>«</td>
+					<td>»</td>
+					<td>𐑵</td>
+					<td>𐑙</td>
+					<td>𐑴</td>
+					<td>𐑹</td>
+					<td>𐑬</td>
+					<td>𐑸</td>
+					<td>𐑖</td>
+					<td>𐑔</td>
+					<td>𐑫</td>
+					<td>𐑿</td>
+					<td>𐑾</td>
+					<td>𐑺</td>
+					<td>𐑷</td>
+					<td>𐑠</td>
+				</tr>
+				<tr class="shawIpa">
+					<td>æ</td>
+					<td>⸰</td>
+					<td>ɪər</td>
+					<td>ər</td>
+					<td>eɪ</td>
+					<td>aɪ</td>
+					<td>·</td>
+					<td>ð</td>
+					<td>i</td>
+					<td>dʒ</td>
+					<td>«</td>
+					<td>»</td>
+					<td>u</td>
+					<td>ŋ</td>
+					<td>ɔʊ</td>
+					<td>ɔr</td>
+					<td>aʊ</td>
+					<td>ɑr</td>
+					<td>ʃ</td>
+					<td>θ</td>
+					<td>ʊ</td>
+					<td>ju</td>
+					<td>ɪə</td>
+					<td>ɛr</td>
+					<td>ɔ</td>
+					<td>ʒ</td>
+				</tr>
+			</table>
+
+		<p> </p>
+		<p>
+				In April 2003 Shavian was added to the Unicode Standard at block U+10450–U+1047F in Plane 1 (Supplementary Multilingual).
+				Since then many new Shavian fonts appeared with Shavian symbols in their own Unicode range.
+		</p>
+		<p>
+				In 2012 the first <b>Shaw QWERTY</b> keyboard layout for Windows was published by Brian Wojtczak <i>aka Astrolox</i> 
+				on his website (now defunct, but can be found in
+				<a href="https://web.archive.org/web/20161105120533/https://www.astrolox.com/2012/08/31/shavian-unicode-keyboard/">archive.org</a>).
+				Unfortunately he posted only the 32-bit version.
+				However, since then many new keyboard layouts for Windows and macOS appeared.
+		</p>
+		<p>
+				Currently the easiest way to start typing in Shavian Alphabet on any operating system (Windows, macOS, Linux, Android, etc) is by
+				installing <a href="https://keyman.com/keyboards/english_shavian_qwerty">Keyman</a>.
+				However, Keyman is a big (over 200 MB) application, with some issues like sporadically switching layouts without any user action,
+				connecting to the Internet and sending some data despite of disabled auto-update, etc.<br>
+				The best choice is to create or install an open-source keyboard layout that was designed for the OS.
+		</p>
+		<p>
+				All the layouts published here are open-source, published on GitHub, minimal amount of code so you can review the code yourself.
+		</p>
+
+		<h5>Links:</h5>
+		<ul>
+			<li><a href="https://shavian.info">shavian.info</a> — the #1 website about Shavian Alphabet (fonts, books, etc).</li>
+			<li><a href="https://www.unicode.org/charts/PDF/U10450.pdf">Shavian in the Unicode</a> (range U+10450–U+1047F)</li>
+			<li><a href="https://www.omniglot.com/writing/shavian.htm">Omniglot.com</a> — general info.</li>
+			<li><a href="https://physics.wooster.edu/lindner/shavian/">John F. Lindner</a>'s website — a collection of 13 public domain books transliterated into Shavian Alphabet.</li>
+			<li><a href="https://shavian.weebly.com/">Shavian.weebly.com</a> — some info and some texts transliterated into Shavian.</li>
+			<li><a href="https://web.archive.org/web/20100113034124/http://www.30below.com/~ethanl/fonts.html">archive.org</a> — Ethan Lamoreaux website (ESL_Gothic_Unicode font which can also be found on <a href="https://www.fontspace.com/esl-gothic-unicode-font-f12185">Fontspace.com</a>)</li>
+			<li><a href="http://i18nguy.com/unicode/unicode-font.html">i18nguy.com</a> — Andagii font by Mark Williamson (copyleft license).</li>
+			<li><a href="https://hughbirkenhead.com/shavian/ascii-unicode/">Hugh Birkenhead's site</a>— the converter from old-style pre-Unicode ASCII Shavian to Unicode Shavian.</li>
+			<li><a href="https://reddit.com/r/shavian">reddit.com</a> — Shavian discussion group on Reddit.</li>
+			<li><a href="https://shavian.neocities.org/american">Haley Halcyon</a> website — “A Guide to American Shavian Spelling” by Haruki “Haley” Wakamatsu</li>
+			<li><a href="https://www.youtube.com/@shavianalphabet4307">ShavianAlphabet4307</a> YouTube channel.</li>
+			<li><a href="https://postimg.cc/gallery/vZPtJXw">The Cat in the Hat (Shavian)</a> — the famous children's book by Dr. Seuss transliterated into Shavian.</li>
+		</ul>
+
+	</div>
+
+	<div id="shawEmpireDesc" class="desc" style="display:none;">
+		<h4>Shaw Imperial</h4>
+		<p>
+				This keyboard layout is based on 
+				<a href="https://oztypewriter.blogspot.com/2014/04/history-of-shavian-keyboard-imperial.html">Imperial Good Companion Model 6</a> typewriter.
+		</p>
+		<p>
+				Please note: This keyboard layout <b>is not based</b> on the 
+				<a href="https://keyman.com/keyboards/english_shavian_igc">Keyman Shaw Imperial</a>.
+		</p>
+		<p>
+		<ul>The <b>Imperial Model 6</b> typewriter:
+			<li>had no keys ⟮`⟯ and ⟮1⟯,</li>
+			<li>had no digits 0 and 1. Just like on many very old typewriters I and O had to be used instead,</li>
+			<li>had only <b>capital</b> Latin letters when "CapsLock" lever was pressed,</li>
+			<li>had no CapsLock button — just like many old typewriters it had a lever to lock the SHIFT key (actually to lock the roller pin in the upper position),</li>
+			<li>the keys ⟮3⟯ and ⟮5⟯ had Shavian letters (IPA equivalents: ⟨ɛ⟩ and ⟨e⟩) which are not in official Shavian Unicode charset. Currently the only font supporting those extra Shavian letters is only Inter Alia. So instead, the following symbols are linked to those keys: ⟨𐑻⟩ and ⟨𐑺⟩.</li>
+			<li>had no letters ⟨𐑸,𐑹,𐑿,𐑼,𐑽⟩.</li>
+			<li>had no exclamation point ⟨!⟩, no double-quote mark ⟨"⟩, no semi-colon ⟨;⟩</li>
+			<li>punctuation marks on the SHIFT line were: unshifted ⟨,·.⟩; shifted ⟨?-/⟩</li>
+		</ul>
+
+		<p>
+				Possibly the lack of several Shavian letters and missing commonly used 
+				punctuation marks mentioned above were among the reasons why Shavian
+				wasn't adopted back in 1970‐ties. That, and off course, 
+				the price of the <b>Imperial Model 6</b> being about five times higher 
+				than of a regular typewriter.
+		</p>
+
+		<ul>Differences between this keyboard layout and the original Imperial Model 6:
+			<li>four layers instead of only two,</li>
+			<li>lowercase Latin letters in the <b>shifted</b> layer instead of uppercase,</li>
+			<li>uppercase Latin letters in the <b>AltGr</b> layer,</li>
+			<li>missing Shavian letters ⟨𐑸,𐑹,𐑿,𐑼,𐑽⟩ added to the <b>shifted</b> layer in the numerals line,</li>
+			<li>this layout adds symbols to keys ⟮`⟯ and ⟮1⟯:
+				<ul>
+						<li>⟨⸰⟩ and ⟨·⟩ (namer dot) in the <b>Unshifted</b> layer</li>
+						<li>⟨◦⟩ and ⟨•⟩ (bullets) in <b>Shifted</b> layer</li>
+						<li>numbers ⟨0⟩ and ⟨1⟩ in <b>AltGR</b> layer.</li>
+				</ul>
+			<li>punctuation marks on the SHIFT line (unshifted layer) are ⟨,./⟩ instead of originally ⟨,·.⟩,</li>
+			<li>punctuation marks on the SHIFT line (shifted layer) are ⟨;:?⟩ instead of ⟨?-/⟩,</li>
+			<li>also, some of the most common punctuation marks were added to the <b>AltGR+Shift</b> layer.</li>
+		</ul>
+
+		<p>
+				Note: In Windows AltGr (RightAlt) is equivalent to LeftAlt+Ctrl.
+				In macOS the Option key works the same way on right and left side.
+		</p>
+	</div>
+
+	<p>Last updated: 2025-10-27</p> 
+
+<!-- ----------- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) ----------- -->
+<script>
+	layoutSwitch("shawQwerty");  // default keyboard layout
+	fontDetector(); //check which fonts were found in current directory + if SegoeUI-Historic is detected for a fallback (Windows).
+</script>
+
+</main>
+<footer><script>insertHTML(footerHtml);</script></footer>
+</body>
+</html>

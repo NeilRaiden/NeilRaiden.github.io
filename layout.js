@@ -1,6 +1,7 @@
 /* Add menu items to this array: */
 const menuItems = [
-	{ item:'Home - Phonemic Keyboards', link:'index.html'},
+	{ item:'Phonemic Keyboards',        link:'index.html'},
+	{ item:'Shavian Keyboards',         link:'shavian.html'},
 	{ item:'Other Keyboard Layouts',    link:'other.html'},
 	{ item:'Downloads',                 link:'downloads.html'},
 	{ item:'Site-map',                  link:'sitemap.html'},
