@@ -82,8 +82,10 @@ blockquote.bq2 {
 	border-radius: 7px;
 }
 
+/*
 blockquote.bq1 ipa { font-size: 1em; }
 blockquote.bq2 ipa { font-size: 1em; }
+*/
 /*
 blockquote.bq1 ul li ipa { color: black; font-size: 1em; }
 blockquote.bq2 ul li ipa { color: black; font-size: 1em; }
@@ -125,12 +127,20 @@ yel { color: yellow; }
 blk { color: black; }
 gry { color: gray; }
 
-.ipa { 
+b {
+		color: black;
+		font-weight: bold;
+}
+
+/*.ipa { */
+ipa { 
 	font-family: NotoSans;
-	font-size: 0.8em;
+	font-size: 1.0em;
 	color: black;
 }
-div.ipa, p ipa { 
+
+/* div.ipa, p ipa { */
+div.ipa { 
 	display: inline;
 	font-family: NotoSans;
 	font-size: 0.8em;
