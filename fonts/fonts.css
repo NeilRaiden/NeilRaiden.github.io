@@ -1,30 +1,30 @@
 @font-face {
-	font-family:Antonio;
+	font-family:Antonio-Bold;
 	src: url('./Antonio-Bold.ttf');
 	src: url('./Antonio-Bold.ttf') format('truetype');
 }
 @font-face {
-	font-family:Arvo;
+	font-family:Arvo-Regular;
 	src: url('./Arvo-Regular.ttf');
 	src: url('./Arvo-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Barlow;
+	font-family:Barlow-Regular;
 	src: url('./Barlow-Regular.ttf');
 	src: url('./Barlow-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:ComicNeue;
+	font-family:ComicNeue-Regular;
 	src: url('./ComicNeue-Regular.ttf');
 	src: url('./ComicNeue-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Dangrek;
+	font-family:Dangrek-Regular;
 	src: url('./Dangrek-Regular.ttf');
 	src: url('./Dangrek-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Dosis;
+	font-family:Dosis-VariableFont_wght;
 	src: url('./Dosis-VariableFont_wght.ttf');
 	src: url('./Dosis-VariableFont_wght.ttf') format('truetype');
 }
@@ -34,194 +34,194 @@
 	src: url('./EBH Facsimile.otf') format('opentype');
 }
 @font-face {
-	font-family:EncodeSans_Expanded;
+	font-family:EncodeSans_Expanded-Regular;
 	src: url('./EncodeSans_Expanded-Regular.ttf');
 	src: url('./EncodeSans_Expanded-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Gidole;
+	font-family:Gidole-Regular;
 	src: url('./Gidole-Regular.ttf');
 	src: url('./Gidole-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Gidolinya;
+	font-family:Gidolinya-Regular;
 	src: url('./Gidolinya-Regular.otf');
 	src: url('./Gidolinya-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family:GoudyBookletter1911;
+	font-family:GoudyBookletter1911-Regular;
 	src: url('./GoudyBookletter1911-Regular.ttf');
 	src: url('./GoudyBookletter1911-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:HenryHigginsSans;
+	font-family:HenryHigginsSans-Regular;
 	src: url('./HenryHigginsSans-Regular.otf');
 	src: url('./HenryHigginsSans-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family:InterAlia;
+	font-family:InterAlia-Bold;
 	src: url('./InterAlia-Bold.woff2');
 	src: url('./InterAlia-Bold.woff2') format('woff2');
 }
 @font-face {
-	font-family:InterAlia;
+	font-family:InterAlia-BoldItalic;
 	src: url('./InterAlia-BoldItalic.woff2');
 	src: url('./InterAlia-BoldItalic.woff2') format('woff2');
 }
 @font-face {
-	font-family:InterAlia;
+	font-family:InterAlia-Italic;
 	src: url('./InterAlia-Italic.woff2');
 	src: url('./InterAlia-Italic.woff2') format('woff2');
 }
 @font-face {
-	font-family:InterAlia;
+	font-family:InterAlia-Regular;
 	src: url('./InterAlia-Regular.woff2');
 	src: url('./InterAlia-Regular.woff2') format('woff2');
 }
 @font-face {
-	font-family:Jost;
+	font-family:Jost-Regular;
 	src: url('./Jost-Regular.ttf');
 	src: url('./Jost-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Lato;
+	font-family:Lato-Regular;
 	src: url('./Lato-Regular.ttf');
 	src: url('./Lato-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:MouseMemoirs;
+	font-family:MouseMemoirs-Regular;
 	src: url('./MouseMemoirs-Regular.ttf');
 	src: url('./MouseMemoirs-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSans;
+	font-family:NotoSans-Regular;
 	src: url('./NotoSans-Regular.ttf');
 	src: url('./NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSansMono_ExtraCondensed;
+	font-family:NotoSansMono_ExtraCondensed-Regular;
 	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf');
 	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSansMono;
+	font-family:NotoSansMono-Regular;
 	src: url('./NotoSansMono-Regular.ttf');
 	src: url('./NotoSansMono-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSansRunic;
+	font-family:NotoSansRunic-Regular;
 	src: url('./NotoSansRunic-Regular.ttf');
 	src: url('./NotoSansRunic-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSansShavian;
+	font-family:NotoSansShavian-Regular;
 	src: url('./NotoSansShavian-Regular.ttf');
 	src: url('./NotoSansShavian-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSerif;
+	font-family:NotoSerif-Regular;
 	src: url('./NotoSerif-Regular.ttf');
 	src: url('./NotoSerif-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Now;
+	font-family:Now-Regular;
 	src: url('./Now-Regular.otf');
 	src: url('./Now-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family:Onest;
+	font-family:Onest-Light;
 	src: url('./Onest-Light.ttf');
 	src: url('./Onest-Light.ttf') format('truetype');
 }
 @font-face {
-	font-family:OpenSans;
+	font-family:OpenSans-Regular-webfont;
 	src: url('./OpenSans-Regular-webfont.ttf');
 	src: url('./OpenSans-Regular-webfont.ttf') format('truetype');
 }
 @font-face {
-	font-family:OpenSauceOne;
+	font-family:OpenSauceOne-Light;
 	src: url('./OpenSauceOne-Light.ttf');
 	src: url('./OpenSauceOne-Light.ttf') format('truetype');
 }
 @font-face {
-	font-family:Oxygen;
+	font-family:Oxygen-Regular;
 	src: url('./Oxygen-Regular.ttf');
 	src: url('./Oxygen-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedditMono;
+	font-family:RedditMono-Regular;
 	src: url('./RedditMono-Regular.ttf');
 	src: url('./RedditMono-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedditSans;
+	font-family:RedditSans-Regular;
 	src: url('./RedditSans-Regular.ttf');
 	src: url('./RedditSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedditSansCondensed;
+	font-family:RedditSansCondensed-Bold;
 	src: url('./RedditSansCondensed-Bold.ttf');
 	src: url('./RedditSansCondensed-Bold.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedHatText;
+	font-family:RedHatText-Regular;
 	src: url('./RedHatText-Regular.ttf');
 	src: url('./RedHatText-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RobotoMono;
+	font-family:RobotoMono-Regular;
 	src: url('./RobotoMono-Regular.ttf');
 	src: url('./RobotoMono-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Slabo27px;
+	font-family:Slabo27px-Regular;
 	src: url('./Slabo27px-Regular.ttf');
 	src: url('./Slabo27px-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:StintUltraCondensed;
+	font-family:StintUltraCondensed-Regular;
 	src: url('./StintUltraCondensed-Regular.ttf');
 	src: url('./StintUltraCondensed-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:texgyreheros;
-	src: url('./texgyreheros-bold.otf');
-	src: url('./texgyreheros-bold.otf') format('opentype');
+	font-family:TexGyreHeros-bold;
+	src: url('./TexGyreHeros-bold.otf');
+	src: url('./TexGyreHeros-bold.otf') format('opentype');
 }
 @font-face {
-	font-family:texgyreheros;
-	src: url('./texgyreheros-bolditalic.otf');
-	src: url('./texgyreheros-bolditalic.otf') format('opentype');
+	font-family:TexGyreHeros-bolditalic;
+	src: url('./TexGyreHeros-bolditalic.otf');
+	src: url('./TexGyreHeros-bolditalic.otf') format('opentype');
 }
 @font-face {
-	font-family:texgyreheros;
-	src: url('./texgyreheros-italic.otf');
-	src: url('./texgyreheros-italic.otf') format('opentype');
+	font-family:TexGyreHeros-italic;
+	src: url('./TexGyreHeros-italic.otf');
+	src: url('./TexGyreHeros-italic.otf') format('opentype');
 }
 @font-face {
-	font-family:texgyreheros;
-	src: url('./texgyreheros-regular.otf');
-	src: url('./texgyreheros-regular.otf') format('opentype');
+	font-family:TexGyreHeros-regular;
+	src: url('./TexGyreHeros-regular.otf');
+	src: url('./TexGyreHeros-regular.otf') format('opentype');
 }
 @font-face {
-	font-family:texgyreheroscn;
-	src: url('./texgyreheroscn-bold.otf');
-	src: url('./texgyreheroscn-bold.otf') format('opentype');
+	font-family:TexGyreHerosCondensed-bold;
+	src: url('./TexGyreHerosCondensed-bold.otf');
+	src: url('./TexGyreHerosCondensed-bold.otf') format('opentype');
 }
 @font-face {
-	font-family:texgyreheroscn;
-	src: url('./texgyreheroscn-bolditalic.otf');
-	src: url('./texgyreheroscn-bolditalic.otf') format('opentype');
+	font-family:TexGyreHerosCondensed-bolditalic;
+	src: url('./TexGyreHerosCondensed-bolditalic.otf');
+	src: url('./TexGyreHerosCondensed-bolditalic.otf') format('opentype');
 }
 @font-face {
-	font-family:texgyreheroscn;
-	src: url('./texgyreheroscn-italic.otf');
-	src: url('./texgyreheroscn-italic.otf') format('opentype');
+	font-family:TexGyreHerosCondensed-italic;
+	src: url('./TexGyreHerosCondensed-italic.otf');
+	src: url('./TexGyreHerosCondensed-italic.otf') format('opentype');
 }
 @font-face {
-	font-family:texgyreheroscn;
-	src: url('./texgyreheroscn-regular.otf');
-	src: url('./texgyreheroscn-regular.otf') format('opentype');
+	font-family:TexGyreHerosCondensed-regular;
+	src: url('./TexGyreHerosCondensed-regular.otf');
+	src: url('./TexGyreHerosCondensed-regular.otf') format('opentype');
 }
 @font-face {
 	font-family:Trabajo;
@@ -229,12 +229,12 @@
 	src: url('./Trabajo.otf') format('opentype');
 }
 @font-face {
-	font-family:Ubuntu;
+	font-family:Ubuntu-Regular;
 	src: url('./Ubuntu-Regular.ttf');
 	src: url('./Ubuntu-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:UbuntuSansMono;
+	font-family:UbuntuSansMono-Regular;
 	src: url('./UbuntuSansMono-Regular.ttf');
 	src: url('./UbuntuSansMono-Regular.ttf') format('truetype');
 }
@@ -244,7 +244,7 @@
 	src: url('./Virgil.woff2') format('woff2');
 }
 @font-face {
-	font-family:YanoneKaffeesatz;
+	font-family:YanoneKaffeesatz-Regular;
 	src: url('./YanoneKaffeesatz-Regular.ttf');
 	src: url('./YanoneKaffeesatz-Regular.ttf') format('truetype');
 }
