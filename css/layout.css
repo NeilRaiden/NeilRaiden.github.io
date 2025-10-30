@@ -1,10 +1,11 @@
 /* global CSS variables */
 :root {
 	--fontSizeText: 14pt;
-/*	--fontSizeHead: 28pt; */
+	/*--fontSizeHead: 28pt;*/
 	--fontSizeIPA:  12pt;
-	--fontFamilyText: Now;
-	--fontFamilyHead: Dangrek;
+	--fontFamilyText: Now-Regular;
+	--fontFamilyHead: Dangrek-Regular;
+	--fontFamilyIPA: NotoSans-Regular;
 	--lineHeight: 1.4;
 	--wordSpace: 1px;
 }
@@ -16,6 +17,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+
 /* ---------- website layout (header + main + footer) ---------- */
 header {
 	position: fixed;
@@ -29,20 +31,20 @@ header {
 	z-index:1;
 }
 main {
-/*	display: flex; * /
+	/*display: flex; * /
 	position: relative;  */
-/*	margin-top: 150px; */
-/*	top: 150px; */
+	/*margin-top: 150px; */
+	/*top: 150px; */
 	padding-top: 48px; /* to compensate for header */
 	padding-left:5px;
 	left: 0px;
 	margin: 0;
 	width: 96%;
 	z-index: 2; 
-/*	padding: 1px 6px; /* T-R-B-L */
+	/*padding: 1px 6px; /* T-R-B-L */
 }
 footer {
-/*	position: fixed;
+	/*position: fixed;
 	left: 0;
 	bottom: 0; */
 	width: 100%;
@@ -61,11 +63,11 @@ header button {
 	padding: 2px 12px; /*top & bottom = 2 - right & left = 12 */
 	color: white;
 	background-color: #6A5ACD; /*slateblue*/
-	font-family: Dangrek;
+	font-family: Dangrek-Regular;
 	line-height: 2;
 	text-decoration: none;
 	text-align: center;
-/*	vertical-align: middle;*/
+	/*vertical-align: middle;*/
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -73,6 +75,7 @@ header button:hover {
 	color: black;
 	background-color: silver; /* #c0c0c0; */
 }
+
 /*-------------------- footer-------------------- */
 footer p.copy {
 	display: inline-block;
@@ -97,6 +100,7 @@ footer div.button:hover {
 	background-color: silver;
 	color: black;
 }
+
 /* ---------- navigation menu - default: hidden ---------- */
 nav {
 /*	position: relative; */
@@ -130,6 +134,7 @@ nav a:hover {
 	background-color: silver;
 	color: black;
 }
+
 /* ---------- setup page (font size, etc) ---------- */
 #pageSetup {
 	display: none;  /* default = hidden */
@@ -142,25 +147,25 @@ nav a:hover {
 }
 /* grid container for styles dialog */
 .grid-container {
-  display: grid;
-  width: 420px;
-  grid-template-columns: auto auto auto auto;
-  gap: 1px;
-/*  background-color: gray; */
-  background-color: dodgerblue;
-  padding: 1px 1px;
+	display: grid;
+	width: 420px;
+	grid-template-columns: auto auto auto auto;
+	gap: 1px;
+	/*background-color: gray; */
+	background-color: dodgerblue;
+	padding: 1px 1px;
 	align-items: center;
 }
 /* grid element styles */
 .grid-container > div {
-  background-color: #f1f1f1;
-  color: #000;
-  padding: 0px 0px;
-  text-align: center;
+	background-color: #f1f1f1;
+	color: #000;
+	padding: 0px 0px;
+	text-align: center;
 	line-height: 1.5;
-	font-family:NotoSans;
-/*	font-weight: bold; */
-/*  font-size: 12pt; */
+	font-family:NotoSans-Regular;
+	/*font-weight: bold; */
+	/* font-size: 12pt; */
 	font-size:1em; 
 }
 /*
@@ -178,11 +183,11 @@ button.pgSetup {
 	display: inline-block;
 	padding: 0px 10px 0px 10px;
 	margin:0;
-/*	width: 32px;*/
+	/*width: 32px;*/
 	color: black;
 	font-weight: bold;
 	font-size: 1em;
-  text-align: center;
+	text-align: center;
 	word-spacing: 10px;
 	border: 1px solid red;
 }
@@ -216,16 +221,17 @@ main button:hover {
 	background-color: #eef;
 	color: blue;
 }
+
 /* ---------- fonts size, line spacing, word spacing ---------- */
 /*body, a, div, ul, li, p, i, b { */
 body {
-	font-family:  var(--fontFamilyText), NotoSans;
+	font-family:  var(--fontFamilyText), NotoSans-Regular;
 	font-size:    var(--fontSizeText);
 	line-height:  var(--lineHeight);
-  word-spacing: var(--wordSpace);
+	word-spacing: var(--wordSpace);
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--fontFamilyHead), NotoSans;
+	font-family: var(--fontFamilyHead), NotoSans-Regular;
 	font-weight: bold;
 	margin-top:  20pt;
 	margin-bottom: 0px;
@@ -250,19 +256,23 @@ h3:target {
 	color: blue;
 	background: Indigo;
 }
+
 /* ---------- other styles ---------- */
-ipa { 
-	font-family: NotoSans;
-/*	font-size: 0.8em; */
+/* how to use: <span class="ipa">/ðɪs ɪz ən aɪ-piː-eɪ ɪɡzæmpəl/</span> */   
+.ipa { 
+	/* font-family: NotoSans-Regular; */
+	/* font-size: 0.8em; */
+	font-family: var(--fontFamilyIPA);
 	font-size: var(--fontSizeIPA);
 	color: black;
 }
 /* --- select does not allow vertical-align ---- */
 select {
 	font-size: 1em;
-/*	padding-top:4px;*/ 
+	/* padding-top:4px;*/ 
 	vertical-align: middle;
 }
+
 /* ---------- flexbox ---------- */
 .flex-container {
 	margin-left: auto;

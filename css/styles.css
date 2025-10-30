@@ -24,32 +24,32 @@ td {
 }
 
 table.alphabet {
-	font-family: NotoSans;
+	font-family: NotoSans-Regular;
 }
 table.alphabet th, td {
 	text-align: center;
-/*	font-size:10pt;*/
+	/*font-size:10pt;*/
 	padding: 3px 8px 3px 8px;
 	font-size: var(--fontSizeIPA);
 }
 table.alphabet tr:hover {
-  background-color: lightgrey;
+	background-color: lightgrey;
 }
 /* ------ downloads table ------ */
 table.downl {
-		margin:auto;
-		border-collapse:collapse;
-		padding: 5px;
+	margin:auto;
+	border-collapse:collapse;
+	padding: 5px;
 }
 table.downl th {
-		background-color: slateblue;
-		border: 1px solid slateblue;
-		padding: 5px 25px; /* top=bottom=5px and right=left=25px */
-		border-radius: 0px;
+	background-color: slateblue;
+	border: 1px solid slateblue;
+	padding: 5px 25px; /* top=bottom=5px and right=left=25px */
+	border-radius: 0px;
 }
 table.downl td {
-		padding: 5px;
-		border: 1px solid slateblue;
+	padding: 5px;
+	border: 1px solid slateblue;
 }
 
 /* ------ hr, blockquotes ------ */
@@ -62,16 +62,16 @@ hr {
 	border-top: 1px solid #ccc;
 }
 blockquote.bq1 {
-	font-family: NotoSans;
+	font-family: NotoSans-Regular;
 	font-size: 0.8em;
-  border-left: 3px solid #ccc;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 30px;
-  padding-left: 15px;
+	border-left: 3px solid #ccc;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	padding-left: 15px;
 } 
 blockquote.bq2 {
-	font-family: NotoSans;
+	font-family: NotoSans-Regular;
 	font-size: 0.8em;
 	color: dimgray;
 	border: 1px solid blue;
@@ -104,7 +104,7 @@ img {
 	margin-right: auto;
 	border-radius: 8px;
 	max-width: 90%;
-  height: auto;
+	height: auto;
 }
 figure {
 	margin:0;
@@ -112,11 +112,11 @@ figure {
 figcaption {
 	text-align: center;
 	color: gray;
-	font-family: NotoSans;
+	font-family: NotoSans-Regular;
 	font-size: 10pt;
 }
 figcaption a {
-	font-family: NotoSans;
+	font-family: NotoSans-Regular;
 	font-size: 10pt;
 }
 
@@ -128,21 +128,23 @@ blk { color: black; }
 gry { color: gray; }
 
 b {
-		color: black;
-		font-weight: bold;
+	color: black;
+	font-weight: bold;
 }
 
 .ipa { 
-	font-family: NotoSans;
+	font-family: NotoSans-Regular;
 	font-size: 1.0em;
+	font-size: var(--fontSizeIPA);
 	color: black;
 }
 
 /* div.ipa, p ipa { */
 div.ipa { 
 	display: inline;
-	font-family: NotoSans;
+	font-family: NotoSans-Regular;
 	font-size: 0.8em;
+	font-size: var(--fontSizeIPA);
 	color: black;
 }
 p.source {
@@ -152,12 +154,12 @@ p.source {
 }
 pre {
 /*	font-family:NotoSansMono;*/
-	font-family:NotoSansMono_ExtraCondensed;
+	font-family:NotoSansMono_ExtraCondensed-Regular;
 	white-space: pre-wrap; 
 	overflow-x: auto; 
 }
 .mono {
-	font-family:NotoSansMono_ExtraCondensed;
+	font-family:NotoSansMono_ExtraCondensed-Regular;
 	font-size:1em;
 	color:black;
 /*	border:1px solid red;*/
@@ -165,7 +167,7 @@ pre {
 
 div.ctr {
 	display: flex;
-  justify-content: center;
+	justify-content: center;
 	font-size:1em;
 }
 
@@ -174,14 +176,14 @@ div.cen {
 	text-align: center; 
 }
 div.lft {
-/*	display: inline-block; */
+	/*	display: inline-block; */
 	display: flex;
-  justify-content: left;
+	justify-content: left;
 	/*text-align: left;*/
 }
 div.rgt {
 	display: flex;
-  justify-content: right;
+	justify-content: right;
 	/*text-align: right;*/
 }
 
@@ -192,125 +194,126 @@ div.border {
 /* ------------ modal image - pop up 100% ------------ */
 /* unsused */
 .modalImg {
-/*  border-radius: 5px; */
-  cursor: pointer;
-  transition: 0.3s;
+	/*  border-radius: 5px; */
+	cursor: pointer;
+	transition: 0.3s;
 }
 .modalImg:hover {
 	opacity: 0.8;
-  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 /* The Modal (background) */
 .modal {
-  display: none;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+	display: none;
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
 	padding: 0px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-/*  overflow: auto; /* Enable scroll if needed */
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	/*  overflow: auto; /* Enable scroll if needed */
 	overflow-y: scroll; /* Show vertical scrollbar */
 	overflow-x: scroll; /* Show horizontal scrollbar */
-  background-color: rgb(0,0,0); /* Fallback color */
-/*  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	background-color: rgb(0,0,0); /* Fallback color */
+	/*  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
 .modal-content {
-  display: block;
-/*  margin: auto; */
-  margin-left: auto;
-  margin-right: auto;
+	display: block;
+	/*  margin: auto; */
+	margin-left: auto;
+	margin-right: auto;
 	padding:0;
 	background: white;
-  width: 100%;
-/*	object-fit:fill; */
-/*  max-width: 700px; */
+	width: 100%;
+	/*	object-fit:fill; */
+	/*  max-width: 700px; */
 }
 /* Add Animation */
 .modal-content {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+	-webkit-animation-name: zoom;
+	-webkit-animation-duration: 0.6s;
+	animation-name: zoom;
+	animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
+	from {-webkit-transform:scale(0)}
+	to {-webkit-transform:scale(1)}
 }
 @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+	from {transform:scale(0)}
+	to {transform:scale(1)}
 }
 
 /* The Close Button */
 /*
 .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
 }
 .close:hover,
 .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
 }
 */
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
+	.modal-content {
+		width: 100%;
+	}
 }
 
 /* ------------ disable auto-scaling images ------------ */
 /* how to use:
 <div class="flxdiv">
-   <div class="divimg">
-	    <img class="bigimg" src="..." ... >
-   </div>
+	<div class="divimg">
+		<img class="bigimg" src="..." ... >
+	</div>
 </div>
 */
- /* container div */
+
+/* container div */
 .flxdiv {
-/*	display: flex; */
-  display: none;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+	/*	display: flex; */
+	display: none;
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
 	padding: 0px;
 	justify-content: center; 
 	/*align-items: center;*/
-/*	margin:0px;
+	/*	margin:0px;
 	padding:0px;*/
 }
 /* unsused */
 .divimg { /* child div */
 	flex-shrink: 0;
-  overflow: auto; /* Enable scroll if needed */
+	overflow: auto; /* Enable scroll if needed */
 	align-self: center;
 	object-fit:fill;
- }
+}
 .bigimg {
-/*	flex-shrink: 0; /*doesnt work*/
+	/*	flex-shrink: 0; /*doesnt work*/
 	display:block;
-  overflow: auto; /* Enable scroll if needed */
+	overflow: auto; /* Enable scroll if needed */
 	width: 100%; /**/
 	background:white;/**/
 }
 
 /* all links: local and global*/
 a {
-  color: Indigo;
+	color: Indigo;
 	text-decoration: none;
 }
 /* global links */
@@ -328,7 +331,7 @@ a:hover {
 }
 
 a.locallnk {
-/*	background: lavender;* /
+	/*	background: lavender;* /
 	color: DarkMagenta; */
 	color: Indigo;
 	padding:3px;
