@@ -70,9 +70,10 @@ function insertFontPickers(path) {
 //	let code = '<div id="fontPick" class="modal">\n';
 	let	code = '<div class="grid-container" style="grid-template-columns: auto auto;">\n';
 
-// font picker for ordinary text
+// font picker for ordinary text:
 		code += '	<div><a href="' + path + 'fonts.html">Text font</a>:</div>\n';
-		code += '	<div><select id="textFontSelect" name="Select text font" onchange="changeTextFont(this)">\n';
+		//code += '	<div><select id="textFontSelect" name="Select text font" onchange="changeTextFont(this)">\n';
+		code += '	<div><select id="textFontSelect" name="Select text font" onchange="changeFont(this,\'--fontFamilyText\')">\n';
 
 	for (let i in fontList) {
 		code += '<option value="' + fontList[i].name + '"';
@@ -81,9 +82,22 @@ function insertFontPickers(path) {
 	}
 	code += '	</select></div>\n';
 
+// font picker for text with IPA symbols:
+		code += '	<div><a href="' + path + 'fonts.html">IPA font</a>:</div>\n';
+		//code += '	<div><select id="textFontSelect" name="Select text font" onchange="changeIpaFont(this)">\n';
+		code += '	<div><select id="textFontSelect" name="Select text font" onchange="changeFont(this,\'--fontFamilyIPA\')">\n';
+
+	for (let i in fontList) {
+		code += '<option value="' + fontList[i].name + '"';
+		if ( fontList[i].name == fontFamilyIPA ) { code += ' selected="selected"'; }
+		code += '>' + fontList[i].name + '</option>\n';
+	}
+	code += '	</select></div>\n';
+
 // font picker for headings only (h1, h2, ..., h6)
 	code += '	<div><a href="' + path + 'fonts.html">Header font</a>:</div>\n';
-	code += '	<div><select id="headFontSelect" name="Select header font" onchange="changeHeadFont(this)">\n';
+	//code += '	<div><select id="headFontSelect" name="Select header font" onchange="changeHeadFont(this)">\n';
+	code += '	<div><select id="headFontSelect" name="Select header font" onchange="changeFont(this,\'--fontFamilyHead\')">\n';
 
 	for (let i in fontList) {
 		code += '<option value="' + fontList[i].name + '"';
@@ -157,11 +171,12 @@ function splashOff() {
 }
 
 // ---------- page setup dialog for formatting styles ----------
+/*
 // change font (main, div, p, a, ul, li, ...)
 function changeTextFont(selectedFont) {
 
 	let selectedIndex = selectedFont.selectedIndex;
-	let selectedText = selectedFont.options[selectedIndex].text;
+	let selectedText  = selectedFont.options[selectedIndex].text;
 	let selectedValue = selectedFont.options[selectedIndex].value;
 
 	console.log("Selected text font: " + selectedText + ", index: " + selectedIndex + ", value: " + selectedValue);
@@ -169,17 +184,53 @@ function changeTextFont(selectedFont) {
 	fontFamilyText = selectedValue;
 }
 
+/*
+// change IPA symbols font (main, div, p, a, ul, li, ...)
+function changeIpaFont(selectedFont) {
+
+	let selectedIndex = selectedFont.selectedIndex;
+	let selectedText  = selectedFont.options[selectedIndex].text;
+	let selectedValue = selectedFont.options[selectedIndex].value;
+
+	console.log("Selected text font: " + selectedText + ", index: " + selectedIndex + ", value: " + selectedValue);
+	r.style.setProperty('--fontFamilyIPA', selectedValue );
+	fontFamilyText = selectedValue;
+}
+
+/*
 // change font ( headings: h1, h2, ..., h6)
 function changeHeadFont(selectedFont) {
 
 	let selectedIndex = selectedFont.selectedIndex;
-	let selectedText = selectedFont.options[selectedIndex].text;
+	let selectedText  = selectedFont.options[selectedIndex].text;
 	let selectedValue = selectedFont.options[selectedIndex].value;
 
 	console.log("Selected heading font: " + selectedText + ", index: " + selectedIndex + ", value: " + selectedValue);
-	r.style.setProperty( '--fontFamilyHead', selectedValue );
+	r.style.setProperty('--fontFamilyHead', selectedValue );
 	fontFamilyHead = selectedValue;
 }
+*/
+
+// universal changeFont() function
+// fontCategory can be:
+//	'--fontFamilyText'
+//	'--fontFamilyIPA'
+//	'--fontFamilyHead'
+function changeFont(selectedFont,fontCategory) {
+
+	let selectedIndex = selectedFont.selectedIndex;
+	let selectedText  = selectedFont.options[selectedIndex].text;
+	let selectedValue = selectedFont.options[selectedIndex].value;
+
+	console.log("Selected text font: " + selectedText + ", index: " + selectedIndex + ", value: " + selectedValue);
+
+	r.style.setProperty( fontCategory, selectedValue );
+
+	if( fontCategory == "--fontFamilyText" ) { fontFamilyText = selectedValue; }
+	if( fontCategory == "--fontFamilyIPA"  ) { fontFamilyIPA  = selectedValue; }
+	if( fontCategory == "--fontFamilyHead" ) { fontFamilyHead = selectedValue; }
+}
+
 
 function changeTxtFontSize(val) {
 	if( ( val < 0 && textFontSize > 6 ) || ( val > 0 && textFontSize < 25 ) ) {
@@ -227,6 +278,7 @@ function changeWordSpace(val) {
 	--fontSizeHead: 28pt;
 	--fontFamilyText: Now;
 	--fontFamilyHead: Dangrek;
+	--fontFamilyIPA:  NotoSans-Regular;
 	--lineHeight: 1.1;
 	--wordSpace: 1px;
 } */
@@ -238,7 +290,8 @@ var textFontSize  =  14; 	// text     font-size (default 14pt)
 var ipaFontSize   =  12; 	// IPA tags font-size (default 12pt) - font-family: NotoSans
 var lineHeight    =  1.4;
 var wordSpace     =  1;
-var fontFamilyText ='Now';
-var fontFamilyHead ='Dangrek';
+var fontFamilyText ='Now-Regular';
+var fontFamilyHead ='Dangrek-Regular';
+var fontFamilyIPA  ='NotoSans-Regular';
 var r = document.querySelector(':root'); 	// Get the root element
 
