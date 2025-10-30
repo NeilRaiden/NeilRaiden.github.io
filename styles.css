@@ -132,8 +132,7 @@ b {
 		font-weight: bold;
 }
 
-/*.ipa { */
-ipa { 
+.ipa { 
 	font-family: NotoSans;
 	font-size: 1.0em;
 	color: black;
