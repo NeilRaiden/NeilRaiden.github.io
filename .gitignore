@@ -17,3 +17,6 @@
 # download packages	
 *.dmg
 *.zip
+
+# macOS
+.DS_Store
