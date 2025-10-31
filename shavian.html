@@ -20,12 +20,13 @@
 <style>
 /* global CSS variables */
 :root {
+		--bodyopacity:  0.8;
 		--spacerwidth: 1px;
 		--keysheight:  28px;
-		--keyfontsize: 14pt;
-		--bodyopacity:  0.8;
 		--kboardfont: Higgins;
+		--keyfontsize: 14pt;
 		--textareafont: Higgins;
+		--textareafontsize: 14pt;
 }
 
 /* Adobe Blank 2 from */
@@ -87,7 +88,6 @@
 		src: url('./fonts-shavian/Trabajo.otf') format('opentype');
 }
 
-
 @font-face {
 		font-family:Higgins;
 		src: url('./fonts-Shavian/HenryHigginsSans-Regular.otf');
@@ -115,17 +115,7 @@
 //		src: url('./fonts/InterAlia-BoldItalic.woff2');
 //		src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
 //}
-//
-//@font-face {
-//		font-family:Trabajo;
-//		src: url('./fonts/Trabajo.otf');
-//		src: url('./fonts/Trabajo.otf') format('opentype');
-//}
-//@font-face {
-//		font-family: 'TrabajoRegular';
-//		font-weight: normal;
-//		font-style: normal;
-//}
+
 /* SegoeUI-Historic is only on Microsoft Windows machines */
 //@font-face {
 //	font-family:Segoe;
@@ -142,15 +132,39 @@
 .pDoolittR  { font-family: DoolittR,   AdobeBlank2; font-size: 14pt; }
 .pFairfax   { font-family: Fairfax,    AdobeBlank2; font-size: 14pt; }
 .pHiggins   { font-family: Higgins,    AdobeBlank2; font-size: 14pt; }
-.pIntAliaR  { font-family: IntAliaR,   AdobeBlank2; font-size: 14pt; }
-.pIntAliaI  { font-family: IntAliaI,   AdobeBlank2; font-size: 14pt; }
-.pIntAliaB  { font-family: IntAliaB,   AdobeBlank2; font-size: 14pt; }
-.pIntAliaBI { font-family: IntAliaBI,  AdobeBlank2; font-size: 14pt; }
 .pMPH       { font-family: MPH,        AdobeBlank2; font-size: 14pt; }
 .pOrmin     { font-family: Ormin,      AdobeBlank2; font-size: 14pt; }
 .pNotoSh    { font-family: NotoShavian, NotoS, AdobeBlank2; font-size: 14pt; }
 .pTrabajo   { font-family: Trabajo,    AdobeBlank2; font-size: 14pt; }
 //.pSegoe     { font-family: Segoe,    AdobeBlank2; font-size: 14pt; }
+
+//.pIntAliaR  { font-family: IntAliaR,  AdobeBlank2; font-size: 14pt; }
+//.pIntAliaI  { font-family: IntAliaI,  AdobeBlank2; font-size: 14pt; }
+//.pIntAliaB  { font-family: IntAliaB,  AdobeBlank2; font-size: 14pt; }
+//.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2; font-size: 14pt; }
+
+.pIntAliaR  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: normal;
+}
+.pIntAliaI  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: normal;
+	font-style: italic;
+}
+.pIntAliaB  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pIntAliaBI {
+	font-family: InterAlia,  AdobeBlank2;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: italic;
+}
 
 /* ----------- styles ----------- */
 /*body {*/
@@ -181,7 +195,7 @@ ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
 
 textarea {
-		font-family: var(--textareafont), Segoe;
+		font-family: var(--textareafont); /*, Segoe;*/
 		font-size: 14pt;
 		/* margin:auto doesn't work
 		margin-left: auto;
@@ -190,7 +204,7 @@ textarea {
 		margin-bottom:5px;
 }
 
-/* keyboard style */
+/* --- keyboard styles --- */
 .rounded-corners {
 		margin-left: auto;
 		margin-right: auto;
@@ -209,7 +223,7 @@ textarea {
 		background-color: Silver;
 }
 
-/* regular table style */
+/* --- regular table style --- */
 table {
 		margin-left: auto;
 		margin-right: auto;
@@ -252,7 +266,7 @@ button {
 		border-radius: 7px;
 		color: black;
 		text-align: center;
-		font-family: var(--kboardfont), Noto;
+		font-family: var(--kboardfont);
 		font-size: var(--keyfontsize);
 		font-weight: bold;
 		padding: 5px;
@@ -267,7 +281,7 @@ button {
 		border-radius: 7px;
 		color: black;
 		text-align: center;
-		font-family: var(--defaultfont), Noto;
+		font-family: var(--kboardfont), Noto;
 		font-size: var(--keyfontsize);
 		font-weight: bold;
 		padding: 5px;
@@ -312,7 +326,7 @@ button {
 		justify-content: center;
 		text-align:center;
 		/*width: 100%;*/
-		border:0px solid blue;
+		/*border:1px solid blue;*/
 		/*padding-left:10px;*/
 		/*font-size:11pt;*/
 }
@@ -758,14 +772,28 @@ function fontDetector() {
 		}
 }
 
+/* global CSS variables */
+//:root {
+//		--bodyopacity:  0.8;
+//		--spacerwidth: 1px;
+//		--keysheight:  28px;
+//		--kboardfont: Higgins;
+//		--keyfontsize: 14pt;
+//		--textareafont: Higgins;
+//		--textareafontsize: 14pt;
+//}
+
 // global variables - important: some of these variables have their corresponding counterpart in the ":root" CSS global variables
-var bodyOpacity       = 0.8;	// CSS variable: --bodyopacity
-var defaultFont       = 'Higgins';   // CSS variable: --defaultfont
+
+var bodyOpacity       = 0.8; // CSS variable: --bodyopacity
+var kboardSpacerWidth =   1; // keys width (default 12px)  - CSS variable ""
+var kboardKeysHeight  =  28; // keys height (default 25px) - CSS variable "--keysheight"
+
+var textAreaFont      = 'Higgins';   // CSS variable: --defaultfont
 var textAreaFontSize  =  14; 	// textarea font-size (default 14pt)
 var kboardFont        = 'Higgins'; 
 var kboardFontSize    =  14; 	// class .bton font-size (default 14pt)
-var kboardSpacerWidth =  1;	  // keys width (default 12px)  - CSS variable ""
-var kboardKeysHeight  =  28;	// keys height (default 25px) - CSS variable "--keysheight"
+
 var r = document.querySelector(':root'); 	// Get the root element
 
 /*   default keyboard layout - on startup will be loaded at the end of page */

@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Neil Raiden - demo of keyboard layouts.">
+	<meta name="description" content="Neil Raiden - phonemic keyboard layouts.">
 
 	<link rel="stylesheet" href="./fonts/fonts.css">
 	<link rel="stylesheet" href="./css/layout.css">
@@ -20,13 +20,15 @@
 <style>
 /* global CSS variables */
 :root {
+		--bodyopacity:  0.8;
 		--spacerwidth: 1px;
 		--keysheight:  28px;
+		--kboardfont: NotoSans;
 		--keyfontsize: 14pt;
-		--bodyopacity:  0.8;
-		--defaultfont: Higgins;
-		--kboardfont: Higgins;
+		--textareafont: NotoSans;
+		--textareafontsize: 14pt;
 }
+
 /* Adobe Blank 2 from */
 @font-face {
     font-family: AdobeBlank2;
@@ -34,71 +36,108 @@
 }
 
 /* --------- font faces --------- */
-@font-face {
-		font-family:Higgins;
-		src: url('./fonts/HenryHigginsSans-Regular.otf');
-		src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
-}
+// HenryHiggins is a Shavian font
+//@font-face {
+//		font-family:Higgins;
+//		src: url('./fonts/HenryHigginsSans-Regular.otf');
+//		src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
+//}
+// Trabajo is a Shavian font
+//@font-face {
+//		font-family:Trabajo;
+//		src: url('./fonts/Trabajo.otf');
+//		src: url('./fonts/Trabajo.otf') format('opentype');
+//}
+
+// --- InterAlia - todo: change style, not font-face
 @font-face {
 		font-family:IntAliaR;
 		src: url('./fonts/InterAlia-Regular.woff2');
 		src: url('./fonts/InterAlia-Regular.woff2') format('woff2');
 }
 @font-face {
-    font-family:IntAliaI;
-    src: url('./fonts/InterAlia-Italic.woff2');
-    src: url('./fonts/InterAlia-Italic.woff2') format('woff2');
+		font-family:IntAliaI;
+		src: url('./fonts/InterAlia-Italic.woff2');
+		src: url('./fonts/InterAlia-Italic.woff2') format('woff2');
 }
 @font-face {
-    font-family:IntAliaB;
-    src: url('./fonts/InterAlia-Bold.woff2');
-    src: url('./fonts/InterAlia-Bold.woff2') format('woff2');
+		font-family:IntAliaB;
+		src: url('./fonts/InterAlia-Bold.woff2');
+		src: url('./fonts/InterAlia-Bold.woff2') format('woff2');
 }
 @font-face {
 		font-family:IntAliaBI;
 		src: url('./fonts/InterAlia-BoldItalic.woff2');
 		src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
 }
+
+// --- Noto fonts - already in ./fonts/fonts.css
 @font-face {
 		font-family:NotoS;
 		src: url('./fonts/NotoSans-Regular.ttf');
 		src: url('./fonts/NotoSans-Regular.ttf') format('truetype');
 }
-@font-face {
-		font-family:NotoF;
-		src: url('./fonts/NotoSerif-Regular.ttf');
-		src: url('./fonts/NotoSerif-Regular.ttf') format('truetype');
-}
-@font-face {
-		font-family:Trabajo;
-		src: url('./fonts/Trabajo.otf');
-		src: url('./fonts/Trabajo.otf') format('opentype');
-}
+// NotoSerif deleted
+//@font-face {
+//		font-family:NotoF;
+//		src: url('./fonts/NotoSerif-Regular.ttf');
+//		src: url('./fonts/NotoSerif-Regular.ttf') format('truetype');
+//}
+
 
 /* --------- FontTable styles --------- */
 .pHiggins   { font-family: Higgins,   AdobeBlank2; font-size: 14pt; }
-.pIntAliaR  { font-family: IntAliaR,  AdobeBlank2; font-size: 14pt; }
-.pIntAliaI  { font-family: IntAliaI,  AdobeBlank2; font-size: 14pt; }
-.pIntAliaB  { font-family: IntAliaB,  AdobeBlank2; font-size: 14pt; }
-.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2; font-size: 14pt; }
 .pNotoS     { font-family: NotoS,     AdobeBlank2; font-size: 14pt; }
 .pNotoF     { font-family: NotoF,     AdobeBlank2; font-size: 14pt; }
 .pTrabajo   { font-family: Trabajo,   AdobeBlank2; font-size: 14pt; }
 
+//.pIntAliaR  { font-family: IntAliaR,  AdobeBlank2; font-size: 14pt; }
+//.pIntAliaI  { font-family: IntAliaI,  AdobeBlank2; font-size: 14pt; }
+//.pIntAliaB  { font-family: IntAliaB,  AdobeBlank2; font-size: 14pt; }
+//.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2; font-size: 14pt; }
+
+.pIntAliaR  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: normal;
+}
+.pIntAliaI  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: normal;
+	font-style: italic;
+}
+.pIntAliaB  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pIntAliaBI {
+	font-family: InterAlia,  AdobeBlank2;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: italic;
+}
+
 /* ----------- styles ----------- */
-body {
-		font-family: var(--defaultfont), Noto;
+/*body {*/
+		/*font-family: var(--defaultfont), Noto;*/
 		/*font-family: var(--defaultfont), Segoe; * / for Windows */
 		/*background-color: transparent; */
-		background-color: rgba(232, 232, 255, 0.9);
-		background:none transparent;
+		/*background-color: rgba(232, 232, 255, 0.9);*/
+		/*background:none transparent;*/
 		/*opacity: 0.7; */
-		opacity: var(--bodyopacity);
-		text-align: center;
-		font-size: 10pt;
-}
+		/*opacity: var(--bodyopacity);*/
+		/*text-align: center;*/
+		/*font-size: 10pt;*/
+/*}*/
+
 h1 { text-align: center; }
+h2 { text-align: center; }
 h3 { text-align: center; }
+h4 { text-align: center; }
+h5 { text-align: center; }
+h6 { text-align: center; }
 
 p {
 		font-weight: normal;
@@ -109,13 +148,16 @@ ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
 
 textarea {
-		font-family: var(--defaultfont), Segoe;
+		font-family: var(--textareafont); /*, Segoe;*/
 		font-size: 14pt;
+		/* margin:auto doesn't work
 		margin-left: auto;
-		margin-right: auto;
+		margin-right: auto;*/
 		margin-top:10px;
 		margin-bottom:5px;
 }
+
+/* --- keyboard styles --- */
 .rounded-corners {
 		margin-left: auto;
 		margin-right: auto;
@@ -133,6 +175,8 @@ textarea {
 		text-align: center;
 		background-color: Silver;
 }
+
+/* --- regular table style --- */
 table {
 		margin-left: auto;
 		margin-right: auto;
@@ -151,6 +195,7 @@ td {
 		/* border-style: none none solid none; */
 }
 
+/* buttons  - unused ? */
 button {
 		/*font-family: var(--defaultfont), Noto;
 		font-size: var(--keyfontsize); */
@@ -174,7 +219,7 @@ button {
 		border-radius: 7px;
 		color: black;
 		text-align: center;
-		font-family: var(--kboardfont), Noto;
+		font-family: var(--kboardfont), NotoSans;
 		font-size: var(--keyfontsize);
 		font-weight: bold;
 		padding: 5px;
@@ -189,7 +234,7 @@ button {
 		border-radius: 7px;
 		color: black;
 		text-align: center;
-		font-family: var(--defaultfont), Noto;
+		font-family: var(--kboardfont), Noto;
 		font-size: var(--keyfontsize);
 		font-weight: bold;
 		padding: 5px;
@@ -203,6 +248,8 @@ button {
 		height: 0px;
 		border: 0px;
 }
+
+/* --- table made of <div> elements --- */
 .divtab {
 		display: table;
 		width: auto;
@@ -224,13 +271,15 @@ button {
 		font-size:14pt;
 		font-weight:bold;
 }
+
+/* --- kb layout description --- */
 .desc {
 		display: flex;
 		/*align-items: center;*/
 		justify-content: center;
 		text-align:center;
 		/*width: 100%;*/
-		border:0px solid blue;
+		/*border:1px solid blue;*/
 		/*padding-left:10px;*/
 		/*font-size:11pt;*/
 }
@@ -251,6 +300,8 @@ button {
 		color:black;
 		font-weight:bold;
 }
+
+/* --- translation QWERTY to Phonemic table --- */
 .transTable td {
 		text-align: center;
 		font-weight: bold;
@@ -710,14 +761,28 @@ function fontDetector() {
 	}
 }
 
+/* global CSS variables */
+//:root {
+//		--bodyopacity:  0.8;
+//		--spacerwidth: 1px;
+//		--keysheight:  28px;
+//		--kboardfont: NotoSans;
+//		--keyfontsize: 14pt;
+//		--textareafont: NotoSans;
+//		--textareafontsize: 14pt;
+//}
+
 // global variables - important: some of these variables have their corresponding counterpart in the ":root" CSS global variables
-var bodyOpacity       = 0.8;	// CSS variable: --bodyopacity
-var defaultFont       = 'Higgins';   // CSS variable: --defaultfont
+
+var bodyOpacity       = 0.8; // CSS variable: --bodyopacity
+var kboardSpacerWidth =   1; // keys width (default 12px)  - CSS variable ""
+var kboardKeysHeight  =  28; // keys height (default 25px) - CSS variable "--keysheight"
+
+var textAreaFont      = 'NotoSans';   // CSS variable: --textareafont
 var textAreaFontSize  =  14; 	// textarea font-size (default 14pt)
-var kboardFont        = 'Higgins'; 
+var kboardFont        = 'NotoSans'; 
 var kboardFontSize    =  14; 	// class .bton font-size (default 14pt)
-var kboardSpacerWidth =  1;	  // keys width (default 12px)  - CSS variable ""
-var kboardKeysHeight  =  28;	// keys height (default 25px) - CSS variable "--keysheight"
+
 var r = document.querySelector(':root'); 	// Get the root element
 
 /*   default keyboard layout - on startup will be loaded at the end of page */
@@ -740,18 +805,18 @@ var keysD = phonUSD;
 <main>
 
 	<!-- textArea -->
-	<div>
+	<div class="cen">
 		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
 	</div>
 	<!-- buttons (Clear, To Clipboard -->
 	<!-- div style="margin: 5px;padding: 0px;" -->
-	<div style="margin: 0px;padding: 0px;">
+	<div class="cen" style="margin: 0px;padding: 0px;">
 		<button onclick="clearTextArea()" >Clear</button>
 		<button onclick="copyToClip()"    >To Clipboard</button>
 	</div>
 
 	<!-- Layout switcher -->
-	<div style="margin: 5px;padding: 0px;">
+	<div class="cen" style="margin: 5px;padding: 0px;">
 		<b>Layout:</b>&nbsp;
 		<button id="phonemus" onclick="layoutSwitch('phonemus')" >US Phonemic</button>
 		<button id="phonemuk" onclick="layoutSwitch('phonemuk')" >UK Phonemic</button>
@@ -1108,7 +1173,7 @@ var keysD = phonUSD;
 	</div>
 
 	<!-- buttons: Options, Fonts -->
-	<div style="margin: 5px;padding: 0px;">
+	<div class="cen" style="margin: 5px;padding: 0px;">
 		<!-- button id="kboardButton"  onclick="showWindow('kboard')" >US Phonemic</button -->
 		<button id="optionsButton" onclick="showWindow('options')">Options</button>
 		<button id="fontsButton"   onclick="showWindow('fonts')"  >Fonts</button>
@@ -1644,7 +1709,7 @@ var keysD = phonUSD;
 		</table>
 	</div>
 
-	<p>Last updated: 2025-10-27</p>
+	<p>Last updated: 2025-10-31</p>
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>
