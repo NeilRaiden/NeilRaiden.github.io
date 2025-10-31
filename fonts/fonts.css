@@ -1,87 +1,7 @@
 @font-face {
-	font-family:Antonio-Bold;
-	src: url('./Antonio-Bold.ttf');
-	src: url('./Antonio-Bold.ttf') format('truetype');
-}
-@font-face {
-	font-family:Arvo-Regular;
-	src: url('./Arvo-Regular.ttf');
-	src: url('./Arvo-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Barlow-Regular;
-	src: url('./Barlow-Regular.ttf');
-	src: url('./Barlow-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:ComicNeue-Regular;
-	src: url('./ComicNeue-Regular.ttf');
-	src: url('./ComicNeue-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Dangrek-Regular;
-	src: url('./Dangrek-Regular.ttf');
-	src: url('./Dangrek-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Dosis-VariableFont_wght;
-	src: url('./Dosis-VariableFont_wght.ttf');
-	src: url('./Dosis-VariableFont_wght.ttf') format('truetype');
-}
-@font-face {
-	font-family:EBH Facsimile;
-	src: url('./EBH Facsimile.otf');
-	src: url('./EBH Facsimile.otf') format('opentype');
-}
-@font-face {
-	font-family:EncodeSans_Expanded-Regular;
-	src: url('./EncodeSans_Expanded-Regular.ttf');
-	src: url('./EncodeSans_Expanded-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Gidole-Regular;
-	src: url('./Gidole-Regular.ttf');
-	src: url('./Gidole-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Gidolinya-Regular;
-	src: url('./Gidolinya-Regular.otf');
-	src: url('./Gidolinya-Regular.otf') format('opentype');
-}
-@font-face {
-	font-family:GoudyBookletter1911-Regular;
-	src: url('./GoudyBookletter1911-Regular.ttf');
-	src: url('./GoudyBookletter1911-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:HenryHigginsSans-Regular;
-	src: url('./HenryHigginsSans-Regular.otf');
-	src: url('./HenryHigginsSans-Regular.otf') format('opentype');
-}
-@font-face {
-	font-family:InterAlia-Bold;
-	src: url('./InterAlia-Bold.woff2');
-	src: url('./InterAlia-Bold.woff2') format('woff2');
-}
-@font-face {
-	font-family:InterAlia-BoldItalic;
-	src: url('./InterAlia-BoldItalic.woff2');
-	src: url('./InterAlia-BoldItalic.woff2') format('woff2');
-}
-@font-face {
-	font-family:InterAlia-Italic;
-	src: url('./InterAlia-Italic.woff2');
-	src: url('./InterAlia-Italic.woff2') format('woff2');
-}
-@font-face {
 	font-family:InterAlia-Regular;
 	src: url('./InterAlia-Regular.woff2');
 	src: url('./InterAlia-Regular.woff2') format('woff2');
-}
-@font-face {
-	font-family:Jost-Regular;
-	src: url('./Jost-Regular.ttf');
-	src: url('./Jost-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family:Lato-Regular;
@@ -89,9 +9,9 @@
 	src: url('./Lato-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:MouseMemoirs-Regular;
-	src: url('./MouseMemoirs-Regular.ttf');
-	src: url('./MouseMemoirs-Regular.ttf') format('truetype');
+	font-family:NotoSans_Condensed-Regular;
+	src: url('./NotoSans_Condensed-Regular.ttf');
+	src: url('./NotoSans_Condensed-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family:NotoSans-Regular;
@@ -99,59 +19,9 @@
 	src: url('./NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSansMono_ExtraCondensed-Regular;
-	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf');
-	src: url('./NotoSansMono_ExtraCondensed-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:NotoSansMono-Regular;
-	src: url('./NotoSansMono-Regular.ttf');
-	src: url('./NotoSansMono-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:NotoSansRunic-Regular;
-	src: url('./NotoSansRunic-Regular.ttf');
-	src: url('./NotoSansRunic-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:NotoSansShavian-Regular;
-	src: url('./NotoSansShavian-Regular.ttf');
-	src: url('./NotoSansShavian-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:NotoSerif-Regular;
-	src: url('./NotoSerif-Regular.ttf');
-	src: url('./NotoSerif-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Now-Regular;
-	src: url('./Now-Regular.otf');
-	src: url('./Now-Regular.otf') format('opentype');
-}
-@font-face {
-	font-family:Onest-Light;
-	src: url('./Onest-Light.ttf');
-	src: url('./Onest-Light.ttf') format('truetype');
-}
-@font-face {
-	font-family:OpenSans-Regular-webfont;
-	src: url('./OpenSans-Regular-webfont.ttf');
-	src: url('./OpenSans-Regular-webfont.ttf') format('truetype');
-}
-@font-face {
-	font-family:OpenSauceOne-Light;
-	src: url('./OpenSauceOne-Light.ttf');
-	src: url('./OpenSauceOne-Light.ttf') format('truetype');
-}
-@font-face {
-	font-family:Oxygen-Regular;
-	src: url('./Oxygen-Regular.ttf');
-	src: url('./Oxygen-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:RedditMono-Regular;
-	src: url('./RedditMono-Regular.ttf');
-	src: url('./RedditMono-Regular.ttf') format('truetype');
+	font-family:Poppins-Regular;
+	src: url('./Poppins-Regular.ttf');
+	src: url('./Poppins-Regular.ttf') format('truetype');
 }
 @font-face {
 	font-family:RedditSans-Regular;
@@ -159,92 +29,22 @@
 	src: url('./RedditSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedditSansCondensed-Bold;
-	src: url('./RedditSansCondensed-Bold.ttf');
-	src: url('./RedditSansCondensed-Bold.ttf') format('truetype');
+	font-family:Roboto-Regular;
+	src: url('./Roboto-Regular.ttf');
+	src: url('./Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedHatText-Regular;
-	src: url('./RedHatText-Regular.ttf');
-	src: url('./RedHatText-Regular.ttf') format('truetype');
+	font-family:TexGyreHeros-Regular;
+	src: url('./TexGyreHeros-Regular.otf');
+	src: url('./TexGyreHeros-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family:RobotoMono-Regular;
-	src: url('./RobotoMono-Regular.ttf');
-	src: url('./RobotoMono-Regular.ttf') format('truetype');
+	font-family:TexGyreHerosCondensed-Regular;
+	src: url('./TexGyreHerosCondensed-Regular.otf');
+	src: url('./TexGyreHerosCondensed-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family:Slabo27px-Regular;
-	src: url('./Slabo27px-Regular.ttf');
-	src: url('./Slabo27px-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:StintUltraCondensed-Regular;
-	src: url('./StintUltraCondensed-Regular.ttf');
-	src: url('./StintUltraCondensed-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:TexGyreHeros-bold;
-	src: url('./TexGyreHeros-bold.otf');
-	src: url('./TexGyreHeros-bold.otf') format('opentype');
-}
-@font-face {
-	font-family:TexGyreHeros-bolditalic;
-	src: url('./TexGyreHeros-bolditalic.otf');
-	src: url('./TexGyreHeros-bolditalic.otf') format('opentype');
-}
-@font-face {
-	font-family:TexGyreHeros-italic;
-	src: url('./TexGyreHeros-italic.otf');
-	src: url('./TexGyreHeros-italic.otf') format('opentype');
-}
-@font-face {
-	font-family:TexGyreHeros-regular;
-	src: url('./TexGyreHeros-regular.otf');
-	src: url('./TexGyreHeros-regular.otf') format('opentype');
-}
-@font-face {
-	font-family:TexGyreHerosCondensed-bold;
-	src: url('./TexGyreHerosCondensed-bold.otf');
-	src: url('./TexGyreHerosCondensed-bold.otf') format('opentype');
-}
-@font-face {
-	font-family:TexGyreHerosCondensed-bolditalic;
-	src: url('./TexGyreHerosCondensed-bolditalic.otf');
-	src: url('./TexGyreHerosCondensed-bolditalic.otf') format('opentype');
-}
-@font-face {
-	font-family:TexGyreHerosCondensed-italic;
-	src: url('./TexGyreHerosCondensed-italic.otf');
-	src: url('./TexGyreHerosCondensed-italic.otf') format('opentype');
-}
-@font-face {
-	font-family:TexGyreHerosCondensed-regular;
-	src: url('./TexGyreHerosCondensed-regular.otf');
-	src: url('./TexGyreHerosCondensed-regular.otf') format('opentype');
-}
-@font-face {
-	font-family:Trabajo;
-	src: url('./Trabajo.otf');
-	src: url('./Trabajo.otf') format('opentype');
-}
-@font-face {
-	font-family:Ubuntu-Regular;
-	src: url('./Ubuntu-Regular.ttf');
-	src: url('./Ubuntu-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:UbuntuSansMono-Regular;
-	src: url('./UbuntuSansMono-Regular.ttf');
-	src: url('./UbuntuSansMono-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Virgil;
-	src: url('./Virgil.woff2');
-	src: url('./Virgil.woff2') format('woff2');
-}
-@font-face {
-	font-family:YanoneKaffeesatz-Regular;
-	src: url('./YanoneKaffeesatz-Regular.ttf');
-	src: url('./YanoneKaffeesatz-Regular.ttf') format('truetype');
+	font-family:UbuntuSans-Regular;
+	src: url('./UbuntuSans-Regular.ttf');
+	src: url('./UbuntuSans-Regular.ttf') format('truetype');
 }

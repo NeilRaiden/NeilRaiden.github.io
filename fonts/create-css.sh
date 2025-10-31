@@ -27,7 +27,7 @@ exec 4<> fonts.css
 
 # 1. list all fonts:
 #ls *.ttf *.otf *.woff *.woff2 > fontlist.txt
-ls *.ttf *.otf *.woff2 > fontlist.txt
+ls *-Regular.ttf *-Regular.otf *-Regular.woff2 > fontlist.txt
 
 # 2
 printf "var fontList = [\n" >&3
