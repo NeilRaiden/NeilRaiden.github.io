@@ -24,9 +24,10 @@
 		--keysheight:  28px;
 		--keyfontsize: 14pt;
 		--bodyopacity:  0.8;
-		--defaultfont: Higgins;
 		--kboardfont: Higgins;
+		--textareafont: Higgins;
 }
+
 /* Adobe Blank 2 from */
 @font-face {
     font-family: AdobeBlank2;
@@ -86,14 +87,14 @@
 		src: url('./fonts-shavian/Trabajo.otf') format('opentype');
 }
 
-/* --- shavian fonts already in the main "./fonts" directory:
 
-//@font-face {
-//		font-family:Higgins;
-//	src: url('./fonts/HenryHigginsSans-Regular.otf');
-//		src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
-//}
+@font-face {
+		font-family:Higgins;
+		src: url('./fonts-Shavian/HenryHigginsSans-Regular.otf');
+		src: url('./fonts-Shavian/HenryHigginsSans-Regular.otf') format('opentype');
+}
 
+/* --- shavian fonts in the main "./fonts" directory:
 //@font-face {
 //		font-family:IntAliaR;
 //		src: url('./fonts/InterAlia-Regular.woff2');
@@ -134,37 +135,42 @@
 //}
 
 /* ---- Shavian fonts table ------ */
-.pAndagii   { font-family: Andagii, AdobeBlank2;     font-size: 14pt; }
-.pCafeI     { font-family: CafeI, AdobeBlank2;       font-size: 14pt; }
-.pCafeR     { font-family: CafeR, AdobeBlank2;       font-size: 14pt; }
-.pDoolittI  { font-family: DoolittI, AdobeBlank2;    font-size: 14pt; }
-.pDoolittR  { font-family: DoolittR, AdobeBlank2;    font-size: 14pt; }
-.pFairfax   { font-family: Fairfax, AdobeBlank2;     font-size: 14pt; }
-.pHiggins   { font-family: Higgins, AdobeBlank2;     font-size: 14pt; }
-.pIntAliaR  { font-family: IntAliaR, AdobeBlank2;    font-size: 14pt; }
-.pIntAliaI  { font-family: IntAliaI, AdobeBlank2;    font-size: 14pt; }
-.pIntAliaB  { font-family: IntAliaB, AdobeBlank2;    font-size: 14pt; }
-.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2;   font-size: 14pt; }
-.pMPH       { font-family: MPH, AdobeBlank2;         font-size: 14pt; }
-.pOrmin     { font-family: Ormin, AdobeBlank2;       font-size: 14pt; }
+.pAndagii   { font-family: Andagii,    AdobeBlank2; font-size: 14pt; }
+.pCafeI     { font-family: CafeI,      AdobeBlank2; font-size: 14pt; }
+.pCafeR     { font-family: CafeR,      AdobeBlank2; font-size: 14pt; }
+.pDoolittI  { font-family: DoolittI,   AdobeBlank2; font-size: 14pt; }
+.pDoolittR  { font-family: DoolittR,   AdobeBlank2; font-size: 14pt; }
+.pFairfax   { font-family: Fairfax,    AdobeBlank2; font-size: 14pt; }
+.pHiggins   { font-family: Higgins,    AdobeBlank2; font-size: 14pt; }
+.pIntAliaR  { font-family: IntAliaR,   AdobeBlank2; font-size: 14pt; }
+.pIntAliaI  { font-family: IntAliaI,   AdobeBlank2; font-size: 14pt; }
+.pIntAliaB  { font-family: IntAliaB,   AdobeBlank2; font-size: 14pt; }
+.pIntAliaBI { font-family: IntAliaBI,  AdobeBlank2; font-size: 14pt; }
+.pMPH       { font-family: MPH,        AdobeBlank2; font-size: 14pt; }
+.pOrmin     { font-family: Ormin,      AdobeBlank2; font-size: 14pt; }
 .pNotoSh    { font-family: NotoShavian, NotoS, AdobeBlank2; font-size: 14pt; }
-.pTrabajo   { font-family: Trabajo, AdobeBlank2;   font-size: 14pt; }
-//.pSegoe     { font-family: Segoe, AdobeBlank2;     font-size: 14pt; }
+.pTrabajo   { font-family: Trabajo,    AdobeBlank2; font-size: 14pt; }
+//.pSegoe     { font-family: Segoe,    AdobeBlank2; font-size: 14pt; }
 
 /* ----------- styles ----------- */
-body {
-		font-family: var(--defaultfont), Noto;
+/*body {*/
+		/*font-family: var(--defaultfont), Noto;*/
 		/*font-family: var(--defaultfont), Segoe; * / for Windows */
 		/*background-color: transparent; */
-		background-color: rgba(232, 232, 255, 0.9);
-		background:none transparent;
+		/*background-color: rgba(232, 232, 255, 0.9);*/
+		/*background:none transparent;*/
 		/*opacity: 0.7; */
-		opacity: var(--bodyopacity);
-		text-align: center;
-		font-size: 10pt;
-}
+		/*opacity: var(--bodyopacity);*/
+		/*text-align: center;*/
+		/*font-size: 10pt;*/
+/*}*/
+
 h1 { text-align: center; }
+h2 { text-align: center; }
 h3 { text-align: center; }
+h4 { text-align: center; }
+h5 { text-align: center; }
+h6 { text-align: center; }
 
 p {
 		font-weight: normal;
@@ -175,13 +181,16 @@ ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
 
 textarea {
-		font-family: var(--defaultfont), Segoe;
+		font-family: var(--textareafont), Segoe;
 		font-size: 14pt;
+		/* margin:auto doesn't work
 		margin-left: auto;
-		margin-right: auto;
+		margin-right: auto;*/
 		margin-top:10px;
 		margin-bottom:5px;
 }
+
+/* keyboard style */
 .rounded-corners {
 		margin-left: auto;
 		margin-right: auto;
@@ -199,6 +208,8 @@ textarea {
 		text-align: center;
 		background-color: Silver;
 }
+
+/* regular table style */
 table {
 		margin-left: auto;
 		margin-right: auto;
@@ -217,6 +228,7 @@ td {
 		/* border-style: none none solid none; */
 }
 
+/* buttons  - unused ? */
 button {
 		/*font-family: var(--defaultfont), Noto;
 		font-size: var(--keyfontsize); */
@@ -269,6 +281,8 @@ button {
 		height: 0px;
 		border: 0px;
 }
+
+/* --- table made of <div> elements --- */
 .divtab {
 		display: table;
 		width: auto;
@@ -290,6 +304,8 @@ button {
 		font-size:14pt;
 		font-weight:bold;
 }
+
+/* --- kb layout description --- */
 .desc {
 		display: flex;
 		/*align-items: center;*/
@@ -317,6 +333,8 @@ button {
 		color:black;
 		font-weight:bold;
 }
+
+/* --- translation Latin to Shavian table --- */
 .transTable td {
 		text-align: center;
 		font-weight: bold;
@@ -770,18 +788,18 @@ var keysD = emptY;
 <main>
 
 <!-- textArea -->
-	<div>
+	<div class="cen">
 		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
 	</div>
 	<!-- buttons (Clear, To Clipboard -->
 	<!-- div style="margin: 5px;padding: 0px;" -->
-	<div style="margin: 0px;padding: 0px;">
+	<div class="cen" style="margin: 0px;padding: 0px;">
 		<button onclick="clearTextArea()" >Clear</button>
 		<button onclick="copyToClip()"    >To Clipboard</button>
 	</div>
 
 	<!-- Layout switcher -->
-	<div style="margin: 5px;padding: 0px;">
+	<div class="cen" style="margin: 5px;padding: 0px;">
 		<b>Layout:</b>&nbsp;
 		<button id="shawQwerty" onclick="layoutSwitch('shawQwerty')" >Shaw QWERTY</button>
 		<button id="shawEmpire" onclick="layoutSwitch('shawEmpire')" >Shaw Imperial</button>
@@ -1136,7 +1154,7 @@ var keysD = emptY;
 	</div>
 
 	<!-- buttons: Options, Fonts -->
-	<div style="margin: 5px;padding: 0px;">
+	<div class="cen" style="margin: 5px;padding: 0px;">
 		<!-- button id="kboardButton"  onclick="showWindow('kboard')" >US Phonemic</button -->
 		<button id="optionsButton" onclick="showWindow('options')">Keyboard Options</button>
 		<button id="fontsButton"   onclick="showWindow('fonts')"  >Shavian Fonts</button>
@@ -1276,7 +1294,8 @@ var keysD = emptY;
 	<div id="shawQwertyDesc" class="desc" style="display:block;">
 
 		<h4>Shaw QWERTY</h4>
-		<p>Layout for typing in <b>Shavian Alphabet</b> <span class="ipa">/ˈʃeɪviən/</span>.<br>
+		<p>
+			Layout for typing in <b>Shavian Alphabet</b> <span class="ipa">/ˈʃeɪviən/</span>.<br>
 			The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with the <b>Phonemic</b> layouts, 
 			so if you've already learned to type with any Phonemic layout from this website and you decide to learn the Shavian Alphabet, 
 			you'll already know the positions of the phonemes on the keyboard.<br>
@@ -1292,20 +1311,45 @@ var keysD = emptY;
 		<p>
 			The Shavian Alphabet is named after 
 			<a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw">George Bernard Shaw</a> (1856-1950),
-			an Irish playwright, critic, an political activist.
+			an Irish playwright, critic, an political activist (awarded the Nobel Prize for Literature in 1925).
 			Shaw was a critic of English orthography, he himself used <a href="https://en.wikipedia.org/wiki/Pitman_shorthand">Pitman shorthand</a>,
 			a phonetic shorthand system, in writing his plays.
 			Shaw considered the use of the Latin alphabet for writing English as a great waste of time, energy and paper,
 			so in his will he left a provision to fund the design of a new English alphabet that would be fully phonemic.
 		</p>
-		<p>
-			Shaw set three main criteria for the new alphabet:
-		</p>
+
+		<p>Shaw set three main criteria for the new alphabet:</p>
 		<ol>
 			<li>at least 40 letters;</li>
 			<li>as "phonetic" as possible (that is, letters should have a 1:1 correspondence to phonemes); and</li>
 			<li>distinct from the Latin alphabet to avoid the impression that the new spellings were simply "misspellings".</li>
 		</ol>
+
+
+		<!-- blockquote>
+			A new scientific alphabet is no mere ideal.
+			We should be able to write each sort of sound we speak
+			with its own single letter. Think what a saving
+			that would be in time, and money. Judge, if you
+			can, your child's confusion through using at once
+			the several alphabets, all of which are unable to
+			speak words according to their sound. . . . Ah!
+			Poor boys and girls; poor foreigners . . . poor
+			“Scientific” age.               — <i>Kingsley Read</i>
+		</blockquote>
+
+		<blockquote>
+			𐑩 𐑯𐑿 𐑕𐑲𐑩𐑯𐑑𐑦𐑓𐑦𐑒 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑦𐑟 𐑯𐑴 𐑥𐑽 𐑲𐑛𐑾𐑤.
+			𐑢𐑰 𐑖𐑫𐑛 𐑚𐑰 𐑱𐑚𐑩𐑤 𐑑 𐑮𐑲𐑑 𐑰𐑗 𐑕𐑹𐑑 𐑝 𐑕𐑬𐑯𐑛 𐑢𐑰 𐑕𐑐𐑰𐑒
+			𐑢𐑦𐑞 𐑦𐑑𐑕 𐑴𐑯 𐑕𐑦𐑙𐑜𐑩𐑤 𐑤𐑧𐑑𐑼. 𐑔𐑦𐑙𐑒 𐑢𐑪𐑑 𐑩 𐑕𐑱𐑝𐑦𐑙
+			𐑞𐑨𐑑 𐑢𐑫𐑛 𐑚𐑰 𐑦𐑯 𐑑𐑲𐑥, 𐑯 𐑥𐑳𐑯𐑦. 𐑡𐑳𐑡, 𐑦𐑓 𐑿
+			𐑒𐑨𐑯, 𐑘𐑹 𐑗𐑲𐑤𐑛'𐑟 𐑒𐑩𐑯𐑓𐑿𐑠𐑩𐑯 𐑔𐑮𐑵 𐑿𐑟𐑦𐑙 𐑨𐑑 𐑢𐑳𐑯𐑕
+			𐑞 𐑕𐑧𐑝𐑼𐑩𐑤 𐑨𐑤𐑓𐑩𐑚𐑧𐑑𐑕, 𐑷𐑤 𐑝 𐑢𐑦𐑗 𐑸 𐑳𐑯𐑱𐑚𐑩𐑤 𐑑
+			𐑕𐑐𐑰𐑒 𐑢𐑻𐑛𐑟 𐑩𐑒𐑹𐑛𐑦𐑙 𐑑 𐑞𐑺 𐑕𐑬𐑯𐑛. … 𐑭!
+			𐑐𐑫𐑼 𐑚𐑶𐑟 𐑯 𐑜𐑻𐑤𐑟; 𐑐𐑫𐑼 𐑓𐑪𐑮𐑦𐑯𐑼𐑟 … 𐑐𐑫𐑼
+			«𐑕𐑲𐑩𐑯𐑑𐑦𐑓𐑦𐑒» 𐑱𐑡.            — <i>·𐑒𐑦𐑙𐑟𐑤𐑦 ·𐑮𐑰𐑛</i>
+		</blockquote -->
+
 		<p>
 			In 1958, eight years after Shaw's death in 1950, the competition took place to design such an alphabet and 
 			<a href="https://en.wikipedia.org/wiki/Ronald_Kingsley_Read">Kingsley Read</a>'s system was chosen as the winner out of the 467 entries.
@@ -1540,23 +1584,35 @@ var keysD = emptY;
 				— the #1 website about Shavian Alphabet (fonts, books, etc).</li>
 			<li><a href="https://www.youtube.com/@shavianalphabet4307">ShavianAlphabet4307</a> YouTube channel.</li>
 			<li><a href="https://www.omniglot.com/writing/shavian.htm">Omniglot.com</a> 
-				— general info.</li>
+				— short general info.</li>
+			<li><b>Medium.com</b> — an excellent article by Leo Philip about Shaw Alphabet history (in three parts):
+				<ul>
+					<li><a href="https://articles.c-a-s-t.com/towards-an-ideal-alphabet-the-origins-and-the-typographic-interpretation-of-shavian-22bb5455c11c">Shavian (1/3): origins</a></li>
+					<li><a href="https://articles.c-a-s-t.com/shavian-2-3-the-development-9cba31f9bc5a">Shavian (2/3): the development</a></li>
+					<li><a href="https://articles.c-a-s-t.com/shavian-3-3-typographic-implementation-3a43d3bbb8b8">Shavian (3/3): typographic implementation</a></li>
+				</ul></li>
+			<li><a href="https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition/mode/2up">archive.org</a>
+				— the book “Androcless and the Lion” (hardcover version).</a>
+			<!-- li><a href="https://www.scribd.com/document/729192126/Androcles-and-the-Lion-Shaw-Alphabet-Edition-text">Androcles and the Lion</a></li -->
 			<li><a href="https://physics.wooster.edu/lindner/shavian/">John F. Lindner</a>'s website 
 				— a collection of 13 public domain books transliterated into Shavian Alphabet.</li>
+			<li><a href="https://www.mithrandir.com/Shavian/Shavian.shtml">mithrandir.com</a>
+				— Scott Harrison website with a collection of texts translated into Shavian
+					(Hans Christian Andersen Fairy Tales).</li>
 			<li><a href="https://shavian.weebly.com/">Shavian.weebly.com</a> 
 				— some info and some texts transliterated into Shavian.</li>
-			<li><a href="https://web.archive.org/web/20100113034124/http://www.30below.com/~ethanl/fonts.html">archive.org</a> 
-				— Ethan Lamoreaux website (ESL_Gothic_Unicode font which can also be found on 
-				<a href="https://www.fontspace.com/esl-gothic-unicode-font-f12185">Fontspace.com</a>)</li>
-			<li><a href="http://i18nguy.com/unicode/unicode-font.html">i18nguy.com</a> 
-				— Andagii font by Mark Williamson (copyleft license).</li>
-			<li><a href="https://hughbirkenhead.com/shavian/ascii-unicode/">Hugh Birkenhead's site</a>
-				— the converter from old-style pre-Unicode ASCII Shavian to Unicode Shavian.</li>
+			<li><a href="https://shavian-school.github.io/?l=0">Shavian-School.github.io</a>
+				— a table of Shavian Alphabet with sounds.</li>
+			<li><a href="https://www.youtube.com/watch?v=D66LrlotvCA">YouTube:There’s a better English alphabet</a> by RobWords
+				— An excellent introduction to Shavian for beginners.</li>
 			<li><a href="https://reddit.com/r/shavian">reddit.com</a> — Shavian discussion group on Reddit.</li>
-			<li><a href="https://shavian.neocities.org/american">Haruki “Haley” Halcyon</a> website 
-				— “A Guide to American Shavian Spelling” by Haruki “Haley” Wakamatsu</li>
-			<li><a href="https://shavian.neocities.org/type">Haruki “Haley” Wakamatsu</a> website 
-				— online keyboard for learning Shavian.</li>
+			<li><a href="https://shavian.neocities.org/">Shavian.neocities.org</a> Haruki “Haley” Halcyon website:
+				<ul>
+					<li><a href="https://shavian.neocities.org/quick">Quick learning guide</a></li>
+					<li><a href="https://shavian.neocities.org/crash-course">A Slightly Nerdy Crash Course to Shavian Letters</a></li>
+					<li><a href="https://shavian.neocities.org/american">A Guide to American Shavian Spelling</a></li>
+					<li><a href="https://shavian.neocities.org/type">Lexilogos-style Shavian keyboard</a> — an online keyboard for learning Shavian.</li>
+				</ul></li>
 			<li><a href="https://postimg.cc/gallery/vZPtJXw">The Cat in the Hat (Shavian)</a> 
 				— the famous children's book by Dr. Seuss transliterated into Shavian.</li>
 			<li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+Shavian">Google Fonts</a> 
@@ -1564,9 +1620,18 @@ var keysD = emptY;
 			<li><a href="https://2gd4.me/tidbit/shavian-fonts.html">2gd4.me</a> 
 				— Shavian fonts by Haley Wakamatsu,
 				(see also his <a href="https://2gd4.me/tidbit/shavian-info.html">Interactive Shavian Table</a> with sounds).</li>
+			<li><a href="https://web.archive.org/web/20100113034124/http://www.30below.com/~ethanl/fonts.html">archive.org</a> 
+				— Ethan Lamoreaux website (ESL_Gothic_Unicode font which can also be found on 
+				<a href="https://www.fontspace.com/esl-gothic-unicode-font-f12185">Fontspace.com</a>)</li>
+			<li><a href="http://i18nguy.com/unicode/unicode-font.html">i18nguy.com</a> 
+				— Andagii font by Mark Williamson (copyleft license).</li>
+			<li><a href="https://hughbirkenhead.com/shavian/ascii-unicode/">Hugh Birkenhead's site</a>
+				— the converter from old-style pre-Unicode ASCII Shavian to Unicode Shavian.</li>
 			<li><a href="https://www.unicode.org/standard/translations/shavian.html">Unicode.org</a> page in Shavian.</li>
 			<li><a href="https://www.unicode.org/charts/PDF/U10450.pdf">Shavian in the Unicode (PDF)</a> 
 				(Unicode range U+10450–U+1047F).</li>
+			<!-- li><a href="https://dechifro.org/shavian/">Converting English text to phonemic script</a></li -->
+			<!-- li><a href="https://readlex.pythonanywhere.com/">ReadLex.pythonanywhere.com</a> — Lating to Shavian converter.</li -->
 		</ul>
 
 	</div>
@@ -1625,7 +1690,7 @@ var keysD = emptY;
 		</p>
 	</div>
 
-	<p>Last updated: 2025-10-27</p> 
+	<p>Last updated: 2025-10-31</p> 
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>

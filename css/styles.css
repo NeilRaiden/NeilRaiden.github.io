@@ -1,4 +1,4 @@
-/* ---------- table styles ---------- */
+/* ---------- regular table styles ---------- */
 table {
 	border: 1px solid blue;
 	margin-left: auto;
@@ -23,8 +23,10 @@ td {
 /*	line-height: calc(var(--lineHeight) - 0.2);*/
 }
 
+/* ---------- alphabet table styles ---------- */
+/* where is it used ? */
 table.alphabet {
-	font-family: NotoSans-Regular;
+	font-family: NotoSans;
 }
 table.alphabet th, td {
 	text-align: center;
@@ -35,6 +37,7 @@ table.alphabet th, td {
 table.alphabet tr:hover {
 	background-color: lightgrey;
 }
+
 /* ------ downloads table ------ */
 table.downl {
 	margin:auto;
@@ -61,8 +64,11 @@ hr {
 	margin-right: 10px;
 	border-top: 1px solid #ccc;
 }
+
+/* --- blockquotes --- */
+/* where are these used ? */
 blockquote.bq1 {
-	font-family: NotoSans-Regular;
+	font-family: NotoSans;
 	font-size: 0.8em;
 	border-left: 3px solid #ccc;
 	margin-top: 10px;
@@ -71,7 +77,7 @@ blockquote.bq1 {
 	padding-left: 15px;
 } 
 blockquote.bq2 {
-	font-family: NotoSans-Regular;
+	font-family: NotoSans;
 	font-size: 0.8em;
 	color: dimgray;
 	border: 1px solid blue;
@@ -98,6 +104,9 @@ blockquote.bq2 a {
 	font-size: 1.2em;
 }
 */
+
+/* --- images --- */
+/* centered, inside <figure> - to add caption */
 img {
 	display: block;
 	margin-left: auto;
@@ -112,14 +121,15 @@ figure {
 figcaption {
 	text-align: center;
 	color: gray;
-	font-family: NotoSans-Regular;
+	font-family: NotoSans;
 	font-size: 10pt;
 }
 figcaption a {
-	font-family: NotoSans-Regular;
+	font-family: NotoSans;
 	font-size: 10pt;
 }
 
+/* --- colored text --- */
 red { color: red; }
 blu { color: blue; }
 grn { color: green; }
@@ -127,44 +137,58 @@ yel { color: yellow; }
 blk { color: black; }
 gry { color: gray; }
 
+/* modified <b> tag to change text color to black */
 b {
 	color: black;
 	font-weight: bold;
 }
 
+/* .ipa class already defined in layout.css */
+/*
 .ipa { 
-	font-family: NotoSans-Regular;
+	/*font-family: NotoSans;* /
+	font-family: var(--ipaFontFamily);
+	font-size: var(--ipaFontSize);
 	font-size: 1.0em;
-	font-size: var(--fontSizeIPA);
 	color: black;
 }
+*/
 
 /* div.ipa, p ipa { */
 div.ipa { 
 	display: inline;
-	font-family: NotoSans-Regular;
-	font-size: 0.8em;
-	font-size: var(--fontSizeIPA);
+	/*font-family: NotoSans;*/
+	font-family: var(--ipaFontFamily);
+	font-size: var(--ipaFontSize);
 	color: black;
+	font-size: 0.8em;
 }
+
 p.source {
 	font-style:italic;
 	font-weight:0.9em;
 	color:gray;
 }
+
+/* --- monospaced text --- */
 pre {
-/*	font-family:NotoSansMono;*/
-	font-family:NotoSansMono_ExtraCondensed-Regular;
+	/*font-family:NotoSansMono;*/
+	/*font-family:NotoSansMono_ExtraCondensed;*/
+	font-family: var(--monoFontFamily);
+	font-size: var(--monoFontSize);
 	white-space: pre-wrap; 
 	overflow-x: auto; 
 }
 .mono {
-	font-family:NotoSansMono_ExtraCondensed-Regular;
+	/*font-family:NotoSansMono_ExtraCondensed;*/
+	font-family: var(--monoFontFamily);
+	font-size: var(--monoFontSize);
 	font-size:1em;
 	color:black;
 /*	border:1px solid red;*/
 }
 
+/* --- centering --- */
 div.ctr {
 	display: flex;
 	justify-content: center;
@@ -202,7 +226,6 @@ div.border {
 	opacity: 0.8;
 	box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
-
 /* The Modal (background) */
 .modal {
 	display: none;
@@ -219,7 +242,6 @@ div.border {
 	background-color: rgb(0,0,0); /* Fallback color */
 	/*  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
-
 /* Modal Content (image) */
 .modal-content {
 	display: block;
@@ -240,6 +262,7 @@ div.border {
 	animation-duration: 0.6s;
 }
 
+/* unused ? */
 @-webkit-keyframes zoom {
 	from {-webkit-transform:scale(0)}
 	to {-webkit-transform:scale(1)}
@@ -311,16 +334,18 @@ div.border {
 	background:white;/**/
 }
 
-/* all links: local and global*/
+/* ------ links ------ */
+/* all links, both LOCAL and GLOBAL */
 a {
 	color: Indigo;
 	text-decoration: none;
 }
-/* global links */
+/* GLOBAL links */
 a[href^=http] {
 	color: DarkBlue;
+	text-decoration: underline;
 }
-/* wikipedia links */
+/* WIKIPEDIA links */
 a[href^="https://en.wikipedia"] {
 	color: Blue;
 	text-decoration: underline;
