@@ -1,50 +1,50 @@
 @font-face {
-	font-family:InterAlia-Regular;
+	font-family:InterAlia;
 	src: url('./InterAlia-Regular.woff2');
 	src: url('./InterAlia-Regular.woff2') format('woff2');
 }
 @font-face {
-	font-family:Lato-Regular;
+	font-family:Lato;
 	src: url('./Lato-Regular.ttf');
 	src: url('./Lato-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSans_Condensed-Regular;
+	font-family:NotoSans_Condensed;
 	src: url('./NotoSans_Condensed-Regular.ttf');
 	src: url('./NotoSans_Condensed-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:NotoSans-Regular;
+	font-family:NotoSans;
 	src: url('./NotoSans-Regular.ttf');
 	src: url('./NotoSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Poppins-Regular;
+	font-family:Poppins;
 	src: url('./Poppins-Regular.ttf');
 	src: url('./Poppins-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:RedditSans-Regular;
+	font-family:RedditSans;
 	src: url('./RedditSans-Regular.ttf');
 	src: url('./RedditSans-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:Roboto-Regular;
+	font-family:Roboto;
 	src: url('./Roboto-Regular.ttf');
 	src: url('./Roboto-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family:TexGyreHeros-Regular;
+	font-family:TexGyreHeros;
 	src: url('./TexGyreHeros-Regular.otf');
 	src: url('./TexGyreHeros-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family:TexGyreHerosCondensed-Regular;
+	font-family:TexGyreHerosCondensed;
 	src: url('./TexGyreHerosCondensed-Regular.otf');
 	src: url('./TexGyreHerosCondensed-Regular.otf') format('opentype');
 }
 @font-face {
-	font-family:UbuntuSans-Regular;
+	font-family:UbuntuSans;
 	src: url('./UbuntuSans-Regular.ttf');
 	src: url('./UbuntuSans-Regular.ttf') format('truetype');
 }

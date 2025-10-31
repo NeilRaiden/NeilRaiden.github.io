@@ -29,7 +29,7 @@ exec 4<> fonts.css
 #ls *.ttf *.otf *.woff *.woff2 > fontlist.txt
 ls *-Regular.ttf *-Regular.otf *-Regular.woff2 > fontlist.txt
 
-# 2
+# 2. build fontlist.js
 printf "var fontList = [\n" >&3
 
 # 3. process fontlist
@@ -37,7 +37,7 @@ readarray -t FONTS <fontlist.txt
 i=0
 while [[ $i -lt ${#FONTS[@]} ]]; do
 	FONTNAME="${FONTS[$i]}"
-  FONTTYPE="${FONTNAME##*.}"
+	FONTTYPE="${FONTNAME##*.}"
 	case $FONTTYPE in
 		ttf)    LONGTYPE="truetype" ;;
 		otf)    LONGTYPE="opentype" ;;
@@ -46,12 +46,12 @@ while [[ $i -lt ${#FONTS[@]} ]]; do
 	esac
 	SHORT1="${FONTNAME%%.*}"
 	SHORT2="${SHORT1%%-*}"
-#	echo "fontfile: $FONTNAME			fonttype: $FONTTYPE longtype: $LONGTYPE	shortname1: $SHORT1	shortname2: $SHORT2"
+	echo "fontfile: $FONTNAME			fonttype: $FONTTYPE longtype: $LONGTYPE	shortname1: $SHORT1	shortname2: $SHORT2"
 
 	# fonts.css
 	printf "@font-face {\n" >&4
-#	printf "	font-family:${SHORT2};\n" >&4
-	printf "	font-family:${SHORT1};\n" >&4
+	printf "	font-family:${SHORT2};\n" >&4
+#	printf "	font-family:${SHORT1};\n" >&4
 #	printf "	src: url('./fonts/${FONTNAME}');\n" >&4
 #	printf "	src: url('./fonts/${FONTNAME}') format('${LONGTYPE}');\n" >&4
 
@@ -60,8 +60,8 @@ while [[ $i -lt ${#FONTS[@]} ]]; do
 	printf "}\n" >&4
 
 	# fontlist.js
-#	printf "	{ name:\"${SHORT2}\", file:'${FONTNAME}'}" >&3
-	printf "	{ name:\"${SHORT1}\", file:'${FONTNAME}'}" >&3
+	printf "	{ name:\"${SHORT2}\", file:'${FONTNAME}'}" >&3
+#	printf "	{ name:\"${SHORT1}\", file:'${FONTNAME}'}" >&3
 
 	i=$((i+1))
 
