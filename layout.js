@@ -13,17 +13,37 @@ const menuItems = [
 //	{ item:'Phonetic Dictionaries',     link:'dicts.html'},
 //	{ item:'Phonetic Spellchecks',      link:'spell.html'},
 
-const headerHtml = [
-//	'<a href="./index.html" class="home" title="Back to homepage"><b>NeilRaiden.com</b></a>\n',
-	'<button style="padding:4px 32px;font-size:20px;"  onclick="location.href=\'./index.html\'" type="button"><span title="https://NeilRaiden.com">NeilRaiden.com</span></button>\n',
-	'<button style="padding:0px 12px;font-size:24px;"  onclick="toggleBlock(\'pageSetup\')"><span title="Styles preferences">&#x2699;</span></button>\n',
-	'<button style="padding:0px 12px;font-size:24px;float:right" onclick="toggleBlock(\'menuLinks\')">&#x2630;</button>\n' ];
+//   // version 1 (buttons):
+//   const headerHtml = [
+//   //	'<a href="./index.html" class="home" title="Back to homepage"><b>NeilRaiden.com</b></a>\n',
+//   	'<button style="padding:4px 32px;font-size:20px;"  onclick="location.href=\'./index.html\'" type="button"><span title="https://NeilRaiden.com">NeilRaiden.com</span></button>\n',
+//   	'<button style="padding:0px 12px;font-size:24px;"  onclick="toggleBlock(\'pageSetup\')"><span title="Styles preferences">&#x2699;</span></button>\n',
+//   	'<button style="padding:0px 12px;font-size:24px;float:right" onclick="toggleBlock(\'menuLinks\')">&#x2630;</button>\n' ];
 
+// version 2 (flex):
+const headerHtml = [
+	'<div class="hdr">',
+	'<div class="hdrlogo"  onclick="location.href=\'./index.html\'">NeilRaiden.com</div>\n',
+	'<div class="hdrsetup" onclick="toggleBlock(\'pageSetup\')"><span title="Styles &amp; preferences">&#x2699;</span></div>\n',
+	'<div class="hdrspacer">&nbsp;</div>',
+	'<div class="hdrmenu"  onclick="toggleBlock(\'menuLinks\')">&#x2630;</div>\n', 
+	'</div>' ];
+
+//	// version 1 (button):
+//	const footerHtml = [
+//		'<p class="copy">Copyright &copy; 2025 NeilRaiden.com (AGPLv3)</p>',
+//		'<div class="button" onclick="toTop()"><span title="Return to top">TOP &#x2B06;</span></div>\n' ];
+//	// version 0 :
+//	//	'<button onclick="toTop()"><b><span title="Return to top"><span style="font-size:10px;">TOP</span>&#x2B06;</span></b></button>\n' ];
+//	//	'<button onclick="toTop()">&#x1F51D;</a>\n' ];
+
+// version 1 (button):
 const footerHtml = [
-	'<p class="copy">Copyright &copy; 2025 NeilRaiden.com (AGPLv3)</p>',
-	'<div class="button" onclick="toTop()"><span title="Return to top">TOP &#x2B06;</span></div>\n' ];
-//	'<button onclick="toTop()"><b><span title="Return to top"><span style="font-size:10px;">TOP</span>&#x2B06;</span></b></button>\n' ];
-//	'<button onclick="toTop()">&#x1F51D;</a>\n' ];
+	'<div class="ftr">',
+	'<div class="ftrcopy">Copyright &copy; 2025 NeilRaiden.com (AGPLv3)</div>',
+	'<div class="ftrtotop" onclick="toTop()"><span title="Return to top">TOP &#x2B06;</span></div>\n',
+	'</div>' ];
+
 
 const styleSetupHtml = [
 '<div class="grid-container">',

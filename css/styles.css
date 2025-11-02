@@ -1,3 +1,27 @@
+/* --- light mode settings --- */
+:root {
+  --link-color: #0066ff; /* Default link color for light mode */
+}
+
+/* --- inherit color-scheme from browser --- */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--link-color: #6ba3ff; /* Dark mode link color */
+	}
+	/* todo: switch to using variables for colors */
+	body { background: #333; color: #ccc; }
+	p b { color: white; }
+	div b { color: white; }
+	/*table { border: 1px solid LightSteelBlue; }*/
+	table { border: 1px solid white; }
+	table th { background-color: DarkBlue; }
+	.ipa { color: white; }	
+}
+/*
+@media (prefers-color-scheme: dark) {
+	filter: invert(100%);
+}
+*/
 /* ---------- regular table styles ---------- */
 table {
 	border: 1px solid blue;
@@ -120,12 +144,13 @@ figure {
 }
 figcaption {
 	text-align: center;
-	color: gray;
-	font-family: NotoSans;
+	color: dimgray;
+	font-family: var(--textFontFamily);
 	font-size: 10pt;
 }
 figcaption a {
-	font-family: NotoSans;
+	/*font-family: NotoSans;*/
+	font-family: var(--textFontFamily);
 	font-size: 10pt;
 }
 
@@ -137,12 +162,12 @@ yel { color: yellow; }
 blk { color: black; }
 gry { color: gray; }
 
+
 /* modified <b> tag to change text color to black */
 b {
 	color: black;
 	font-weight: bold;
 }
-
 /* .ipa class already defined in layout.css */
 /*
 .ipa { 
@@ -334,33 +359,49 @@ div.border {
 	background:white;/**/
 }
 
-/* ------ links ------ */
+/* ------ link sstyles ------ */
 /* all links, both LOCAL and GLOBAL */
+/* LOCAL links - no underline */
 a {
-	color: Indigo;
+	/*color: Indigo;*/
+	color: var(--link-color);
+	text-decoration: underline;
+}
+a:hover {
+	font-weight:bold;
 	text-decoration: none;
 }
 /* GLOBAL links */
 a[href^=http] {
-	color: DarkBlue;
+	/*color: DarkBlue;*/
 	text-decoration: underline;
 }
 /* WIKIPEDIA links */
 a[href^="https://en.wikipedia"] {
-	color: Blue;
+	/*color: Blue;*/
 	text-decoration: underline;
 }
 
-a:hover {
-	font-weight:bold;
-}
 
+/* Example external link symbol: ⤴  ⤴ ⤴ */
+/*  the symbol "⎋" rotated for external links. */
+/*
+a[href^="http://"]:after { 
+    content:"\2197";
+}
+*/
+
+
+/* is it still used? */
 a.locallnk {
 	/*	background: lavender;* /
 	color: DarkMagenta; */
-	color: Indigo;
+	/*color: Indigo;*/
 	padding:3px;
 	border-radius: 7px;
 }
+
+/* ------ other ------ */
+b { color: black; }
 
 /* ------ end ------ */

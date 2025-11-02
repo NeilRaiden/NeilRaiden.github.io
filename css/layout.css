@@ -28,12 +28,42 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height:48px;
-	background: #6A5ACD; /*slateblue*/ 
+	/*height:48px;*/
 	background-color: #6A5ACD; /*slateblue*/
 	font-weight: bold;
 	z-index:1;
 }
+div.hdr {
+	display:flex;
+	gap: 1.5rem;
+}
+div.hdr > * {
+	/*border: 3px solid lime;*/
+	color: white;
+}
+div.hdrlogo {
+	flex-basis: 14ch;
+	padding: 4px 32px;
+	font-size:20px;
+}
+div.hdrsetup {
+	padding: 0px 12px;
+	font-size: 24px;
+}
+div.hdrspacer {
+	flex-grow:1; /* this will "float:right" the elements to the right of spacer */
+}
+div.hdrmenu {
+	padding: 0px 12px;
+	font-size: 24px;
+	/*float: right;*/
+}
+div.hdrmenu:hover, div.hdrsetup:hover {
+	color: black;
+	background-color: white;
+}
+
+/* --- main body for articles, etc --- */
 main {
 	/*display: flex; * /
 	position: relative;  */
@@ -57,6 +87,32 @@ footer {
 	text-align: center;
 	height: 36px;
 }
+div.ftr {
+	display:flex;
+	align-items:center; /* for "display:flex;" */
+	/*vertical-align: middle; / * only in "display:table-cell;"*/
+	/*gap: 1.5rem;*/
+}
+div.ftr > * {
+	/*border: 3px solid lime;*/
+	color: white;
+}
+div.ftrcopy {
+	/*flex-basis: 14ch;*/
+	flex-grow:1;
+	text-align: center;
+	font-size: 10px;
+}
+div.ftrtotop {
+	padding: 0px 12px;
+	font-size: 24px;
+	/*float: right;*/
+}
+div.ftrtotop:hover {
+	color: black;
+	background-color: white;
+}
+
 /* ---------- home & hamburger button/icon ---------- */
 header button {
 	float: left;
@@ -65,7 +121,7 @@ header button {
 	margin: 0;
 	height: 48px;
 	padding: 2px 12px; /*top & bottom = 2 - right & left = 12 */
-	color: white;
+	/*color: white;*/
 	background-color: #6A5ACD; /*slateblue*/
 	font-family: var(--headFontFamily);
 	line-height: 2;
@@ -76,7 +132,7 @@ header button {
 	font-weight: bold;
 }
 header button:hover {
-	color: black;
+	/*color: black;*/
 	background-color: silver; /* #c0c0c0; */
 }
 
