@@ -167,18 +167,6 @@
 }
 
 /* ----------- styles ----------- */
-/*body {*/
-		/*font-family: var(--defaultfont), Noto;*/
-		/*font-family: var(--defaultfont), Segoe; * / for Windows */
-		/*background-color: transparent; */
-		/*background-color: rgba(232, 232, 255, 0.9);*/
-		/*background:none transparent;*/
-		/*opacity: 0.7; */
-		/*opacity: var(--bodyopacity);*/
-		/*text-align: center;*/
-		/*font-size: 10pt;*/
-/*}*/
-
 h1 { text-align: center; }
 h2 { text-align: center; }
 h3 { text-align: center; }
@@ -186,20 +174,13 @@ h4 { text-align: center; }
 h5 { text-align: center; }
 h6 { text-align: center; }
 
-p {
-		font-weight: normal;
-		text-align: left; 
-}
-
+p  { text-align: left; font-weight:normal; }
 ul { text-align: left; font-weight:normal; }
 ol { text-align: left; font-weight:normal; }
 
 textarea {
 		font-family: var(--textareafont); /*, Segoe;*/
-		font-size: 14pt;
-		/* margin:auto doesn't work
-		margin-left: auto;
-		margin-right: auto;*/
+		font-size: var(--textareafontsize);
 		margin-top:10px;
 		margin-bottom:5px;
 }
@@ -242,7 +223,7 @@ td {
 		/* border-style: none none solid none; */
 }
 
-/* buttons  - unused ? */
+/* --- buttons --- */
 button {
 		/*font-family: var(--defaultfont), Noto;
 		font-size: var(--keyfontsize); */
@@ -343,10 +324,12 @@ button {
 		padding-left:5px;
 		text-align:left;
 }
+/*
 .desc b {
 		color:black;
 		font-weight:bold;
 }
+*/
 
 /* --- translation Latin to Shavian table --- */
 .transTable td {
@@ -1378,6 +1361,9 @@ var keysD = emptY;
 			«𐑕𐑲𐑩𐑯𐑑𐑦𐑓𐑦𐑒» 𐑱𐑡.            — <i>·𐑒𐑦𐑙𐑟𐑤𐑦 ·𐑮𐑰𐑛</i>
 		</blockquote -->
 
+<!-- 
+Shaw’s main concern was waste: time lost teaching children and foreigners a system full of irregularities, time lost in writing silent or redundant letters, and the paper and ink thrown away after them. The world would be a better place, he argued, if the alphabet had more letters so that every letter had a precise sound. “If the introduction of an English alphabet for the English language costs a civil war, or even […] a world war, I shall not grudge it,” he wrote. “The waste of war is negligible in comparison to the daily waste of trying to communicate with one another in English through an alphabet with sixteen letters missing. That must be remedied, come what may.”
+ -->
 		<p>
 			In 1958, eight years after Shaw's death in 1950, the competition took place to design such an alphabet and 
 			<a href="https://en.wikipedia.org/wiki/Ronald_Kingsley_Read">Kingsley Read</a>'s system was chosen as the winner out of the 467 entries.
@@ -1660,6 +1646,8 @@ var keysD = emptY;
 				(Unicode range U+10450–U+1047F).</li>
 			<!-- li><a href="https://dechifro.org/shavian/">Converting English text to phonemic script</a></li -->
 			<!-- li><a href="https://readlex.pythonanywhere.com/">ReadLex.pythonanywhere.com</a> — Lating to Shavian converter.</li -->
+				<!-- li><a href="https://nwah.github.io/to-shavian/">Nwah.github.io</a>
+				— Transliterate English to Shavian.</li -->
 		</ul>
 
 	</div>
@@ -1718,7 +1706,7 @@ var keysD = emptY;
 		</p>
 	</div>
 
-	<p>Last updated: 2025-10-31</p> 
+	<p>Last updated: 2025-11-02</p> 
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>

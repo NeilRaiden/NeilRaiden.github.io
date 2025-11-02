@@ -18,13 +18,13 @@
 	<script src="./layout.js"></script>
 
 <style>
-/* global CSS variables */
+/* --- CSS variables specific to this page -- */
 :root {
 		--bodyopacity:  0.8;
 		--spacerwidth: 1px;
 		--keysheight:  28px;
 		--kboardfont: NotoSans;
-		--keyfontsize: 14pt;
+		--keyfontsize: 12pt;
 		--textareafont: NotoSans;
 		--textareafontsize: 14pt;
 }
@@ -36,20 +36,9 @@
 }
 
 /* --------- font faces --------- */
-// HenryHiggins is a Shavian font
-//@font-face {
-//		font-family:Higgins;
-//		src: url('./fonts/HenryHigginsSans-Regular.otf');
-//		src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
-//}
-// Trabajo is a Shavian font
-//@font-face {
-//		font-family:Trabajo;
-//		src: url('./fonts/Trabajo.otf');
-//		src: url('./fonts/Trabajo.otf') format('opentype');
-//}
 
 // --- InterAlia - todo: change style, not font-face
+/*
 @font-face {
 		font-family:IntAliaR;
 		src: url('./fonts/InterAlia-Regular.woff2');
@@ -70,26 +59,10 @@
 		src: url('./fonts/InterAlia-BoldItalic.woff2');
 		src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
 }
-
-// --- Noto fonts - already in ./fonts/fonts.css
-@font-face {
-		font-family:NotoS;
-		src: url('./fonts/NotoSans-Regular.ttf');
-		src: url('./fonts/NotoSans-Regular.ttf') format('truetype');
-}
-// NotoSerif deleted
-//@font-face {
-//		font-family:NotoF;
-//		src: url('./fonts/NotoSerif-Regular.ttf');
-//		src: url('./fonts/NotoSerif-Regular.ttf') format('truetype');
-//}
-
+*/
 
 /* --------- FontTable styles --------- */
-.pHiggins   { font-family: Higgins,   AdobeBlank2; font-size: 14pt; }
 .pNotoS     { font-family: NotoS,     AdobeBlank2; font-size: 14pt; }
-.pNotoF     { font-family: NotoF,     AdobeBlank2; font-size: 14pt; }
-.pTrabajo   { font-family: Trabajo,   AdobeBlank2; font-size: 14pt; }
 
 //.pIntAliaR  { font-family: IntAliaR,  AdobeBlank2; font-size: 14pt; }
 //.pIntAliaI  { font-family: IntAliaI,  AdobeBlank2; font-size: 14pt; }
@@ -120,18 +93,6 @@
 }
 
 /* ----------- styles ----------- */
-/*body {*/
-		/*font-family: var(--defaultfont), Noto;*/
-		/*font-family: var(--defaultfont), Segoe; * / for Windows */
-		/*background-color: transparent; */
-		/*background-color: rgba(232, 232, 255, 0.9);*/
-		/*background:none transparent;*/
-		/*opacity: 0.7; */
-		/*opacity: var(--bodyopacity);*/
-		/*text-align: center;*/
-		/*font-size: 10pt;*/
-/*}*/
-
 h1 { text-align: center; }
 h2 { text-align: center; }
 h3 { text-align: center; }
@@ -162,14 +123,14 @@ textarea {
 		margin-left: auto;
 		margin-right: auto;
 		border-collapse: separate;
-		border: 1px solid black;
+		border: 1px solid #333;
 		border-radius: 5px;
 		background-color: WhiteSmoke; /* #F5F5F5 */ /*Gainsboro; /* #DCDCDC; */
 }
 .rounded-corners td {
 		border-collapse: separate;
 		border-radius: 7px;
-		border: 1px solid black;
+		border: 1px solid #333;
 		width: 12px;
 		height: 12px;
 		text-align: center;
@@ -178,14 +139,14 @@ textarea {
 
 /* --- regular table style --- */
 table {
+		border: 1px solid #333;
 		margin-left: auto;
 		margin-right: auto;
 		border-radius: 7px;
-		border: 1px solid black;
 }
 th { background-color: LightSteelBlue; }
 td {
-		border: 0px solid black;
+		border: 0px solid #333;
 		margin-top: 0px;
 		margin-bottom: 0px;
 		padding-top: 0px;
@@ -195,31 +156,22 @@ td {
 		/* border-style: none none solid none; */
 }
 
-/* buttons  - unused ? */
+/* --- buttons --- */
 button {
-		/*font-family: var(--defaultfont), Noto;
-		font-size: var(--keyfontsize); */
+		font-family: var(--kboardfont);
+		font-size: var(--keyfontsize);
 		font-weight: bold;
 		padding-right: 5px;
 		padding-left: 5px;
 }
 
+/* --- "buttons" of the keyboard --- */
 .bton {
-		/*background-color: Silver;
-		/*Silver; #C0C0C0
-		/*SlateGrey; #708090
-		/*LightSlateGrey; #778899
-		/*LightSteelBlue; #B0C4DE
-		/*LightGray; #D3D3D3 */
-		/*Gray; #808080 */
-		/*DimGray #696969 */
-		/*DarkGrey; #A9A9A9 */
-		/*display: table; */
 		border: none;
 		border-radius: 7px;
-		color: black;
+		color: #333;
 		text-align: center;
-		font-family: var(--kboardfont), NotoSans;
+		font-family: var(--kboardfont);
 		font-size: var(--keyfontsize);
 		font-weight: bold;
 		padding: 5px;
@@ -232,14 +184,13 @@ button {
 		background-color: LightBlue;
 		border: none;
 		border-radius: 7px;
-		color: black;
+		color: #333;
 		text-align: center;
-		font-family: var(--kboardfont), Noto;
+		font-family: var(--kboardfont);
 		font-size: var(--keyfontsize);
 		font-weight: bold;
 		padding: 5px;
 		width: 100%;
-		/*height: 100%;*/
 		height: var(--keysheight);
 		cursor: pointer;
 }
@@ -252,10 +203,10 @@ button {
 /* --- table made of <div> elements --- */
 .divtab {
 		display: table;
+		border-collapse: collapse;
 		width: auto;
 		margin: auto; /* shrink and center */
 		margin-top: 10px;
-		border-collapse: collapse;
 }
 .divrow {
 		display: table-row;
@@ -285,7 +236,7 @@ button {
 }
 .desc p {
 		border: 0px solid magenta;
-/*		width:400px; /* "margin:auto;" for centering fixed-width objects*/
+		/*width:400px; /* "margin:auto;" for centering fixed-width objects*/
 		margin: auto;
 		margin-bottom: 10px;
 		padding-left:5px;
@@ -296,17 +247,19 @@ button {
 		padding-left:5px;
 		text-align:left;
 }
+/*
 .desc b {
 		color:black;
 		font-weight:bold;
 }
+*/
 
 /* --- translation QWERTY to Phonemic table --- */
 .transTable td {
 		text-align: center;
 		font-weight: bold;
 		padding: 3px 3px 3px 3px; /* top right bottom left */
-		font-size:1.2em;
+		font-size:1.1em;
 }
 </style>
 
@@ -729,18 +682,16 @@ function changeFont(selObj) {
 }
 function fontDetector() {
 	const fontFaceSet = document.fonts;
-	const fontList = [ 'HenryHigginsSans-Regular.otf',
+	const fontList = [ 
 		'InterAlia-Regular.woff2',
 		'InterAlia-Italic.woff2',
 		'InterAlia-Bold.woff2',
 		'InterAlia-BoldItalic.woff2',
-		'NotoSans-Regular.ttf',
-		'NotoSerif-Regular.ttf',
-		'Trabajo.otf' ];
-	const fontShortList = [ 'Higgins', 'IntAliaR','IntAliaI','IntAliaB','IntAliaBI','NotoS','NotoF','Trabajo' ];
+		'NotoSans-Regular.ttf' ];
+	const fontShortList = [ 'IntAliaR','IntAliaI','IntAliaB','IntAliaBI','NotoS', ];
 
 	// fontIs are used as ElementIs of <td> in font table:
-	const fontIds = ['higg','alia','alii','alib','albi','nots','notf','trab'];
+	const fontIds = ['alia','alii','alib','albi','nots'];
 	var fontSelector = document.getElementById('fontSelect').getElementsByTagName("option");
 
 	for ( let i=0; i<fontIds.length; i++ ) {
@@ -1211,7 +1162,6 @@ var keysD = phonUSD;
 			<tr> <!-- changeFont() -->
 				<td colspan="4" style="text-align:center;width:100%;">
 					<select id="fontSelect" name="Select font" onchange="changeFont(this)">
-						<option value="Higgins"   >HenryHigginsSans-Regular.otf</option>
 						<option value="IntAliaR"  >InterAlia-Regular.ttf</option>
 						<option value="IntAliaI"  >InterAlia-Italic.ttf</option>
 						<option value="IntAliaB"  >InterAlia-Bold.ttf</option>
@@ -1229,22 +1179,21 @@ var keysD = phonUSD;
 	<div id="fontsTable" class="divtab" style="display:none;">
 		<h4>Fonts used by this keyboard</h4>
 		<table style="font-weight:normal;font-size:14pt;margin-bottom:5px;">
-			<tr><td id="higg">?</td><td>HenryHigginsSans-Regular.otf</td>
-				<td class="pHiggins">the five boxing wizards jump quickly<br>THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
-			<tr><td id="alia">?</td><td>InterAlia-Regular.woff2</td>
-				<td class="pIntAliaR">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="alii">?</td><td>InterAlia-Italic.woff2</td>
-				<td class="pIntAliaI">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="alib">?</td><td>InterAlia-Bold.woff2</td>
-				<td class="pIntAliaB">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="albi">?</td><td>InterAlia-BoldItalic.woff2</td>
-				<td class="pIntAliaBI">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="nots">?</td><td>NotoSans-Regular.ttf</td>
-				<td class="pNotoS">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="notf">?</td><td>NotoSerif-Regular.ttf</td>
-				<td class="pNotoF">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="trab">?</td><td>Trabajo.otf</td>
-				<td class="pTrabajo">the five boxing wizards jump quickly</td></tr>
+			<tr><td id="alia">?</td><td>InterAlia-Regular</td>
+				<td class="pIntAliaR">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="alii">?</td><td>InterAlia-Italic</td>
+				<td class="pIntAliaI">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="alib">?</td><td>InterAlia-Bold</td>
+				<td class="pIntAliaB">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="albi">?</td><td>InterAlia-BoldItalic</td>
+				<td class="pIntAliaBI">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="nots">?</td><td>NotoSans-Regular</td>
+				<td class="pNotoS">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
 		</table>
 		<button onclick="fontDetector()">Reload fonts</button>
 
@@ -1283,7 +1232,7 @@ var keysD = phonUSD;
 		-->
 	</div>
 
-	<h4>Download</h4>
+	<h4>Downloads</h4>
 	<table class="downl">
 		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
 		<tr>
@@ -1709,7 +1658,7 @@ var keysD = phonUSD;
 		</table>
 	</div>
 
-	<p>Last updated: 2025-10-31</p>
+	<p>Last updated: 2025-11-02</p>
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>
