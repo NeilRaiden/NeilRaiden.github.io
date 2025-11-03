@@ -21,12 +21,16 @@ const menuItems = [
 //   	'<button style="padding:0px 12px;font-size:24px;float:right" onclick="toggleBlock(\'menuLinks\')">&#x2630;</button>\n' ];
 
 // version 2 (flex):
+// todo: separate pageSetup and fontSetup, use icon: ⓕ  ⒡  ḟ ƒ f ℱ Ḟ ₣ ℉ F
+// ⓕ   - Html Hex &#x24d5; Html Decimal &#9429;
+// ℱA  - Html Hex &#x2131; Html Decimal &#8497;
+
 const headerHtml = [
 	'<div class="hdr">',
-	'<div class="hdrlogo"  onclick="location.href=\'./index.html\'">NeilRaiden.com</div>\n',
-	'<div class="hdrsetup" onclick="toggleBlock(\'pageSetup\')"><span title="Styles &amp; preferences">&#x2699;</span></div>\n',
-	'<div class="hdrspacer">&nbsp;</div>',
-	'<div class="hdrmenu"  onclick="toggleBlock(\'menuLinks\')">&#x2630;</div>\n', 
+	'<div class="hlogo"  onclick="location.href=\'./index.html\'">NeilRaiden.com</div>\n',
+	'<div class="hsetup" id="pageSetupBtn" onclick="toggleSetup(\'pageSetup\')"><span title="Styles &amp; preferences">&#x2699;</span></div>\n',
+	'<div class="hspacer">&nbsp;</div>',
+	'<div class="hmenu"  id="menuLinksBtn" onclick="toggleHmenu(\'menuLinks\')">&#x2630;</div>\n', 
 	'</div>' ];
 
 //	// version 1 (button):
@@ -44,7 +48,7 @@ const footerHtml = [
 	'<div class="ftrtotop" onclick="toTop()"><span title="Return to top">TOP &#x2B06;</span></div>\n',
 	'</div>' ];
 
-
+/* old:
 const styleSetupHtml = [
 '<div class="grid-container">',
 '	<div>Text font size:</div>',
@@ -68,6 +72,42 @@ const styleSetupHtml = [
 '	<div id="wordSpc">1px</div>',
 '	<div><button class="pgSetup" onclick="changeWordSpace(1)"> + </button></div>',
 '</div>' ];
+*/
+
+const styleSetupHtml = [
+'<table class="pgSetupTb">',
+'	<tr>',
+'		<td>Text font size:</td>',
+'		<td><button class="pgSetup" onclick="changeTxtFontSize(-1)"> - </button></td>',
+'		<td id="textSize">11pt</td>',
+'		<td><button class="pgSetup" onclick="changeTxtFontSize(1)"> + </button></td>',
+'	</tr>',
+'	<tr>',
+'		<td>Headings font size:</td>',
+'		<td><button class="pgSetup" onclick="changeHeadFontSize(-1)"> - </button></td>',
+'		<td id="headSize">28pt</td>',
+'		<td><button class="pgSetup" onclick="changeHeadFontSize(1)"> + </button></td>',
+'	</tr>',
+'	<tr>',
+'		<td>IPA symbols font size:</td>',
+'		<td><button class="pgSetup" onclick="changeIPAFontSize(-1)"> - </button></td>',
+'		<td id="ipaSize">12pt</td>',
+'		<td><button class="pgSetup" onclick="changeIPAFontSize(1)"> + </button></td>',
+'	</tr>',
+'	<tr>',
+'		<td>Line spacing:</td>',
+'		<td><button class="pgSetup" onclick="changeLineHeight(-0.1)"> - </button></td>',
+'		<td id="lineHigh">1.4</td>',
+'		<td><button class="pgSetup" onclick="changeLineHeight(0.1)"> + </button></td>',
+'	</tr>',
+'	<tr>',
+'		<td>Word spacing:</td>',
+'		<td><button class="pgSetup" onclick="changeWordSpace(-1)"> - </button></td>',
+'		<td id="wordSpc">1px</td>',
+'		<td><button class="pgSetup" onclick="changeWordSpace(1)"> + </button></td>',
+'	</tr>',
+'</table>' ];
+
 
 // ---------- functions ----------
 function insertHTML(htmlCode) {
@@ -83,13 +123,14 @@ function insertNavBar() {
 		code += '</ul>\n</div>\n';
 	document.write(code);
 }
-
-// this function is called from  webPageSetup() - see below
+/*
+// OLD (switched to <table>): this function is called from  webPageSetup() - see below
 function insertFontPickers(path) {
-//	let code = '<div id="fontPick" class="modal">\n';
+	//	let code = '<div id="fontPick" class="modal">\n';
+	//let path = '';
 	let	code = '<div class="grid-container" style="grid-template-columns: auto auto;">\n';
 
-// font picker for ordinary text:
+	// font picker for ordinary text:
 		code += '	<div><a href="' + path + 'fonts.html">Text font</a>:</div>\n';
 		code += '	<div><select id="textFontSelect" name="Select text font" onchange="changeTextFont(this)">\n';
 		//code += '	<div><select id="textFontSelect" name="Select text font" onchange="changeFont(this,\'--fontFamilyText\')">\n';
@@ -101,7 +142,7 @@ function insertFontPickers(path) {
 	}
 	code += '	</select></div>\n';
 
-// font picker for text with IPA symbols:
+	// font picker for text with IPA symbols:
 		code += '	<div><a href="' + path + 'fonts.html">IPA font</a>:</div>\n';
 		code += '	<div><select id="ipaFontSelect" name="Select text font" onchange="changeIpaFont(this)">\n';
 		//code += '	<div><select id="ipaFontSelect" name="Select text font" onchange="changeFont(this,\'--fontFamilyIPA\')">\n';
@@ -113,7 +154,7 @@ function insertFontPickers(path) {
 	}
 	code += '	</select></div>\n';
 
-// font picker for headings only (h1, h2, ..., h6)
+	// font picker for headings only (h1, h2, ..., h6)
 	code += '	<div><a href="' + path + 'fonts.html">Header font</a>:</div>\n';
 	code += '	<div><select id="headFontSelect" name="Select header font" onchange="changeHeadFont(this)">\n';
 	//code += '	<div><select id="headFontSelect" name="Select header font" onchange="changeFont(this,\'--fontFamilyHead\')">\n';
@@ -126,11 +167,54 @@ function insertFontPickers(path) {
 
 	code += '	</select></div>\n';
 	code += '</div> <!-- endof: grid-container -->\n';
-//	code += '</div>\n';
+	//	code += '</div>\n';
 	
 	document.write(code);
 }
+*/
 
+// NEW (switched to <table>): this function is called from  webPageSetup() - see below
+function insertFontPickers(path) {
+	// OLD: let	code = '<div class="grid-container" style="grid-template-columns: auto auto;">\n';
+	let	code = '<table class="pgSetupTb">\n<tr>\n';
+
+	// font picker for ordinary text:
+		code += '	<td><a href="' + path + 'fonts.html">Text font</a>:</td>\n';
+		code += '	<td><select id="textFontSelect" name="Select text font" onchange="changeTextFont(this)">\n';
+
+	for (let i in fontList) {
+		code += '<option value="' + fontList[i].name + '"';
+		if ( fontList[i].name == textFontFamily ) { code += ' selected="selected"'; }
+		code += '>' + fontList[i].name + '</option>\n';
+	}
+	code += '	</select></td>\n</tr>';
+
+	// font picker for text with IPA symbols:
+		code += '	<tr>\n<td><a href="' + path + 'fonts.html">IPA font</a>:</td>\n';
+		code += '	<td><select id="ipaFontSelect" name="Select text font" onchange="changeIpaFont(this)">\n';
+
+	for (let i in fontList) {
+		code += '<option value="' + fontList[i].name + '"';
+		if ( fontList[i].name == ipaFontFamily ) { code += ' selected="selected"'; }
+		code += '>' + fontList[i].name + '</option>\n';
+	}
+	code += '	</select></td>\n</tr>';
+
+	// font picker for headings only (h1, h2, ..., h6)
+	code += '	<tr>\n<td><a href="' + path + 'fonts.html">Header font</a>:</td>\n';
+	code += '	<td><select id="headFontSelect" name="Select header font" onchange="changeHeadFont(this)">\n';
+
+	for (let i in fontList) {
+		code += '<option value="' + fontList[i].name + '"';
+		if ( fontList[i].name == headFontFamily ) { code += ' selected="selected"'; }
+		code += '>' + fontList[i].name + '</option>';
+	}
+
+	code += '	</select></td>\n';
+	code += '</tr>\n</table>\n';
+	
+	document.write(code);
+}
 function fontsCompareTable() {
 	let tdstyle = "";
 	let code = '<table><tr><th>Font Name</th><th>Digits</th><th>agy</th><th>alphabet</th><th>ALPHABET</th><th>Icons</th></tr>\n';
@@ -141,7 +225,8 @@ function fontsCompareTable() {
 		code += tdstyle + 'agy</td>';
 		code += tdstyle + 'abcdefghijklmnopqrstuvwxyz</td>';
 		code += tdstyle + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>';
-		code += tdstyle + '&#x2b06; &#x1f51d; &#x2630; &#x2699;</td></tr>\n';
+		code += tdstyle + '&#x2b06; &#x1f51d; &#x2630; &#x2699;</td>';
+		code += tdstyle + '</tr>\n';
 	}
 	code += '</table>\n';
 	document.write(code);
@@ -165,7 +250,48 @@ function toggleBlock(blockName) {
   }
 }
 
+/* toggle Site Preferences (Setup) */
+function toggleSetup(name) {
+	//toggleBlock(pageSetup);
+	let x = document.getElementById(name);
+	let y = document.getElementById(name + "Btn");
+	if (x.style.display === "block") {
+		x.style.display = "none";
+		// when modifying style, after one use "class:hover" stops working
+		// use y.className instead.
+		//y.style.color = "white";
+		//y.style.backgroundColor = "slateblue";
+		y.className = "hsetup";
+	} else {
+		x.style.display = "block";
+		//y.style.color = "black";
+		//y.style.backgroundColor = "white";
+		y.className = "hspres";
+	}
+}
+
+/* toggle Site Preferences (Setup) */
+function toggleHmenu(name) {
+	//toggleBlock(pageSetup);
+	let x = document.getElementById(name);
+	let y = document.getElementById(name + "Btn");
+	if (x.style.display === "block") {
+		x.style.display = "none";
+		// when modifying style, after one use "class:hover" stops working
+		// use y.className instead.
+		//y.style.color = "white";
+		//y.style.backgroundColor = "slateblue";
+		y.className = "hmenu";
+	} else {
+		x.style.display = "block";
+		//y.style.color = "black";
+		//y.style.backgroundColor = "white";
+		y.className = "hmpres";
+	}
+}
+
 /* Toggle navigation menu - the hamburger menu on top bar */
+/* UNUSED !!! */
 function flexBlock(blockName) {
   let x = document.getElementById(blockName);
   if (x.style.display === "flex") {

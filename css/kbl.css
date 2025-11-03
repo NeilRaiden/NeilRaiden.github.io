@@ -1,0 +1,173 @@
+/* ------ CSS styles for pages with virtual keyboards ------ */
+:root {
+		--bodyopacity:  0.8;
+		--spacerwidth: 1px;
+		--keysheight:  28px;
+		--kboardfont: NotoSans;
+		--keyfontsize: 12pt;
+		--textareafont: NotoSans;
+		--textareafontsize: 14pt;
+}
+
+/* ----------- styles ----------- */
+h1 { text-align: center; }
+h2 { text-align: center; }
+h3 { text-align: center; }
+h4 { text-align: center; }
+h5 { text-align: center; }
+h6 { text-align: center; }
+
+p  { text-align: left; font-weight: normal; }
+ul { text-align: left; font-weight: normal; }
+ol { text-align: left; font-weight: normal; }
+
+/* --- textarea for testing kb layouts --- */
+textarea {
+		font-family: var(--textareafont); /*, Segoe;*/
+		font-size: var(--textareafontsize);
+		margin-top:10px;
+		margin-bottom:5px;
+}
+
+/* --- keyboard styles --- */
+/* used only by the virtual keyboard */
+.rounded-corners {
+		margin-left: auto;
+		margin-right: auto;
+		border-collapse: separate;
+		border: 1px solid #333;
+		/*border: 1px solid black;*/
+		border-radius: 5px;
+		background-color: WhiteSmoke;
+}
+.rounded-corners tr.trSpacer td {
+		width: var(--spacerwidth);
+		height: 0px;
+		border: 0px;
+		padding: 0px;
+}
+.rounded-corners td {
+		border-collapse: separate;
+		border-radius: 7px;
+		border: 1px solid #333;
+		/*border: 1px solid black;*/
+		width: 12px;
+		height: 12px;
+		text-align: center;
+		background-color: Silver;
+}
+
+/* --- regular table style --- */
+/* used by optionsTable and fontsTable */
+table.optfonts {
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 7px;
+		border: 1px solid #333;
+}
+table.optfonts th { background-color: LightSteelBlue; }
+table.optfonts td {
+		border: 0px solid #333;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		text-align: left;
+		font-size: 10pt;
+		/* border-style: none none solid none; */
+}
+
+/* --- regular buttons --- */
+button {
+		/*font-family: var(--kboardfont);*/
+		/*font-size: var(--keyfontsize);*/
+		font-family: var(--textFontFamily);
+		font-size: var(--textFontSize);
+		font-weight: bold;
+		padding-right: 5px;
+		padding-left: 5px;
+}
+
+/* --- "buttons" of the keyboard --- */
+.bton {
+		border: none;
+		border-radius: 7px;
+		color: #333;
+		text-align: center;
+		font-family: var(--kboardfont);
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		height: var(--keysheight);
+		cursor: pointer;
+}
+.bton:hover { background-color: RoyalBlue; }
+.btonpressed {
+		background-color: LightBlue;
+		border: none;
+		border-radius: 7px;
+		color: #333;
+		text-align: center;
+		font-family: var(--kboardfont);
+		font-size: var(--keyfontsize);
+		font-weight: bold;
+		padding: 5px;
+		width: 100%;
+		height: var(--keysheight);
+		cursor: pointer;
+}
+
+/* --- table made of <div> elements --- */
+/* used by optionsTable, fontsTable  */
+.divtab {
+		display: table;
+		border-collapse: collapse;
+		width: auto;
+		margin: auto; /* shrink and center */
+		margin-top: 10px;
+}
+.divrow {
+		display: table-row;
+}
+.divcell {
+		display: table-cell;
+		border: 0px solid #ddd;
+}
+.divcellch {
+		display: table-cell;
+		padding: 3px;
+		border: 0px solid #ddd;
+		font-size:14pt;
+		font-weight:bold;
+}
+
+/* --- kb layout description --- */
+.desc {
+		display: flex;
+		/*align-items: center;*/
+		justify-content: center;
+		/*text-align:center;*/
+		/*width: 100%;*/
+		/*border:1px solid blue;*/
+		/*padding-left:10px;*/
+		/*font-size:11pt;*/
+		margin-top: 10px;
+}
+.desc p {
+		border: 0px solid magenta;
+		/*width:400px; /* "margin:auto;" for centering fixed-width objects*/
+		margin: auto;
+		margin-bottom: 10px;
+		padding-left:5px;
+}
+.desc blockquote {
+		margin-left:15px;
+		border-left:3px solid silver;
+		padding-left:5px;
+		text-align:left;
+}
+/*
+.desc b { color:black; font-weight:bold; }
+*/
+

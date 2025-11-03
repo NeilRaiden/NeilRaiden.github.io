@@ -41,24 +41,38 @@ div.hdr > * {
 	/*border: 3px solid lime;*/
 	color: white;
 }
-div.hdrlogo {
+/*
+             ┌────────────────┬──────┬─────────┬─────┐
+             │ NeilRaiden.com │   ⚙  │         │  ☰  │
+             ├────────────────┼──────┼─────────┼─────┤
+class:         hlogo           hsetup  hspacer  hmenu
+class:hover
+pressed:                       hspres           hmpres
+*/
+.hlogo {
 	flex-basis: 14ch;
-	padding: 4px 32px;
+	padding: 4px 12px;
 	font-size:20px;
 }
-div.hdrsetup {
+.hsetup {
 	padding: 0px 12px;
 	font-size: 24px;
 }
-div.hdrspacer {
+.hspacer {
 	flex-grow:1; /* this will "float:right" the elements to the right of spacer */
 }
-div.hdrmenu {
+.hmenu {
 	padding: 0px 12px;
 	font-size: 24px;
 	/*float: right;*/
 }
-div.hdrmenu:hover, div.hdrsetup:hover {
+.hspres, .hmpres {
+	padding: 0px 12px;
+	font-size: 24px;
+	background-color: lavender;
+	color: black;
+}
+.hsetup:hover, .hmenu:hover {
 	color: black;
 	background-color: white;
 }
@@ -205,14 +219,23 @@ nav a:hover {
 	margin: auto;
 	padding: 1px;
 }
-/* grid container for styles dialog */
+table.pgSetupTb {
+	background-color: white;
+}
+table.pgSetupTb td {
+	color: black;
+	background-color: lavender;
+	border-collapse: collapse;
+}
+
+/* grid container for styles dialog - not used anymore - switched to <table>*/
 .grid-container {
 	display: grid;
 	width: 420px;
 	grid-template-columns: auto auto auto auto;
 	gap: 1px;
 	/*background-color: gray; */
-	background-color: dodgerblue;
+	/*background-color: dodgerblue;*/
 	padding: 1px 1px;
 	align-items: center;
 }

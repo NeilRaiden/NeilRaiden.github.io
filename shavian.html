@@ -14,27 +14,18 @@
 	<link rel="stylesheet" href="./fonts/fonts.css">
 	<link rel="stylesheet" href="./css/layout.css">
 	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/adobeblank.css">
+	<link rel="stylesheet" href="./css/kbl.css">
+
 	<script src="./fonts/fontlist.js"></script>
 	<script src="./layout.js"></script>
 
 <style>
 /* global CSS variables */
 :root {
-		--bodyopacity:  0.8;
-		--spacerwidth: 1px;
-		--keysheight:  28px;
 		--kboardfont: Higgins;
-		--keyfontsize: 14pt;
 		--textareafont: Higgins;
-		--textareafontsize: 14pt;
 }
-
-/* Adobe Blank 2 from */
-@font-face {
-    font-family: AdobeBlank2;
-    src: url("data:font/opentype;base64,T1RUTwAKAIAAAwAgQ0ZGIN6nWacAAAfMAAABMURTSUcAAAABAAAJCAAAAAhPUy8yAF+xmwAAARAAAABgY21hcAE0tLwAAAasAAABAGhlYWQIOsNZAAAArAAAADZoaGVhB1oD7wAAAOQAAAAkaG10eAPoAHwAAAkAAAAACG1heHAAAlAAAAABCAAAAAZuYW1lc0mXUAAAAXAAAAU6cG9zdP+4ADIAAAesAAAAIAABAAAAAgBB1Q6SE18PPPUAAwPoAAAAANKdP6AAAAAA0p0/oAB8/4gDbANwAAAAAwACAAAAAAAAAAEAAANw/4gAAAPoAHwAfANsAAEAAAAAAAAAAAAAAAAAAAACAABQAAACAAAAAwPoAZAABQAAAooCWAAAAEsCigJYAAABXgAyANwAAAAAAAAAAAAAAAD3/67/+9///w/gAD8AAAAAQURCTwBAAAD//wNw/4gAAANwAHhgLwH/AAAAAAAAAAAAAAAgAAAAAAALAIoAAwABBAkAAACUAAAAAwABBAkAAQAaAJQAAwABBAkAAgAOAK4AAwABBAkAAwA4ALwAAwABBAkABAAaAJQAAwABBAkABQB0APQAAwABBAkABgAWAWgAAwABBAkACAA0AX4AAwABBAkACwA0AbIAAwABBAkADQKWAeYAAwABBAkADgA0BHwAQwBvAHAAeQByAGkAZwBoAHQAIACpACAAMgAwADEAMwAsACAAMgAwADEANQAgAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgACgAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAGEAZABvAGIAZQAuAGMAbwBtAC8AKQAuAEEAZABvAGIAZQAgAEIAbABhAG4AawAgADIAUgBlAGcAdQBsAGEAcgAyAC4AMAAwADEAOwBBAEQAQgBPADsAQQBkAG8AYgBlAEIAbABhAG4AawAyADsAQQBEAE8AQgBFAFYAZQByAHMAaQBvAG4AIAAyAC4AMAAwADEAOwBQAFMAIAAyAC4AMAAwADEAOwBoAG8AdABjAG8AbgB2ACAAMQAuADAALgA4ADgAOwBtAGEAawBlAG8AdABmAC4AbABpAGIAMgAuADUALgA2ADUAMAAxADIAQQBkAG8AYgBlAEIAbABhAG4AawAyAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZABoAHQAdABwADoALwAvAHcAdwB3AC4AYQBkAG8AYgBlAC4AYwBvAG0ALwB0AHkAcABlAC8AVABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIABpAHMAIABsAGkAYwBlAG4AcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAFMASQBMACAATwBwAGUAbgAgAEYAbwBuAHQAIABMAGkAYwBlAG4AcwBlACwAIABWAGUAcgBzAGkAbwBuACAAMQAuADEALgAgAFQAaABpAHMAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACAAaQBzACAAZABpAHMAdAByAGkAYgB1AHQAZQBkACAAbwBuACAAYQBuACAAIgBBAFMAIABJAFMAIgAgAEIAQQBTAEkAUwAsACAAVwBJAFQASABPAFUAVAAgAFcAQQBSAFIAQQBOAFQASQBFAFMAIABPAFIAIABDAE8ATgBEAEkAVABJAE8ATgBTACAATwBGACAAQQBOAFkAIABLAEkATgBEACwAIABlAGkAdABoAGUAcgAgAGUAeABwAHIAZQBzAHMAIABvAHIAIABpAG0AcABsAGkAZQBkAC4AIABTAGUAZQAgAHQAaABlACAAUwBJAEwAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUAIABmAG8AcgAgAHQAaABlACAAcwBwAGUAYwBpAGYAaQBjACAAbABhAG4AZwB1AGEAZwBlACwAIABwAGUAcgBtAGkAcwBzAGkAbwBuAHMAIABhAG4AZAAgAGwAaQBtAGkAdABhAHQAaQBvAG4AcwAgAGcAbwB2AGUAcgBuAGkAbgBnACAAeQBvAHUAcgAgAHUAcwBlACAAbwBmACAAdABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUALgBoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAAEAAwAKAAAADAANAAAAAAD0AAAAAAAAABMAAAAAAADX/wAAAAEAAOAAAAD9zwAAAAEAAP3wAAD//QAAAAEAAQAAAAH//QAAAAEAAgAAAAL//QAAAAEAAwAAAAP//QAAAAEABAAAAAT//QAAAAEABQAAAAX//QAAAAEABgAAAAb//QAAAAEABwAAAAf//QAAAAEACAAAAAj//QAAAAEACQAAAAn//QAAAAEACgAAAAr//QAAAAEACwAAAAv//QAAAAEADAAAAAz//QAAAAEADQAAAA3//QAAAAEADgAAAA7//QAAAAEADwAAAA///QAAAAEAEAAAABD//QAAAAEAAwAAAAAAAP+1ADIAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAIAAQEBDEFkb2JlQmxhbmsyAAEBAS34G/gciwwe+B0B+B4Ci/sM+gD6BAUeKgAfDB+NDCL3Uw/3WRH3Vgwl96wMJAAFAQEGDlZjcEFkb2JlSWRlbnRpdHlDb3B5cmlnaHQgMjAxMywgMjAxNSBBZG9iZSBTeXN0ZW1zIEluY29ycG9yYXRlZCAoaHR0cDovL3d3dy5hZG9iZS5jb20vKS5BZG9iZSBCbGFuayAyQWRvYmVCbGFuazItMgAAAAABAAAAAAIBAUxO+nz7DLf6JLcB9xC3+Sy3A/cQ+gQV/nz5hPp8B/1Y/icV+dIH98X8MwWmsBX7xfg3Bfj2BqZiFf3SB/vF+DMFcGYV98X8NwX89gYOiw4AAQEBCfgfDCaX97kS+46LHAVGiwa9Cr0LAAAAA+gAfAAAAAAAAAABAAAAAA==");
-}
-
 
 /* --------- Shavian font faces --------- */
 @font-face {
@@ -68,6 +59,11 @@
 		src: url('./fonts-shavian/FairfaxHD.ttf') format('truetype');
 }
 @font-face {
+		font-family:Higgins;
+		src: url('./fonts-Shavian/HenryHigginsSans-Regular.otf');
+		src: url('./fonts-Shavian/HenryHigginsSans-Regular.otf') format('opentype');
+}
+@font-face {
 		font-family:MPH;
 		src: url('./fonts-shavian/MPH-2B-Damase_v2.ttf');
 		src: url('./fonts-shavian/MPH-2B-Damase_v2.ttf') format('truetype');
@@ -88,41 +84,20 @@
 		src: url('./fonts-shavian/Trabajo.otf') format('opentype');
 }
 
-@font-face {
-		font-family:Higgins;
-		src: url('./fonts-Shavian/HenryHigginsSans-Regular.otf');
-		src: url('./fonts-Shavian/HenryHigginsSans-Regular.otf') format('opentype');
-}
-
 /* --- shavian fonts in the main "./fonts" directory:
-//@font-face {
-//		font-family:IntAliaR;
-//		src: url('./fonts/InterAlia-Regular.woff2');
-//		src: url('./fonts/InterAlia-Regular.woff2') format('woff2');
-//}
-//@font-face {
-//		font-family:IntAliaI;
-//		src: url('./fonts/InterAlia-Italic.woff2');
-//		src: url('./fonts/InterAlia-Italic.woff2') format('woff2');
-//}
-//@font-face {
-//		font-family:IntAliaB;
-//		src: url('./fonts/InterAlia-Bold.woff2');
-//		src: url('./fonts/InterAlia-Bold.woff2') format('woff2');
-//}
-//@font-face {
-//		font-family:IntAliaBI;
-//		src: url('./fonts/InterAlia-BoldItalic.woff2');
-//		src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
-//}
+InterAlia
+NonoSans
+*/
 
 /* SegoeUI-Historic is only on Microsoft Windows machines */
-//@font-face {
-//	font-family:Segoe;
-//	src: url('./fonts/SegoeUI-Historic.ttf');
-//	src: url('c:/Windows/Fonts/seguihis.ttf');
-//	src: url(c:/Windows/Fonts/seguihis.ttf) format('truetype');
-//}
+/*
+@font-face {
+	font-family:Segoe;
+	src: url('./fonts/SegoeUI-Historic.ttf');
+	src: url('c:/Windows/Fonts/seguihis.ttf');
+	src: url(c:/Windows/Fonts/seguihis.ttf) format('truetype');
+}
+*/
 
 /* ---- Shavian fonts table ------ */
 .pAndagii   { font-family: Andagii,    AdobeBlank2; font-size: 14pt; }
@@ -137,11 +112,6 @@
 .pNotoSh    { font-family: NotoShavian, NotoS, AdobeBlank2; font-size: 14pt; }
 .pTrabajo   { font-family: Trabajo,    AdobeBlank2; font-size: 14pt; }
 //.pSegoe     { font-family: Segoe,    AdobeBlank2; font-size: 14pt; }
-
-//.pIntAliaR  { font-family: IntAliaR,  AdobeBlank2; font-size: 14pt; }
-//.pIntAliaI  { font-family: IntAliaI,  AdobeBlank2; font-size: 14pt; }
-//.pIntAliaB  { font-family: IntAliaB,  AdobeBlank2; font-size: 14pt; }
-//.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2; font-size: 14pt; }
 
 .pIntAliaR  {
 	font-family: InterAlia,   AdobeBlank2;
@@ -166,182 +136,17 @@
 	font-style: italic;
 }
 
-/* ----------- styles ----------- */
-h1 { text-align: center; }
-h2 { text-align: center; }
-h3 { text-align: center; }
-h4 { text-align: center; }
-h5 { text-align: center; }
-h6 { text-align: center; }
-
-p  { text-align: left; font-weight:normal; }
-ul { text-align: left; font-weight:normal; }
-ol { text-align: left; font-weight:normal; }
-
-textarea {
-		font-family: var(--textareafont); /*, Segoe;*/
-		font-size: var(--textareafontsize);
-		margin-top:10px;
-		margin-bottom:5px;
-}
-
-/* --- keyboard styles --- */
-.rounded-corners {
-		margin-left: auto;
-		margin-right: auto;
-		border-collapse: separate;
-		border: 1px solid black;
-		border-radius: 5px;
-		background-color: WhiteSmoke; /* #F5F5F5 */ /*Gainsboro; /* #DCDCDC; */
-}
-.rounded-corners td {
-		border-collapse: separate;
-		border-radius: 7px;
-		border: 1px solid black;
-		width: 12px;
-		height: 12px;
-		text-align: center;
-		background-color: Silver;
-}
-
-/* --- regular table style --- */
-table {
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 7px;
-		border: 1px solid black;
-}
-th { background-color: LightSteelBlue; }
-td {
-		border: 0px solid black;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		padding-top: 0px;
-		padding-bottom: 0px;
-		text-align: left;
-		font-size: 10pt;
-		/* border-style: none none solid none; */
-}
-
-/* --- buttons --- */
-button {
-		/*font-family: var(--defaultfont), Noto;
-		font-size: var(--keyfontsize); */
-		font-weight: bold;
-		padding-right: 5px;
-		padding-left: 5px;
-}
-
-.bton {
-		/*background-color: Silver;
-		/*Silver; #C0C0C0
-		/*SlateGrey; #708090
-		/*LightSlateGrey; #778899
-		/*LightSteelBlue; #B0C4DE
-		/*LightGray; #D3D3D3 */
-		/*Gray; #808080 */
-		/*DimGray #696969 */
-		/*DarkGrey; #A9A9A9 */
-		/*display: table; */
-		border: none;
-		border-radius: 7px;
-		color: black;
-		text-align: center;
-		font-family: var(--kboardfont);
-		font-size: var(--keyfontsize);
-		font-weight: bold;
-		padding: 5px;
-		width: 100%;
-		height: var(--keysheight);
-		cursor: pointer;
-}
-.bton:hover { background-color: RoyalBlue; }
-.btonpressed {
-		background-color: LightBlue;
-		border: none;
-		border-radius: 7px;
-		color: black;
-		text-align: center;
-		font-family: var(--kboardfont), Noto;
-		font-size: var(--keyfontsize);
-		font-weight: bold;
-		padding: 5px;
-		width: 100%;
-		/*height: 100%;*/
-		height: var(--keysheight);
-		cursor: pointer;
-}
-.trSpacer td {
-		width: var(--spacerwidth);
-		height: 0px;
-		border: 0px;
-}
-
-/* --- table made of <div> elements --- */
-.divtab {
-		display: table;
-		width: auto;
-		margin: auto; /* shrink and center */
-		margin-top: 10px;
-		border-collapse: collapse;
-}
-.divrow {
-		display: table-row;
-}
-.divcell {
-		display: table-cell;
-		border: 0px solid #ddd;
-}
-.divcellch {
-		display: table-cell;
-		padding: 3px;
-		border: 0px solid #ddd;
-		font-size:14pt;
-		font-weight:bold;
-}
-
-/* --- kb layout description --- */
-.desc {
-		display: flex;
-		/*align-items: center;*/
-		justify-content: center;
-		text-align:center;
-		/*width: 100%;*/
-		/*border:1px solid blue;*/
-		/*padding-left:10px;*/
-		/*font-size:11pt;*/
-}
-.desc p {
-		border: 0px solid magenta;
-/*		width:400px; /* "margin:auto;" for centering fixed-width objects*/
-		margin: auto;
-		margin-bottom: 10px;
-		padding-left:5px;
-}
-.desc blockquote {
-		margin-left:15px;
-		border-left:3px solid silver;
-		padding-left:5px;
-		text-align:left;
-}
-/*
-.desc b {
-		color:black;
-		font-weight:bold;
-}
-*/
-
 /* --- translation Latin to Shavian table --- */
-.transTable td {
+table.transTable td {
 		text-align: center;
 		font-weight: bold;
 		padding: 3px 3px 3px 3px; /* top right bottom left */
 		font-size:1.2em;
 }
-.transTable .Shavian td {
+table.transTable .Shavian td {
 		color: red;
 }
-.transTable .shawIpa td {
+table.transTable .shawIpa td {
 		color: silver;
 		font-style:italic;
 }
@@ -795,10 +600,10 @@ var keysD = emptY;
 <!-- Top Navigation Menu -->
 <nav><script>insertNavBar();</script></nav>
 <!-- hidden page with controls to personalize styles -->
-<div id="pageSetup"><script>webPageSetup();</script></div>
+<div id="pageSetup"><script>webPageSetup('');</script></div>
 <main>
 
-<!-- textArea -->
+	<!-- textArea -->
 	<div class="cen">
 		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
 	</div>
@@ -1284,429 +1089,428 @@ var keysD = emptY;
 		-->
 	</div>
 
-	<h4>Download</h4>
+	<h4>Downloads</h4>
 	<table class="downl">
 		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
 		<tr>
 			<td>Shaw QWERTY</td>
-			<td><a href="./downloads/macOS/ShawQWERTY.dmg">ShawQWERTY.dmg</a></td>
+			<td><a href="./downloads/macOS/ShawQWERTY.dmg">ShawQWERTY.dmg &#x2913;</a></td>
 			<td>(coming soon)</td>
 			<td>(coming soon)</td>
 		</tr>
 		<tr>
 			<td>Shaw Imperial</td>
-			<td><a href="./downloads/macOS/ShawImperial.dmg">ShawImperial.dmg</a></td>
+			<td><a href="./downloads/macOS/ShawImperial.dmg">ShawImperial.dmg &#x2913;</a></td>
 			<td>(coming soon)</td>
 			<td>(coming soon)</td>
 		</tr>
 	</table>
 
 	<!-- Layout descriptions -->
-	<div id="shawQwertyDesc" class="desc" style="display:block;">
+	<details><summary>More info (click to expand)</summary>
+		<div id="shawQwertyDesc" class="desc" style="display:block;">
+			<h4>Shaw QWERTY</h4>
+			<p>
+				Layout for typing in <b>Shavian Alphabet</b> <span class="ipa">/ˈʃeɪviən/</span>.<br>
+				The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with the <b>Phonemic</b> layouts, 
+				so if you've already learned to type with any Phonemic layout from this website and you decide to learn the Shavian Alphabet, 
+				you'll already know the positions of the phonemes on the keyboard.<br>
+				Layers 3 &amp; 4 contain additional punctuation marks, hyphens, etc., that may also be very useful.
+			</p>
+			<!-- p> ·𐑒𐑩𐑯𐑑𐑳𐑒𐑦 ·𐑓𐑮𐑲𐑛 ·𐑗𐑦𐑒𐑦𐑯, ·𐑨𐑯 𐑝 ·𐑜𐑮𐑰𐑯 ·𐑜𐑱𐑚𐑩𐑤𐑟, ·𐑢𐑦𐑯𐑦 𐑞 ·𐑐𐑵, ·𐑻𐑕𐑩𐑤𐑩 𐑓𐑪𐑯 𐑛𐑧𐑮 ·𐑤𐑲𐑦𐑯. </p -->
+			<p>
+				The <a href="https://en.wikipedia.org/wiki/Shavian_alphabet">Shavian Alphabet</a>
+				is one of the best (if not “the best”) alternative writing systems for English language.
+				It is fully phonemic (phoneme to grapheme ratio is 1:1).
+				Moreover, the Shavian Alphabet has 6 ligatures for R-colored vowels, totaling 48 letters to represent all sounds used in English language.
+			</p>
+			<p>
+				The Shavian Alphabet is named after 
+				<a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw">George Bernard Shaw</a> (1856-1950),
+				an Irish playwright, critic, an political activist (awarded the Nobel Prize for Literature in 1925).
+				Shaw was a critic of English orthography, he himself used <a href="https://en.wikipedia.org/wiki/Pitman_shorthand">Pitman shorthand</a>,
+				a phonetic shorthand system, in writing his plays.
+				Shaw considered the use of the Latin alphabet for writing English as a great waste of time, energy and paper,
+				so in his will he left a provision to fund the design of a new English alphabet that would be fully phonemic.
+			</p>
+	
+			<p>Shaw set three main criteria for the new alphabet:</p>
+			<ol>
+				<li>at least 40 letters;</li>
+				<li>as "phonetic" as possible (that is, letters should have a 1:1 correspondence to phonemes); and</li>
+				<li>distinct from the Latin alphabet to avoid the impression that the new spellings were simply "misspellings".</li>
+			</ol>
+	
+			<!-- blockquote>
+				A new scientific alphabet is no mere ideal.
+				We should be able to write each sort of sound we speak
+				with its own single letter. Think what a saving
+				that would be in time, and money. Judge, if you
+				can, your child's confusion through using at once
+				the several alphabets, all of which are unable to
+				speak words according to their sound. . . . Ah!
+				Poor boys and girls; poor foreigners . . . poor
+				“Scientific” age.               — <i>Kingsley Read</i>
+			</blockquote>
+	
+			<blockquote>
+				𐑩 𐑯𐑿 𐑕𐑲𐑩𐑯𐑑𐑦𐑓𐑦𐑒 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑦𐑟 𐑯𐑴 𐑥𐑽 𐑲𐑛𐑾𐑤.
+				𐑢𐑰 𐑖𐑫𐑛 𐑚𐑰 𐑱𐑚𐑩𐑤 𐑑 𐑮𐑲𐑑 𐑰𐑗 𐑕𐑹𐑑 𐑝 𐑕𐑬𐑯𐑛 𐑢𐑰 𐑕𐑐𐑰𐑒
+				𐑢𐑦𐑞 𐑦𐑑𐑕 𐑴𐑯 𐑕𐑦𐑙𐑜𐑩𐑤 𐑤𐑧𐑑𐑼. 𐑔𐑦𐑙𐑒 𐑢𐑪𐑑 𐑩 𐑕𐑱𐑝𐑦𐑙
+				𐑞𐑨𐑑 𐑢𐑫𐑛 𐑚𐑰 𐑦𐑯 𐑑𐑲𐑥, 𐑯 𐑥𐑳𐑯𐑦. 𐑡𐑳𐑡, 𐑦𐑓 𐑿
+				𐑒𐑨𐑯, 𐑘𐑹 𐑗𐑲𐑤𐑛'𐑟 𐑒𐑩𐑯𐑓𐑿𐑠𐑩𐑯 𐑔𐑮𐑵 𐑿𐑟𐑦𐑙 𐑨𐑑 𐑢𐑳𐑯𐑕
+				𐑞 𐑕𐑧𐑝𐑼𐑩𐑤 𐑨𐑤𐑓𐑩𐑚𐑧𐑑𐑕, 𐑷𐑤 𐑝 𐑢𐑦𐑗 𐑸 𐑳𐑯𐑱𐑚𐑩𐑤 𐑑
+				𐑕𐑐𐑰𐑒 𐑢𐑻𐑛𐑟 𐑩𐑒𐑹𐑛𐑦𐑙 𐑑 𐑞𐑺 𐑕𐑬𐑯𐑛. … 𐑭!
+				𐑐𐑫𐑼 𐑚𐑶𐑟 𐑯 𐑜𐑻𐑤𐑟; 𐑐𐑫𐑼 𐑓𐑪𐑮𐑦𐑯𐑼𐑟 … 𐑐𐑫𐑼
+				«𐑕𐑲𐑩𐑯𐑑𐑦𐑓𐑦𐑒» 𐑱𐑡.            — <i>·𐑒𐑦𐑙𐑟𐑤𐑦 ·𐑮𐑰𐑛</i>
+			</blockquote -->
+	
+			<!-- 
+			Shaw’s main concern was waste: time lost teaching children and foreigners a system full of irregularities, time lost in writing silent or redundant letters, and the paper and ink thrown away after them. The world would be a better place, he argued, if the alphabet had more letters so that every letter had a precise sound. “If the introduction of an English alphabet for the English language costs a civil war, or even […] a world war, I shall not grudge it,” he wrote. “The waste of war is negligible in comparison to the daily waste of trying to communicate with one another in English through an alphabet with sixteen letters missing. That must be remedied, come what may.”
+			 -->
+			<p>
+				In 1958, eight years after Shaw's death in 1950, the competition took place to design such an alphabet and 
+				<a href="https://en.wikipedia.org/wiki/Ronald_Kingsley_Read">Kingsley Read</a>'s system was chosen as the winner out of the 467 entries.
+				In 1962 the book <a href="https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition"><i>Androcles and the Lion</i></a> was published,
+				a side-by-side English and Shavian transcription.
+				Between 1963 and 1965, 8 issues of the quarterly journal, <i>Shaw-script</i>, were published by Read.
+				However, the Shavian Alphabet failed to gain popularity, and in 1966 Kingsley Read published
+				<a href="https://en.wikipedia.org/wiki/Quikscript">Quikscript</a>, aka “Read Alphabet”.
+				Which also failed to gain popularity.
+			</p>
+			<p>
+				In 1997, Ross DeMeyere published on his website (now defunct but still can be found in 
+				<a href="https://web.archive.org/web/19970726074639/http://www.demeyere.com/Shavian/info.html">archive.org</a>) font file
+				<a href="https://web.archive.org/web/19970726074154/http://www.demeyere.com/Shavian/shawr___.zip">ShawRough &#x2913;</a>, and a
+				<a href="https://web.archive.org/web/19970726075300/http://www.demeyere.com/Shavian/keys.html">keymap</a> showing
+				the translation of Latin to Shaw alphabet. 
+				Later, in 1999, he published two probably the most popular Shavian fonts at the time: 
+				<a href="https://web.archive.org/web/20060502050959/http://www.demeyere.com/shavian/androcles_ghoti.zip"><i>Androcles</i> and <i>Ghoti &#x2913;</i></a>.
+			</p>
+			<p>
+				Those first font files used a clever trick: replacing Lating letters of English alphabet with Shavian symbols.
+				Typing in Shavian was actually done with a regular QWERTY layout.
+				That was the basis for the <b>Shaw QWERTY</b> keyboard layout.
+			</p>
+			<!-- p>
+				Then in 2000 (<a href="https://web.archive.org/web/20130129175352/http://demeyere.com/shavian/">archive.org</a>) two 
+				<a href="https://web.archive.org/web/20130129175352/http://demeyere.com/shavian/androcles_ghoti.zip">font files</a>: androcles.ttf and ghoti.ttf.<br>
+				These font files had Shaw Alphabet symbols in places of Latin alphabet symbols.
+	
+				http://www.30below.com/%7Eethanl/fonts.html - 
+			</p -->
+	
+				<table class="transTable">
+					<caption>Keymap for the Shavian QWERTY</caption>
+					<tr>
+						<td>a</td>
+						<td>b</td>
+						<td>c</td>
+						<td>d</td>
+						<td>e</td>
+						<td>f</td>
+						<td>g</td>
+						<td>h</td>
+						<td>i</td>
+						<td>j</td>
+						<td>k</td>
+						<td>l</td>
+						<td>m</td>
+						<td>n</td>
+						<td>o</td>
+						<td>p</td>
+						<td>q</td>
+						<td>r</td>
+						<td>s</td>
+						<td>t</td>
+						<td>u</td>
+						<td>v</td>
+						<td>w</td>
+						<td>x</td>
+						<td>y</td>
+						<td>z</td>
+					</tr>
+					<tr class="Shavian">
+						<td>𐑩</td>
+						<td>𐑚</td>
+						<td>𐑗</td>
+						<td>𐑛</td>
+						<td>𐑧</td>
+						<td>𐑓</td>
+						<td>𐑜</td>
+						<td>𐑣</td>
+						<td>𐑦</td>
+						<td>𐑘</td>
+						<td>𐑒</td>
+						<td>𐑤</td>
+						<td>𐑥</td>
+						<td>𐑯</td>
+						<td>𐑪</td>
+						<td>𐑐</td>
+						<td>𐑶</td>
+						<td>𐑮</td>
+						<td>𐑕</td>
+						<td>𐑑</td>
+						<td>𐑳</td>
+						<td>𐑝</td>
+						<td>𐑢</td>
+						<td>𐑻</td>
+						<td>𐑭</td>
+						<td>𐑟</td>
+					</tr>
+					<tr class="shawIpa">
+						<td>ə</td>
+						<td>b</td>
+						<td>tʃ</td>
+						<td>d</td>
+						<td>ɛ</td>
+						<td>f</td>
+						<td>ɡ</td>
+						<td>h</td>
+						<td>ɪ</td>
+						<td>j</td>
+						<td>k</td>
+						<td>l</td>
+						<td>m</td>
+						<td>n</td>
+						<td>ɒ</td>
+						<td>p</td>
+						<td>ɔɪ</td>
+						<td>r</td>
+						<td>s</td>
+						<td>t</td>
+						<td>ʌ</td>
+						<td>v</td>
+						<td>w</td>
+						<td>ɜr</td>
+						<td>ɑ</td>
+						<td>z</td>
+					</tr>
+					<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
+					<tr>
+						<td>A</td>
+						<td>B</td>
+						<td>C</td>
+						<td>D</td>
+						<td>E</td>
+						<td>F</td>
+						<td>G</td>
+						<td>H</td>
+						<td>I</td>
+						<td>J</td>
+						<td>K</td>
+						<td>L</td>
+						<td>M</td>
+						<td>N</td>
+						<td>O</td>
+						<td>P</td>
+						<td>Q</td>
+						<td>R</td>
+						<td>S</td>
+						<td>T</td>
+						<td>U</td>
+						<td>V</td>
+						<td>W</td>
+						<td>X</td>
+						<td>Y</td>
+						<td>Z</td>
+					</tr>
+					<tr class="Shavian">
+						<td>𐑨</td>
+						<td>⸰</td>
+						<td>𐑽</td>
+						<td>𐑼</td>
+						<td>𐑱</td>
+						<td>𐑲</td>
+						<td>·</td>
+						<td>𐑞</td>
+						<td>𐑰</td>
+						<td>𐑡</td>
+						<td>«</td>
+						<td>»</td>
+						<td>𐑵</td>
+						<td>𐑙</td>
+						<td>𐑴</td>
+						<td>𐑹</td>
+						<td>𐑬</td>
+						<td>𐑸</td>
+						<td>𐑖</td>
+						<td>𐑔</td>
+						<td>𐑫</td>
+						<td>𐑿</td>
+						<td>𐑾</td>
+						<td>𐑺</td>
+						<td>𐑷</td>
+						<td>𐑠</td>
+					</tr>
+					<tr class="shawIpa">
+						<td>æ</td>
+						<td>⸰</td>
+						<td>ɪər</td>
+						<td>ər</td>
+						<td>eɪ</td>
+						<td>aɪ</td>
+						<td>·</td>
+						<td>ð</td>
+						<td>i</td>
+						<td>dʒ</td>
+						<td>«</td>
+						<td>»</td>
+						<td>u</td>
+						<td>ŋ</td>
+						<td>ɔʊ</td>
+						<td>ɔr</td>
+						<td>aʊ</td>
+						<td>ɑr</td>
+						<td>ʃ</td>
+						<td>θ</td>
+						<td>ʊ</td>
+						<td>ju</td>
+						<td>ɪə</td>
+						<td>ɛr</td>
+						<td>ɔ</td>
+						<td>ʒ</td>
+					</tr>
+				</table>
+	
+			<p> </p>
+			<p>
+					In April 2003 Shavian was added to the Unicode Standard at block U+10450–U+1047F in Plane 1 (Supplementary Multilingual).
+					Since then many new Shavian fonts appeared with Shavian symbols in their own Unicode range.
+			</p>
+			<p>
+					In 2012 the first <b>Shaw QWERTY</b> keyboard layout for Windows was published by Brian Wojtczak <i>aka Astrolox</i> 
+					on his website (now defunct, but can be found in
+					<a href="https://web.archive.org/web/20161105120533/https://www.astrolox.com/2012/08/31/shavian-unicode-keyboard/">archive.org</a>).
+					Unfortunately he posted only the 32-bit version.
+					However, since then many new keyboard layouts for Windows and macOS appeared.
+			</p>
+			<p>
+					Currently the easiest way to start typing in Shavian Alphabet on any operating system (Windows, macOS, Linux, Android, etc) is by
+					installing <a href="https://keyman.com/keyboards/english_shavian_qwerty">Keyman</a>.
+					However, Keyman is a big (over 200 MB) application, with some issues like sporadically switching layouts without any user action,
+					connecting to the Internet and sending some data despite of disabled auto-update, etc.<br>
+					The best choice is to create or install an open-source keyboard layout that was designed for the OS.
+			</p>
+			<p>
+					All the layouts published here are open-source, published on GitHub, minimal amount of code so you can review the code yourself.
+			</p>
+	
+			<h5>Links:</h5>
+			<ul>
+				<li><a href="https://shavian.info">shavian.info</a> 
+					— the #1 website about Shavian Alphabet (fonts, books, etc).</li>
+				<li><a href="https://www.youtube.com/@shavianalphabet4307">ShavianAlphabet4307</a> YouTube channel.</li>
+				<li><a href="https://www.omniglot.com/writing/shavian.htm">Omniglot.com</a> 
+					— short general info.</li>
+				<li><b>Medium.com</b> — an excellent article by Leo Philip about Shaw Alphabet history (in three parts):
+					<ul>
+						<li><a href="https://articles.c-a-s-t.com/towards-an-ideal-alphabet-the-origins-and-the-typographic-interpretation-of-shavian-22bb5455c11c">Shavian (1/3): origins</a></li>
+						<li><a href="https://articles.c-a-s-t.com/shavian-2-3-the-development-9cba31f9bc5a">Shavian (2/3): the development</a></li>
+						<li><a href="https://articles.c-a-s-t.com/shavian-3-3-typographic-implementation-3a43d3bbb8b8">Shavian (3/3): typographic implementation</a></li>
+					</ul></li>
+				<li><a href="https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition/mode/2up">archive.org</a>
+					— the book “Androcless and the Lion” (hardcover version).</a>
+				<!-- li><a href="https://www.scribd.com/document/729192126/Androcles-and-the-Lion-Shaw-Alphabet-Edition-text">Androcles and the Lion</a></li -->
+				<li><a href="https://physics.wooster.edu/lindner/shavian/">John F. Lindner</a>'s website 
+					— a collection of 13 public domain books transliterated into Shavian Alphabet.</li>
+				<li><a href="https://www.mithrandir.com/Shavian/Shavian.shtml">mithrandir.com</a>
+					— Scott Harrison website with a collection of texts translated into Shavian
+						(Hans Christian Andersen Fairy Tales).</li>
+				<li><a href="https://shavian.weebly.com/">Shavian.weebly.com</a> 
+					— some info and some texts transliterated into Shavian.</li>
+				<li><a href="https://shavian-school.github.io/?l=0">Shavian-School.github.io</a>
+					— a table of Shavian Alphabet with sounds.</li>
+				<li><a href="https://www.youtube.com/watch?v=D66LrlotvCA">YouTube:There’s a better English alphabet</a> by RobWords
+					— An excellent introduction to Shavian for beginners.</li>
+				<li><a href="https://reddit.com/r/shavian">reddit.com</a> — Shavian discussion group on Reddit.</li>
+				<li><a href="https://shavian.neocities.org/">Shavian.neocities.org</a> Haruki “Haley” Halcyon website:
+					<ul>
+						<li><a href="https://shavian.neocities.org/quick">Quick learning guide</a></li>
+						<li><a href="https://shavian.neocities.org/crash-course">A Slightly Nerdy Crash Course to Shavian Letters</a></li>
+						<li><a href="https://shavian.neocities.org/american">A Guide to American Shavian Spelling</a></li>
+						<li><a href="https://shavian.neocities.org/type">Lexilogos-style Shavian keyboard</a> — an online keyboard for learning Shavian.</li>
+					</ul></li>
+				<li><a href="https://postimg.cc/gallery/vZPtJXw">The Cat in the Hat (Shavian)</a> 
+					— the famous children's book by Dr. Seuss transliterated into Shavian.</li>
+				<li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+Shavian">Google Fonts</a> 
+					— Noto Sans Shavian.</li>
+				<li><a href="https://2gd4.me/tidbit/shavian-fonts.html">2gd4.me</a> 
+					— Shavian fonts by Haley Wakamatsu,
+					(see also his <a href="https://2gd4.me/tidbit/shavian-info.html">Interactive Shavian Table</a> with sounds).</li>
+				<li><a href="https://web.archive.org/web/20100113034124/http://www.30below.com/~ethanl/fonts.html">archive.org</a> 
+					— Ethan Lamoreaux website (ESL_Gothic_Unicode font which can also be found on 
+					<a href="https://www.fontspace.com/esl-gothic-unicode-font-f12185">Fontspace.com</a>)</li>
+				<li><a href="http://i18nguy.com/unicode/unicode-font.html">i18nguy.com</a> 
+					— Andagii font by Mark Williamson (copyleft license).</li>
+				<li><a href="https://hughbirkenhead.com/shavian/ascii-unicode/">Hugh Birkenhead's site</a>
+					— the converter from old-style pre-Unicode ASCII Shavian to Unicode Shavian.</li>
+				<li><a href="https://www.unicode.org/standard/translations/shavian.html">Unicode.org</a> page in Shavian.</li>
+				<li><a href="https://www.unicode.org/charts/PDF/U10450.pdf">Shavian in the Unicode (PDF) &#x2913;</a> 
+					(Unicode range U+10450–U+1047F).</li>
+				<!-- li><a href="https://dechifro.org/shavian/">Converting English text to phonemic script</a></li -->
+				<!-- li><a href="https://readlex.pythonanywhere.com/">ReadLex.pythonanywhere.com</a> — Lating to Shavian converter.</li -->
+					<!-- li><a href="https://nwah.github.io/to-shavian/">Nwah.github.io</a>
+					— Transliterate English to Shavian.</li -->
+			</ul>
+		</div>
 
-		<h4>Shaw QWERTY</h4>
-		<p>
-			Layout for typing in <b>Shavian Alphabet</b> <span class="ipa">/ˈʃeɪviən/</span>.<br>
-			The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with the <b>Phonemic</b> layouts, 
-			so if you've already learned to type with any Phonemic layout from this website and you decide to learn the Shavian Alphabet, 
-			you'll already know the positions of the phonemes on the keyboard.<br>
-			Layers 3 &amp; 4 contain additional punctuation marks, hyphens, etc., that may also be very useful.
-		</p>
-		<!-- p> ·𐑒𐑩𐑯𐑑𐑳𐑒𐑦 ·𐑓𐑮𐑲𐑛 ·𐑗𐑦𐑒𐑦𐑯, ·𐑨𐑯 𐑝 ·𐑜𐑮𐑰𐑯 ·𐑜𐑱𐑚𐑩𐑤𐑟, ·𐑢𐑦𐑯𐑦 𐑞 ·𐑐𐑵, ·𐑻𐑕𐑩𐑤𐑩 𐑓𐑪𐑯 𐑛𐑧𐑮 ·𐑤𐑲𐑦𐑯. </p -->
-		<p>
-			The <a href="https://en.wikipedia.org/wiki/Shavian_alphabet">Shavian Alphabet</a>
-			is one of the best (if not “the best”) alternative writing systems for English language.
-			It is fully phonemic (phoneme to grapheme ratio is 1:1).
-			Moreover, the Shavian Alphabet has 6 ligatures for R-colored vowels, totaling 48 letters to represent all sounds used in English language.
-		</p>
-		<p>
-			The Shavian Alphabet is named after 
-			<a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw">George Bernard Shaw</a> (1856-1950),
-			an Irish playwright, critic, an political activist (awarded the Nobel Prize for Literature in 1925).
-			Shaw was a critic of English orthography, he himself used <a href="https://en.wikipedia.org/wiki/Pitman_shorthand">Pitman shorthand</a>,
-			a phonetic shorthand system, in writing his plays.
-			Shaw considered the use of the Latin alphabet for writing English as a great waste of time, energy and paper,
-			so in his will he left a provision to fund the design of a new English alphabet that would be fully phonemic.
-		</p>
+		<div id="shawEmpireDesc" class="desc" style="display:none;">
+			<h4>Shaw Imperial</h4>
+			<p>
+					This keyboard layout is based on 
+					<a href="https://oztypewriter.blogspot.com/2014/04/history-of-shavian-keyboard-imperial.html">Imperial Good Companion Model 6</a> typewriter.
+			</p>
+			<p>
+					Please note: This keyboard layout <b>is not based</b> on the 
+					<a href="https://keyman.com/keyboards/english_shavian_igc">Keyman Shaw Imperial</a>.
+			</p>
+	
+			<p>The <b>Imperial Model 6</b> typewriter:</p>
+			<ul>
+				<li>had no keys ⟮`⟯ and ⟮1⟯,</li>
+				<li>had no digits 0 and 1. Just like on many very old typewriters I and O had to be used instead,</li>
+				<li>had only <b>capital</b> Latin letters when "CapsLock" lever was pressed,</li>
+				<li>had no CapsLock button — just like many old typewriters it had a lever to lock the SHIFT key (actually to lock the roller pin in the upper position),</li>
+				<li>the keys ⟮3⟯ and ⟮5⟯ had Shavian letters (IPA equivalents: ⟨ɛ⟩ and ⟨e⟩) which are not in official Shavian Unicode charset. Currently the only font supporting those extra Shavian letters is only Inter Alia. So instead, the following symbols are linked to those keys: ⟨𐑻⟩ and ⟨𐑺⟩.</li>
+				<li>had no letters ⟨𐑸,𐑹,𐑿,𐑼,𐑽⟩.</li>
+				<li>had no exclamation point ⟨!⟩, no double-quote mark ⟨"⟩, no semi-colon ⟨;⟩</li>
+				<li>punctuation marks on the SHIFT line were: unshifted ⟨,·.⟩; shifted ⟨?-/⟩</li>
+			</ul>
+	
+			<p>
+					Possibly the lack of several Shavian letters and missing commonly used 
+					punctuation marks mentioned above were among the reasons why Shavian
+					wasn't adopted back in 1970‐ties. That, and off course, 
+					the price of the <b>Imperial Model 6</b> being about five times higher 
+					than of a regular typewriter.
+			</p>
+	
+			<p>Differences between this keyboard layout and the original Imperial Model 6:</p>
+			<ul>
+				<li>four layers instead of only two,</li>
+				<li>lowercase Latin letters in the <b>shifted</b> layer instead of uppercase,</li>
+				<li>uppercase Latin letters in the <b>AltGr</b> layer,</li>
+				<li>missing Shavian letters ⟨𐑸,𐑹,𐑿,𐑼,𐑽⟩ added to the <b>shifted</b> layer in the numerals line,</li>
+				<li>this layout adds symbols to keys ⟮`⟯ and ⟮1⟯:
+					<ul>
+							<li>⟨⸰⟩ and ⟨·⟩ (namer dot) in the <b>Unshifted</b> layer</li>
+							<li>⟨◦⟩ and ⟨•⟩ (bullets) in <b>Shifted</b> layer</li>
+							<li>numbers ⟨0⟩ and ⟨1⟩ in <b>AltGR</b> layer.</li>
+					</ul>
+				<li>punctuation marks on the SHIFT line (unshifted layer) are ⟨,./⟩ instead of originally ⟨,·.⟩,</li>
+				<li>punctuation marks on the SHIFT line (shifted layer) are ⟨;:?⟩ instead of ⟨?-/⟩,</li>
+				<li>also, some of the most common punctuation marks were added to the <b>AltGR+Shift</b> layer.</li>
+			</ul>
+	
+			<p>
+					Note: In Windows AltGr (RightAlt) is equivalent to LeftAlt+Ctrl.
+					In macOS the Option key works the same way on right and left side.
+			</p>
+		</div>
+	</details>
 
-		<p>Shaw set three main criteria for the new alphabet:</p>
-		<ol>
-			<li>at least 40 letters;</li>
-			<li>as "phonetic" as possible (that is, letters should have a 1:1 correspondence to phonemes); and</li>
-			<li>distinct from the Latin alphabet to avoid the impression that the new spellings were simply "misspellings".</li>
-		</ol>
-
-
-		<!-- blockquote>
-			A new scientific alphabet is no mere ideal.
-			We should be able to write each sort of sound we speak
-			with its own single letter. Think what a saving
-			that would be in time, and money. Judge, if you
-			can, your child's confusion through using at once
-			the several alphabets, all of which are unable to
-			speak words according to their sound. . . . Ah!
-			Poor boys and girls; poor foreigners . . . poor
-			“Scientific” age.               — <i>Kingsley Read</i>
-		</blockquote>
-
-		<blockquote>
-			𐑩 𐑯𐑿 𐑕𐑲𐑩𐑯𐑑𐑦𐑓𐑦𐑒 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑦𐑟 𐑯𐑴 𐑥𐑽 𐑲𐑛𐑾𐑤.
-			𐑢𐑰 𐑖𐑫𐑛 𐑚𐑰 𐑱𐑚𐑩𐑤 𐑑 𐑮𐑲𐑑 𐑰𐑗 𐑕𐑹𐑑 𐑝 𐑕𐑬𐑯𐑛 𐑢𐑰 𐑕𐑐𐑰𐑒
-			𐑢𐑦𐑞 𐑦𐑑𐑕 𐑴𐑯 𐑕𐑦𐑙𐑜𐑩𐑤 𐑤𐑧𐑑𐑼. 𐑔𐑦𐑙𐑒 𐑢𐑪𐑑 𐑩 𐑕𐑱𐑝𐑦𐑙
-			𐑞𐑨𐑑 𐑢𐑫𐑛 𐑚𐑰 𐑦𐑯 𐑑𐑲𐑥, 𐑯 𐑥𐑳𐑯𐑦. 𐑡𐑳𐑡, 𐑦𐑓 𐑿
-			𐑒𐑨𐑯, 𐑘𐑹 𐑗𐑲𐑤𐑛'𐑟 𐑒𐑩𐑯𐑓𐑿𐑠𐑩𐑯 𐑔𐑮𐑵 𐑿𐑟𐑦𐑙 𐑨𐑑 𐑢𐑳𐑯𐑕
-			𐑞 𐑕𐑧𐑝𐑼𐑩𐑤 𐑨𐑤𐑓𐑩𐑚𐑧𐑑𐑕, 𐑷𐑤 𐑝 𐑢𐑦𐑗 𐑸 𐑳𐑯𐑱𐑚𐑩𐑤 𐑑
-			𐑕𐑐𐑰𐑒 𐑢𐑻𐑛𐑟 𐑩𐑒𐑹𐑛𐑦𐑙 𐑑 𐑞𐑺 𐑕𐑬𐑯𐑛. … 𐑭!
-			𐑐𐑫𐑼 𐑚𐑶𐑟 𐑯 𐑜𐑻𐑤𐑟; 𐑐𐑫𐑼 𐑓𐑪𐑮𐑦𐑯𐑼𐑟 … 𐑐𐑫𐑼
-			«𐑕𐑲𐑩𐑯𐑑𐑦𐑓𐑦𐑒» 𐑱𐑡.            — <i>·𐑒𐑦𐑙𐑟𐑤𐑦 ·𐑮𐑰𐑛</i>
-		</blockquote -->
-
-<!-- 
-Shaw’s main concern was waste: time lost teaching children and foreigners a system full of irregularities, time lost in writing silent or redundant letters, and the paper and ink thrown away after them. The world would be a better place, he argued, if the alphabet had more letters so that every letter had a precise sound. “If the introduction of an English alphabet for the English language costs a civil war, or even […] a world war, I shall not grudge it,” he wrote. “The waste of war is negligible in comparison to the daily waste of trying to communicate with one another in English through an alphabet with sixteen letters missing. That must be remedied, come what may.”
- -->
-		<p>
-			In 1958, eight years after Shaw's death in 1950, the competition took place to design such an alphabet and 
-			<a href="https://en.wikipedia.org/wiki/Ronald_Kingsley_Read">Kingsley Read</a>'s system was chosen as the winner out of the 467 entries.
-			In 1962 the book <a href="https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition"><i>Androcles and the Lion</i></a> was published,
-			a side-by-side English and Shavian transcription.
-			Between 1963 and 1965, 8 issues of the quarterly journal, <i>Shaw-script</i>, were published by Read.
-			However, the Shavian Alphabet failed to gain popularity, and in 1966 Kingsley Read published
-			<a href="https://en.wikipedia.org/wiki/Quikscript">Quikscript</a>, aka “Read Alphabet”.
-			Which also failed to gain popularity.
-		</p>
-		<p>
-			In 1997, Ross DeMeyere published on his website (now defunct but still can be found in 
-			<a href="https://web.archive.org/web/19970726074639/http://www.demeyere.com/Shavian/info.html">archive.org</a>) font file
-			<a href="https://web.archive.org/web/19970726074154/http://www.demeyere.com/Shavian/shawr___.zip">ShawRough</a>, and a
-			<a href="https://web.archive.org/web/19970726075300/http://www.demeyere.com/Shavian/keys.html">keymap</a> showing
-			the translation of Latin to Shaw alphabet. 
-			Later, in 1999, he published two probably the most popular Shavian fonts at the time: 
-			<a href="https://web.archive.org/web/20060502050959/http://www.demeyere.com/shavian/androcles_ghoti.zip"><i>Androcles</i> and <i>Ghoti</i></a>.
-		</p>
-		<p>
-			Those first font files used a clever trick: replacing Lating letters of English alphabet with Shavian symbols.
-			Typing in Shavian was actually done with a regular QWERTY layout.
-			That was the basis for the <b>Shaw QWERTY</b> keyboard layout.
-		</p>
-		<!-- p>
-			Then in 2000 (<a href="https://web.archive.org/web/20130129175352/http://demeyere.com/shavian/">archive.org</a>) two 
-			<a href="https://web.archive.org/web/20130129175352/http://demeyere.com/shavian/androcles_ghoti.zip">font files</a>: androcles.ttf and ghoti.ttf.<br>
-			These font files had Shaw Alphabet symbols in places of Latin alphabet symbols.
-
-			http://www.30below.com/%7Eethanl/fonts.html - 
-		</p -->
-
-			<table class="transTable">
-				<caption>Keymap for the Shavian QWERTY</caption>
-				<tr>
-					<td>a</td>
-					<td>b</td>
-					<td>c</td>
-					<td>d</td>
-					<td>e</td>
-					<td>f</td>
-					<td>g</td>
-					<td>h</td>
-					<td>i</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>o</td>
-					<td>p</td>
-					<td>q</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>u</td>
-					<td>v</td>
-					<td>w</td>
-					<td>x</td>
-					<td>y</td>
-					<td>z</td>
-				</tr>
-				<tr class="Shavian">
-					<td>𐑩</td>
-					<td>𐑚</td>
-					<td>𐑗</td>
-					<td>𐑛</td>
-					<td>𐑧</td>
-					<td>𐑓</td>
-					<td>𐑜</td>
-					<td>𐑣</td>
-					<td>𐑦</td>
-					<td>𐑘</td>
-					<td>𐑒</td>
-					<td>𐑤</td>
-					<td>𐑥</td>
-					<td>𐑯</td>
-					<td>𐑪</td>
-					<td>𐑐</td>
-					<td>𐑶</td>
-					<td>𐑮</td>
-					<td>𐑕</td>
-					<td>𐑑</td>
-					<td>𐑳</td>
-					<td>𐑝</td>
-					<td>𐑢</td>
-					<td>𐑻</td>
-					<td>𐑭</td>
-					<td>𐑟</td>
-				</tr>
-				<tr class="shawIpa">
-					<td>ə</td>
-					<td>b</td>
-					<td>tʃ</td>
-					<td>d</td>
-					<td>ɛ</td>
-					<td>f</td>
-					<td>ɡ</td>
-					<td>h</td>
-					<td>ɪ</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>ɒ</td>
-					<td>p</td>
-					<td>ɔɪ</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>ʌ</td>
-					<td>v</td>
-					<td>w</td>
-					<td>ɜr</td>
-					<td>ɑ</td>
-					<td>z</td>
-				</tr>
-				<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
-				<tr>
-					<td>A</td>
-					<td>B</td>
-					<td>C</td>
-					<td>D</td>
-					<td>E</td>
-					<td>F</td>
-					<td>G</td>
-					<td>H</td>
-					<td>I</td>
-					<td>J</td>
-					<td>K</td>
-					<td>L</td>
-					<td>M</td>
-					<td>N</td>
-					<td>O</td>
-					<td>P</td>
-					<td>Q</td>
-					<td>R</td>
-					<td>S</td>
-					<td>T</td>
-					<td>U</td>
-					<td>V</td>
-					<td>W</td>
-					<td>X</td>
-					<td>Y</td>
-					<td>Z</td>
-				</tr>
-				<tr class="Shavian">
-					<td>𐑨</td>
-					<td>⸰</td>
-					<td>𐑽</td>
-					<td>𐑼</td>
-					<td>𐑱</td>
-					<td>𐑲</td>
-					<td>·</td>
-					<td>𐑞</td>
-					<td>𐑰</td>
-					<td>𐑡</td>
-					<td>«</td>
-					<td>»</td>
-					<td>𐑵</td>
-					<td>𐑙</td>
-					<td>𐑴</td>
-					<td>𐑹</td>
-					<td>𐑬</td>
-					<td>𐑸</td>
-					<td>𐑖</td>
-					<td>𐑔</td>
-					<td>𐑫</td>
-					<td>𐑿</td>
-					<td>𐑾</td>
-					<td>𐑺</td>
-					<td>𐑷</td>
-					<td>𐑠</td>
-				</tr>
-				<tr class="shawIpa">
-					<td>æ</td>
-					<td>⸰</td>
-					<td>ɪər</td>
-					<td>ər</td>
-					<td>eɪ</td>
-					<td>aɪ</td>
-					<td>·</td>
-					<td>ð</td>
-					<td>i</td>
-					<td>dʒ</td>
-					<td>«</td>
-					<td>»</td>
-					<td>u</td>
-					<td>ŋ</td>
-					<td>ɔʊ</td>
-					<td>ɔr</td>
-					<td>aʊ</td>
-					<td>ɑr</td>
-					<td>ʃ</td>
-					<td>θ</td>
-					<td>ʊ</td>
-					<td>ju</td>
-					<td>ɪə</td>
-					<td>ɛr</td>
-					<td>ɔ</td>
-					<td>ʒ</td>
-				</tr>
-			</table>
-
-		<p> </p>
-		<p>
-				In April 2003 Shavian was added to the Unicode Standard at block U+10450–U+1047F in Plane 1 (Supplementary Multilingual).
-				Since then many new Shavian fonts appeared with Shavian symbols in their own Unicode range.
-		</p>
-		<p>
-				In 2012 the first <b>Shaw QWERTY</b> keyboard layout for Windows was published by Brian Wojtczak <i>aka Astrolox</i> 
-				on his website (now defunct, but can be found in
-				<a href="https://web.archive.org/web/20161105120533/https://www.astrolox.com/2012/08/31/shavian-unicode-keyboard/">archive.org</a>).
-				Unfortunately he posted only the 32-bit version.
-				However, since then many new keyboard layouts for Windows and macOS appeared.
-		</p>
-		<p>
-				Currently the easiest way to start typing in Shavian Alphabet on any operating system (Windows, macOS, Linux, Android, etc) is by
-				installing <a href="https://keyman.com/keyboards/english_shavian_qwerty">Keyman</a>.
-				However, Keyman is a big (over 200 MB) application, with some issues like sporadically switching layouts without any user action,
-				connecting to the Internet and sending some data despite of disabled auto-update, etc.<br>
-				The best choice is to create or install an open-source keyboard layout that was designed for the OS.
-		</p>
-		<p>
-				All the layouts published here are open-source, published on GitHub, minimal amount of code so you can review the code yourself.
-		</p>
-
-		<h5>Links:</h5>
-		<ul>
-			<li><a href="https://shavian.info">shavian.info</a> 
-				— the #1 website about Shavian Alphabet (fonts, books, etc).</li>
-			<li><a href="https://www.youtube.com/@shavianalphabet4307">ShavianAlphabet4307</a> YouTube channel.</li>
-			<li><a href="https://www.omniglot.com/writing/shavian.htm">Omniglot.com</a> 
-				— short general info.</li>
-			<li><b>Medium.com</b> — an excellent article by Leo Philip about Shaw Alphabet history (in three parts):
-				<ul>
-					<li><a href="https://articles.c-a-s-t.com/towards-an-ideal-alphabet-the-origins-and-the-typographic-interpretation-of-shavian-22bb5455c11c">Shavian (1/3): origins</a></li>
-					<li><a href="https://articles.c-a-s-t.com/shavian-2-3-the-development-9cba31f9bc5a">Shavian (2/3): the development</a></li>
-					<li><a href="https://articles.c-a-s-t.com/shavian-3-3-typographic-implementation-3a43d3bbb8b8">Shavian (3/3): typographic implementation</a></li>
-				</ul></li>
-			<li><a href="https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition/mode/2up">archive.org</a>
-				— the book “Androcless and the Lion” (hardcover version).</a>
-			<!-- li><a href="https://www.scribd.com/document/729192126/Androcles-and-the-Lion-Shaw-Alphabet-Edition-text">Androcles and the Lion</a></li -->
-			<li><a href="https://physics.wooster.edu/lindner/shavian/">John F. Lindner</a>'s website 
-				— a collection of 13 public domain books transliterated into Shavian Alphabet.</li>
-			<li><a href="https://www.mithrandir.com/Shavian/Shavian.shtml">mithrandir.com</a>
-				— Scott Harrison website with a collection of texts translated into Shavian
-					(Hans Christian Andersen Fairy Tales).</li>
-			<li><a href="https://shavian.weebly.com/">Shavian.weebly.com</a> 
-				— some info and some texts transliterated into Shavian.</li>
-			<li><a href="https://shavian-school.github.io/?l=0">Shavian-School.github.io</a>
-				— a table of Shavian Alphabet with sounds.</li>
-			<li><a href="https://www.youtube.com/watch?v=D66LrlotvCA">YouTube:There’s a better English alphabet</a> by RobWords
-				— An excellent introduction to Shavian for beginners.</li>
-			<li><a href="https://reddit.com/r/shavian">reddit.com</a> — Shavian discussion group on Reddit.</li>
-			<li><a href="https://shavian.neocities.org/">Shavian.neocities.org</a> Haruki “Haley” Halcyon website:
-				<ul>
-					<li><a href="https://shavian.neocities.org/quick">Quick learning guide</a></li>
-					<li><a href="https://shavian.neocities.org/crash-course">A Slightly Nerdy Crash Course to Shavian Letters</a></li>
-					<li><a href="https://shavian.neocities.org/american">A Guide to American Shavian Spelling</a></li>
-					<li><a href="https://shavian.neocities.org/type">Lexilogos-style Shavian keyboard</a> — an online keyboard for learning Shavian.</li>
-				</ul></li>
-			<li><a href="https://postimg.cc/gallery/vZPtJXw">The Cat in the Hat (Shavian)</a> 
-				— the famous children's book by Dr. Seuss transliterated into Shavian.</li>
-			<li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+Shavian">Google Fonts</a> 
-				— Noto Sans Shavian.</li>
-			<li><a href="https://2gd4.me/tidbit/shavian-fonts.html">2gd4.me</a> 
-				— Shavian fonts by Haley Wakamatsu,
-				(see also his <a href="https://2gd4.me/tidbit/shavian-info.html">Interactive Shavian Table</a> with sounds).</li>
-			<li><a href="https://web.archive.org/web/20100113034124/http://www.30below.com/~ethanl/fonts.html">archive.org</a> 
-				— Ethan Lamoreaux website (ESL_Gothic_Unicode font which can also be found on 
-				<a href="https://www.fontspace.com/esl-gothic-unicode-font-f12185">Fontspace.com</a>)</li>
-			<li><a href="http://i18nguy.com/unicode/unicode-font.html">i18nguy.com</a> 
-				— Andagii font by Mark Williamson (copyleft license).</li>
-			<li><a href="https://hughbirkenhead.com/shavian/ascii-unicode/">Hugh Birkenhead's site</a>
-				— the converter from old-style pre-Unicode ASCII Shavian to Unicode Shavian.</li>
-			<li><a href="https://www.unicode.org/standard/translations/shavian.html">Unicode.org</a> page in Shavian.</li>
-			<li><a href="https://www.unicode.org/charts/PDF/U10450.pdf">Shavian in the Unicode (PDF)</a> 
-				(Unicode range U+10450–U+1047F).</li>
-			<!-- li><a href="https://dechifro.org/shavian/">Converting English text to phonemic script</a></li -->
-			<!-- li><a href="https://readlex.pythonanywhere.com/">ReadLex.pythonanywhere.com</a> — Lating to Shavian converter.</li -->
-				<!-- li><a href="https://nwah.github.io/to-shavian/">Nwah.github.io</a>
-				— Transliterate English to Shavian.</li -->
-		</ul>
-
-	</div>
-
-	<div id="shawEmpireDesc" class="desc" style="display:none;">
-		<h4>Shaw Imperial</h4>
-		<p>
-				This keyboard layout is based on 
-				<a href="https://oztypewriter.blogspot.com/2014/04/history-of-shavian-keyboard-imperial.html">Imperial Good Companion Model 6</a> typewriter.
-		</p>
-		<p>
-				Please note: This keyboard layout <b>is not based</b> on the 
-				<a href="https://keyman.com/keyboards/english_shavian_igc">Keyman Shaw Imperial</a>.
-		</p>
-
-		<p>The <b>Imperial Model 6</b> typewriter:</p>
-		<ul>
-			<li>had no keys ⟮`⟯ and ⟮1⟯,</li>
-			<li>had no digits 0 and 1. Just like on many very old typewriters I and O had to be used instead,</li>
-			<li>had only <b>capital</b> Latin letters when "CapsLock" lever was pressed,</li>
-			<li>had no CapsLock button — just like many old typewriters it had a lever to lock the SHIFT key (actually to lock the roller pin in the upper position),</li>
-			<li>the keys ⟮3⟯ and ⟮5⟯ had Shavian letters (IPA equivalents: ⟨ɛ⟩ and ⟨e⟩) which are not in official Shavian Unicode charset. Currently the only font supporting those extra Shavian letters is only Inter Alia. So instead, the following symbols are linked to those keys: ⟨𐑻⟩ and ⟨𐑺⟩.</li>
-			<li>had no letters ⟨𐑸,𐑹,𐑿,𐑼,𐑽⟩.</li>
-			<li>had no exclamation point ⟨!⟩, no double-quote mark ⟨"⟩, no semi-colon ⟨;⟩</li>
-			<li>punctuation marks on the SHIFT line were: unshifted ⟨,·.⟩; shifted ⟨?-/⟩</li>
-		</ul>
-
-		<p>
-				Possibly the lack of several Shavian letters and missing commonly used 
-				punctuation marks mentioned above were among the reasons why Shavian
-				wasn't adopted back in 1970‐ties. That, and off course, 
-				the price of the <b>Imperial Model 6</b> being about five times higher 
-				than of a regular typewriter.
-		</p>
-
-		<p>Differences between this keyboard layout and the original Imperial Model 6:</p>
-		<ul>
-			<li>four layers instead of only two,</li>
-			<li>lowercase Latin letters in the <b>shifted</b> layer instead of uppercase,</li>
-			<li>uppercase Latin letters in the <b>AltGr</b> layer,</li>
-			<li>missing Shavian letters ⟨𐑸,𐑹,𐑿,𐑼,𐑽⟩ added to the <b>shifted</b> layer in the numerals line,</li>
-			<li>this layout adds symbols to keys ⟮`⟯ and ⟮1⟯:
-				<ul>
-						<li>⟨⸰⟩ and ⟨·⟩ (namer dot) in the <b>Unshifted</b> layer</li>
-						<li>⟨◦⟩ and ⟨•⟩ (bullets) in <b>Shifted</b> layer</li>
-						<li>numbers ⟨0⟩ and ⟨1⟩ in <b>AltGR</b> layer.</li>
-				</ul>
-			<li>punctuation marks on the SHIFT line (unshifted layer) are ⟨,./⟩ instead of originally ⟨,·.⟩,</li>
-			<li>punctuation marks on the SHIFT line (shifted layer) are ⟨;:?⟩ instead of ⟨?-/⟩,</li>
-			<li>also, some of the most common punctuation marks were added to the <b>AltGR+Shift</b> layer.</li>
-		</ul>
-
-		<p>
-				Note: In Windows AltGr (RightAlt) is equivalent to LeftAlt+Ctrl.
-				In macOS the Option key works the same way on right and left side.
-		</p>
-	</div>
-
-	<p>Last updated: 2025-11-02</p> 
+	<p>Last updated: 2025-11-03</p> 
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>

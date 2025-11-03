@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>NeilRaiden.com</title>
+	<title>NeilRaiden.com - other layouts</title>
 	<meta charset="UTF-8"> <!-- HTML5 -->
 	<!-- meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!- - HTML4 -->
 	<!-- match width with phone device widths -->
@@ -10,254 +10,60 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Neil Raiden - demo of keyboard layouts.">
-	<!--link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/trabajo" type="text/css" -->
 
 	<link rel="stylesheet" href="./fonts/fonts.css">
 	<link rel="stylesheet" href="./css/layout.css">
 	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/adobeblank.css">
+	<link rel="stylesheet" href="./css/kbl.css">
+
 	<script src="./fonts/fontlist.js"></script>
 	<script src="./layout.js"></script>
 
 <style>
-/* global CSS variables */
-:root {
-		--spacerwidth: 1px;
-		--keysheight:  28px;
-		--keyfontsize: 14pt;
-		--bodyopacity:  0.8;
-		--defaultfont: Higgins;
-		--kboardfont: Higgins;
-}
-/* Adobe Blank 2 from */
-@font-face {
-    font-family: AdobeBlank2;
-    src: url("data:font/opentype;base64,T1RUTwAKAIAAAwAgQ0ZGIN6nWacAAAfMAAABMURTSUcAAAABAAAJCAAAAAhPUy8yAF+xmwAAARAAAABgY21hcAE0tLwAAAasAAABAGhlYWQIOsNZAAAArAAAADZoaGVhB1oD7wAAAOQAAAAkaG10eAPoAHwAAAkAAAAACG1heHAAAlAAAAABCAAAAAZuYW1lc0mXUAAAAXAAAAU6cG9zdP+4ADIAAAesAAAAIAABAAAAAgBB1Q6SE18PPPUAAwPoAAAAANKdP6AAAAAA0p0/oAB8/4gDbANwAAAAAwACAAAAAAAAAAEAAANw/4gAAAPoAHwAfANsAAEAAAAAAAAAAAAAAAAAAAACAABQAAACAAAAAwPoAZAABQAAAooCWAAAAEsCigJYAAABXgAyANwAAAAAAAAAAAAAAAD3/67/+9///w/gAD8AAAAAQURCTwBAAAD//wNw/4gAAANwAHhgLwH/AAAAAAAAAAAAAAAgAAAAAAALAIoAAwABBAkAAACUAAAAAwABBAkAAQAaAJQAAwABBAkAAgAOAK4AAwABBAkAAwA4ALwAAwABBAkABAAaAJQAAwABBAkABQB0APQAAwABBAkABgAWAWgAAwABBAkACAA0AX4AAwABBAkACwA0AbIAAwABBAkADQKWAeYAAwABBAkADgA0BHwAQwBvAHAAeQByAGkAZwBoAHQAIACpACAAMgAwADEAMwAsACAAMgAwADEANQAgAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZAAgACgAaAB0AHQAcAA6AC8ALwB3AHcAdwAuAGEAZABvAGIAZQAuAGMAbwBtAC8AKQAuAEEAZABvAGIAZQAgAEIAbABhAG4AawAgADIAUgBlAGcAdQBsAGEAcgAyAC4AMAAwADEAOwBBAEQAQgBPADsAQQBkAG8AYgBlAEIAbABhAG4AawAyADsAQQBEAE8AQgBFAFYAZQByAHMAaQBvAG4AIAAyAC4AMAAwADEAOwBQAFMAIAAyAC4AMAAwADEAOwBoAG8AdABjAG8AbgB2ACAAMQAuADAALgA4ADgAOwBtAGEAawBlAG8AdABmAC4AbABpAGIAMgAuADUALgA2ADUAMAAxADIAQQBkAG8AYgBlAEIAbABhAG4AawAyAEEAZABvAGIAZQAgAFMAeQBzAHQAZQBtAHMAIABJAG4AYwBvAHIAcABvAHIAYQB0AGUAZABoAHQAdABwADoALwAvAHcAdwB3AC4AYQBkAG8AYgBlAC4AYwBvAG0ALwB0AHkAcABlAC8AVABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIABpAHMAIABsAGkAYwBlAG4AcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAFMASQBMACAATwBwAGUAbgAgAEYAbwBuAHQAIABMAGkAYwBlAG4AcwBlACwAIABWAGUAcgBzAGkAbwBuACAAMQAuADEALgAgAFQAaABpAHMAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACAAaQBzACAAZABpAHMAdAByAGkAYgB1AHQAZQBkACAAbwBuACAAYQBuACAAIgBBAFMAIABJAFMAIgAgAEIAQQBTAEkAUwAsACAAVwBJAFQASABPAFUAVAAgAFcAQQBSAFIAQQBOAFQASQBFAFMAIABPAFIAIABDAE8ATgBEAEkAVABJAE8ATgBTACAATwBGACAAQQBOAFkAIABLAEkATgBEACwAIABlAGkAdABoAGUAcgAgAGUAeABwAHIAZQBzAHMAIABvAHIAIABpAG0AcABsAGkAZQBkAC4AIABTAGUAZQAgAHQAaABlACAAUwBJAEwAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUAIABmAG8AcgAgAHQAaABlACAAcwBwAGUAYwBpAGYAaQBjACAAbABhAG4AZwB1AGEAZwBlACwAIABwAGUAcgBtAGkAcwBzAGkAbwBuAHMAIABhAG4AZAAgAGwAaQBtAGkAdABhAHQAaQBvAG4AcwAgAGcAbwB2AGUAcgBuAGkAbgBnACAAeQBvAHUAcgAgAHUAcwBlACAAbwBmACAAdABoAGkAcwAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUALgBoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAAEAAwAKAAAADAANAAAAAAD0AAAAAAAAABMAAAAAAADX/wAAAAEAAOAAAAD9zwAAAAEAAP3wAAD//QAAAAEAAQAAAAH//QAAAAEAAgAAAAL//QAAAAEAAwAAAAP//QAAAAEABAAAAAT//QAAAAEABQAAAAX//QAAAAEABgAAAAb//QAAAAEABwAAAAf//QAAAAEACAAAAAj//QAAAAEACQAAAAn//QAAAAEACgAAAAr//QAAAAEACwAAAAv//QAAAAEADAAAAAz//QAAAAEADQAAAA3//QAAAAEADgAAAA7//QAAAAEADwAAAA///QAAAAEAEAAAABD//QAAAAEAAwAAAAAAAP+1ADIAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAIAAQEBDEFkb2JlQmxhbmsyAAEBAS34G/gciwwe+B0B+B4Ci/sM+gD6BAUeKgAfDB+NDCL3Uw/3WRH3Vgwl96wMJAAFAQEGDlZjcEFkb2JlSWRlbnRpdHlDb3B5cmlnaHQgMjAxMywgMjAxNSBBZG9iZSBTeXN0ZW1zIEluY29ycG9yYXRlZCAoaHR0cDovL3d3dy5hZG9iZS5jb20vKS5BZG9iZSBCbGFuayAyQWRvYmVCbGFuazItMgAAAAABAAAAAAIBAUxO+nz7DLf6JLcB9xC3+Sy3A/cQ+gQV/nz5hPp8B/1Y/icV+dIH98X8MwWmsBX7xfg3Bfj2BqZiFf3SB/vF+DMFcGYV98X8NwX89gYOiw4AAQEBCfgfDCaX97kS+46LHAVGiwa9Cr0LAAAAA+gAfAAAAAAAAAABAAAAAA==");
-}
-
-/* --------- font faces --------- */
-@font-face {
-	font-family:Higgins;
-	src: url('./fonts/HenryHigginsSans-Regular.otf');
-	src: url('./fonts/HenryHigginsSans-Regular.otf') format('opentype');
-}
-@font-face {
-    font-family:IntAliaR;
-    src: url('./fonts/InterAlia-Regular.woff2');
-    src: url('./fonts/InterAlia-Regular.woff2') format('woff2');
-}
-@font-face {
-    font-family:IntAliaI;
-    src: url('./fonts/InterAlia-Italic.woff2');
-    src: url('./fonts/InterAlia-Italic.woff2') format('woff2');
-}
-@font-face {
-    font-family:IntAliaB;
-    src: url('./fonts/InterAlia-Bold.woff2');
-    src: url('./fonts/InterAlia-Bold.woff2') format('woff2');
-}
-@font-face {
-    font-family:IntAliaBI;
-    src: url('./fonts/InterAlia-BoldItalic.woff2');
-    src: url('./fonts/InterAlia-BoldItalic.woff2') format('woff2');
-}
-@font-face {
-	font-family:NotoS;
-	src: url('./fonts/NotoSans-Regular.ttf');
-	src: url('./fonts/NotoSans-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:NotoF;
-	src: url('./fonts/NotoSerif-Regular.ttf');
-	src: url('./fonts/NotoSerif-Regular.ttf') format('truetype');
-}
-@font-face {
-	font-family:Trabajo;
-	src: url('./fonts/Trabajo.otf');
-	src: url('./fonts/Trabajo.otf') format('opentype');
-}
+/* --- CSS variables specific to this page -- */
 
 /* --------- FontTable styles --------- */
-.pHiggins   { font-family: Higgins,   AdobeBlank2; font-size: 14pt; }
-.pIntAliaR  { font-family: IntAliaR,  AdobeBlank2; font-size: 14pt; }
-.pIntAliaI  { font-family: IntAliaI,  AdobeBlank2; font-size: 14pt; }
-.pIntAliaB  { font-family: IntAliaB,  AdobeBlank2; font-size: 14pt; }
-.pIntAliaBI { font-family: IntAliaBI, AdobeBlank2; font-size: 14pt; }
-.pNotoS     { font-family: NotoS,     AdobeBlank2; font-size: 14pt; }
-.pNotoF     { font-family: NotoF,     AdobeBlank2; font-size: 14pt; }
-.pTrabajo   { font-family: Trabajo,   AdobeBlank2; font-size: 14pt; }
-
-/* ----------- styles ----------- */
-body {
-		font-family: var(--defaultfont), Noto;
-		/*font-family: var(--defaultfont), Segoe; * / for Windows */
-		/*background-color: transparent; */
-		background-color: rgba(232, 232, 255, 0.9);
-		background:none transparent;
-		/*opacity: 0.7; */
-		opacity: var(--bodyopacity);
-		text-align: center;
-		font-size: 10pt;
+.pNotoS     { font-family: NotoSans, AdobeBlank2; font-size: 14pt; }
+.pIntAliaR  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: normal;
 }
-h1 { text-align: center; }
-h3 { text-align: center; }
-
-p {
-		font-weight: normal;
-		text-align: left; 
+.pIntAliaI  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: normal;
+	font-style: italic;
+}
+.pIntAliaB  {
+	font-family: InterAlia,   AdobeBlank2;
+	font-size: 14pt;
+	font-weight: bold;
+}
+.pIntAliaBI {
+	font-family: InterAlia,  AdobeBlank2;
+	font-size: 14pt;
+	font-weight: bold;
+	font-style: italic;
 }
 
-ul { text-align: left; font-weight:normal; }
-ol { text-align: left; font-weight:normal; }
-
-textarea {
-		font-family: var(--defaultfont), Segoe;
-		font-size: 14pt;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top:10px;
-		margin-bottom:5px;
-}
-.rounded-corners {
-		margin-left: auto;
-		margin-right: auto;
-		border-collapse: separate;
-		border: 1px solid black;
-		border-radius: 5px;
-		background-color: WhiteSmoke; /* #F5F5F5 */ /*Gainsboro; /* #DCDCDC; */
-}
-.rounded-corners td {
-		border-collapse: separate;
-		border-radius: 7px;
-		border: 1px solid black;
-		width: 12px;
-		height: 12px;
-		text-align: center;
-		background-color: Silver;
-}
-table {
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 7px;
-		border: 1px solid black;
-}
-th { background-color: LightSteelBlue; }
-td {
-		border: 0px solid black;
-		margin-top: 0px;
-		margin-bottom: 0px;
-		padding-top: 0px;
-		padding-bottom: 0px;
-		text-align: left;
-		font-size: 10pt;
-		/* border-style: none none solid none; */
-}
-
-button {
-		/*font-family: var(--defaultfont), Noto;
-		font-size: var(--keyfontsize); */
-		font-weight: bold;
-		padding-right: 5px;
-		padding-left: 5px;
-}
-
-.bton {
-		/*background-color: Silver;
-		/*Silver; #C0C0C0
-		/*SlateGrey; #708090
-		/*LightSlateGrey; #778899
-		/*LightSteelBlue; #B0C4DE
-		/*LightGray; #D3D3D3 */
-		/*Gray; #808080 */
-		/*DimGray #696969 */
-		/*DarkGrey; #A9A9A9 */
-		/*display: table; */
-		border: none;
-		border-radius: 7px;
-		color: black;
-		text-align: center;
-		font-family: var(--kboardfont), Noto;
-		font-size: var(--keyfontsize);
-		font-weight: bold;
-		padding: 5px;
-		width: 100%;
-		height: var(--keysheight);
-		cursor: pointer;
-}
-.bton:hover { background-color: RoyalBlue; }
-.btonpressed {
-		background-color: LightBlue;
-		border: none;
-		border-radius: 7px;
-		color: black;
-		text-align: center;
-		font-family: var(--defaultfont), Noto;
-		font-size: var(--keyfontsize);
-		font-weight: bold;
-		padding: 5px;
-		width: 100%;
-		/*height: 100%;*/
-		height: var(--keysheight);
-		cursor: pointer;
-}
-.trSpacer td {
-		width: var(--spacerwidth);
-		height: 0px;
-		border: 0px;
-}
-.divtab {
-		display: table;
-		width: auto;
-		margin: auto; /* shrink and center */
-		margin-top: 10px;
-		border-collapse: collapse;
-}
-.divrow {
-		display: table-row;
-}
-.divcell {
-		display: table-cell;
-		border: 0px solid #ddd;
-}
-.divcellch {
-		display: table-cell;
-		padding: 3px;
-		border: 0px solid #ddd;
-		font-size:14pt;
-		font-weight:bold;
-}
-.desc {
-		display: flex;
-		/*align-items: center;*/
-		justify-content: center;
-		text-align:center;
-		/*width: 100%;*/
-		border:0px solid blue;
-		/*padding-left:10px;*/
-		/*font-size:11pt;*/
-}
-.desc p {
-		border: 0px solid magenta;
-/*		width:400px; /* "margin:auto;" for centering fixed-width objects*/
-		margin: auto;
-		margin-bottom: 10px;
-		padding-left:5px;
-}
-.desc blockquote {
-		margin-left:15px;
-		border-left:3px solid silver;
-		padding-left:5px;
-		text-align:left;
-}
-.desc b {
-		color:black;
-		font-weight:bold;
-}
-.transTable td {
+/* --- translation QWERTY to Phonemic table --- */
+table.transTable td {
 		text-align: center;
 		font-weight: bold;
 		padding: 3px 3px 3px 3px; /* top right bottom left */
+		font-size:1.1em;
+}
+
+/*
+.transTable td {
+		text-align: center;
+		font-weight: bold;
+		padding: 3px 3px 3px 3px; /* top right bottom left * /
 		font-size:1.2em;
 }
+*/
 </style>
 
 <script>
@@ -608,18 +414,16 @@ function changeFont(selObj) {
 }
 function fontDetector() {
 	const fontFaceSet = document.fonts;
-	const fontList = [ 'HenryHigginsSans-Regular.otf',
+	const fontList = [ 
 		'InterAlia-Regular.woff2',
 		'InterAlia-Italic.woff2',
 		'InterAlia-Bold.woff2',
 		'InterAlia-BoldItalic.woff2',
-		'NotoSans-Regular.ttf',
-		'NotoSerif-Regular.ttf',
-		'Trabajo.otf' ];
-	const fontShortList = [ 'Higgins', 'IntAliaR','IntAliaI','IntAliaB','IntAliaBI','NotoS','NotoF','Trabajo' ];
+		'NotoSans-Regular.ttf' ];
+	const fontShortList = [ 'IntAliaR','IntAliaI','IntAliaB','IntAliaBI','NotoS' ];
 
 	// fontIs are used as ElementIs of <td> in font table:
-	const fontIds = ['higg','alia','alii','alib','albi','nots','notf','trab'];
+	const fontIds = ['alia','alii','alib','albi','nots'];
 	var fontSelector = document.getElementById('fontSelect').getElementsByTagName("option");
 
 	for ( let i=0; i<fontIds.length; i++ ) {
@@ -640,14 +444,28 @@ function fontDetector() {
 	}
 }
 
+/* global CSS variables */
+//:root {
+//		--bodyopacity:  0.8;
+//		--spacerwidth: 1px;
+//		--keysheight:  28px;
+//		--kboardfont: NotoSans;
+//		--keyfontsize: 14pt;
+//		--textareafont: NotoSans;
+//		--textareafontsize: 14pt;
+//}
+
 // global variables - important: some of these variables have their corresponding counterpart in the ":root" CSS global variables
-var bodyOpacity       = 0.8;	// CSS variable: --bodyopacity
-var defaultFont       = 'Higgins';   // CSS variable: --defaultfont
+
+var bodyOpacity       = 0.8; // CSS variable: --bodyopacity
+var kboardSpacerWidth =   1; // keys width (default 12px)  - CSS variable ""
+var kboardKeysHeight  =  28; // keys height (default 25px) - CSS variable "--keysheight"
+
+var textAreaFont      = 'NotoSans';   // CSS variable: --textareafont
 var textAreaFontSize  =  14; 	// textarea font-size (default 14pt)
-var kboardFont        = 'Higgins'; 
+var kboardFont        = 'NotoSans'; 
 var kboardFontSize    =  14; 	// class .bton font-size (default 14pt)
-var kboardSpacerWidth =  1;	  // keys width (default 12px)  - CSS variable ""
-var kboardKeysHeight  =  28;	// keys height (default 25px) - CSS variable "--keysheight"
+
 var r = document.querySelector(':root'); 	// Get the root element
 
 /*   default keyboard layout - on startup will be loaded at the end of page */
@@ -666,21 +484,22 @@ var keysD = writerD;
 <!-- Top Navigation Menu -->
 <nav><script>insertNavBar();</script></nav>
 <!-- hidden page with controls to personalize styles -->
-<div id="pageSetup"><script>webPageSetup();</script></div>
+<div id="pageSetup"><script>webPageSetup('');</script></div>
 <main>
 
-<!-- textArea -->
-	<div>
+	<!-- textArea -->
+	<div class="cen">
 		<form accept-charset="UTF-8"><textarea cols="50" rows="7" id="txtWin" autofocus></textarea></form>
 	</div>
+
 	<!-- buttons (Clear, To Clipboard -->
-	<div style="margin: 0px;padding: 0px;">
+	<div class="cen" style="margin: 0px;padding: 0px;">
 		<button onclick="clearTextArea()" >Clear</button>
 		<button onclick="copyToClip()"    >To Clipboard</button>
 	</div>
 
 	<!-- Layout switcher -->
-	<div style="margin: 5px;padding: 0px;">
+	<div class="cen" style="margin: 5px;padding: 0px;">
 		<b>Layout:</b>&nbsp;
 		<button id="writer" onclick="layoutSwitch('writer')" >US Writer</button>
 		<button id="aserth" onclick="layoutSwitch('aserth')" >ASERTH</button>
@@ -1035,7 +854,7 @@ var keysD = writerD;
 	</div>
 
 	<!-- buttons: Options, Fonts -->
-	<div style="margin: 5px;padding: 0px;">
+	<div class="cen" style="margin: 5px;padding: 0px;">
 		<!-- button id="kboardButton"  onclick="showWindow('kboard')" >US Phonemic</button -->
 		<button id="optionsButton" onclick="showWindow('options')">Options</button>
 		<button id="fontsButton"   onclick="showWindow('fonts')"  >Fonts</button>
@@ -1044,7 +863,7 @@ var keysD = writerD;
 
 	<!-- Options -->
 	<div id="optionsTable" class="divtab" style="display:none;padding:40px;">
-		<table>
+		<table class="optfonts">
 		<tr> <!-- changeTxtAreaFontSize() -->
 			<td><button onclick="changeTxtAreaFontSize(-1)">-</button></td>
 			<td>Text area font size :</td>
@@ -1090,23 +909,22 @@ var keysD = writerD;
 	<!-- Fonts -->
 	<div id="fontsTable" class="divtab" style="display:none;">
 		<h4>Fonts used by this keyboard</h4>
-		<table style="font-weight:normal;font-size:14pt;margin-bottom:5px;">
-			<tr><td id="higg">?</td><td>HenryHigginsSans-Regular.otf</td>
-				<td class="pHiggins">the five boxing wizards jump quickly<br>THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
-			<tr><td id="alia">?</td><td>InterAlia-Regular.woff2</td>
-				<td class="pIntAliaR">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="alii">?</td><td>InterAlia-Italic.woff2</td>
-				<td class="pIntAliaI">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="alib">?</td><td>InterAlia-Bold.woff2</td>
-				<td class="pIntAliaB">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="albi">?</td><td>InterAlia-BoldItalic.woff2</td>
-				<td class="pIntAliaBI">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="nots">?</td><td>NotoSans-Regular.ttf</td>
-				<td class="pNotoS">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="notf">?</td><td>NotoSerif-Regular.ttf</td>
-				<td class="pNotoF">the five boxing wizards jump quickly</td></tr>
-			<tr><td id="trab">?</td><td>Trabajo.otf</td>
-				<td class="pTrabajo">the five boxing wizards jump quickly</td></tr>
+		<table class="optfonts" style="font-weight:normal;font-size:14pt;margin-bottom:5px;">
+			<tr><td id="alia">?</td><td>InterAlia-Regular</td>
+				<td class="pIntAliaR">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="alii">?</td><td>InterAlia-Italic</td>
+				<td class="pIntAliaI">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="alib">?</td><td>InterAlia-Bold</td>
+				<td class="pIntAliaB">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="albi">?</td><td>InterAlia-BoldItalic</td>
+				<td class="pIntAliaBI">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
+			<tr><td id="nots">?</td><td>NotoSans-Regular</td>
+				<td class="pNotoS">the five boxing wizards jump quickly<br>
+					THE FIVE BOXING WIZARDS JUMP QUICKLY</td></tr>
 		</table>
 		<button onclick="fontDetector()">Reload fonts</button>
 
@@ -1150,148 +968,149 @@ var keysD = writerD;
 		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
 		<tr>
 			<td>Writer</td>
-			<td><a href="./downloads/macOS/Writer.dmg">US-Writer.dmg</a></td>
+			<td><a href="./downloads/macOS/Writer.dmg">US-Writer.dmg &#x2913;</a></td>
 			<td><i>coming soon</i></td>
 			<td><i>coming soon</i></td>
 		</tr>
 		<tr>
 			<td>ASERTH</td>
-			<td><a href="./downloads/macOS/ASERTH.dmg">ASERTH.dmg</a></td>
+			<td><a href="./downloads/macOS/ASERTH.dmg">ASERTH.dmg &#x2913;</a></td>
 			<td><i>coming soon</i></td>
 			<td><i>coming soon</i></td>
 		</tr>
 	</table>
 	<!-- p><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-v3.0</a><p -->
 
-
 	<!-- Layout descriptions -->
-	<div id="writerDesc" class="desc" style="display:block;">
-		<h4>US Writer</h4>
-		<p><i>Layout for typing frequently used punctuation marks and 
-			typographic symbols (required by writing style guides) which are 
-			not available on the standard QWERTY layout.</i></p>
-		<h5>Problem:</h5>
-		<p>All the novels, essays, newspaper articles, etc — anything 
-			that is published or printed — must follow specific rules 
-			outlined in the writing guides such as the famous 
-			“Chicago Manual of Style”.</p>
-		<p>For example, those writing guides require writers, authors, 
-			publishers to use:</p>
-		<ul>
-			<li>66-99 and 6-9 quotation marks,</li>
-			<li>N-dash, M-dash, several types of hyphens — not the hyphen-minus
-			that is present on the QWERTY layout,</li>
-			<li>ellipsis, footnotes, end-notes, etc.</li>
-			<li>em-space (U+2003), zero-width space (U+200B)</li>
-		</ul>
-		<p>None of those symbols is readily available on the 
-			standard <b>English QWERTY</b> keyboard layout. 
-			Neither on Dvorak and Colemak. Instead, writers must either:</p>
-		<ul>
-			<li>memorize a list of <b>Alt codes,</b></li>
-			<li>laboriously copy the symbols from the <b>CharacterMap</b> 
-			or a similar app,</li>
-			<li>or use an expensive software dedicated for writers that 
-			auto-magically replaces typed symbols with the correct ones.</li>
-		</ul>
-		<p>Unfortunately the "smart quotes" are not implemented in every 
-			text editor — <b>that is THE PROBLEM</b>.</p>
-		<h5>Solution:</h5>
-		<p>The <b>Writer</b> keyboard layout allows you to type those 
-			most commonly used symbols with <b>AltGr</b> (right Alt key)
-			and <b>AltGr+Shift</b> in a way easier to memorize 
-			than the <i>Alt codes</i>.
-		<p>And you may also easily enter some other useful symbols: “<b>«©℗®™√÷×≠±≈⟨¹²⁹⁰₁₂₉₀⟩⟮·○•◦⟯°πµ☐☑☒☺»</b>”.</p>
-	</div>
+	<details><summary>More info (click to expand)</summary>
+		<div id="writerDesc" class="desc" style="display:block;">
+			<h4>US Writer</h4>
+			<p><i>Layout for typing frequently used punctuation marks and 
+				typographic symbols (required by writing style guides) which are 
+				not available on the standard QWERTY layout.</i></p>
+			<h5>Problem:</h5>
+			<p>All the novels, essays, newspaper articles, etc — anything 
+				that is published or printed — must follow specific rules 
+				outlined in the writing guides such as the famous 
+				“Chicago Manual of Style”.</p>
+			<p>For example, those writing guides require writers, authors, 
+				publishers to use:</p>
+			<ul>
+				<li>66-99 and 6-9 quotation marks,</li>
+				<li>N-dash, M-dash, several types of hyphens — not the hyphen-minus
+				that is present on the QWERTY layout,</li>
+				<li>ellipsis, footnotes, end-notes, etc.</li>
+				<li>em-space (U+2003), zero-width space (U+200B)</li>
+			</ul>
+			<p>None of those symbols is readily available on the 
+				standard <b>English QWERTY</b> keyboard layout. 
+				Neither on Dvorak and Colemak. Instead, writers must either:</p>
+			<ul>
+				<li>memorize a list of <b>Alt codes,</b></li>
+				<li>laboriously copy the symbols from the <b>CharacterMap</b> 
+				or a similar app,</li>
+				<li>or use an expensive software dedicated for writers that 
+				auto-magically replaces typed symbols with the correct ones.</li>
+			</ul>
+			<p>Unfortunately the "smart quotes" are not implemented in every 
+				text editor — <b>that is THE PROBLEM</b>.</p>
+			<h5>Solution:</h5>
+			<p>The <b>Writer</b> keyboard layout allows you to type those 
+				most commonly used symbols with <b>AltGr</b> (right Alt key)
+				and <b>AltGr+Shift</b> in a way easier to memorize 
+				than the <i>Alt codes</i>.
+			<p>And you may also easily enter some other useful symbols: “<b>«©℗®™√÷×≠±≈⟨¹²⁹⁰₁₂₉₀⟩⟮·○•◦⟯°πµ☐☑☒☺»</b>”.</p>
+		</div>
+	
+		<div id="aserthDesc" class="desc" style="display:none;">
+			<h4>ASERTH</h4>
+			<p><i>A layout for more efficient typing</i>.</p>
+			<p>This layout is based on 
+				<a href="https://github.com/nick-gravgaard/qwerty-flip">QWERTY-Flip-Twist</a> by Nick Gravgaard.<br>
+				The <b>AltGr</b> and <b>AltGr+Shift</b> layers are similar to the <b>Writer</b> layout.<br>
+			</p>
+			<h5>Problem:</h5>
+			<p>
+				The most popular keyboard layout in the world, <b>QWERTY</b> was designed in 1870s, for the first typewriter machines.
+				The keys in those typewriter machines were moving type-bars which were placed very close to each other and their trajectories crossed with others.
+				This caused jamming when a user pressed two keys one after another too quickly.
+				Reportedly to prevent jamming the keys were arranged in a way to slow down the user.
+			</p>
+	
+			<blockquote>In summary: <b>QWERTY is highly inefficient by design</b>.</blockquote>
+	
+			<p>
+				In the 1930-ties <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">Dr August Dvorak</a>
+				re-arranged the keys to create a more ergonomic layout with focus on writing speed and minimizing strain.
+				It was most likely designed for electric typewriting machines that started being popular in 1920s.
+				His layout is known as <b>Dvorak</b> layout.
+				But probably because the mechanical typewriters were still widely used the adoption of Dvorak failed.
+			</p>
+	
+			<blockquote>
+				In summary: <b>Dvorak is efficient, but hard to learn</b>, especially by people already proficient with QWERTY,
+				it retains only 2 keys from QWERTY layout.
+			</blockquote>
+	
+			<p>
+				In 2006 <a href="https://colemak.com/">Shai Coleman</a> released his <b>Colemak</b>
+				layout as a compromise between QWERTY and typing speed (17 keys moved and 10 retained).
+				Colemak is the result of a very thorough analysis of English text,
+				finger distances for most common letter pairs, etc.
+				For more info visit <a href="https://colemak.com/">Colemak.com</a> (the official Shai Coleman website),
+				<a href="https://colemak.org/">Colemak.org</a> and <a href="https://mk.bcgsc.ca/carpalx/?colemak">CarpalX</a>.
+			</p>
+	
+			<blockquote>
+				In summary: Colemak is one of the best designed layouts, easier to learn than Dvorak.
+				But if you're already typing at speed of more than 50wpm it may take you months to achieve
+				that kind of speed with the new layout.
+				However, reportedly the reduction in fatigue is noticeable almost immediately.
+			</blockquote>
+	
+			<p>
+				In recent decade multiple new layouts were designed that are slightly more efficient than Colemak.
+				But they are not much faster than Colemak, and their focus is on various types of optimization and
+				not reduction of learning curve. Examples:
+			</p>
+			<ul>
+				<li><a href="https://github.com/jackrosenthal/threelayout">Three Layout - 3l</a></li>
+				<li><a href="https://en.wikipedia.org/wiki/Keyboard_layout#Workman">Workman</a></li>
+			</ul>
+	
+			<p>
+					Probably the difficulty of having to completely re-learn the layout is what keeps most 
+					people from even trying it. And that is <b>the problem</b>.
+			</p>
+	
+			<h5>Solution:</h5>
+			<p>Several good solutions already exist that are a middle-ground between QWERTY and Colemak. Three most notable examples:</p>
+			<ol> 
+				<li><a href="http://www.minimak.org/">Minimak</a> layout. With Minimak you can gradually swap 12 keys:
+					<ul>
+						<li><b>Minimak-4</b>: swap 4 keys for 60% improvement ⟮rotation: D → E → K → T → D⟯.</li>
+						<li><b>Minimak-8</b>: after few weeks, swap another 4 keys ⟮swap N with J, and L with O⟯</li>
+						<li><b>Minimak-12</b>: after another few weeks, swap another 4 keys to achieve 83% of the benefits of Dvorak ⟮swap R with F, and P with ;⟯</li>
+					</ul></li>
+				<li><a href="https://github.com/AlternateKeyboard/ASERT">ASERT</a> layout (15 keys relocated):
+					<ul>
+						<li>swap ERT with DFG</li>
+						<li>swap IOP with KL;</li>
+						<li>rotate: J → Y → N → J</li>
+					</ul></li>
+				<li><a href="https://nick-gravgaard.com/qwerty-flip/">QWERTY-Flip-Twist</a> (the <b>ASERTH</b> layout presented here). Total of 14 keys relocated according to scheme:
+					<ul>
+						<li>flip <b>ERT</b> with <b>DFG</b></li>
+						<li>flip <b>N</b> with <b>J</b>, <b>K</b> with <b>I</b></li>
+						<li>twist: <b>L → ; → P → O → L</b></li>
+					</ul>
+				</li>
+			</ol>
+			<p>ASERT, Minimak and QWERTY-flip-twist layouts focus on <b>reducing the learning curve</b> while being <i>almost</i> as efficient as Colemak.</p>
+		</div>
+	</details>
 
-	<div id="aserthDesc" class="desc" style="display:none;">
-		<h4>ASERTH</h4>
-		<p><i>A layout for more efficient typing</i>.</p>
-		<p>This layout is based on 
-			<a href="https://github.com/nick-gravgaard/qwerty-flip">QWERTY-Flip-Twist</a> by Nick Gravgaard.<br>
-			The <b>AltGr</b> and <b>AltGr+Shift</b> layers are similar to the <b>Writer</b> layout.<br>
-		</p>
-		<h5>Problem:</h5>
-		<p>
-			The most popular keyboard layout in the world, <b>QWERTY</b> was designed in 1870s, for the first typewriter machines.
-			The keys in those typewriter machines were moving type-bars which were placed very close to each other and their trajectories crossed with others.
-			This caused jamming when a user pressed two keys one after another too quickly.
-			Reportedly to prevent jamming the keys were arranged in a way to slow down the user.
-		</p>
-
-		<blockquote>In summary: <b>QWERTY is highly inefficient by design</b>.</blockquote>
-
-		<p>
-			In the 1930-ties <a href="https://en.wikipedia.org/wiki/Dvorak_keyboard_layout">Dr August Dvorak</a>
-			re-arranged the keys to create a more ergonomic layout with focus on writing speed and minimizing strain.
-			It was most likely designed for electric typewriting machines that started being popular in 1920s.
-			His layout is known as <b>Dvorak</b> layout.
-			But probably because the mechanical typewriters were still widely used the adoption of Dvorak failed.
-		</p>
-
-		<blockquote>
-			In summary: <b>Dvorak is efficient, but hard to learn</b>, especially by people already proficient with QWERTY,
-			it retains only 2 keys from QWERTY layout.
-		</blockquote>
-
-		<p>
-			In 2006 <a href="https://colemak.com/">Shai Coleman</a> released his <b>Colemak</b>
-			layout as a compromise between QWERTY and typing speed (17 keys moved and 10 retained).
-			Colemak is the result of a very thorough analysis of English text,
-			finger distances for most common letter pairs, etc.
-			For more info visit <a href="https://colemak.com/">Colemak.com</a> (the official Shai Coleman website),
-			<a href="https://colemak.org/">Colemak.org</a> and <a href="https://mk.bcgsc.ca/carpalx/?colemak">CarpalX</a>.
-		</p>
-
-		<blockquote>
-			In summary: Colemak is one of the best designed layouts, easier to learn than Dvorak.
-			But if you're already typing at speed of more than 50wpm it may take you months to achieve
-			that kind of speed with the new layout.
-			However, reportedly the reduction in fatigue is noticeable almost immediately.
-		</blockquote>
-
-		<p>
-			In recent decade multiple new layouts were designed that are slightly more efficient than Colemak.
-			But they are not much faster than Colemak, and their focus is on various types of optimization and
-			not reduction of learning curve. Examples:
-		</p>
-		<ul>
-			<li><a href="https://github.com/jackrosenthal/threelayout">Three Layout - 3l</a></li>
-			<li><a href="https://en.wikipedia.org/wiki/Keyboard_layout#Workman">Workman</a></li>
-		</ul>
-
-		<p>
-				Probably the difficulty of having to completely re-learn the layout is what keeps most 
-				people from even trying it. And that is <b>the problem</b>.
-		</p>
-
-		<h5>Solution:</h5>
-		<p>Several good solutions already exist that are a middle-ground between QWERTY and Colemak. Three most notable examples:</p>
-		<ol> 
-			<li><a href="http://www.minimak.org/">Minimak</a> layout. With Minimak you can gradually swap 12 keys:
-				<ul>
-					<li><b>Minimak-4</b>: swap 4 keys for 60% improvement ⟮rotation: D → E → K → T → D⟯.</li>
-					<li><b>Minimak-8</b>: after few weeks, swap another 4 keys ⟮swap N with J, and L with O⟯</li>
-					<li><b>Minimak-12</b>: after another few weeks, swap another 4 keys to achieve 83% of the benefits of Dvorak ⟮swap R with F, and P with ;⟯</li>
-				</ul></li>
-			<li><a href="https://github.com/AlternateKeyboard/ASERT">ASERT</a> layout (15 keys relocated):
-				<ul>
-					<li>swap ERT with DFG</li>
-					<li>swap IOP with KL;</li>
-					<li>rotate: J → Y → N → J</li>
-				</ul></li>
-			<li><a href="https://nick-gravgaard.com/qwerty-flip/">QWERTY-Flip-Twist</a> (the <b>ASERTH</b> layout presented here). Total of 14 keys relocated according to scheme:
-				<ul>
-					<li>flip <b>ERT</b> with <b>DFG</b></li>
-					<li>flip <b>N</b> with <b>J</b>, <b>K</b> with <b>I</b></li>
-					<li>twist: <b>L → ; → P → O → L</b></li>
-				</ul>
-			</li>
-		</ol>
-		<p>ASERT, Minimak and QWERTY-flip-twist layouts focus on <b>reducing the learning curve</b> while being <i>almost</i> as efficient as Colemak.</p>
-	</div>
-
-	<p>Last updated: 2025-10-27</p>
+	<p>Last updated: 2025-11-03</p>
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>

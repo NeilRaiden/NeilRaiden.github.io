@@ -65,6 +65,7 @@ table.alphabet tr:hover {
 /* ------ downloads table ------ */
 table.downl {
 	margin:auto;
+	margin-bottom: 1em;
 	border-collapse:collapse;
 	padding: 5px;
 }
@@ -365,27 +366,53 @@ div.border {
 a {
 	/*color: Indigo;*/
 	color: var(--link-color);
-	text-decoration: underline;
+	text-decoration: none;
 }
 a:hover {
 	font-weight:bold;
-	text-decoration: none;
+	text-decoration: underline;
+}
+a:visited {
+	color: darkgrey;
 }
 /* GLOBAL links */
+/* a[href*='//']{ } / * applies to to both http and https */
 a[href^=http] {
 	/*color: DarkBlue;*/
 	text-decoration: underline;
+	font-weight: bold;
 }
 /* WIKIPEDIA links */
 a[href^="https://en.wikipedia"] {
 	/*color: Blue;*/
 	text-decoration: underline;
+	font-weight: bold;
 }
-
+a[href^="mailto:"] { /* email link */
+	font-style: italic;
+}
+a[href$=".pdf"] { /* PDF file */
+	color: magenta;
+}
+a[href$=".zip"] { /* Archive file */
+	color: magenta;
+}
+a[href$=".dmg"] { /* macOS package file */
+	color: magenta;
+}
 
 /* Example external link symbol: ⤴  ⤴ ⤴ */
 /*  the symbol "⎋" rotated for external links. */
-/*
+
+/* Download icon: ⤓ (U+2913) HTML Entity:	&#10515; &#x2913; &DownArrowBar;*/
+
+/* External link icon (maybe some day):
+	“⤤” (U+2924) - North East Arrow with Hook
+	“↗” (U+2197) - North East Arrow : &#8599; &#x2197; &UpperRightArrow;
+	“➚” (U+279A) - Heavy North East Arrow : &#10138; &#x279A;
+	“⤴” (U+2934)- Arrow Pointing Rightwards Then Curving Upwards: &#10548; &#x2934;
+*/
+/* 
 a[href^="http://"]:after { 
     content:"\2197";
 }
