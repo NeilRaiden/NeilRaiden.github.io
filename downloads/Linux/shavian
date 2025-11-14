@@ -1,0 +1,184 @@
+// # Shavian QWERTY (or Shaw QWERTY) keyboard layout
+// Copyright (c) 2025 Neil Raiden (AGPL v.3)
+// <https://www.gnu.org/licenses/agpl-3.0.en.html>
+
+// This is a classic Shavian(QWERTY) layout based on early fonts from 1990s which replaced regular Latin alphabet symbols with Shavian symbols.
+// This layout, on Layer 3 and 4, contains extra symbols (mostly punctuation marks) that are required by most writing style guides. See Writer(QWERTY) layout for details.
+
+// ## Installation:
+// 1. Copy this file (shavian) to `/etc/xkb/symbols/shavian`
+//```
+//  sudo mkdir -p /etc/xkb/rules
+//  sudo mkdir -p /etc/xkb/symbols
+//  sudo cp shavian /etc/xkb/symbols/
+//```
+// 2. Add the following section to `/etc/xkb/rules/evdev.xml`:
+//```
+//<?xml version="1.0" encoding="UTF-8"?>
+//<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+//<xkbConfigRegistry version="1.1">
+//  <layoutList>
+//<!-- Shavian QWERTY Layout (start) -->
+//    <layout>
+//      <configItem>
+//        <name>shavian</name>
+//        <shortDescription>Shavian</shortDescription>
+//        <description>Shavian (QWERTY)</description>
+//        <countryList><iso3166Id>US</iso3166Id></countryList>
+//        <languageList><iso639Id>eng</iso639Id></languageList>
+//      </configItem>
+//    </layout>
+//<!-- Shavian QWERTY Layout (end) -->
+//  </layoutList>
+//</xkbConfigRegistry>
+//```
+// 3. (optional) add the following line to `/etc/xkb/rules/evdev`. Note that GNOME layout switcher ignores the `evdev` file and uses only the `evdev.xml`:
+//```
+//! option = symbols
+//  shavian:qwerty    = +shavian(qwerty)
+//! include %S/evdev
+//```
+// 4. Testing:
+//	- activate "Shavian (QWERTY)": `setxkbmap -layout shavian`,
+//  - test it by simply typing with the new layout,
+//  - if setxkbmap returns "Error loading new keyboard description", then it's possible that your Linux distro runs xkb with elevated privileges and ignores files in `/etc/xkb/symbols`. In such case create a link: `sudo ln -s /etc/xkb/symbols/shavian /usr/share/X11/xkb/symbols/shavian`,
+//	- reset back to default layout: `setxkbmap us`
+
+// ------ Layer 1 (unshifted) ------
+//┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+//│ ` │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ - │ = │ bksp │
+//├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+//│ tab │ 𐑶 │ 𐑢 │ 𐑧 │ 𐑮 │ 𐑑 │ 𐑭 │ 𐑳 │ 𐑦 │ 𐑪 │ 𐑐 │ [ │ ] │ \  │
+//├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+//│ caps  │ 𐑩 │ 𐑕 │ 𐑛 │ 𐑓 │ 𐑜 │ 𐑣 │ 𐑘 │ 𐑒 │ 𐑤 │ ; │ ' │  ent │
+//├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+//│ shift   │ 𐑟 │ 𐑻 │ 𐑗 │ 𐑝 │ 𐑚 │ 𐑯 │ 𐑥 │ , │ . │ / │  shift │
+//└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+
+// ------ Layer 2 (shifted) ------
+//┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+//│ ~ │ ! │ @ │ # │ $ │ % │ ^ │ & │ * │ ( │ ) │ _ │ + │ bksp │
+//├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+//│ tab │ 𐑬 │ 𐑾 │ 𐑱 │ 𐑸 │ 𐑔 │ 𐑷 │ 𐑫 │ 𐑰 │ 𐑴 │ 𐑹 │ { │ } │  | │
+//├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+//│ caps  │ 𐑨 │ 𐑖 │ 𐑼 │ 𐑲 │ · │ 𐑞 │ 𐑡 │ « │ » │ : │ " │  ent │
+//├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+//│ shift   │ 𐑠 │ 𐑺 │ 𐑽 │ 𐑿 │ ⸰ │ 𐑙 │ 𐑵 │ ‹ │ › │ ? │  shift │
+//└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+
+// ------ Layer 3 (Alt+key) ------
+//┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+//│ ´ │ ¹ │ ² │ ³ │ ⁴ │ ⁵ │ ⁶ │ ⁷ │ ⁸ │ ⁹ │ ⁰ │ → │ ≠ │ bksp │
+//├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+//│ tab │ … │ ◌̀ │ ◌́ │ ® │ ™ │ √ │ ↑ │ ◌̈ │ ø │ ℗ │ ⟨ │ ⟩ │ •  │
+//├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+//│ caps  │ “ │ ” │ ↓ │ ° │ æ │ ‐ │ œ │ ≤ │ ≥ │ § │ × │  ent │
+//├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+//│ shift   │ ‘ │ ’ │ © │ ⁃ │ ○ │ – │ — │ < │ > │ ÷ │  shift │
+//└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+// shift+w ◌̀ U+0300 combining grave mark
+// shift+e ◌́ U+0301 combining acute mark
+// shift+i ◌̈ U+0308 combining diaeresis (umlaut)
+
+// ------ Layer 4 (Alt+Shift+key) ------
+//┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+//│ ≈ │ ₁ │ ₂ │ ₃ │ ₄ │ ₅ │ ₆ │ ₇ │ ₈ │ ₉ │ ₀ │ ← │ ± │ bksp │
+//├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+//│ tab │ ⌜ │ ⌝ │ ⌞ │ ⌟ │ ‰ │   │   │   │ Ø │ π │ ⟮ │ ⟯ │ ◦  │
+//├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+//│ caps  │ ⊞ │ ☺ │   │   │ Æ │ ‑ │ Œ │   │ ₤ │   │   │  ent │
+//├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+//│ shift   │   │   │ ¢ │   │ ◌ │ ◌̃ │ µ │ ☒ │ ☐ │ ☑ │  shift │
+//└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+// Alt+Shift+n ◌̃  U+0303 - combining tilde
+
+// (for better viewing in VIM run ":set ts=18")
+
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "qwerty" {
+
+    name[Group1]= "Shavian (QWERTY)";
+
+//│ ´ │ ¹ │ ² │ ³ │ ⁴ │ ⁵ │ ⁶ │ ⁷ │ ⁸ │ ⁹ │ ⁰ │ → │ ≠ │ bksp │
+//│ ≈ │ ₁ │ ₂ │ ₃ │ ₄ │ ₅ │ ₆ │ ₇ │ ₈ │ ₉ │ ₀ │ ← │ ± │ bksp │
+    key <TLDE>	{[ grave,	asciitilde,	U00B4,	U2248	]}; // ` ~ ´ (acute accent)  ≈ (almost equal)
+    key <AE01>	{[ 1,	exclam,	U00B9,	U2081	]}; // 1 ! ¹ (superscript 1) ₁ (subscript 1)
+    key <AE02>	{[ 2,	at,	U00B2,	U2082	]}; // 2 @ ² (superscript 2) ₂ (subscript 2)
+    key <AE03>	{[ 3,	numbersign,	U00b3,	U2083	]}; // 3 # ³ (superscript 3) ₃ (subscript 3)
+    key <AE04>	{[ 4,	dollar,	U2074,	U2084	]}; // 4 $ ⁴ (superscript 4) ₄ (subscript 4)
+    key <AE05>	{[ 5,	percent,	U2075,	U2085	]}; // 5 % ⁵ (superscript 5) ₅ (subscript 5)
+    key <AE06>	{[ 6,	asciicircum,	U2076,	U2086	]}; // 6 ^ ⁶ (superscript 6) ₆ (subscript 6)
+    key <AE07>	{[ 7,	ampersand,	U2077,	U2087	]}; // 7 & ⁷ (superscript 7) ₇ (subscript 7)
+    key <AE08>	{[ 8,	asterisk,	U2078,	U2088	]}; // 8 * ⁸ (superscript 8) ₈ (subscript 8)
+    key <AE09>	{[ 9,	parenleft,	U2079,	U2089	]}; // 9 ( ⁹ (superscript 9) ₉ (subscript 9)
+    key <AE10>	{[ 0,	parenright,	U2070,	U2080	]}; // 0 ( ⁰ (superscript 0) ₀ (subscript 0)
+    key <AE11>	{[ minus,	underscore,	U2192,	U2190	]}; // - _ → (right arrow)   ← (left arrow)
+    key <AE12>	{[ equal,	plus,	U2260,	U00B1	]}; // = + ≠ (notequal to)   ± (plus minus)
+
+//│ tab │ … │ ◌̀ │ ◌́ │ ® │ ™ │ √ │ ↑ │ ◌̈ │ ø │ ℗ │ ⟨ │ ⟩ │ •  │
+//│ tab │ ⌜ │ ⌝ │ ⌞ │ ⌟ │ ‰ │   │   │   │ Ø │ π │ ⟮ │ ⟯ │ ◦  │
+// shift+w ◌̀ U+0300 combining grave mark
+// shift+e ◌́ U+0301 combining acute mark
+// shift+i ◌̈ U+0308 combining diaeresis (umlaut)
+    key <AD01>	{[ U10476,	U1046C,	U2026,	U231C	]}; //q: oil    Out
+    key <AD02>	{[ U10462,	U1047E,	U0300,	U231D	]}; //w: woe    Ian
+    key <AD03>	{[ U10467,	U10471,	U0301,	U231E	]}; //e: egg    Age
+    key <AD04>	{[ U1046E,	U10478,	U00AE,	U231F	]}; //r: roar   Are
+    key <AD05>	{[ U10451,	U10454,	U2122,	U2030	]}; //t: tot    Thigh
+    key <AD06>	{[ U1046D,	U10477,	U221A,	VoidSymbol	]}; //y: ah     Awe
+    key <AD07>	{[ U10473,	U1046B,	U2191,	VoidSymbol	]}; //u: up     Wool
+    key <AD08>	{[ U10466,	U10470,	U0308,	VoidSymbol	]}; //i: if     Eat
+    key <AD09>	{[ U1046A,	U10474,	U00F8,	U00D8	]}; //o: on     Oak
+    key <AD10>	{[ U10450,	U10479,	U2117,	U03C0	]}; //p: peep   Or
+    key <AD11>	{[ bracketleft,	braceleft,	U27E8,	U27EE	]}; //   [      {
+    key <AD12>	{[ bracketright, braceright,	U27E9,	U27EF	]}; //   ]      }
+    key <BKSL>	{[ backslash,	bar,	U2022,	U25E6	]}; //   \      |
+
+//│ caps  │ “ │ ” │ ↓ │ ° │ æ │ ‐ │ œ │ ≤ │ ≥ │ § │ × │  ent │
+//│ caps  │   │ ☺ │   │   │ Æ │ ‑ │ Œ │   │ ₤ │   │   │  ent │
+    key <AC01>	{[ U10469,	U10468,	U201C,	VoidSymbol	]}; //a: Ado    Ash
+    key <AC02>	{[ U10455,	U10456,	U201D,	U263A	]}; //s: So     Sure
+    key <AC03>	{[ U1045B,	U1047C,	U2193,	VoidSymbol	]}; //d: Dead   Array
+    key <AC04>	{[ U10453,	U10472,	U00B0,	VoidSymbol	]}; //f: Fee    Ice
+    key <AC05>	{[ U1045C,	periodcentered,	U00E6,	U00C6	]}; //g: Gag    ·(UB7)
+    key <AC06>	{[ U10463,	U1045E,	U2010,	U2011	]}; //h: Ha-ha  They
+    key <AC07>	{[ U10458,	U10461,	U0153,	U0152	]}; //j: Yea    Judge
+    key <AC08>	{[ U10452,	guillemotleft,	U2264,	VoidSymbol	]}; //k: Kick   «(Uab)
+    key <AC09>	{[ U10464,	guillemotright,	U2265,	U20A4	]}; //l: Loll   »(Ubb)
+    key <AC10>	{[ semicolon,	colon,	U00A7,	VoidSymbol	]}; //   ;      :      § (section)
+    key <AC11>	{[ apostrophe,	quotedbl,	U00D7,	VoidSymbol	]}; //   '      "      × (multipl)
+
+//│ shift   │ ‘ │ ’ │ © │ ⁃ │ ○ │ – │ — │ < │ > │ ÷ │  shift │
+//│ shift   │   │   │ ¢ │   │ ◌ │ ◌̃ │ µ │ ☒ │ ☐ │ ☑ │  shift │
+// Alt+Shift+n ◌̃  U+0303 - combining tilde
+    key <AB01>	{[ U1045F,	U10460,	U2018,	VoidSymbol	]}; //z: Zoo    Measure
+    key <AB02>	{[ U1047B,	U1047A,	U2019,	VoidSymbol	]}; //x: Err    Air
+    key <AB03>	{[ U10457,	U1047D,	U00A9,	U00A2	]}; //c: Church Ear
+    key <AB04>	{[ U1045D,	U1047F,	U2043,	VoidSymbol	]}; //v: Vow    Yew
+    key <AB05>	{[ U1045A,	U2E30,	U25CB,	U25CC	]}; //b: Bib    (midcir)
+    key <AB06>	{[ U1046F,	U10459,	U2013,	U0303	]}; //n: Nun    Hung
+    key <AB07>	{[ U10465,	U10475,	U2014,	U00B5	]}; //m: Mime   Ooze
+    key <AB08>	{[ comma,	U2039,	less,	U2612	]}; //   ,      ‹ (s guil)
+    key <AB09>	{[ period,	U203a,	greater,	U2610	]}; //   .      › (s guil)
+    key <AB10>	{[ slash,	question,	U00F7,	U2611	]}; //   /      ?
+
+    key <SPCE>	{[ space,	space,	U2003,	U200B	]}; // U2003 M-space, U200B zero-width space
+
+    replace key <CAPS> {
+        type = "ALPHABETIC",
+        symbols = [ Escape, Escape ],
+        actions [Group1] = [ SetMods(modifiers=none), SetMods(modifiers=Lock,clearLocks) ]
+    };
+
+    replace key <ESC> { [ Alt_L, Alt_L ] };
+
+    include "shift(both_capslock_cancel)"
+
+    // both LAlt and RAlt switch to level3
+    include "level3(alt_switch)"
+
+    // compose key
+    include "compose(paus)"
+
+};
+
