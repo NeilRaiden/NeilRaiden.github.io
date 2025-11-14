@@ -1,0 +1,112 @@
+# UK English (Phonemic) keyboard layout
+# Copyright (c) 2024 Neil Raiden (AGPL v.3)
+# <https://www.gnu.org/licenses/agpl-3.0.en.html>
+
+# Note:
+#  * XKB does not allow to type more than one Unicode point per key press
+#  * The **English (US, Phonemic)** keyboard layout requires to type 14 phonemes up to 3 unicode points in length
+#  * single-symbol code point are produced by layout defined in /usr/share/X11/xkb/symbols/usphonem
+#  * for longer sequences the layout sends out Unicode points from unassigned range U+FDD0-U+FDEF (aka non-characters)
+#  * those non-characters are then converted by ~/.XCompose to proper phoneme sequences
+#
+## Notes:    (source: https://www.x.org/releases/current/doc/man/man5/Compose.5.xhtml)
+## There are several substitutions that can be made in the file name of the included instruction:
+##    %H - expands to the user’s home directory (the $HOME environment variable)
+##    %L - expands to the name of the locale specific Compose file (i.e., "/usr/share/X11/locale/<localename>/Compose")
+##    %S - expands to the name of the system directory for Compose files (i.e., "/usr/share/X11/locale")
+## For example, you can include in your compose file the default Compose file by using:
+##    include "%L"
+## and then rewrite only the few rules that you need to change. New compose rules can be added, and previous ones replaced.
+
+include "%L"
+
+# after any modifications to this file run command:
+# ibus restart
+
+# ------ Layer 1 (unshifted) ------
+#┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+#│ ` │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ - │ = │ bksp │
+#├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+#│ tab │ɔɪ │ w │ ɛ │ r │ t │ɑː │ ʌ │ ɪ │ ɒ │ p │ [ │ ] │ \  │
+#├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+#│ caps  │ ə │ s │ d │ f │ ɡ │ h │ j │ k │ l │ ; │ ' │  ent │
+#├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+#│ shift   │ z │ɜːʳ│tʃ │ v │ b │ n │ m │ , │ . │ / │  shift │
+#└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+
+# ------ Layer 2 (shifted) ------
+#┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+#│ ~ │ ! │ @ │ £ │ $ │ % │ ^ │ & │ * │ ( │ ) │ _ │ + │ bksp │
+#├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+#│ tab │aʊ │ɪə │eɪ │ɑːʳ│ θ │ɔː │ ʊ │iː │əʊ │ɔːʳ│ { │ } │ |  │
+#├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+#│ caps  │ æ │ ʃ │əʳ │aɪ │ · │ ð │dʒ │ « │ » │ : │ " │  ent │
+#├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+#│ shift   │ ʒ │eəʳ│ɪəʳ│juː│ ⸰ │ ŋ │uː │ ‹ │ › │ ? │  shift │
+#└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+
+# Using characters from Latin-1 range U+00C0-00CF — "Latin-1 Supplement (0080–00FF)":
+# 
+# consonants:
+<U00C0> : "tʃ"  # c U0074 U0283       # À  Latin Capital Letter A with grave
+<U00C1> : "dʒ"  # J U0064 U0292       # Á  Latin Capital letter A with acute
+# long vowels:
+<U00C2> : "ɑː"  # y U0251 U02D0       # Â  Latin Capital letter A with circumflex
+<U00C3> : "ɔː"  # Y U0254 U02D0       # Ã  Latin Capital letter A with tilde
+<U00C4> : "iː"  # I U0069 U02D0       # Ä  Latin Capital letter A with diaeresis
+<U00C5> : "uː"  # M U0075 U02D0       # Å  Latin Capital letter A with ring above
+# diphtongs:
+<U00C8> : "juː" # V U006A U0075 U02D0 # È  Latin Capital letter E with grave 	
+<U00C9> : "eɪ"  # E U0065 U026A       # É  Latin Capital letter E with acute 	
+<U00CA> : "aɪ"  # F U0061 U026A       # Ê  Latin Capital letter E with circumflex 	
+<U00CB> : "ɔɪ"  # q U0254 U026A       # Ë  Latin Capital letter E with diaeresis 	
+<U00CC> : "aʊ"  # Q U0061 U028A       # Ì  Latin Capital letter I with grave 	
+<U00CD> : "əʊ"  # O U0259 U028A       # Í  Latin Capital letter I with acute 	
+<U00CE> : "ɪə"  # W U026A U0259       # Î  Latin Capital letter I with circumflex 	
+# R-colored vowels:
+<U00CF> : "əʳ"  # D U0259 U02B3       # Ï  Latin Capital letter I with diaeresis 	
+<U00D2> : "ɜːʳ" # x U025C U02D0 U02B3 # Ò  Latin Capital letter O with grave 	
+<U00D3> : "ɑːʳ" # R U0251 U02D0 U02B3 # Ó  Latin Capital letter O with acute 	
+<U00D4> : "ɔːʳ" # P U0254 U02D0 U02B3 # Ô  Latin Capital letter O with circumflex 	
+<U00D5> : "eəʳ" # X U0065 U0259 U02B3 # Õ  Latin Capital letter O with tilde 	
+<U00D6> : "ɪəʳ" # C U026A U0259 U02B3 # Ö  Latin Capital letter O with diaeresis
+
+# ------------
+# Latin-1 Supplement (0080–00FF):
+# U+00C0 	À 	Latin Capital Letter A with grave 	
+# U+00C1 	Á 	Latin Capital letter A with acute 	
+# U+00C2 	Â 	Latin Capital letter A with circumflex 	
+# U+00C3 	Ã 	Latin Capital letter A with tilde 	
+# U+00C4 	Ä 	Latin Capital letter A with diaeresis 	
+# U+00C5 	Å 	Latin Capital letter A with ring above 	
+# U+00C6 	Æ 	Latin Capital letter AE 	
+# U+00C7 	Ç 	Latin Capital letter C with cedilla 	
+# U+00C8 	È 	Latin Capital letter E with grave 	
+# U+00C9 	É 	Latin Capital letter E with acute 	
+# U+00CA 	Ê 	Latin Capital letter E with circumflex 	
+# U+00CB 	Ë 	Latin Capital letter E with diaeresis 	
+# U+00CC 	Ì 	Latin Capital letter I with grave 	
+# U+00CD 	Í 	Latin Capital letter I with acute 	
+# U+00CE 	Î 	Latin Capital letter I with circumflex 	
+# U+00CF 	Ï 	Latin Capital letter I with diaeresis 	
+# U+00D0 	Ð 	Latin Capital letter Eth 	
+# U+00D1 	Ñ 	Latin Capital letter N with tilde 	
+# U+00D2 	Ò 	Latin Capital letter O with grave 	
+# U+00D3 	Ó 	Latin Capital letter O with acute 	
+# U+00D4 	Ô 	Latin Capital letter O with circumflex 	
+# U+00D5 	Õ 	Latin Capital letter O with tilde 	
+# U+00D6 	Ö 	Latin Capital letter O with diaeresis
+#
+# (in vim ":set ts=6")
+#	0	1	2	3	4	5	6	7	8	9	a	b	c	d	e	f
+# Ax	NBSP 	¡ 	¢ 	£ 	¤ 	¥ 	¦ 	§ 	¨ 	© 	ª 	« 	¬ 	SHY 	® 	¯
+# Bx 	° 	± 	² 	³ 	´ 	µ 	¶ 	· 	¸ 	¹ 	º 	» 	¼ 	½ 	¾ 	¿
+# Cx 	À 	Á 	Â 	Ã 	Ä 	Å 	Æ 	Ç 	È 	É 	Ê 	Ë 	Ì 	Í 	Î 	Ï
+# Dx 	Ð 	Ñ 	Ò 	Ó 	Ô 	Õ 	Ö 	× 	Ø 	Ù 	Ú 	Û 	Ü 	Ý 	Þ 	ß
+# Ex 	à 	á 	â 	ã 	ä 	å 	æ 	ç 	è 	é 	ê 	ë 	ì 	í 	î 	ï
+# Fx 	ð 	ñ 	ò 	ó 	ô 	õ 	ö 	÷ 	ø 	ù 	ú 	û 	ü 	ý 	þ 	ÿ
+
+# after any modifications run command:
+# ibus restart
+# ------------
+

@@ -1,0 +1,167 @@
+// # English ESL (QWERTY) keyboard layout
+// Copyright (c) 2024 Neil Raiden (AGPL v.3)
+// <https://www.gnu.org/licenses/agpl-3.0.en.html>
+
+// This layout contains all English phoneme symbols in Layer 3 (AltGr) and Layer 4 (AltGr+Shift).
+//  Note: Layer 1 (unshifted) and Layer 2 (shifted) are exactly the same as on the regular US QWERTY layout.
+
+// ## Installation
+// 1. Copy this file (esl) to `/etc/xkb/symbols/esl`
+//```
+//  sudo mkdir -p /etc/xkb/rules
+//  sudo mkdir -p /etc/xkb/symbols
+//  sudo cp esl /etc/xkb/symbols/
+//```
+// 2. Add the following section to `/etc/xkb/rules/evdev.xml`:
+//```
+//<?xml version="1.0" encoding="UTF-8"?>
+//<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+//<xkbConfigRegistry version="1.1">
+//  <layoutList>
+//<!-- ESL (QWERTY) Layout (start) -->
+//    <layout>
+//      <configItem>
+//        <name>esl</name>
+//        <shortDescription>ESL</shortDescription>
+//        <description>ESL (QWERTY)</description>
+//        <countryList><iso3166Id>US</iso3166Id></countryList>
+//        <languageList><iso639Id>eng</iso639Id></languageList>
+//      </configItem>
+//    </layout>
+//<!-- ESL (QWERTY) Layout (end) -->
+//  </layoutList>
+//</xkbConfigRegistry>
+//```
+// 3. (optional) add the following line to `/etc/xkb/rules/evdev`. Note that GNOME layout switcher ignores the `evdev` file and uses only the `evdev.xml`:
+//```
+//! option = symbols
+//  esl:qwerty  = +esl(qwerty)
+//! include %S/evdev
+//```
+// 4. Testing:
+//	- activate "Writer (QWERTY)": `setxkbmap -layout esl`,
+//  - test it by simply typing with the new layout,
+//  - if setxkbmap returns "Error loading new keyboard description", then it's possible that your Linux distro runs xkb with elevated privileges and ignores files in `/etc/xkb/symbols`. In such case create a link: `sudo ln -s /etc/xkb/symbols/esl /usr/share/X11/xkb/symbols/esl`,
+//	- reset back to default layout: `setxkbmap us`
+
+// ------ Layer 3 (Alt+key) ------
+//┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+//│ ´ │ ¹ │ ² │ ³ │ ⁴ │ ⁵ │ ⁶ │ ⁷ │ ⁸ │ ⁹ │ ⁰ │ → │ ≠ │ bksp │
+//├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+//│ tab │ ɜ │ ʍ │ ɛ │ ɹ │ θ │ ə │ ʊ │ ɪ │ ɔ │ ɒ │ ⟨ │ ⟩ │ •  │
+//├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+//│ caps  │ ɑ │ ʃ │ ð │ ɐ │ ɡ │ ‐ │ ʤ │ ʰ │ ɫ │ ː │ ᵊ │  ent │
+//├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+//│ shift   │ ʒ │ æ │ ʧ │ ʌ │ · │ ŋ │ ◌̃ │ ˈ │ ˌ │ ʔ │  shift │
+//└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+// Alt+m ◌̃ - (U+0303) combining tilde (for nasalization)
+
+// ------ Layer 4 (Alt+Shift+key) ------
+//┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
+//│ ≈ │ ₁ │ ₂ │ ₃ │ ₄ │ ₅ │ ₆ │ ₇ │ ₈ │ ₉ │ ₀ │ ← │ ± │ bksp │
+//├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+//│ tab │ ɝ │ ◌̀ │ ◌́ │ ʳ │ ɾ │ ɚ │ ↑ │   │ ◌ │   │ ⟮ │ ⟯ │ ◦  │
+//├─────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+//│ caps  │ “ │ ” │ ↓ │ ◌̄ │ ◌̱ │ ‑ │   │ « │ » │ § │ × │  ent │
+//├───────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──────┤
+//│ shift   │ ‘ │ ’ │ … │ ⁃ │ ○ │ – │ — │ ‹ │ › │ ÷ │  shift │
+//└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
+// Alt+Shift+w ◌̀  - U+0300 combining grave accent
+// Alt+Shift+e ◌́  - U+0301 combining acute accent
+// Alt+Shift+f ◌̄  - U+0304 combining macron
+// Alt+Shift+g ◌̱  - U+0331 combining macron below
+
+// (for better view in vim use ":set ts=16")
+
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "qwerty" {
+
+    include "us(basic)"
+
+    name[Group1]= "ESL (QWERTY)";
+
+//│ ´ │ ¹ │ ² │ ³ │ ⁴ │ ⁵ │ ⁶ │ ⁷ │ ⁸ │ ⁹ │ ⁰ │ → │ ≠ │ bksp │ alt
+//│ ≈ │ ₁ │ ₂ │ ₃ │ ₄ │ ₅ │ ₆ │ ₇ │ ₈ │ ₉ │ ₀ │ ← │ ± │ bksp │ alt+shift
+    key <TLDE>	{ [ NoSymbol,	NoSymbol,	acute,	U2248	] };
+    key <AE01>	{ [ NoSymbol,	NoSymbol,	onesuperior,	U2081	] };
+    key <AE02>	{ [ NoSymbol,	NoSymbol,	twosuperior,	U2082	] };
+    key <AE03>	{ [ NoSymbol,	NoSymbol,	threesuperior,	U2083	] };
+    key <AE04>	{ [ NoSymbol,	NoSymbol,	U2074,	U2084	] };
+    key <AE05>	{ [ NoSymbol,	NoSymbol,	U2075,	U2085	] };
+    key <AE06>	{ [ NoSymbol,	NoSymbol,	U2076,	U2086	] };
+    key <AE07>	{ [ NoSymbol,	NoSymbol,	U2077,	U2087	] };
+    key <AE08>	{ [ NoSymbol,	NoSymbol,	U2078,	U2088	] };
+    key <AE09>	{ [ NoSymbol,	NoSymbol,	U2079,	U2089	] };
+    key <AE10>	{ [ NoSymbol,	NoSymbol,	U2070,	U2080	] };
+    key <AE11>	{ [ NoSymbol,	NoSymbol,	U2192,	U2190	] };
+    key <AE12>	{ [ NoSymbol,	NoSymbol,	U2260,	plusminus	] };
+
+//│ tab │ ɜ │ ʍ │ ɛ │ ɹ │ θ │ ə │ ʊ │ ɪ │ ɔ │ ɒ │ ⟨ │ ⟩ │ •  │ alt
+//│ tab │ ɝ │ ◌̀ │ ◌́ │ ʳ │ ɾ │ ɚ │ ↑ │   │ ◌ │   │ ⟮ │ ⟯ │ ◦  │ alt+shift
+// Alt+Shift+w ◌̀  - U+0300 combining grave accent
+// Alt+Shift+e ◌́  - U+0301 combining acute accent
+    key <AD01>	{ [ NoSymbol,	NoSymbol,	U025C,	U025D	] };
+    key <AD02>	{ [ NoSymbol,	NoSymbol,	U028D,	U0300	] };
+    key <AD03>	{ [ NoSymbol,	NoSymbol,	U025B,	U0301	] };
+    key <AD04>	{ [ NoSymbol,	NoSymbol,	U0279,	U02B3	] };
+    key <AD05>	{ [ NoSymbol,	NoSymbol,	U03B8,	U027E	] };
+    key <AD06>	{ [ NoSymbol,	NoSymbol,	U0259,	U025A	] };
+    key <AD07>	{ [ NoSymbol,	NoSymbol,	U028A,	U2191	] };
+    key <AD08>	{ [ NoSymbol,	NoSymbol,	U026A,	VoidSymbol	] };
+    key <AD09>	{ [ NoSymbol,	NoSymbol,	U0254,	U25CC     	] };
+    key <AD10>	{ [ NoSymbol,	NoSymbol,	U0252,	VoidSymbol	] };
+    key <AD11>	{ [ NoSymbol,	NoSymbol,	U27E8,	U27EE	] };
+    key <AD12>	{ [ NoSymbol,	NoSymbol,	U27E9,	U27EF	] };
+    key <BKSL>	{ [ NoSymbol,	NoSymbol,	U2022,	U25E6	] };
+
+//│ caps  │ ɑ │ ʃ │ ð │ ɐ │ ɡ │ ‐ │ ʤ │ ʰ │ ɫ │ ː │ ᵊ │  ent │ alt
+//│ caps  │ “ │ ” │ ↓ │ ◌̄ │ ◌̱ │ ‑ │   │ « │ » │ § │ × │  ent │ alt+shift
+// Alt+Shift+f ◌̄  - U+0304 combining macron
+// Alt+Shift+g ◌̱  - U+0331 combining macron below
+    key <AC01>	{ [ NoSymbol,	NoSymbol,	U0251,	U201C	] };
+    key <AC02>	{ [ NoSymbol,	NoSymbol,	U0283,	U201D	] };
+    key <AC03>	{ [ NoSymbol,	NoSymbol,	U00F0,	U2193	] };
+    key <AC04>	{ [ NoSymbol,	NoSymbol,	U0250,	U0304	] };
+    key <AC05>	{ [ NoSymbol,	NoSymbol,	U0261,	U0331	] };
+    key <AC06>	{ [ NoSymbol,	NoSymbol,	U2010,	U2011	] };
+    key <AC07>	{ [ NoSymbol,	NoSymbol,	U02A4,	VoidSymbol	] };
+    key <AC08>	{ [ NoSymbol,	NoSymbol,	U02B0,	guillemotleft	] };
+    key <AC09>	{ [ NoSymbol,	NoSymbol,	U026B,	guillemotright	] };
+    key <AC10>	{ [ NoSymbol,	NoSymbol,	U02D0,	section	] };
+    key <AC11>	{ [ NoSymbol,	NoSymbol,	U1D4A,	multiply	] };
+
+//│ shift   │ ʒ │ æ │ ʧ │ ʌ │ · │ ŋ │ ◌̃ │ ˈ │ ˌ │ ʔ │  shift │ alt
+//│ shift   │ ‘ │ ’ │ … │ ⁃ │ ○ │ – │ — │ ‹ │ › │ ÷ │  shift │ alt+shift
+// Alt+m ◌̃ - (U+0303) combining tilde (for nasalization)
+    key <AB01>	{ [ NoSymbol,	NoSymbol,	U0292,	U2018	] };
+    key <AB02>	{ [ NoSymbol,	NoSymbol,	U00E6,	U2019	] };
+    key <AB03>	{ [ NoSymbol,	NoSymbol,	U02A7,	U2026	] };
+    key <AB04>	{ [ NoSymbol,	NoSymbol,	U028C,	U2043	] };
+    key <AB05>	{ [ NoSymbol,	NoSymbol,	periodcentered,	U25CB	] };
+    key <AB06>	{ [ NoSymbol,	NoSymbol,	U014B,	U2013	] };
+    key <AB07>	{ [ NoSymbol,	NoSymbol,	U0303,	U2014	] };
+    key <AB08>	{ [ NoSymbol,	NoSymbol,	U02C8,	U2039	] };
+    key <AB09>	{ [ NoSymbol,	NoSymbol,	U02CC,	U203A	] };
+    key <AB10>	{ [ NoSymbol,	NoSymbol,	U0294,	division	] };
+
+    key <SPCE>	{ [ space,	space,	U2003,	U200B	] };
+
+    // CapsLock becomes Escape key:
+    replace key <CAPS> {
+        type = "ALPHABETIC",
+        symbols = [ Escape, Escape ],
+        actions [Group1] = [ SetMods(modifiers=none), SetMods(modifiers=Lock,clearLocks) ]
+    };
+
+    // ESC key becomes LeftAlt
+    replace key <ESC> { [ Alt_L, Alt_L ] };
+
+    // Both shift keys together become CapsLock:
+    include "shift(both_capslock_cancel)"
+
+    include "level3(alt_switch)"
+
+    include "compose(paus)"
+
+};
+
