@@ -95,9 +95,10 @@
 	</table>
 	<p style="text-align:center"><a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-v3.0</a><p>
 
-	<h2>Installation instructions</h2>
+	<h2>Installation and configuration instructions</h2>
 	<details><summary>Mac OS</summary>
-		<p>Installation on Mac is the simplest of all: </p>
+		<h4>Installation:</h4>
+		<p>Installation on Mac is the simplest of all operating systems:</p>
 		<ol>
 			<li>
 				Double-click on the downloaded <b>.dmg</b> file — a window will pop up displaying two options, for example:
@@ -136,13 +137,60 @@
 			<li><b>⌃ Space</b> — press <b>Control + Space</b> to switch layouts - selection window is displayed on the screen.</li>
 			<li><b>⌃ ⌥ Space</b> — press <b>Control + Option + Space</b> to switch layouts. </li>
 		</ul>
+		<h4>Customizing:</h4>
+		<p>The easiest way to customize layouts please download and install <a href="https://software.sil.org/ukelele/">Ukelele</a>
+			from <a href="https://sil.org/">sil.org</a>. Install with administrator privileges — to compile a new
+			<span class="mono">.dmg</span> you need to log in as an administrator.
+		</p>
+		<p>After installation the keyboard layout can be found in either of the two locations:</p>
+		<ol>
+			<li><span class="mono">/Library/Keyboard Layouts/</span> — all users</li>
+			<li><span class="mono">~/Library/Keyboard Layouts/</span> — current user</li>
+		</ol>
+		<p>Alternatively, you can download layout <b>.bundle</b> file from the project website:
+			<a href="https://github.com/NeilRaiden/keyboard-layouts-macOS">github.com/NeilRaiden/keyboard-layouts-macOS/</a>.
+		</p>
+		<p>
+			To edit the layout, open one of the locations mentioned above and locate the <span class="mono">XXX.bundle</span> of the layout 
+			you want to edit. It is a directory. However, the Finder will not allow you to get inside. Double-click will open <b>Ukelele</b>.</a>
+		</p>
+		<p>
+			Alternatively, use the Terminal (or GhosTTY or KiTTY instead). For example:
+		</p>
+		<p><span class="mono">cd /Library/Keyboard Layouts/ESL.bundle/Contents/Resources/</span></p>
+		<p>You should see two files, for example:</p>
+		<ul>
+			<li><span class="mono">ESL.icns</span> — a binary file containg the icon set displayed in the status bar.</li>
+			<li><span class="mono">ESL.keylayout</span> — a text file in XML format of the layout. You can edit this file in a text editor.</li>
+		</ul>
 		<hr style="padding-bottom: 20px;">
 	</details>
 	<details><summary>Windows</summary>
-		<p><i>comings soon</i></p>
+		<p>There are two options to create a keyboard layout for Windows:</p>
+		<ul>
+			<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=102134">Microsoft Keyboard Layout Creator</a></li>
+			<li><a href="https://www.autohotkey.com/">AutoHotKey</a></li>
+		</ul>
+		<p>As of November 2025, this project offers only scripts created for AutoHotKey v2.</p>
+		<h4>Installation:</h4>
+		<ol>
+			<li>Download the keyboard layout of your choice — it is a simple text file (AHK script).</li>
+			<li>Download and install AutoHotkey version 2.</li>
+			<li>Double-click the <span class="mono">.ahk</span> script</li>
+			<li>Currently (as of November 2025) to disable the layout, you have to stop the script: 
+				<ol>
+					<li>Right-click on the AutoHotKey icon in the task bar.</li>
+					<li>Select “Stop script”.</li>
+				</ol>
+			</li>
+		</ol>
+		<hr style="padding-bottom: 20px;">
 	</details>
+
 	<details><summary>Linux</summary>
 		<p><i>comings soon</i></p>
+		<p>
+		</p>
 	</details>
 
 

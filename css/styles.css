@@ -16,7 +16,10 @@
 	/*table { border: 1px solid LightSteelBlue; }*/
 	table { border: 1px solid white; }
 	table th { background-color: DarkBlue; }
-	.ipa { color: white; }	
+	.ipa { color: white; }
+	.mono { color: white; }
+	p .mono { color: white; }
+	li .mono { color: white; }
 }
 /*
 @media (prefers-color-scheme: dark) {
@@ -201,14 +204,14 @@ p.source {
 pre {
 	/*font-family:NotoSansMono;*/
 	/*font-family:NotoSansMono_ExtraCondensed;*/
-	font-family: var(--monoFontFamily);
+	font-family: var(--monoFontFamily), monospace;
 	font-size: var(--monoFontSize);
 	white-space: pre-wrap; 
 	overflow-x: auto; 
 }
 .mono {
 	/*font-family:NotoSansMono_ExtraCondensed;*/
-	font-family: var(--monoFontFamily);
+	font-family: var(--monoFontFamily), monospace;
 	font-size: var(--monoFontSize);
 	font-size:1em;
 	color:black;
