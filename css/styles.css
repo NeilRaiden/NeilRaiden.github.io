@@ -11,6 +11,7 @@
 	/* todo: switch to using variables for colors */
 	body { background: #333; color: #ccc; }
 	p b { color: white; }
+	li b { color: white; }
 	div b { color: white; }
 	/*table { border: 1px solid LightSteelBlue; }*/
 	table { border: 1px solid white; }
