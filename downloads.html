@@ -98,7 +98,7 @@
 	<h2>Installation and configuration instructions</h2>
 	<details><summary>Mac OS</summary>
 		<h4>Installation:</h4>
-		<p>Installation on Mac is the simplest of all operating systems:</p>
+		<p>Installation on Mac is the simplest of all major operating systems:</p>
 		<ol>
 			<li>
 				Double-click on the downloaded <b>.dmg</b> file — a window will pop up displaying two options, for example:
@@ -108,7 +108,7 @@
 				</ul>
 			</li>
 			<li>
-				Double-click the <i>Keyboard Installer</i> icon, its' window will pop up.
+				Double-click the <i>Keyboard Installer</i> icon, it's window will pop up.
 				At the bottom it says: “Keyboard layout to install: <i>Drag keyboard layout here to install</i>”.
 			</li>
 			<li>
@@ -140,28 +140,28 @@
 		<h4>Customizing:</h4>
 		<p>The easiest way to customize layouts please download and install <a href="https://software.sil.org/ukelele/">Ukelele</a>
 			from <a href="https://sil.org/">sil.org</a>. Install with administrator privileges — to compile a new
-			<span class="mono">.dmg</span> you need to log in as an administrator.
+			<code>.dmg</code> you need to log in as an administrator.
 		</p>
 		<p>After installation the keyboard layout can be found in either of the two locations:</p>
 		<ol>
-			<li><span class="mono">/Library/Keyboard Layouts/</span> — all users</li>
-			<li><span class="mono">~/Library/Keyboard Layouts/</span> — current user</li>
+			<li><code>/Library/Keyboard Layouts/</code> — all users</li>
+			<li><code>~/Library/Keyboard Layouts/</code> — current user</li>
 		</ol>
 		<p>Alternatively, you can download layout <b>.bundle</b> file from the project website:
 			<a href="https://github.com/NeilRaiden/keyboard-layouts-macOS">github.com/NeilRaiden/keyboard-layouts-macOS/</a>.
 		</p>
 		<p>
-			To edit the layout, open one of the locations mentioned above and locate the <span class="mono">XXX.bundle</span> of the layout 
+			To edit the layout, open one of the locations mentioned above and locate the <code>XXX.bundle</code> of the layout 
 			you want to edit. It is a directory. However, the Finder will not allow you to get inside. Double-click will open <b>Ukelele</b>.</a>
 		</p>
 		<p>
 			Alternatively, use the Terminal (or GhosTTY or KiTTY instead). For example:
 		</p>
-		<p><span class="mono">cd /Library/Keyboard Layouts/ESL.bundle/Contents/Resources/</span></p>
+		<p><code>cd /Library/Keyboard Layouts/ESL.bundle/Contents/Resources/</code></p>
 		<p>You should see two files, for example:</p>
 		<ul>
-			<li><span class="mono">ESL.icns</span> — a binary file containg the icon set displayed in the status bar.</li>
-			<li><span class="mono">ESL.keylayout</span> — a text file in XML format of the layout. You can edit this file in a text editor.</li>
+			<li><code>ESL.icns</code> — a binary file containg the icon set displayed in the status bar.</li>
+			<li><code>ESL.keylayout</code> — a text file in XML format of the layout. You can edit this file in a text editor.</li>
 		</ul>
 		<hr style="padding-bottom: 20px;">
 	</details>
@@ -176,7 +176,7 @@
 		<ol>
 			<li>Download the keyboard layout of your choice — it is a simple text file (AHK script).</li>
 			<li>Download and install <a href="https://www.autohotkey.com/">AutoHotKey version 2</a></li>
-			<li>Double-click the <span class="mono">.ahk</span> script</li>
+			<li>Double-click the <code>.ahk</code> script</li>
 			<li>Currently (as of November 2025) to disable the layout, you have to stop the script: 
 				<ol>
 					<li>Right-click on the AutoHotKey icon in the task bar.</li>
@@ -184,11 +184,27 @@
 				</ol>
 			</li>
 		</ol>
+		<h4>Configuration:</h4>
+		<p>All layouts in <b>.ahk</b> format presented here remap the following keys:</p>
+		<ul>
+			<li><b>CapsLock</b> key acts as <b>ESC</b></li>
+			<li><b>ESC</b> key acts as <b>LeftAlt</b></li>
+			<li><b>LeftAlt</b> key acts as <b>RightAlt</b></li>
+		</ul>
+		<p>
+			Thanks to this scheme both <b>Alt</b> keys can be used to access the Layers 3 and 4.
+			If you don't like this scheme, you can easily disable it by editing the <code>.ahk</code> file
+			and removing (or commenting out) the following lines:
+		</p>
+		<pre><code>$Esc::LAlt
+$*CapsLock::Esc
+$LAlt::RAlt</code></pre>
+
 		<hr style="padding-bottom: 20px;">
 	</details>
 
 	<details><summary>Linux</summary>
-		<h4>Installation:</h4>
+		<h4>Installation (general):</h4>
 		<p>1. Copy the layout file (for example “esl”) to <code>/etc/xkb/symbols/esl</code></p>
 		<pre><code>sudo mkdir -p /etc/xkb/rules
 sudo mkdir -p /etc/xkb/symbols
@@ -223,6 +239,67 @@ sudo cp esl /etc/xkb/symbols/</code></pre>
 			<li>- reset back to default layout: <code>setxkbmap us</code></li>
 		</ul>
 		</p>
+		<h4>Installation (phonemic layouts):</h4>
+		<p>There are two problems with creating a keyboard layout for Linux:</p>
+		<ul>
+			<li>XKB on Linux does not allow to map more than a single Unicode symbol to a key (one symbol per keystroke policy).</li>
+			<li>IPA phonetic transcription for English language is <i>phonetic</i> (not <i>phonemic</i>). Out of about 50 English phonemes about 15-20 of them are represented with multiple IPA symbols.</li>
+		</ul>
+		<p>The only solution is to create a keyboard layout that sends some unused (or rarely used) Unicode symbols, and then convert these symbols to multi-symbol strings using <b>XCompose</b>.</p> 
+		<p>But this workaround creates yet another problem: <b>XCompose</b> does not convert multi-byte Unicode symbols. For example there is an unused Unicode range: <b>U+FDD0-U+FDEF</b>. But these are multi-byte codepoins which XCompose ignores, and <b>XCompose</b> ignores them.</p>
+		<p>
+			<b>Solution</b>: For multi-symbol phonemes the phonemic keyboard layout must produce rarely used single-byte symbols (for example, from the <b>U+C0—U+DF</b> range: "ÀÁÂÃÄÅÈÉÊËÌÍÎÏÒÓÔÕÖ"). Just keep in mind that when using some other keyboard layout capable of producing the symbols from that range (Latin-1), <b>XCompose</b> will translate them to English phonemes.
+		</p>
+		<table>
+			<tr>
+				<th></th>
+				<th colspan="3">Unicode symbols produced by this kbd layout</th>
+				<th colspan="3">XCompose phoneme</th>
+			</tr>
+			<tr>
+				<th>key</th>
+				<th>Unicode</th>
+				<th>letter</th>
+				<th>Unicode name</th>
+				<th>UKʳ</th>
+				<th>UKr</th>
+				<th>US</th>
+			</tr>
+			<tr><td>c</td><td>U+C0</td><td>À</td><td>Latin Capital Letter A with grave     </td><td>tʃ </td><td>tʃ </td><td>tʃ </td></tr>
+			<tr><td>J</td><td>U+C1</td><td>Á</td><td>Latin Capital letter A with acute     </td><td>dʒ </td><td>dʒ </td><td>dʒ </td></tr>
+			<tr><td>y</td><td>U+C2</td><td>Â</td><td>Latin Capital letter A with circumflex</td><td>ɑː </td><td>ɑː </td><td>ɑ  </td></tr>
+			<tr><td>Y</td><td>U+C3</td><td>Ã</td><td>Latin Capital letter A with tilde     </td><td>ɔː </td><td>ɔː </td><td>ɔ  </td></tr>
+			<tr><td>I</td><td>U+C4</td><td>Ä</td><td>Latin Capital letter A with diaeresis </td><td>iː </td><td>iː </td><td>i  </td></tr>
+			<tr><td>M</td><td>U+C5</td><td>Å</td><td>Latin Capital letter A with ring above</td><td>uː </td><td>uː </td><td>u  </td></tr>
+			<tr><td>V</td><td>U+C8</td><td>È</td><td>Latin Capital letter E with grave     </td><td>juː</td><td>juː</td><td>ju </td></tr>
+			<tr><td>E</td><td>U+C9</td><td>É</td><td>Latin Capital letter E with acute     </td><td>eɪ </td><td>eɪ </td><td>eɪ </td></tr>
+			<tr><td>F</td><td>U+CA</td><td>Ê</td><td>Latin Capital letter E with circumflex</td><td>aɪ </td><td>aɪ </td><td>aɪ </td></tr>
+			<tr><td>q</td><td>U+CB</td><td>Ë</td><td>Latin Capital letter E with diaeresis </td><td>ɔɪ </td><td>ɔɪ </td><td>ɔɪ </td></tr>
+			<tr><td>Q</td><td>U+CC</td><td>Ì</td><td>Latin Capital letter I with grave     </td><td>aʊ </td><td>aʊ </td><td>aʊ </td></tr>
+			<tr><td>O</td><td>U+CD</td><td>Í</td><td>Latin Capital letter I with acute     </td><td>əʊ </td><td>əʊ </td><td>ɔʊ </td></tr>
+			<tr><td>W</td><td>U+CE</td><td>Î</td><td>Latin Capital letter I with circumflex</td><td>ɪə </td><td>ɪə </td><td>ɪə </td></tr>
+			<tr><td>D</td><td>U+CF</td><td>Ï</td><td>Latin Capital letter I with diaeresis </td><td>əʳ </td><td>ər </td><td>ər </td></tr>
+			<tr><td>x</td><td>U+D2</td><td>Ò</td><td>Latin Capital letter O with grave     </td><td>ɜːʳ</td><td>ɜːr</td><td>ɜr </td></tr>
+			<tr><td>R</td><td>U+D3</td><td>Ó</td><td>Latin Capital letter O with acute     </td><td>ɑːʳ</td><td>ɑːr</td><td>ɑr </td></tr>
+			<tr><td>P</td><td>U+D4</td><td>Ô</td><td>Latin Capital letter O with circumflex</td><td>ɔːʳ</td><td>ɔːr</td><td>ɔr </td></tr>
+			<tr><td>X</td><td>U+D5</td><td>Õ</td><td>Latin Capital letter O with tilde     </td><td>eəʳ</td><td>eər</td><td>er </td></tr>
+			<tr><td>C</td><td>U+D6</td><td>Ö</td><td>Latin Capital letter O with diaeresis </td><td>ɪəʳ</td><td>ɪər</td><td>ɪər</td></tr>
+		</table>
+		<ul>
+			<li>After installing the <code>phonem</code> layout (follow the instruction above) copy one of the XCompose files to <code>/etc/xkb/XCompose</code>.</li>
+			<li>Create a soft link in your <code>$HOME</code> directory pointing to the XCompose file of your choice in the <code>/etc/xkb/XCompose</code> directory.</li>
+			<li>Restart <code>ibus</code></li>
+		</ul>
+		<pre><code>sudo mkdir -p /etc/xkb/XCompose
+sudo cp XCompose-US /etc/xkb/XCompose/
+ln -s /etc/xkb/XCompose/XCompose-US $HOME/.XCompose
+ibus restart</code></pre>
+		<p>To disable XCompose rename or delete the <code>~/.XCompose</code> file (or link) and run the command <code>ibus restart</code>.</p>
+
+		<h4>Configuration and customization:</h4>
+		<p>The XKB layouts on Linux are simple text files. You can edit them any time.</p>
+
+		<hr style="padding-bottom: 20px;">
 	</details>
 
 	<p>Last updated: 2025-11-19</p>
