@@ -175,7 +175,7 @@
 		<h4>Installation:</h4>
 		<ol>
 			<li>Download the keyboard layout of your choice — it is a simple text file (AHK script).</li>
-			<li>Download and install AutoHotkey version 2.</li>
+			<li>Download and install <a href="https://www.autohotkey.com/">AutoHotKey version 2</a></li>
 			<li>Double-click the <span class="mono">.ahk</span> script</li>
 			<li>Currently (as of November 2025) to disable the layout, you have to stop the script: 
 				<ol>
@@ -188,13 +188,48 @@
 	</details>
 
 	<details><summary>Linux</summary>
-		<p><i>comings soon</i></p>
-		<p>
+		<h4>Installation:</h4>
+		<p>1. Copy the layout file (for example “esl”) to <code>/etc/xkb/symbols/esl</code></p>
+		<pre><code>sudo mkdir -p /etc/xkb/rules
+sudo mkdir -p /etc/xkb/symbols
+sudo cp esl /etc/xkb/symbols/</code></pre>
+		<p>2. Add the following section to <code>/etc/xkb/rules/evdev.xml</code>:</p>
+		<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd"&gt;
+&lt;xkbConfigRegistry version="1.1"&gt;
+  &lt;layoutList&gt;
+&lt;!-- ESL (QWERTY) Layout (start) --&gt;
+    &lt;layout&gt;
+      &lt;configItem&gt;
+        &lt;name&gt;esl&lt;/name&gt;
+        &lt;shortDescription&gt;ESL&lt;/shortDescription&gt;
+        &lt;description&gt;ESL (QWERTY)&lt;/description&gt;
+        &lt;countryList&gt;&lt;iso3166Id&gt;US&lt;/iso3166Id&gt;&lt;/countryList&gt;
+        &lt;languageList&gt;&lt;iso639Id&gt;eng&lt;/iso639Id&gt;&lt;/languageList&gt;
+      &lt;/configItem&gt;
+    &lt;/layout&gt;
+&lt;!-- ESL (QWERTY) Layout (end) --&gt;
+  &lt;/layoutList&gt;
+&lt;/xkbConfigRegistry&gt;</code></pre>
+		<p>3. (optional) add the following line to <code>/etc/xkb/rules/evdev</code>. Note that GNOME layout switcher ignores the <code>evdev</code> file and uses only the <code>evdev.xml</code>:</p>
+		<pre><code>! option = symbols
+  esl:qwerty  = +esl(qwerty)
+! include %S/evdev</code></pre>
+		<p>4. Testing:</p>
+		<ul>
+			<li>activate "Writer (QWERTY)": <code>setxkbmap -layout esl</code>,</li>
+			<li>test it by simply typing with the new layout,</li>
+			<li>if <code>setxkbmap</code> returns "Error loading new keyboard description", then it's possible that your Linux distro runs <code>xkb</code> with elevated privileges and ignores files in <code>/etc/xkb/symbols</code>. In such case create a link: <code>sudo ln -s /etc/xkb/symbols/esl /usr/share/X11/xkb/symbols/esl</code>,</li>
+			<li>- reset back to default layout: <code>setxkbmap us</code></li>
+		</ul>
 		</p>
 	</details>
 
+		<pre><code>! option = symbols
+  esl:qwerty  = +esl(qwerty)
+! include %S/evdev</code></pre>
 
-	<p>Last updated: 2025-11-14</p>
+	<p>Last updated: 2025-11-18</p>
 
 </main>
 <footer><script>insertHTML(footerHtml);</script></footer>

@@ -430,9 +430,13 @@ function changeWordSpace(val) {
 	--textFontSize: 11pt;
 	--headFontSize: 28pt;
 	--ipaFontSize:  12pt;
+	--monoFontSize: 12pt;
+	--shawFontSize: 14pt;
 	--textFontFamily: Poppins;
 	--headFontFamily: TexGyreHerosCondensed;
 	--ipaFontFamily: InterAlia;
+	--monoFontFamily: RobotoMono;
+	--shawFontFamily: InterAlia;
 	--lineHeight: 1.4;
 	--wordSpace: 1px;
 }
@@ -443,10 +447,14 @@ function changeWordSpace(val) {
 var textFontSize  =  11; 	// text     font-size (default 14pt)
 var headFontSize  =  28; 	// header   font-size (default 28pt)
 var ipaFontSize   =  12; 	// IPA tags font-size (default 12pt) - font-family: NotoSans
-var lineHeight    =  1.4;
-var wordSpace     =  1;
+var monoFontSize  = 11;
+var shawFontSize  = 12;
 var textFontFamily ='Poppins';
 var headFontFamily ='TexGyreHerosCondensed';
 var ipaFontFamily  ='InterAlia';
+var monoFontFamily ='RobotoMono';
+var shawFontFamily ='InterAlia';
+var lineHeight    =  1.4;
+var wordSpace     =  1;
 var r = document.querySelector(':root'); 	// Get the root element
 

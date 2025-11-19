@@ -3,8 +3,8 @@
 	--textFontSize: 11pt;
 	--headFontSize: 28pt;
 	--ipaFontSize:  12pt;
-	--monoFontSize: 14pt;
-	--shawFontSize: 14pt;
+	--monoFontSize: 11pt;
+	--shawFontSize: 12pt;
 	--textFontFamily: Poppins;
 	--headFontFamily: TexGyreHerosCondensed;
 	--ipaFontFamily: InterAlia;
@@ -377,3 +377,4 @@ select {
 	text-align: center;
 }
 
+/ o€kb€kbmono:q

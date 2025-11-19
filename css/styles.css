@@ -20,6 +20,16 @@
 	.mono { color: white; }
 	p .mono { color: white; }
 	li .mono { color: white; }
+	pre, code {
+		background-color: #222; 
+        /*background: #222;*/
+	}
+	pre code {
+        background-color: #222;
+        /*background: #222;*/
+        color: #aaa;
+        border-color: #555;
+	}
 }
 /*
 @media (prefers-color-scheme: dark) {
@@ -201,14 +211,16 @@ p.source {
 }
 
 /* --- monospaced text --- */
+/* old
 pre {
-	/*font-family:NotoSansMono;*/
-	/*font-family:NotoSansMono_ExtraCondensed;*/
+	/*font-family:NotoSansMono;* /
+	/*font-family:NotoSansMono_ExtraCondensed;* /
 	font-family: var(--monoFontFamily), monospace;
 	font-size: var(--monoFontSize);
 	white-space: pre-wrap; 
 	overflow-x: auto; 
 }
+*/
 .mono {
 	/*font-family:NotoSansMono_ExtraCondensed;*/
 	font-family: var(--monoFontFamily), monospace;
@@ -217,6 +229,43 @@ pre {
 	color:black;
 /*	border:1px solid red;*/
 }
+
+/* github-like styling for pre and code*/
+pre {
+    /*background: #F1F3F5;*/
+	margin-left: 30px;
+	padding-left: 10px;
+    border-radius: 5px; 
+/*    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    border: 1px solid #BCBEC0; */
+	font-family: var(--monoFontFamily), monospace;
+	font-size: var(--monoFontSize);
+    /*font:12px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace*/
+}
+
+code {
+    padding: 2px;
+    border-radius: 5px; 
+/*    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;  */
+    /*border: 1px solid #BCBEC0;*/
+	font-family: var(--monoFontFamily), monospace;
+	font-size: var(--monoFontSize);
+    /*font:12px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace*/
+}
+
+pre code {
+    border-radius: 0px; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border: 0px;
+    padding: 2px;
+	font-family: var(--monoFontFamily), monospace;
+	font-size: var(--monoFontSize);
+    /*font:12px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace*/
+}
+/* end of: github-like styling of pre and code */
 
 /* --- centering --- */
 div.ctr {
@@ -440,3 +489,4 @@ a.locallnk {
 b { color: black; }
 
 /* ------ end ------ */
+/mono:q!
