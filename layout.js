@@ -444,10 +444,10 @@ function changeWordSpace(val) {
 
 // global JS variables 
 // - some of these variables have their corresponding counterpart in the ":root" CSS global variables
-var textFontSize  =  11; 	// text     font-size (default 14pt)
-var headFontSize  =  28; 	// header   font-size (default 28pt)
-var ipaFontSize   =  12; 	// IPA tags font-size (default 12pt) - font-family: NotoSans
-var monoFontSize  = 11;
+var textFontSize  = 11; 	// text     font-size (default 14pt)
+var headFontSize  = 28; 	// header   font-size (default 28pt)
+var ipaFontSize   = 12; 	// IPA tags font-size (default 12pt) - font-family: NotoSans
+var monoFontSize  = 10;
 var shawFontSize  = 12;
 var textFontFamily ='Poppins';
 var headFontFamily ='TexGyreHerosCondensed';
