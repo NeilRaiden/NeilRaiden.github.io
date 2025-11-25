@@ -1,24 +1,25 @@
 ﻿#Requires AutoHotkey v2.0
+#SingleInstance Force
+Persistent
 
 ; Copyright (c) 2025 Neil Raiden, LLC (AGPL v3)
 ; <https://www.gnu.org/licenses/agpl-3.0.en.html>
 
 ; ---
-; # The 3 key swaps:
 ; 1. pressing Esc sends LeftAlt key-code:
-;    (system shortcuts like Ctrl+Alt+Del are now Ctrl+Esc+Del)
 $Esc::LAlt
-
 ; 2. Pressing CapsLock sends Esc key-code:
-; - The "*" wildcard modifier makes the hotkey work even if extra keys are pressed. Example above: "$*CapsLock::Esc". So even then any other key is pressed simultanously with CapsLock, only "Esc" will be sent. Some people prefer using "CapsLock+key" combos to act as "Ctrl+key" -- not implemented here (yet). 
-$*CapsLock::Esc
-
+$CapsLock::Esc
 ; 3. pressing LeftAlt sends RightAlt key-code:
-;    (the LeftAlt now behaves like the RightAlt - activates layer 3 and 4)
 $LAlt::RAlt
+; 4. Physical [Shift+Space] = delete last word (Windows: Ctrl+Backspace)
++Space::Send("^+{Backspace}")
+; ---
 
+; ---
 ; AutoHotKey notes:
 ; - The "$" is the keyboard hook modifier (so the hotkey is only activated if actually pressed).
+; ---
 
 
 ; _Note_: Numbers row in layer 1 & 2 is exactly the same as on the regular QWERTY layout.
@@ -116,7 +117,6 @@ $+\::Send "|"
 
 ; --- CapsLock row:
 ;│ caps  │ æ │ ʃ │ər │aɪ │ · │ ð │dʒ │ « │ » │ : │ " │  ent │
-;│ shift   │ ʒ │er │ɪər│ju │ ⸰ │ ŋ │ u │ ‹ │ › │ ? │  shift │
 $+a::Send "æ"
 $+s::Send "ʃ"
 $+d::Send "ər"   ; US
@@ -131,6 +131,7 @@ $+;::Send ":"
 $+'::Send '"'
 
 ; --- Shift row:
+;│ shift   │ ʒ │er │ɪər│ju │ ⸰ │ ŋ │ u │ ‹ │ › │ ? │  shift │
 $+z::Send "ʒ"
 $+x::Send "er"   ; US
 ;$+x::Send "eəʳ" ; UK
@@ -160,6 +161,7 @@ $+/::Send "?"
 ;└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
 
 ; --- number row:
+;│ ´ │ ¹ │ ² │ ³ │ ⁴ │ ⁵ │ ⁶ │ ⁷ │ ⁸ │ ⁹ │ ⁰ │ → │ ≠ │ bksp │
 $!`::Send "´"
 $!1::Send "¹"
 $!2::Send "²"
@@ -175,6 +177,7 @@ $!-::Send "→"
 $!=::Send "≠"
 
 ; --- TAB row:
+;│ tab │ … │ ʍ │ e │ ʳ │ ɾ │   │ ↑ │   │ ˈ │ ˌ │ ⟨ │ ⟩ │ •  │
 $!q::Send "…"
 $!w::Send "ʍ"
 $!e::Send "e"
@@ -190,6 +193,7 @@ $!]::Send "⟩"
 $!\::Send "•"
 
 ; --- CapsL-Enter row:
+;│ caps  │ “ │ ” │ ↓ │ ° │ ʔ │ ‐ │ ʤ │ ≤ │ ≥ │ ː │ × │  ent │
 $!a::Send "“"
 $!s::Send "”"
 $!d::Send "↓"
@@ -203,6 +207,7 @@ $!;::Send "ː"
 $!'::Send "×"
 
 ; --- Shift row:
+;│ shift   │ ‘ │ ’ │ ʧ │ ⁃ │ ○ │ – │ — │ < │ > │ ÷ │  shift │
 $!z::Send "‘"
 $!x::Send "’"
 $!c::Send "ʧ"
@@ -214,8 +219,8 @@ $!,::Send "<"
 $!.::Send ">"
 $!/::Send "÷"
 
-; --- Alt+Space:
-;!(how to enter space here?)::Send " "
+; --- Alt+Space: Em-Space (space length equal to font height)
+!Space::Send "{U+2003}"
 
 ; ------ Layer 4 (Alt+Shift+key) ------
 ;┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬──────┐
@@ -229,6 +234,7 @@ $!/::Send "÷"
 ;└─────────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────────┘
 
 ; --- number row: ~!@#$%^&*()_+
+;│ ≈ │ ₁ │ ₂ │ ₃ │ ₄ │ ₅ │ ₆ │ ₇ │ ₈ │ ₉ │ ₀ │ ← │ ± │ bksp │
 $!+`::Send "≈"
 $!+1::Send "₁"
 $!+2::Send "₂"
@@ -244,6 +250,7 @@ $!+-::Send "←"
 $!+=::Send "±"
 
 ; --- TAB row: QWERTYUIOP{}|
+;│ tab │ ⋯ │   │ ɜ │ ɹ │ ʰ │   │   │   │   │   │ ⟮ │ ⟯ │ ◦  │
 $!+q::Send "⋯"
 $!+w::Send ""
 $!+e::Send "ɜ"
@@ -259,6 +266,7 @@ $!+]::Send "⟯"
 $!+\::Send "◦"
 
 ; --- CapsL-Enter row: ASDFGHJKL:"
+;│ caps  │ ɐ │ ☺ │ ɚ │   │ ˀ │ ‑ │   │   │ ɫ │ § │   │  ent │
 $!+a::Send "ɐ"
 $!+s::Send "☺"
 $!+d::Send "ɚ"
@@ -272,6 +280,7 @@ $!+;::Send "§"
 $!+'::Send ""
 
 ; --- Shift row: ZXCVBNM<>?
+;│ shift   │   │ ɝ │   │   │ ◌ │   │   │ ☒ │ ☐ │ ☑ │  shift │
 $!+z::Send ""
 $!+x::Send "ɝ"
 $!+c::Send ""
@@ -282,5 +291,8 @@ $!+m::Send ""
 $!+,::Send "☒"
 $!+.::Send "☐"
 $!+/::Send "☑"
+
+; --- Alt+Shift+Space: zero-width space
+!+Space::Send "{U+200B}"
 
 ; --- end
