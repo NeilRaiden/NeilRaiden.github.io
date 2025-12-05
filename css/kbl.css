@@ -10,12 +10,6 @@
 }
 
 /* ----------- styles ----------- */
-/*h1 { text-align: center; }*/
-/*h2 { text-align: center; }*/
-/*h3 { text-align: center; }*/
-/*h4 { text-align: center; }*/
-/*h5 { text-align: center; }*/
-/*h6 { text-align: center; }*/
 
 p  { text-align: left; font-weight: normal; }
 ul { text-align: left; font-weight: normal; }
@@ -141,33 +135,4 @@ button {
 		font-size:14pt;
 		font-weight:bold;
 }
-
-/* --- kb layout description --- */
-.desc {
-		display: flex;
-		/*align-items: center;*/
-		justify-content: center;
-		/*text-align:center;*/
-		/*width: 100%;*/
-		/*border:1px solid blue;*/
-		/*padding-left:10px;*/
-		/*font-size:11pt;*/
-		margin-top: 10px;
-}
-.desc p {
-		border: 0px solid magenta;
-		/*width:400px; /* "margin:auto;" for centering fixed-width objects*/
-		margin: auto;
-		margin-bottom: 10px;
-		padding-left:5px;
-}
-.desc blockquote {
-		margin-left:15px;
-		border-left:3px solid silver;
-		padding-left:5px;
-		text-align:left;
-}
-/*
-.desc b { color:black; font-weight:bold; }
-*/
 
