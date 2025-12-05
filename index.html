@@ -274,9 +274,9 @@ function layoutSwitch(laiout) {
 	document.getElementById("esl").style.backgroundColor      = "";
 	document.getElementById(laiout).style.backgroundColor     = "dodgerblue";
 
- 	document.getElementById(currentLayout + 'Desc').style.display = 'none';
+// 	document.getElementById(currentLayout + 'Desc').style.display = 'none';
  	currentLayout=laiout;
- 	document.getElementById(currentLayout + 'Desc').style.display = 'block';
+// 	document.getElementById(currentLayout + 'Desc').style.display = 'block';
 
 	switch(laiout) {
 		case "phonemus" :
@@ -1025,48 +1025,428 @@ var keysD = phonUSD;
 		-->
 	</div>
 
-	<h4>Downloads</h4>
+	<h2 style="text-align:center;">Downloads &#x2913;</h2>
 	<table class="downl">
-		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows</th><th>Linux</th></tr>
+		<tr><th>Keyboard Layout</th><th>macOS</th><th>Windows 10</th><th>Windows 11</th><th>Linux</th></tr>
 		<tr>
 			<td>US Phonemic</td>
-			<td><a href="./downloads/macOS/US-phonemic.dmg">US-phonemic.dmg &#x2913;</a></td>
-			<td><a href="./downloads/Windows/AHK/US-phonemic.ahk">US-phonemic.ahk &#x2913;</a></td>
+			<td><a href="./downloads/macOS/US-phonemic.dmg">US-phonemic.dmg</a></td>
+			<td><a href="./downloads/Windows/klc/USphonem.klc">USphonem.klc</a></td>
+			<td><a href="./downloads/Windows/AHK/US-phonemic.ahk">US-phonemic.ahk</a></td>
 			<td>
-				<a href="./downloads/Linux/phonem/phonem">phonem &#x2913;</a> +
-				<a href="./downloads/Linux/phonem/XCompose-US">XCompose-US &#x2913;</a>
+				<a href="./downloads/Linux/phonem/phonem">phonem</a> +
+				<a href="./downloads/Linux/phonem/XCompose-US">XCompose-US</a>
 			</td>
 		</tr>
 		<tr>
 			<td>UK Phonemic</td>
-			<td><a href="./downloads/macOS/UK-phonemic.dmg">UK-phonemic.dmg &#x2913;</a></td>
-			<td><a href="./downloads/Windows/AHK/UK-phonemic.ahk">UK-phonemic.ahk &#x2913;</a></td>
+			<td><a href="./downloads/macOS/UK-phonemic.dmg">UK-phonemic.dmg</a></td>
+			<td><a href="./downloads/Windows/klc/UKphonem.klc">UKphonem.klc</a></td>
+			<td><a href="./downloads/Windows/AHK/UK-phonemic.ahk">UK-phonemic.ahk</a></td>
 			<td>
-				<a href="./downloads/Linux/phonem/phonem">phonem &#x2913;</a> +
-				<a href="./downloads/Linux/phonem/XCompose-UK">XCompose-UK &#x2913;</a>
+				<a href="./downloads/Linux/phonem/phonem">phonem</a> +
+				<a href="./downloads/Linux/phonem/XCompose-UK">XCompose-UK</a>
 			</td>
 		</tr>
 		<tr>
 			<td>UK Rhotic</td>
-			<td><a href="./downloads/macOS/UK-rhotic.dmg">UK-rhotic.dmg &#x2913;</a></td>
-			<td><a href="./downloads/Windows/AHK/UK-rhotic.ahk">UK-rhotic.ahk &#x2913;</a></td>
+			<td><a href="./downloads/macOS/UK-rhotic.dmg">UK-rhotic.dmg</a></td>
+			<td><a href="./downloads/Windows/klc/UKrhotic.klc">UKrhotic.klc</a></td>
+			<td><a href="./downloads/Windows/AHK/UK-rhotic.ahk">UK-rhotic.ahk</a></td>
 			<td>
-				<a href="./downloads/Linux/phonem/phonem">phonem &#x2913;</a> +
-				<a href="./downloads/Linux/phonem/XCompose-UKrhotic">XCompose-UKrhotic &#x2913;</a>
+				<a href="./downloads/Linux/phonem/phonem">phonem</a> +
+				<a href="./downloads/Linux/phonem/XCompose-UKrhotic">XCompose-UKrhotic</a>
 			</td>
 		</tr>
 		<tr>
 			<td>ESL</td>
-			<td><a href="./downloads/macOS/ESL.dmg">ESL.dmg &#x2913;</a></td>
-			<td><a href="./downloads/Windows/AHK/ESL.ahk">ESL.ahk &#x2913;</a></td>
-			<td><a href="./downloads/Linux/esl">esl &#x2913;</a></td>
+			<td><a href="./downloads/macOS/ESL.dmg">ESL.dmg</a></td>
+			<td><a href="./downloads/Windows/klc/ESL.klc">ESL.klc</a></td>
+			<td><a href="./downloads/Windows/AHK/ESL.ahk">ESL.ahk</a></td>
+			<td><a href="./downloads/Linux/esl">esl</a></td>
 		</tr>
 	</table>
 
+	<!-- Layout descriptions -->
+	<h2 style="text-align:left;">More Info (click to expand)</h2>
+	<!-- h2>More Info (click to expand)</h2 -->
+
+	<details><summary>US Phonemic</summary>
+		<p>Layout for typing in <b>American English (GA)</b> with IPA symbols.<br>
+		   The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with <b>Shavian QWERTY</b> layout.<br>
+			 Layers 3 &amp; 4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+		</p>
+		<table class="transTable">
+			<tr>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+				<td>d</td>
+				<td>e</td>
+				<td>f</td>
+				<td>g</td>
+				<td>h</td>
+				<td>i</td>
+				<td>j</td>
+				<td>k</td>
+				<td>l</td>
+				<td>m</td>
+				<td>n</td>
+				<td>o</td>
+				<td>p</td>
+				<td>q</td>
+				<td>r</td>
+				<td>s</td>
+				<td>t</td>
+				<td>u</td>
+				<td>v</td>
+				<td>w</td>
+				<td>x</td>
+				<td>y</td>
+				<td>z</td>
+			</tr>
+			<tr>
+				<td>ə</td>
+				<td>b</td>
+				<td>tʃ</td>
+				<td>d</td>
+				<td>ɛ</td>
+				<td>f</td>
+				<td>ɡ</td>
+				<td>h</td>
+				<td>ɪ</td>
+				<td>j</td>
+				<td>k</td>
+				<td>l</td>
+				<td>m</td>
+				<td>n</td>
+				<td>ɒ</td>
+				<td>p</td>
+				<td>ɔɪ</td>
+				<td>r</td>
+				<td>s</td>
+				<td>t</td>
+				<td>ʌ</td>
+				<td>v</td>
+				<td>w</td>
+				<td>ɜr</td>
+				<td>ɑ</td>
+				<td>z</td>
+			</tr>
+			<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
+			<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+				<td>D</td>
+				<td>E</td>
+				<td>F</td>
+				<td>G</td>
+				<td>H</td>
+				<td>I</td>
+				<td>J</td>
+				<td>K</td>
+				<td>L</td>
+				<td>M</td>
+				<td>N</td>
+				<td>O</td>
+				<td>P</td>
+				<td>Q</td>
+				<td>R</td>
+				<td>S</td>
+				<td>T</td>
+				<td>U</td>
+				<td>V</td>
+				<td>W</td>
+				<td>X</td>
+				<td>Y</td>
+				<td>Z</td>
+			</tr>
+			<tr>
+				<td>æ</td>
+				<td>⸰</td>
+				<td>ɪər</td>
+				<td>ər</td>
+				<td>eɪ</td>
+				<td>aɪ</td>
+				<td>·</td>
+				<td>ð</td>
+				<td>i</td>
+				<td>dʒ</td>
+				<td>«</td>
+				<td>»</td>
+				<td>u</td>
+				<td>ŋ</td>
+				<td>ɔʊ</td>
+				<td>ɔr</td>
+				<td>aʊ</td>
+				<td>ɑr</td>
+				<td>ʃ</td>
+				<td>θ</td>
+				<td>ʊ</td>
+				<td>ju</td>
+				<td>ɪə</td>
+				<td>ɛr</td>
+				<td>ɔ</td>
+				<td>ʒ</td>
+			</tr>
+		</table>
+	</details>
+
+	<details><summary>UK Phonemic</summary>
+		<p>Layout typing in <b>non-rhotic British English (RP)</b> with IPA symbols.<br>
+		   The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with <b>Shavian QWERTY</b> layout.<br>
+			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+		</p>
+		<table class="transTable">
+			<tr>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+				<td>d</td>
+				<td>e</td>
+				<td>f</td>
+				<td>g</td>
+				<td>h</td>
+				<td>i</td>
+				<td>j</td>
+				<td>k</td>
+				<td>l</td>
+				<td>m</td>
+				<td>n</td>
+				<td>o</td>
+				<td>p</td>
+				<td>q</td>
+				<td>r</td>
+				<td>s</td>
+				<td>t</td>
+				<td>u</td>
+				<td>v</td>
+				<td>w</td>
+				<td>x</td>
+				<td>y</td>
+				<td>z</td>
+			</tr>
+			<tr>
+				<td>ə</td>
+				<td>b</td>
+				<td>tʃ</td>
+				<td>d</td>
+				<td>ɛ</td>
+				<td>f</td>
+				<td>ɡ</td>
+				<td>h</td>
+				<td>ɪ</td>
+				<td>j</td>
+				<td>k</td>
+				<td>l</td>
+				<td>m</td>
+				<td>n</td>
+				<td>ɒ</td>
+				<td>p</td>
+				<td>ɔɪ</td>
+				<td>r</td>
+				<td>s</td>
+				<td>t</td>
+				<td>ʌ</td>
+				<td>v</td>
+				<td>w</td>
+				<td>ɜːʳ</td>
+				<td>ɑː</td>
+				<td>z</td>
+			</tr>
+			<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
+			<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+				<td>D</td>
+				<td>E</td>
+				<td>F</td>
+				<td>G</td>
+				<td>H</td>
+				<td>I</td>
+				<td>J</td>
+				<td>K</td>
+				<td>L</td>
+				<td>M</td>
+				<td>N</td>
+				<td>O</td>
+				<td>P</td>
+				<td>Q</td>
+				<td>R</td>
+				<td>S</td>
+				<td>T</td>
+				<td>U</td>
+				<td>V</td>
+				<td>W</td>
+				<td>X</td>
+				<td>Y</td>
+				<td>Z</td>
+			</tr>
+			<tr>
+				<td>æ</td>
+				<td>⸰</td>
+				<td>ɪəʳ</td>
+				<td>əʳ</td>
+				<td>eɪ</td>
+				<td>aɪ</td>
+				<td>·</td>
+				<td>ð</td>
+				<td>iː</td>
+				<td>dʒ</td>
+				<td>«</td>
+				<td>»</td>
+				<td>uː</td>
+				<td>ŋ</td>
+				<td>əʊ</td>
+				<td>ɔːʳ</td>
+				<td>aʊ</td>
+				<td>ɑːʳ</td>
+				<td>ʃ</td>
+				<td>θ</td>
+				<td>ʊ</td>
+				<td>juː</td>
+				<td>ɪə</td>
+				<td>eəʳ</td>
+				<td>ɔː</td>
+				<td>ʒ</td>
+			</tr>
+		</table>
+	</details>
+
+	<details><summary>UK Rhotic</summary>
+		<p>Layout typing in <b>Rhotic British English</b> with IPA symbols.<br>
+		   The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with <b>Shavian QWERTY</b> layout.<br>
+			 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
+		</p>
+		<table class="transTable">
+			<tr>
+				<td>a</td>
+				<td>b</td>
+				<td>c</td>
+				<td>d</td>
+				<td>e</td>
+				<td>f</td>
+				<td>g</td>
+				<td>h</td>
+				<td>i</td>
+				<td>j</td>
+				<td>k</td>
+				<td>l</td>
+				<td>m</td>
+				<td>n</td>
+				<td>o</td>
+				<td>p</td>
+				<td>q</td>
+				<td>r</td>
+				<td>s</td>
+				<td>t</td>
+				<td>u</td>
+				<td>v</td>
+				<td>w</td>
+				<td>x</td>
+				<td>y</td>
+				<td>z</td>
+			</tr>
+			<tr>
+				<td>ə</td>
+				<td>b</td>
+				<td>tʃ</td>
+				<td>d</td>
+				<td>ɛ</td>
+				<td>f</td>
+				<td>ɡ</td>
+				<td>h</td>
+				<td>ɪ</td>
+				<td>j</td>
+				<td>k</td>
+				<td>l</td>
+				<td>m</td>
+				<td>n</td>
+				<td>ɒ</td>
+				<td>p</td>
+				<td>ɔɪ</td>
+				<td>r</td>
+				<td>s</td>
+				<td>t</td>
+				<td>ʌ</td>
+				<td>v</td>
+				<td>w</td>
+				<td>ɜːr</td>
+				<td>ɑː</td>
+				<td>z</td>
+			</tr>
+			<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
+			<tr>
+				<td>A</td>
+				<td>B</td>
+				<td>C</td>
+				<td>D</td>
+				<td>E</td>
+				<td>F</td>
+				<td>G</td>
+				<td>H</td>
+				<td>I</td>
+				<td>J</td>
+				<td>K</td>
+				<td>L</td>
+				<td>M</td>
+				<td>N</td>
+				<td>O</td>
+				<td>P</td>
+				<td>Q</td>
+				<td>R</td>
+				<td>S</td>
+				<td>T</td>
+				<td>U</td>
+				<td>V</td>
+				<td>W</td>
+				<td>X</td>
+				<td>Y</td>
+				<td>Z</td>
+			</tr>
+			<tr>
+				<td>æ</td>
+				<td>⸰</td>
+				<td>ɪər</td>
+				<td>ər</td>
+				<td>eɪ</td>
+				<td>aɪ</td>
+				<td>·</td>
+				<td>ð</td>
+				<td>iː</td>
+				<td>dʒ</td>
+				<td>«</td>
+				<td>»</td>
+				<td>uː</td>
+				<td>ŋ</td>
+				<td>əʊ</td>
+				<td>ɔːr</td>
+				<td>aʊ</td>
+				<td>ɑːr</td>
+				<td>ʃ</td>
+				<td>θ</td>
+				<td>ʊ</td>
+				<td>juː</td>
+				<td>ɪə</td>
+				<td>eər</td>
+				<td>ɔː</td>
+				<td>ʒ</td>
+			</tr>
+		</table>
+	</details>
+
+	<details><summary>ESL</summary>
+		<p>This layout is meant for people who only occasionally need to type IPA symbols, and only those specific to English language (like ESL tutors).<br>
+		   The <b>AltGr</b> and <b>AltGr+Shift</b> layers (layers 3 &amp; 4) contain all IPA symbols for English phonemes that may be
+		   needed by an ESL tutor. Also, most of the punctuation marks required by Style Guides, stress marks, dashes, etc.
+		</p>
+	</details>
+
 	<!-- IPA notation comparison table -->
+	<details><summary>Differences between US and UK notations:</summary>
 	<div style="text-align:center; margin-bottom:10px;">
-		<h4>Differences between US and UK notations:</h4>
-		<p> </p>
 		<table style="font-weight:normal">
 			<tr><th>UK (RP)</th><th>UK (rhotic)</th><th>US (GA)</th></tr>
 			<tr><td>ɑː </td><td>ɑː </td><td>ɑ </td></tr>
@@ -1081,388 +1461,9 @@ var keysD = phonUSD;
 			<tr><td>eəʳ</td><td>eər</td><td>er</td></tr>
 		</table>
 	</div>
-
-	<!-- Layout descriptions -->
-	<details><summary>More info (click to expand)</summary>
-		<div id="phonemusDesc" class="desc" style="display:block;">
-			<h4>US Phonemic</h4>
-			<p>Layout for typing in <b>American English (GA)</b> with IPA symbols.<br>
-			   The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with <b>Shavian QWERTY</b> layout.<br>
-				 Layers 3 &amp; 4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
-			</p>
-			<table class="transTable">
-				<tr>
-					<td>a</td>
-					<td>b</td>
-					<td>c</td>
-					<td>d</td>
-					<td>e</td>
-					<td>f</td>
-					<td>g</td>
-					<td>h</td>
-					<td>i</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>o</td>
-					<td>p</td>
-					<td>q</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>u</td>
-					<td>v</td>
-					<td>w</td>
-					<td>x</td>
-					<td>y</td>
-					<td>z</td>
-				</tr>
-				<tr>
-					<td>ə</td>
-					<td>b</td>
-					<td>tʃ</td>
-					<td>d</td>
-					<td>ɛ</td>
-					<td>f</td>
-					<td>ɡ</td>
-					<td>h</td>
-					<td>ɪ</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>ɒ</td>
-					<td>p</td>
-					<td>ɔɪ</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>ʌ</td>
-					<td>v</td>
-					<td>w</td>
-					<td>ɜr</td>
-					<td>ɑ</td>
-					<td>z</td>
-				</tr>
-				<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
-				<tr>
-					<td>A</td>
-					<td>B</td>
-					<td>C</td>
-					<td>D</td>
-					<td>E</td>
-					<td>F</td>
-					<td>G</td>
-					<td>H</td>
-					<td>I</td>
-					<td>J</td>
-					<td>K</td>
-					<td>L</td>
-					<td>M</td>
-					<td>N</td>
-					<td>O</td>
-					<td>P</td>
-					<td>Q</td>
-					<td>R</td>
-					<td>S</td>
-					<td>T</td>
-					<td>U</td>
-					<td>V</td>
-					<td>W</td>
-					<td>X</td>
-					<td>Y</td>
-					<td>Z</td>
-				</tr>
-				<tr>
-					<td>æ</td>
-					<td>⸰</td>
-					<td>ɪər</td>
-					<td>ər</td>
-					<td>eɪ</td>
-					<td>aɪ</td>
-					<td>·</td>
-					<td>ð</td>
-					<td>i</td>
-					<td>dʒ</td>
-					<td>«</td>
-					<td>»</td>
-					<td>u</td>
-					<td>ŋ</td>
-					<td>ɔʊ</td>
-					<td>ɔr</td>
-					<td>aʊ</td>
-					<td>ɑr</td>
-					<td>ʃ</td>
-					<td>θ</td>
-					<td>ʊ</td>
-					<td>ju</td>
-					<td>ɪə</td>
-					<td>ɛr</td>
-					<td>ɔ</td>
-					<td>ʒ</td>
-				</tr>
-			</table>
-		</div>
-
-		<div id="phonemukDesc" class="desc" style="display:none;">
-		<h4>UK Phonemic</h4>
-			<p>Layout typing in <b>non-rhotic British English (RP)</b> with IPA symbols.<br>
-			   The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with <b>Shavian QWERTY</b> layout.<br>
-				 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
-			</p>
-			<table class="transTable">
-				<tr>
-					<td>a</td>
-					<td>b</td>
-					<td>c</td>
-					<td>d</td>
-					<td>e</td>
-					<td>f</td>
-					<td>g</td>
-					<td>h</td>
-					<td>i</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>o</td>
-					<td>p</td>
-					<td>q</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>u</td>
-					<td>v</td>
-					<td>w</td>
-					<td>x</td>
-					<td>y</td>
-					<td>z</td>
-				</tr>
-				<tr>
-					<td>ə</td>
-					<td>b</td>
-					<td>tʃ</td>
-					<td>d</td>
-					<td>ɛ</td>
-					<td>f</td>
-					<td>ɡ</td>
-					<td>h</td>
-					<td>ɪ</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>ɒ</td>
-					<td>p</td>
-					<td>ɔɪ</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>ʌ</td>
-					<td>v</td>
-					<td>w</td>
-					<td>ɜːʳ</td>
-					<td>ɑː</td>
-					<td>z</td>
-				</tr>
-				<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
-				<tr>
-					<td>A</td>
-					<td>B</td>
-					<td>C</td>
-					<td>D</td>
-					<td>E</td>
-					<td>F</td>
-					<td>G</td>
-					<td>H</td>
-					<td>I</td>
-					<td>J</td>
-					<td>K</td>
-					<td>L</td>
-					<td>M</td>
-					<td>N</td>
-					<td>O</td>
-					<td>P</td>
-					<td>Q</td>
-					<td>R</td>
-					<td>S</td>
-					<td>T</td>
-					<td>U</td>
-					<td>V</td>
-					<td>W</td>
-					<td>X</td>
-					<td>Y</td>
-					<td>Z</td>
-				</tr>
-				<tr>
-					<td>æ</td>
-					<td>⸰</td>
-					<td>ɪəʳ</td>
-					<td>əʳ</td>
-					<td>eɪ</td>
-					<td>aɪ</td>
-					<td>·</td>
-					<td>ð</td>
-					<td>iː</td>
-					<td>dʒ</td>
-					<td>«</td>
-					<td>»</td>
-					<td>uː</td>
-					<td>ŋ</td>
-					<td>əʊ</td>
-					<td>ɔːʳ</td>
-					<td>aʊ</td>
-					<td>ɑːʳ</td>
-					<td>ʃ</td>
-					<td>θ</td>
-					<td>ʊ</td>
-					<td>juː</td>
-					<td>ɪə</td>
-					<td>eəʳ</td>
-					<td>ɔː</td>
-					<td>ʒ</td>
-				</tr>
-			</table>
-		</div>
-
-		<div id="rhoticukDesc" class="desc" style="display:none;">
-		<h4>UK Rhotic</h4>
-			<p>Layout typing in <b>Rhotic British English</b> with IPA symbols.<br>
-			   The Unshifted and Shifted layers (Layers 1 &amp; 2) are compatible with <b>Shavian QWERTY</b> layout.<br>
-				 Layers 3&amp;4 contain additional IPA symbols, punctuation marks, hyphens, etc., that may also be very useful.
-			</p>
-			<table class="transTable">
-				<tr>
-					<td>a</td>
-					<td>b</td>
-					<td>c</td>
-					<td>d</td>
-					<td>e</td>
-					<td>f</td>
-					<td>g</td>
-					<td>h</td>
-					<td>i</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>o</td>
-					<td>p</td>
-					<td>q</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>u</td>
-					<td>v</td>
-					<td>w</td>
-					<td>x</td>
-					<td>y</td>
-					<td>z</td>
-				</tr>
-				<tr>
-					<td>ə</td>
-					<td>b</td>
-					<td>tʃ</td>
-					<td>d</td>
-					<td>ɛ</td>
-					<td>f</td>
-					<td>ɡ</td>
-					<td>h</td>
-					<td>ɪ</td>
-					<td>j</td>
-					<td>k</td>
-					<td>l</td>
-					<td>m</td>
-					<td>n</td>
-					<td>ɒ</td>
-					<td>p</td>
-					<td>ɔɪ</td>
-					<td>r</td>
-					<td>s</td>
-					<td>t</td>
-					<td>ʌ</td>
-					<td>v</td>
-					<td>w</td>
-					<td>ɜːr</td>
-					<td>ɑː</td>
-					<td>z</td>
-				</tr>
-				<tr><td colspan="26" style="padding:0px; border:1px solid silver;"></td></tr>
-				<tr>
-					<td>A</td>
-					<td>B</td>
-					<td>C</td>
-					<td>D</td>
-					<td>E</td>
-					<td>F</td>
-					<td>G</td>
-					<td>H</td>
-					<td>I</td>
-					<td>J</td>
-					<td>K</td>
-					<td>L</td>
-					<td>M</td>
-					<td>N</td>
-					<td>O</td>
-					<td>P</td>
-					<td>Q</td>
-					<td>R</td>
-					<td>S</td>
-					<td>T</td>
-					<td>U</td>
-					<td>V</td>
-					<td>W</td>
-					<td>X</td>
-					<td>Y</td>
-					<td>Z</td>
-				</tr>
-				<tr>
-					<td>æ</td>
-					<td>⸰</td>
-					<td>ɪər</td>
-					<td>ər</td>
-					<td>eɪ</td>
-					<td>aɪ</td>
-					<td>·</td>
-					<td>ð</td>
-					<td>iː</td>
-					<td>dʒ</td>
-					<td>«</td>
-					<td>»</td>
-					<td>uː</td>
-					<td>ŋ</td>
-					<td>əʊ</td>
-					<td>ɔːr</td>
-					<td>aʊ</td>
-					<td>ɑːr</td>
-					<td>ʃ</td>
-					<td>θ</td>
-					<td>ʊ</td>
-					<td>juː</td>
-					<td>ɪə</td>
-					<td>eər</td>
-					<td>ɔː</td>
-					<td>ʒ</td>
-				</tr>
-			</table>
-		</div>
-	
-		<div id="eslDesc" class="desc" style="display:none;">
-			<h4>ESL</h4>
-			<p>This layout is meant for people who only occasionally need to type IPA symbols, and only those specific to English language (like ESL tutors).<br>
-			   The <b>AltGr</b> and <b>AltGr+Shift</b> layers (layers 3 &amp; 4) contain all IPA symbols for English phonemes that may be
-			   needed by an ESL tutor. Also, most of the punctuation marks required by Style Guides, stress marks, dashes, etc.
-			</p>
-		</div>
 	</details>
 
-	<p>Last updated: 2025-11-09</p>
+	<p>Last updated: 2025-12-04</p>
 
 <!-- POPULATE KEYBOARDS WITH DEFAULT LAYOUT (after page is loaded) -->
 <script>
