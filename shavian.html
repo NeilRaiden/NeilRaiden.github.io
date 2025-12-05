@@ -111,7 +111,7 @@ NonoSans
 .pOrmin     { font-family: Ormin,      AdobeBlank2; font-size: 14pt; }
 .pNotoSh    { font-family: NotoShavian, NotoS, AdobeBlank2; font-size: 14pt; }
 .pTrabajo   { font-family: Trabajo,    AdobeBlank2; font-size: 14pt; }
-//.pSegoe     { font-family: Segoe,    AdobeBlank2; font-size: 14pt; }
+/*.pSegoe     { font-family: Segoe,    AdobeBlank2; font-size: 14pt; }*/
 
 .pIntAliaR  {
 	font-family: InterAlia,   AdobeBlank2;
@@ -391,9 +391,7 @@ function layoutSwitch(laiout) {
 	document.getElementById("shawEmpire").style.backgroundColor = "";
 	document.getElementById(laiout).style.backgroundColor     = "dodgerblue";
 
- 	document.getElementById(currentLayout + 'Desc').style.display = 'none';
  	currentLayout=laiout;
- 	document.getElementById(currentLayout + 'Desc').style.display = 'block';
 
 	switch(laiout) {
 		case "shawQwerty":
@@ -1494,7 +1492,7 @@ var keysD = emptY;
 					<li><a href="https://articles.c-a-s-t.com/shavian-3-3-typographic-implementation-3a43d3bbb8b8">Shavian (3/3): typographic implementation</a></li>
 				</ul></li>
 			<li><a href="https://archive.org/details/AndroclesAndTheLion_ShawAlphabetEdition/mode/2up">archive.org</a>
-				— the book “Androcless and the Lion” (hardcover version).</a>
+				— the book “Androcless and the Lion” (hardcover version).
 			<!-- li><a href="https://www.scribd.com/document/729192126/Androcles-and-the-Lion-Shaw-Alphabet-Edition-text">Androcles and the Lion</a></li -->
 			<li><a href="https://physics.wooster.edu/lindner/shavian/">John F. Lindner</a>'s website 
 				— a collection of 13 public domain books transliterated into Shavian Alphabet.</li>

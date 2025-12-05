@@ -180,10 +180,8 @@ gry { color: gray; }
 
 
 /* modified <b> tag to change text color to black */
-b {
-	color: black;
-	font-weight: bold;
-}
+b { color: black; font-weight: bold; }
+
 /* .ipa class already defined in layout.css */
 /*
 .ipa { 
@@ -445,21 +443,18 @@ a[href^="https://en.wikipedia"] {
 a[href^="mailto:"] { /* email link */
 	font-style: italic;
 }
-a[href$=".pdf"] { /* PDF file */
-	color: magenta;
-}
-a[href$=".zip"] { /* Archive file */
-	color: magenta;
-}
-a[href$=".dmg"] { /* macOS package file */
-	color: magenta;
-}
-a[href$=".ahk"] { /* Windows AutoHotKey script file */
-	color: magenta;
-}
-a[href$=".klc"] { /* Microsoft Keyboard Layout Creator (MKLC) file */
-	color: magenta;
-}
+/* link styles depending on file extension */
+/* aqua looks nice in dark mode, magenta looks nice in light mode */
+/* PDF file */
+/* a[href$=".pdf"] { color: magenta; }*/
+/* Archive file */
+/* a[href$=".zip"] { color: magenta; }*/
+/* macOS package file */
+/* a[href$=".dmg"] { color: magenta; }*/
+/* Windows AutoHotKey script file */
+/* a[href$=".ahk"] { color: magenta; }*/
+/* Microsoft Keyboard Layout Creator (MKLC) file */
+/* a[href$=".klc"] { color: magenta; }*/
 
 
 /* Example external link symbol: ⤴  ⤴ ⤴ */
@@ -479,7 +474,6 @@ a[href^="http://"]:after {
 }
 */
 
-
 /* is it still used? */
 a.locallnk {
 	/*	background: lavender;* /
@@ -490,6 +484,7 @@ a.locallnk {
 }
 
 /* ------ other ------ */
-b { color: black; }
+
+details summary { font-size: 1.2em; font-weight: bold; }
 
 /* ------ end ------ */
