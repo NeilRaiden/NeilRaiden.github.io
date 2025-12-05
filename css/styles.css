@@ -13,6 +13,7 @@
 	p b { color: white; }
 	li b { color: white; }
 	div b { color: white; }
+	blockquote b { color: white; }
 	/*table { border: 1px solid LightSteelBlue; }*/
 	table { border: 1px solid white; }
 	table th { background-color: DarkBlue; }
@@ -456,6 +457,9 @@ a[href$=".dmg"] { /* macOS package file */
 a[href$=".ahk"] { /* Windows AutoHotKey script file */
 	color: magenta;
 }
+a[href$=".klc"] { /* Microsoft Keyboard Layout Creator (MKLC) file */
+	color: magenta;
+}
 
 
 /* Example external link symbol: ⤴  ⤴ ⤴ */
@@ -489,4 +493,3 @@ a.locallnk {
 b { color: black; }
 
 /* ------ end ------ */
-/mono:q!
