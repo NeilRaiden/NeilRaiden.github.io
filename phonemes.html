@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>NeilRaiden.com - template</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./fonts/fonts.css">
+	<link rel="stylesheet" href="./css/layout.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src="./fonts/fontlist.js"></script>
+	<script src="./layout.js"></script>
+
+<style>
+
+li ipa, blockquote ipa, div.ipa {
+		font-family: InterAlia, NotoSans;
+		font-weight: bold;
+		font-size: 1em;
+}
+</style>
+
+</head>
+<body>
+<!-- "HOME" link and "Hamburger menu" button -->
+<header><script>insertHTML(headerHtml);</script></header>
+<!-- Top Navigation Menu -->
+<nav><script>insertNavBar();</script></nav>
+<!-- hidden page with controls to personalize styles -->
+<div id="pageSetup"><script>webPageSetup();</script></div>
+<!-- main container -->
+<main>
+	<div>
+		<h1>English Phonemes</h1>
+
+	<!-- blockquote class="bq2" -->
+	<blockquote style="border:1px solid blue; padding:5px;">
+		A <a href="https://en.wikipedia.org/wiki/Phoneme">phoneme</a> <ipa>/ˈfoʊniːm/</ipa>
+		is any set of similar speech sounds that are perceptually regarded by the speakers of a language
+		as a single basic sound (a smallest possible phonetic unit) that helps distinguish one word from another.
+	</blockquote>
+
+	<p>
+		The alphabet (symbols used in <b>written</b> English) consists of 26 letters —
+		but the number or phonemes (sounds used in <b>spoken</b> English) is over 40.
+	</p>
+
+	<ul>
+		<li>44 phonemes in <a href="https://en.wikipedia.org/wiki/Received_Pronunciation">Received Pronunciation</a> (RP)
+		— the (somewhat official) dialect used in United Kingdom.
+		</li>
+		<li>40 phonemes in <a href="https://en.wikipedia.org/wiki/General_American_English">General American</a> (GA)
+			— the most commonly used accent/dialect in United States.
+		</li>
+	</ul>
+	<p>
+		RP (UK) and GA (US) differ slightly in the number of phonemes:
+	</p>
+	<ul>
+		<li>24 consonants (both RP and GA):
+			<ul>
+				<li>voiceless: <div class="ipa">/ p · t · k · f · θ · s · ʃ · ʧ /</div></li>
+				<li>voiceless: <ipa>/ p · t · k · f · θ · s · ʃ · ʧ /</ipa></li>
+				<li>voiced:    <ipa>/ b · d · ɡ · v · ð · z · ʒ · ʤ  /</ipa></li>
+				<li>sonorants: <ipa>/ m · n · ŋ · h · r · l · j · w /</ipa></li>
+			</ul>
+		<li>(RP) 12 vowels: <ipa>/ iː · ɪ · ɛ/e · æ · ɑ · ʌ · ɒ · ɔː · ʊ · uː · ɜː · ə /</ipa></li>
+		<li>(GA) 11 vowels: <ipa>/ i · ɪ · ɛ/e · æ · ɑ · ʌ · ɔ · ʊ · u · ɜ · ə /</ipa> — excluding <ipa>⟨ɒ⟩</ipa>,
+			also note that GA vowels are shortened so the vowel lenght mark (ː) is usually omitted.</li>
+		<li>(RP) 8 diphthongs: <ipa>/ eɪ · aɪ · ɔɪ · aʊ · əʊ · eə · ɪə · ʊə /</ipa></li>
+		<li>(GA) 5 diphthongs: <ipa>/ eɪ · aɪ · ɔɪ · aʊ · ɔʊ /</ipa> —
+			note that RP <ipa>⟨əʊ⟩</ipa> in GA is pronounced <ipa>⟨ɔʊ⟩</ipa></li>
+	</ul>
+	<p>
+		Note that the <ipa>⟨ɛ⟩</ipa> and <ipa>⟨e⟩</ipa> symbols are allophones.
+		<ipa>⟨ɛ⟩</ipa> is called “lax-e” (relaxed mouth) and
+		<ipa>⟨e⟩</ipa> is called “tense-e” (mouth corners slightly retracted).
+		The distinction between these two was introduced by 
+		<a href="https://en.wikipedia.org/wiki/Clive_Upton">Clive Upton</a>
+		in “<i>Concise Oxford Dictionary</i>” (1995).
+	</p>
+	<p>
+		Unofficially though, there are also 5 
+		<a href="https://en.wikipedia.org/wiki/Triphthong">triphthongs</a>.
+		A triphthong (UK: <ipa>/ˈtrɪfθɒŋ, ˈtrɪpθɒŋ/</ipa> US: <ipa>/ˈtrɪfθɔŋ/</ipa>)
+		is a glide from one vowel to another and then to a third, all produced rapidly and without interruption.
+	</p>
+	<p>
+		In RP there are 5 triphthongs, which are formed by the diphthongs ending in
+		<ipa>/ɪ/</ipa> and <ipa>/ʊ/</ipa> + the sound <ipa>/ə/</ipa>:
+	</p>
+	<ul>
+		<li><ipa>eɪ + ə = eɪə</ipa> — as in <i>layer, player</i> — <ipa>/leɪə, pleɪə/</ipa></li>
+		<li><ipa>aɪ + ə = aɪə</ipa> — as in <i>liar, fire</i>    — <ipa>/laɪə, faɪə/</ipa></li>
+		<li><ipa>ɔɪ + ə = ɔɪə</ipa> — as in <i>loyal, royal</i>  — <ipa>/lɔɪəl, rɔɪəl/</ipa></li>
+		<li><ipa>əʊ + ə = əʊə</ipa> — as in <i>lower, mower</i>  — <ipa>/ləʊə, məʊə/</ipa></li>
+		<li><ipa>aʊ + ə = aʊə</ipa> — as in <i>power, hour</i>   — <ipa>/paʊə, aʊə/</ipa></li>
+	</ul>
+
+<!-- <div class="yel">ɛ</div> -->
+<!-- p>.gɡ·ɛʤ..</p -->
+<!-- x0261 ɡ ; x02b3 ʳ ; -->
+
+	<h4>British English phonemes</h4>
+
+	<div class="phonem-grid" style="margin: auto;">
+		<div class="yel" style="grid-column: 1 / span 4;">VOWELS</div>
+		<div class="blu" style="grid-column: 5 / span 4;">DIPHTONGS</div>
+		<div class="yel">iː</div> <div class="yel">ɪ</div>  <div class="yel">ʊ</div>  <div class="yel">uː</div>
+		<div class="blu">ɪə</div> <div class="blu">eɪ</div> <div class="blu">aɪ</div> <div class="blu">ɔɪ</div>
+		<div class="yel">ɛ</div>  <div class="yel">ə</div>  <div class="yel">ɜː</div> <div class="yel">ɔː</div>
+		<div class="blu">ʊə</div> <div class="blu">eə</div> <div class="blu">aʊ</div> <div class="blu">əʊ</div>
+		<div class="yel">æ</div>  <div class="yel">ʌ</div>  <div class="yel">ɑː</div> <div class="yel">ɒ</div>
+		<div class="sil" style="grid-column: 5 / span 4;">&nbsp;</div>
+		<div class="lim" style="grid-column: 1 / span 8;">CONSONANTS</div>
+		<div class="lim">p</div> <div class="lim">t</div> <div class="lim">k</div> <div class="lim">tʃ</div>
+		<div class="lim">ʃ</div> <div class="lim">s</div> <div class="lim">f</div> <div class="lim">θ</div>
+		<div class="lim">b</div> <div class="lim">d</div> <div class="lim">ɡ</div> <div class="lim">dʒ</div>
+		<div class="lim">ʒ</div> <div class="lim">z</div> <div class="lim">v</div> <div class="lim">ð</div>
+		<div class="lim">m</div> <div class="lim">n</div> <div class="lim">ŋ</div> <div class="lim">h</div>
+		<div class="lim">r</div> <div class="lim">l</div> <div class="lim">j</div> <div class="lim">w</div>
+	</div>
+
+	<h4>American English phonemes</h4>
+
+	<div class="phonem-grid" style="margin: auto;">
+		<div class="yel" style="grid-column: 1 / span 4;">VOWELS</div>
+		<div class="blu" style="grid-column: 5 / span 4;">DIPHTONGS</div>
+
+		<div class="yel">i</div> <div class="yel">ɪ</div>  <div class="yel">ʊ</div>  <div class="yel">u</div>
+		<div class="blu">ɪə</div> <div class="blu">eɪ</div> <div class="blu">aɪ</div> <div class="blu">ɔɪ</div>
+		<div class="yel">ɛ</div>  <div class="yel">ə</div>  <div class="yel">ɜ</div> <div class="yel">ɔ</div>
+		<div class="blu">ʊə</div> <div class="blu">eə</div> <div class="blu">aʊ</div> <div class="blu">əʊ</div>
+		<div class="yel">æ</div>  <div class="yel">ʌ</div>  <div class="yel">ɑ</div> <div class="yel">ɒ</div>
+		<div class="sil" style="grid-column: 5 / span 4;">&nbsp;</div>
+
+		<div class="lim" style="grid-column: 1 / span 8;">CONSONANTS</div>
+		<div class="lim">p</div> <div class="lim">t</div> <div class="lim">k</div> <div class="lim">tʃ</div>
+		<div class="lim">ʃ</div> <div class="lim">s</div> <div class="lim">f</div> <div class="lim">θ</div>
+		<div class="lim">b</div> <div class="lim">d</div> <div class="lim">ɡ</div> <div class="lim">dʒ</div>
+		<div class="lim">ʒ</div> <div class="lim">z</div> <div class="lim">v</div> <div class="lim">ð</div>
+		<div class="lim">m</div> <div class="lim">n</div> <div class="lim">ŋ</div> <div class="lim">h</div>
+		<div class="lim">r</div> <div class="lim">l</div> <div class="lim">j</div> <div class="lim">w</div>
+	</div>
+
+	<p>
+		The charts above are based on the charts designed by Adrian Underhill
+		(<a href="https://adrianunderhill.com/the-pronunciation-charts/">www.AdrianUnderhill.com</a>),
+		the author of “<i>Sound Foundations: Learning and Teaching Pronunciation</i>”.
+		His original design for the American English has only 5 diphthongs: <ipa>/eɪ, aɪ, ɔɪ, aʊ, ɔʊ/</ipa>,
+		and omits the sound ⟨ɒ⟩. It should be noted that many Americans pronounce ⟨ɑ⟩ instead of ⟨ɒ⟩
+		(it's called “father-bother” merger). However in recent decateds the “father-bother” merger is 
+		reportedly reversing, that's why we've included it back.
+	</p>
+
+
+	</div>
+	<p>Last updated: 2025-11-02</p>
+
+</main>
+<footer><script>insertHTML(footerHtml);</script></footer>
+</body>
+</html>
